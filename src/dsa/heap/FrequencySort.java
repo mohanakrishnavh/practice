@@ -8,14 +8,13 @@ import java.util.PriorityQueue;
 
 public class FrequencySort {
 
-
     public static int[] sort(int[] nums) {
         if (nums.length == 0) {
             return new int[]{};
         }
 
         Map<Integer, Integer> countMap = FrequencyUtil.getCountMap(nums);
-        PriorityQueue<int[]> maxHeap = new PriorityQueue<>((a, b) -> a[0] == b[0] ? a[0] : b[0]-a[0]);
+        PriorityQueue<int[]> maxHeap = new PriorityQueue<>((a, b) -> a[0] == b[0] ? a[0] : b[0] - a[0]);
         for (Map.Entry<Integer, Integer> entry : countMap.entrySet()) {
             maxHeap.add(new int[]{entry.getValue(), entry.getKey()});
         }

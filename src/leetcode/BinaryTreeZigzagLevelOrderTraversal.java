@@ -22,7 +22,7 @@ public class BinaryTreeZigzagLevelOrderTraversal {
             int size = Q.size();
             LinkedList<Integer> row = new LinkedList<>();
 
-            for (int i=0; i<size; i++) {
+            for (int i = 0; i < size; i++) {
                 TreeNode top = Q.poll();
 
                 if (isRightToLeft) {

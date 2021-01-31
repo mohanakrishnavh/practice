@@ -11,13 +11,13 @@ public class RemoveNthFromEndOfList {
         ListNode sentinel = new ListNode(0);
         sentinel.next = head;
         ListNode forward = sentinel;
-        for (int i=0; i<n; i++){
+        for (int i = 0; i < n; i++) {
             forward = forward.next;
         }
 
         ListNode current = sentinel;
         ListNode previous = null;
-        while(forward != null) {
+        while (forward != null) {
             previous = current;
             current = current.next;
             forward = forward.next;

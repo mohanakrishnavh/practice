@@ -7,10 +7,9 @@ public class ClosestNumbers {
 
     /**
      * Returns the k closest numbers to a given number
-     *
+     * <p>
      * Time Complexity : O(n log (k))
      * Space Complexity : O(k)
-     *
      */
     public static int[] getKClosest(int[] nums, int k, int x) {
         if (nums.length == 0 || k <= 0) {
@@ -21,9 +20,9 @@ public class ClosestNumbers {
             return nums;
         }
 
-        PriorityQueue<int[]> maxHeap = new PriorityQueue<>((a, b) -> a[0] == b[0] ? a[0] : b[0]-a[0]);
+        PriorityQueue<int[]> maxHeap = new PriorityQueue<>((a, b) -> a[0] == b[0] ? a[0] : b[0] - a[0]);
         for (int num : nums) {
-            maxHeap.add(new int[]{Math.abs(x-num), num});
+            maxHeap.add(new int[]{Math.abs(x - num), num});
 
             if (maxHeap.size() > k) {
                 maxHeap.poll();

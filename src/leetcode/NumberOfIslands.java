@@ -24,20 +24,20 @@ public class NumberOfIslands {
     }
 
     private static void dfs(int row, int col, int[][] mat, boolean[][] visited) {
-        if (row >= 0 && row < mat.length && col >= 0 && col < mat[0].length && mat[row][col] == 1 && !visited[row][col] ) {
+        if (row >= 0 && row < mat.length && col >= 0 && col < mat[0].length && mat[row][col] == 1 && !visited[row][col]) {
             visited[row][col] = true;
-            dfs(row+1, col, mat, visited);
-            dfs(row, col+1, mat, visited);
-            dfs(row-1, col, mat, visited);
-            dfs(row, col-1, mat, visited);
+            dfs(row + 1, col, mat, visited);
+            dfs(row, col + 1, mat, visited);
+            dfs(row - 1, col, mat, visited);
+            dfs(row, col - 1, mat, visited);
         }
     }
 
     public static void main(String[] args) {
         int[][] mat = {
-                { 1, 1, 1 },
-                { 0, 1, 0 },
-                { 1, 1, 1 }};
+                {1, 1, 1},
+                {0, 1, 0},
+                {1, 1, 1}};
 
         System.out.println(NumberOfIslands.numIslands(mat));
     }

@@ -7,7 +7,7 @@ public class KthSmallestElement {
 
     /**
      * Returns the kth smallest element in an unsorted array
-     *
+     * <p>
      * Time Complexity : O(n) - n is the length of the array
      * Space Complexity : O(k) - k is the size of the heap
      */
