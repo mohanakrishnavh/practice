@@ -19,7 +19,10 @@ public class KClosestPoints {
             }
         }
 
-        return maxHeap.toArray(new int[maxHeap.size()][]);
+        // toArray accepts the dimension of the new array which it needs
+        // to create. For example, here the output array contains maxHeap.size() rows
+        // and 2 columns
+        return maxHeap.toArray(new int[maxHeap.size()][2]);
     }
 
     private int distance(int[] point) {
