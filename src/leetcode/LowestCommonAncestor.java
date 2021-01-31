@@ -1,8 +1,8 @@
-package leetcode.tree;
+package leetcode;
 
 import dsa.tree.TreeNode;
 
-public class LCA {
+public class LowestCommonAncestor {
     public TreeNode getLCABinaryTree(TreeNode root, TreeNode p, TreeNode q) {
         if (root == null) {
             return null;

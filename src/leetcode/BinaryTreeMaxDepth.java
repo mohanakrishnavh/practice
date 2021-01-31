@@ -1,8 +1,8 @@
-package leetcode.tree;
+package leetcode;
 
 import dsa.tree.TreeNode;
 
-public class MaxDepth {
+public class BinaryTreeMaxDepth {
     public int maxDepth(TreeNode root) {
         if (root == null) {
             return 0;

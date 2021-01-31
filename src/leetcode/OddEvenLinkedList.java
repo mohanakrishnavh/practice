@@ -1,4 +1,4 @@
-package leetcode.linkedlist;
+package leetcode;
 
 import dsa.linkedlist.LinkedList;
 import dsa.linkedlist.ListNode;

@@ -1,8 +1,8 @@
-package leetcode.tree;
+package leetcode;
 
 import dsa.tree.TreeNode;
 
-public class MinDepth {
+public class BinaryTreeMinDepth {
     public int minDepth(TreeNode root) {
         if (root == null) {
             return 0;
