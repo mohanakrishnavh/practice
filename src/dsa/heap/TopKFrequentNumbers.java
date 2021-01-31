@@ -10,10 +10,9 @@ public class TopKFrequentNumbers {
 
     /**
      * Returns the top k frequent number
-     *
+     * <p>
      * Time Complexity : O(n log (k))
      * Space Complexity : O(k)
-     *
      */
     public static int[] getTopKFrequentNumbers(int[] nums, int k) {
         if (nums.length == 0 || k <= 0) {
@@ -21,7 +20,7 @@ public class TopKFrequentNumbers {
         }
 
         Map<Integer, Integer> countMap = FrequencyUtil.getCountMap(nums);
-        PriorityQueue<int[]> minHeap = new PriorityQueue<>((a, b) -> a[0] == b[0] ? a[0] : a[0]-b[0]);
+        PriorityQueue<int[]> minHeap = new PriorityQueue<>((a, b) -> a[0] == b[0] ? a[0] : a[0] - b[0]);
         for (Map.Entry<Integer, Integer> entry : countMap.entrySet()) {
             minHeap.add(new int[]{entry.getValue(), entry.getKey()});
 

@@ -14,11 +14,11 @@ public class ConnectRopes {
             minHeap.add(element);
         }
 
-        while(minHeap.size() >= 2) {
+        while (minHeap.size() >= 2) {
             int first = minHeap.poll();
             int second = minHeap.poll();
-            cost = cost+first+second;
-            minHeap.add(first+second);
+            cost = cost + first + second;
+            minHeap.add(first + second);
         }
 
         return cost;

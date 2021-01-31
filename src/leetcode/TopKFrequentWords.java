@@ -5,7 +5,7 @@ import java.util.*;
 public class TopKFrequentWords {
     public static List<String> topKFrequent(String[] words, int k) {
         Map<String, Integer> countMap = getCountMap(words);
-        PriorityQueue<String> minHeap = new PriorityQueue<>((w1, w2) -> countMap.get(w1).equals(countMap.get(w2)) ? w2.compareTo(w1) : countMap.get(w1)-countMap.get(w2));
+        PriorityQueue<String> minHeap = new PriorityQueue<>((w1, w2) -> countMap.get(w1).equals(countMap.get(w2)) ? w2.compareTo(w1) : countMap.get(w1) - countMap.get(w2));
         for (String word : countMap.keySet()) {
             minHeap.add(word);
 
@@ -15,7 +15,7 @@ public class TopKFrequentWords {
         }
 
         LinkedList<String> result = new LinkedList<>();
-        while(minHeap.size() > 0) {
+        while (minHeap.size() > 0) {
             result.addFirst(minHeap.poll());
         }
 
@@ -25,7 +25,7 @@ public class TopKFrequentWords {
     private static Map<String, Integer> getCountMap(String[] words) {
         Map<String, Integer> countMap = new HashMap<>();
         for (String word : words) {
-            countMap.put(word, countMap.getOrDefault(word, 0)+1);
+            countMap.put(word, countMap.getOrDefault(word, 0) + 1);
         }
 
         return countMap;

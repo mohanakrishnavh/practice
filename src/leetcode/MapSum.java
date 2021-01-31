@@ -27,7 +27,7 @@ public class MapSum {
         int delta = val - valueMap.getOrDefault(key, 0);
         valueMap.put(key, val);
 
-        for (int i=0; i<key.length(); i++) {
+        for (int i = 0; i < key.length(); i++) {
             char c = key.charAt(i);
 
             if (!current.children.containsKey(c)) {
@@ -41,7 +41,7 @@ public class MapSum {
     public int sum(String prefix) {
         PrefixValueNode current = root;
 
-        for (int i=0; i<prefix.length(); i++) {
+        for (int i = 0; i < prefix.length(); i++) {
             char c = prefix.charAt(i);
 
             if (!current.children.containsKey(c)) {

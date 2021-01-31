@@ -7,10 +7,9 @@ public class KSortedArray {
 
     /**
      * Sorts a k-sorted array
-     *
+     * <p>
      * Time Complexity : O(n log(k)) - n is the size of the array
      * Space Complexity : O(k) - k is the size of the heap
-     *
      */
     public static int[] sort(int[] nums, int k) {
         if (nums.length == 0 || k <= 0) {

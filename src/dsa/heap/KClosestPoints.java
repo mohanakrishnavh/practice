@@ -23,14 +23,14 @@ public class KClosestPoints {
     }
 
     private int distance(int[] point) {
-        return point[0]*point[0] + point[1]*point[1];
+        return point[0] * point[0] + point[1] * point[1];
     }
 
     public static void main(String[] args) {
         KClosestPoints obj = new KClosestPoints();
         int[][] points = obj.getKClosestPoints(new int[][]{{1, 3}, {-2, 2}, {5, 8}, {0, 1}}, 2);
 
-        for (int[] point: points) {
+        for (int[] point : points) {
             System.out.println(Arrays.toString(point));
         }
     }

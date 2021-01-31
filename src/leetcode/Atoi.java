@@ -21,12 +21,12 @@ public class Atoi {
             isNegative = true;
         }
 
-        for (int i=start; i<s.length(); i++) {
+        for (int i = start; i < s.length(); i++) {
             if (s.charAt(i) < '0' || s.charAt(i) > '9') {
                 break;
             }
 
-            result = result*10 + (int)s.charAt(i)-'0';
+            result = result * 10 + (int) s.charAt(i) - '0';
         }
 
         if (isNegative) {

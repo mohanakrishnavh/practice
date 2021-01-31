@@ -9,8 +9,8 @@ public class GroupAnagrams {
         for (String word : words) {
             int[] count = new int[26];
             Arrays.fill(count, 0);
-            for (int i=0; i<word.length(); i++) {
-                count[word.charAt(i)-'a']++;
+            for (int i = 0; i < word.length(); i++) {
+                count[word.charAt(i) - 'a']++;
             }
 
             int hashCode = Arrays.hashCode(count);
@@ -37,6 +37,6 @@ public class GroupAnagrams {
 
     public static void main(String[] args) {
         GroupAnagrams obj = new GroupAnagrams();
-        System.out.println(obj.groupAnagrams(new String[]{"eat","tea","tan","ate","nat","bat"}));
+        System.out.println(obj.groupAnagrams(new String[]{"eat", "tea", "tan", "ate", "nat", "bat"}));
     }
 }
