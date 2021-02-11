@@ -28,19 +28,17 @@ public class RatMaze {
             return true;
         }
 
-        if (maze[x][y] == 1) {
-            path[x][y] = 1;
+        path[x][y] = 1;
 
-            if (dfs(maze, x+1, y, path)) {
-                return true;
-            }
-
-            if (dfs(maze, x, y+1, path)) {
-                return true;
-            }
-
-            path[x][y] = 0;
+        if (dfs(maze, x+1, y, path)) {
+            return true;
         }
+
+        if (dfs(maze, x, y+1, path)) {
+            return true;
+        }
+
+        path[x][y] = 0;
 
         return false;
     }
