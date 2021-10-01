@@ -13,6 +13,7 @@ public class SingletonDriver {
         });
 
         t1.start();
+        //Thread.sleep(10);
         t2.start();
     }
 }

@@ -7,6 +7,7 @@ public class SingletonBlockSynchronized {
 
     public static SingletonBlockSynchronized getInstance() {
         if (instance == null) {
+            // Double-Checked Locking
             synchronized (SingletonBlockSynchronized.class) {
                 if (instance == null) {
                     instance = new SingletonBlockSynchronized();
