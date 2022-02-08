@@ -30,6 +30,6 @@ public class NearestSmallerToLeft {
 
     public static void main(String[] args) {
         int[] arr = new int[]{4, 5, 2, 10, 8};
-        System.out.println(Arrays.toString(NearestSmallerToLeft.getNearestSmallerToLeft(arr)));
+        System.out.println(Arrays.toString(getNearestSmallerToLeft(arr)));
     }
 }

@@ -30,6 +30,6 @@ public class NearestSmallerToRight {
 
     public static void main(String[] args) {
         int[] arr = new int[]{4, 5, 2, 10, 8};
-        System.out.println(Arrays.toString(NearestSmallerToRight.getNearestSmallerToRight(arr)));
+        System.out.println(Arrays.toString(getNearestSmallerToRight(arr)));
     }
 }

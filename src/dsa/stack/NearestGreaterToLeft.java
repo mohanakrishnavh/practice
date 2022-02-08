@@ -30,6 +30,6 @@ public class NearestGreaterToLeft {
 
     public static void main(String[] args) {
         int[] arr = new int[]{1, 3, 2, 4};
-        System.out.println(Arrays.toString(NearestGreaterToLeft.getNearestGreaterToLeft(arr)));
+        System.out.println(Arrays.toString(getNearestGreaterToLeft(arr)));
     }
 }
