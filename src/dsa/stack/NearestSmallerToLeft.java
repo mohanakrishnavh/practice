@@ -9,7 +9,7 @@ public class NearestSmallerToLeft {
         int[] nsl = new int[nums.length];
         Stack<Integer> stack = new Stack<>();
 
-        for (int i=0; i<nums.length; i++) {
+        for (int i = 0; i < nums.length; i++) {
             if (stack.isEmpty()) {
                 nsl[i] = -1;
             } else if (stack.peek() < nums[i]) {
@@ -19,7 +19,7 @@ public class NearestSmallerToLeft {
                     stack.pop();
                 }
 
-                nsl[i] = stack.isEmpty() ?  -1 : stack.peek();
+                nsl[i] = stack.isEmpty() ? -1 : stack.peek();
             }
 
             stack.push(nums[i]);

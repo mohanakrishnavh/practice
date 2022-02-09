@@ -4,15 +4,21 @@ import java.util.*;
 
 public class TransactionLogs {
 
+    public static void main(String[] args) {
+        String[][] transactions = new String[][]{{"345366 89921 45"}, {"029323 38239 23"}, {"38239 345366 15"}, {"029323 38239 77"}, {"345366 38239 23"}, {"029323 345366 13"}, {"38239 38239 23"}};
+        int threshold = 3;
+        System.out.println(new TransactionLogs().getFraudulentIds(transactions, threshold));
+    }
+
     private Map<String, Integer> getUserTransactionCountMap(String[][] transactions) {
         Map<String, Integer> userTransactionCountMap = new HashMap<>();
 
         for (String[] transaction : transactions) {
             if (!transaction[0].isBlank()) {
                 String[] transactionLog = transaction[0].split(" ");
-                Set<String> users = new HashSet<>(Arrays.asList(transactionLog[0],transactionLog[1]));
+                Set<String> users = new HashSet<>(Arrays.asList(transactionLog[0], transactionLog[1]));
                 for (String user : users) {
-                    userTransactionCountMap.put(user, userTransactionCountMap.getOrDefault(user, 0)+1);
+                    userTransactionCountMap.put(user, userTransactionCountMap.getOrDefault(user, 0) + 1);
                 }
             }
         }
@@ -37,11 +43,5 @@ public class TransactionLogs {
         Collections.sort(fraudulentIds);
 
         return fraudulentIds;
-    }
-
-    public static void main(String[] args) {
-        String[][] transactions= new String[][]{{"345366 89921 45"}, {"029323 38239 23"}, {"38239 345366 15"}, {"029323 38239 77"}, {"345366 38239 23"}, {"029323 345366 13"}, {"38239 38239 23"}};
-        int threshold = 3;
-        System.out.println(new TransactionLogs().getFraudulentIds(transactions, threshold));
     }
 }

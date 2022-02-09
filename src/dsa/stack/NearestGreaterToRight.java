@@ -8,7 +8,7 @@ public class NearestGreaterToRight {
         int[] ngr = new int[nums.length];
         Stack<Integer> stack = new Stack<>();
 
-        for (int i = nums.length-1; i >= 0; i--) {
+        for (int i = nums.length - 1; i >= 0; i--) {
             if (stack.isEmpty()) {
                 ngr[i] = -1;
             } else if (stack.peek() > nums[i]) {

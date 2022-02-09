@@ -12,8 +12,8 @@ public class StringCompression {
         List<Character> compressedString = new ArrayList<>();
         char current = chars[0];
         int count = 1;
-        for (int i=1; i<chars.length; i++) {
-            if (chars[i] != chars[i-1]) {
+        for (int i = 1; i < chars.length; i++) {
+            if (chars[i] != chars[i - 1]) {
                 if (count > 1) {
                     compressedString.add(current);
                     compressedString.add(Character.forDigit(count, 10));
@@ -35,6 +35,6 @@ public class StringCompression {
     }
 
     public static void main(String[] args) {
-        System.out.println(StringCompression.compress(new char[]{'a','a','b','b','c','c','c'}));
+        System.out.println(StringCompression.compress(new char[]{'a', 'a', 'b', 'b', 'c', 'c', 'c'}));
     }
 }

@@ -3,6 +3,14 @@ package dsa.dynamicprogramming;
 import java.util.Arrays;
 
 public class Knapsack {
+    public static void main(String[] args) {
+        Knapsack knapsack = new Knapsack();
+        System.out.println("Max Profit (Recursive) :" + knapsack.getMaxProfit(new int[]{1, 3, 4, 5}, new int[]{1, 4, 5, 7}, 4, 7));
+        System.out.println("Max Profit (Recursive - Memoized) :" + knapsack.getMaxProfitMemoized(new int[]{1, 3, 4, 5}, new int[]{1, 4, 5, 7}, 4, 7));
+        System.out.println("Max Profit (Top-down) :" + knapsack.getMaxProfitTopDown(new int[]{1, 3, 4, 5}, new int[]{1, 4, 5, 7}, 4, 7));
+
+    }
+
     private int getMaxProfit(int[] weights, int[] values, int n, int W) {
         if (n == 0 || W == 0) {
             return 0;
@@ -64,13 +72,5 @@ public class Knapsack {
         }
 
         return t[n][W];
-    }
-
-    public static void main(String[] args) {
-        Knapsack knapsack = new Knapsack();
-        System.out.println("Max Profit (Recursive) :" + knapsack.getMaxProfit(new int[]{1, 3, 4, 5}, new int[]{1, 4, 5, 7}, 4, 7));
-        System.out.println("Max Profit (Recursive - Memoized) :" + knapsack.getMaxProfitMemoized(new int[]{1, 3, 4, 5}, new int[]{1, 4, 5, 7}, 4, 7));
-        System.out.println("Max Profit (Top-down) :" + knapsack.getMaxProfitTopDown(new int[]{1, 3, 4, 5}, new int[]{1, 4, 5, 7}, 4, 7));
-
     }
 }

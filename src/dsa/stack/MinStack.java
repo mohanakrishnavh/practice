@@ -5,12 +5,28 @@ import java.util.Stack;
 
 public class MinStack {
 
-    private Stack<Integer> s;
-    private Stack<Integer> ss;
+    private final Stack<Integer> s;
+    private final Stack<Integer> ss;
 
     public MinStack() {
         s = new Stack<>();
         ss = new Stack<>();
+    }
+
+    public static void main(String[] args) {
+        MinStack m = new MinStack();
+        m.push(2);
+        m.push(0);
+        m.push(3);
+        m.push(0);
+
+        System.out.println(m.getMin());
+        m.pop();
+        System.out.println(m.getMin());
+        m.pop();
+        System.out.println(m.getMin());
+        m.pop();
+        System.out.println(m.getMin());
     }
 
     public void push(int x) {
@@ -47,21 +63,5 @@ public class MinStack {
         }
 
         return ss.peek();
-    }
-
-    public static void main(String[] args) {
-        MinStack m = new MinStack();
-        m.push(2);
-        m.push(0);
-        m.push(3);
-        m.push(0);
-
-        System.out.println(m.getMin());
-        m.pop();
-        System.out.println(m.getMin());
-        m.pop();
-        System.out.println(m.getMin());
-        m.pop();
-        System.out.println(m.getMin());
     }
 }

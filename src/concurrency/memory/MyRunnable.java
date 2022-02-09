@@ -1,6 +1,6 @@
 package concurrency.memory;
 
-public class MyRunnable implements Runnable{
+public class MyRunnable implements Runnable {
 
     private int count = 0;
     private MyObject myObject = null;

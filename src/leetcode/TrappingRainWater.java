@@ -1,6 +1,11 @@
 package leetcode;
 
 public class TrappingRainWater {
+    public static void main(String[] args) {
+        TrappingRainWater obj = new TrappingRainWater();
+        System.out.println(obj.trap(new int[]{0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1}));
+    }
+
     public int trap(int[] height) {
         int trappedWater = 0;
 
@@ -24,10 +29,5 @@ public class TrappingRainWater {
         }
 
         return trappedWater;
-    }
-
-    public static void main(String[] args) {
-        TrappingRainWater obj = new TrappingRainWater();
-        System.out.println(obj.trap(new int[]{0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1}));
     }
 }

@@ -4,6 +4,11 @@ import java.util.Arrays;
 
 public class FindPivotIndex {
 
+    public static void main(String[] args) {
+        FindPivotIndex obj = new FindPivotIndex();
+        System.out.println(obj.getPivotIndex(new int[]{1, 7, 3, 6, 5, 6}));
+    }
+
     public int getPivotIndex(int[] nums) {
         int leftSum = 0;
         int sum = Arrays.stream(nums).sum();
@@ -16,10 +21,5 @@ public class FindPivotIndex {
         }
 
         return -1;
-    }
-
-    public static void main(String[] args) {
-        FindPivotIndex obj = new FindPivotIndex();
-        System.out.println(obj.getPivotIndex(new int[]{1, 7, 3, 6, 5, 6}));
     }
 }
