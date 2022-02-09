@@ -8,8 +8,8 @@ public class ContainsDuplicatesII {
         Map<Integer, Integer> valueIndexMap = new HashMap<>();
         valueIndexMap.put(nums[0], 0);
 
-        for (int i=1; i<nums.length; i++) {
-            if (valueIndexMap.containsKey(nums[i]) && Math.abs(i-valueIndexMap.get(nums[i]))<=k) {
+        for (int i = 1; i < nums.length; i++) {
+            if (valueIndexMap.containsKey(nums[i]) && Math.abs(i - valueIndexMap.get(nums[i])) <= k) {
                 return true;
             }
 
@@ -20,9 +20,9 @@ public class ContainsDuplicatesII {
     }
 
     public static void main(String[] args) {
-        System.out.println(containsNearbyDuplicates(new int[]{1,2,3,1}, 3));
-        System.out.println(containsNearbyDuplicates(new int[]{1,0,1,1}, 1));
-        System.out.println(containsNearbyDuplicates(new int[]{1,2,3,1,2,3}, 2));
+        System.out.println(containsNearbyDuplicates(new int[]{1, 2, 3, 1}, 3));
+        System.out.println(containsNearbyDuplicates(new int[]{1, 0, 1, 1}, 1));
+        System.out.println(containsNearbyDuplicates(new int[]{1, 2, 3, 1, 2, 3}, 2));
     }
 
 }

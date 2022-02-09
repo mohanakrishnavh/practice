@@ -6,8 +6,8 @@ public class WordSearch {
             return false;
         }
 
-        for (int i=0; i<board.length; i++) {
-            for (int j=0; j<board[i].length; j++) {
+        for (int i = 0; i < board.length; i++) {
+            for (int j = 0; j < board[i].length; j++) {
                 if (board[i][j] == word.charAt(0) && dfs(board, i, j, 0, word)) {
                     return true;
                 }
@@ -28,10 +28,10 @@ public class WordSearch {
 
         char temp = board[i][j];
         board[i][j] = '#';
-        boolean found = dfs(board, i+1, j, count+1, word) ||
-                dfs(board, i-1, j, count+1, word) ||
-                dfs(board, i, j+1, count+1, word) ||
-                dfs(board, i, j-1, count+1, word);
+        boolean found = dfs(board, i + 1, j, count + 1, word) ||
+                dfs(board, i - 1, j, count + 1, word) ||
+                dfs(board, i, j + 1, count + 1, word) ||
+                dfs(board, i, j - 1, count + 1, word);
         board[i][j] = temp;
 
         return found;
@@ -39,9 +39,9 @@ public class WordSearch {
 
     public static void main(String[] args) {
         char[][] board = {
-                {'A','B','C','E'},
-                {'S','F','C','S'},
-                {'A','D','E','E'}
+                {'A', 'B', 'C', 'E'},
+                {'S', 'F', 'C', 'S'},
+                {'A', 'D', 'E', 'E'}
         };
 
         System.out.println(WordSearch.exist(board, "ABCCED"));

@@ -12,7 +12,7 @@ public class LargestKWithPositiveAndNegativeK {
         int max = 0;
         Set<Integer> numsSet = new HashSet<>();
         for (int num : nums) {
-            if (numsSet.contains(-1*num)) {
+            if (numsSet.contains(-1 * num)) {
                 max = Math.max(max, Math.abs(num));
             } else {
                 numsSet.add(num);

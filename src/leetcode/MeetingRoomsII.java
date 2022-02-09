@@ -11,10 +11,10 @@ public class MeetingRoomsII {
 
         Arrays.sort(intervals, (a, b) -> a[0] - b[0]);
 
-        PriorityQueue<int[]> minHeap= new PriorityQueue<>((a, b) -> a[1] - b[1]);
+        PriorityQueue<int[]> minHeap = new PriorityQueue<>((a, b) -> a[1] - b[1]);
         minHeap.add(intervals[0]);
 
-        for (int i=1; i<intervals.length; i++) {
+        for (int i = 1; i < intervals.length; i++) {
             int[] current = intervals[i];
             int[] earliest = minHeap.remove();
 

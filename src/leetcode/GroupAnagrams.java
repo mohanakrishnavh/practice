@@ -4,6 +4,11 @@ import java.util.*;
 
 public class GroupAnagrams {
 
+    public static void main(String[] args) {
+        GroupAnagrams obj = new GroupAnagrams();
+        System.out.println(obj.groupAnagrams(new String[]{"eat", "tea", "tan", "ate", "nat", "bat"}));
+    }
+
     private Map<Integer, List<String>> getCountVectorWordMap(String[] words) {
         Map<Integer, List<String>> countVectorWordMap = new HashMap<>();
         for (String word : words) {
@@ -33,10 +38,5 @@ public class GroupAnagrams {
         groups.addAll(countVectorWordMap.values());
 
         return groups;
-    }
-
-    public static void main(String[] args) {
-        GroupAnagrams obj = new GroupAnagrams();
-        System.out.println(obj.groupAnagrams(new String[]{"eat", "tea", "tan", "ate", "nat", "bat"}));
     }
 }

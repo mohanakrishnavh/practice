@@ -31,7 +31,7 @@ public class Graph {
         visited[startIndex] = true;
         bfsTraversal.add(startIndex);
 
-        while(!queue.isEmpty()) {
+        while (!queue.isEmpty()) {
             Integer node = queue.poll();
             List<Integer> children = adjacacencyList.get(node);
 
@@ -54,7 +54,7 @@ public class Graph {
         stack.push(startIndex);
         visited[startIndex] = true;
 
-        while(!stack.isEmpty()) {
+        while (!stack.isEmpty()) {
             Integer node = stack.pop();
             dfsTraversal.add(node);
 

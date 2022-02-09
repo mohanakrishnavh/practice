@@ -11,7 +11,7 @@ public class BinaryTree {
     /**
      * Time Complexity : O(n)
      * Space Complexity : O(1)
-     *
+     * <p>
      * Note: This doesn't handle duplicates.
      * Alternate Implementation: Inorder Traversal will return the data in sorted order.
      */
@@ -24,10 +24,6 @@ public class BinaryTree {
             return true;
         }
 
-        if (root.value > minValue && root.value < maxValue && isBSTUtil(root.left, minValue, root.value) && isBSTUtil(root.right, root.value, maxValue)) {
-            return true;
-        }
-
-        return false;
+        return root.value > minValue && root.value < maxValue && isBSTUtil(root.left, minValue, root.value) && isBSTUtil(root.right, root.value, maxValue);
     }
 }

@@ -11,12 +11,12 @@ public class SortCharactersByFrequency {
         }
 
         Map<Character, Integer> counts = new HashMap<>();
-        for (int i=0; i<s.length(); i++) {
+        for (int i = 0; i < s.length(); i++) {
             char ch = s.charAt(i);
-            counts.put(ch, counts.getOrDefault(ch, 0)+1);
+            counts.put(ch, counts.getOrDefault(ch, 0) + 1);
         }
 
-        PriorityQueue<Character> maxHeap = new PriorityQueue<>((a, b) -> counts.get(b)-counts.get(a));
+        PriorityQueue<Character> maxHeap = new PriorityQueue<>((a, b) -> counts.get(b) - counts.get(a));
         maxHeap.addAll(counts.keySet());
 
         StringBuilder sb = new StringBuilder();

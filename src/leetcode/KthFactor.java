@@ -16,12 +16,12 @@ public class KthFactor {
         PriorityQueue<Integer> maxHeap = new PriorityQueue<>(Collections.reverseOrder());
         maxHeap.add(1);
         maxHeap.add(n);
-        for (int i=2; i<=Math.sqrt(n); i++) {
-            if (n%i == 0) {
+        for (int i = 2; i <= Math.sqrt(n); i++) {
+            if (n % i == 0) {
                 maxHeap.add(i);
 
                 if (i != Math.sqrt(n)) {
-                    maxHeap.add(n/i);
+                    maxHeap.add(n / i);
                 }
 
                 while (maxHeap.size() > k) {

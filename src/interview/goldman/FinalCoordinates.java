@@ -11,11 +11,21 @@ Test Case = [
  */
 
 public class FinalCoordinates {
+    public static void main(String[] args) {
+        FinalCoordinates obj = new FinalCoordinates();
+        int[] result1 = obj.getFinalCoordinates("UUU", new int[]{0, 3});
+        System.out.println("[" + result1[0] + ", " + result1[1] + "]");
+        int[] result2 = obj.getFinalCoordinates("ULDR", new int[]{0, 0});
+        System.out.println("[" + result2[0] + ", " + result2[1] + "]");
+        int[] result3 = obj.getFinalCoordinates("ULLLDUDUURLRLR", new int[]{-2, 2});
+        System.out.println("[" + result3[0] + ", " + result3[1] + "]");
+    }
+
     private int[] getFinalCoordinates(String instructions, int[] initialCoordinates) {
         int x = initialCoordinates[0];
         int y = initialCoordinates[1];
 
-        for (int i=0; i<instructions.length(); i++) {
+        for (int i = 0; i < instructions.length(); i++) {
             switch (instructions.charAt(i)) {
                 case 'U' -> y++;
                 case 'D' -> y--;
@@ -25,15 +35,5 @@ public class FinalCoordinates {
         }
 
         return new int[]{x, y};
-    }
-
-    public static void main(String[] args) {
-        FinalCoordinates obj = new FinalCoordinates();
-        int[] result1 = obj.getFinalCoordinates("UUU", new int[]{0, 3});
-        System.out.println("[" + result1[0] + ", " + result1[1] + "]");
-        int[] result2 = obj.getFinalCoordinates("ULDR", new int[]{0, 0});
-        System.out.println("[" + result2[0] + ", " + result2[1] + "]");
-        int[] result3 = obj.getFinalCoordinates("ULLLDUDUURLRLR", new int[]{-2, 2});
-        System.out.println("[" + result3[0] + ", " + result3[1] + "]");
     }
 }

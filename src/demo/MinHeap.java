@@ -3,7 +3,7 @@ package demo;
 import java.util.PriorityQueue;
 
 public class MinHeap {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         // Creating empty priority queue
         PriorityQueue<Integer> pQueue = new PriorityQueue<>();
 

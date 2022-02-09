@@ -3,7 +3,8 @@ package designpatterns.singleton;
 public class SingletonBlockSynchronized {
     private static volatile SingletonBlockSynchronized instance;
 
-    private SingletonBlockSynchronized() {}
+    private SingletonBlockSynchronized() {
+    }
 
     public static SingletonBlockSynchronized getInstance() {
         if (instance == null) {

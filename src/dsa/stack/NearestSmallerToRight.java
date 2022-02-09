@@ -9,7 +9,7 @@ public class NearestSmallerToRight {
         int[] nsr = new int[nums.length];
         Stack<Integer> stack = new Stack<>();
 
-        for (int i=nums.length-1; i>=0 ; i--) {
+        for (int i = nums.length - 1; i >= 0; i--) {
             if (stack.isEmpty()) {
                 nsr[i] = -1;
             } else if (stack.peek() < nums[i]) {
@@ -19,7 +19,7 @@ public class NearestSmallerToRight {
                     stack.pop();
                 }
 
-                nsr[i] = stack.isEmpty() ?  -1 : stack.peek();
+                nsr[i] = stack.isEmpty() ? -1 : stack.peek();
             }
 
             stack.push(nums[i]);

@@ -16,8 +16,8 @@ public class RatMaze {
     }
 
     public static boolean dfs(int[][] maze, int x, int y, int[][] path) {
-        int n = maze.length-1;
-        int m = maze[0].length-1;
+        int n = maze.length - 1;
+        int m = maze[0].length - 1;
 
         if (x < 0 || x > n || y < 0 || y > m || maze[x][y] == 0) {
             return false;
@@ -30,11 +30,11 @@ public class RatMaze {
 
         path[x][y] = 1;
 
-        if (dfs(maze, x+1, y, path)) {
+        if (dfs(maze, x + 1, y, path)) {
             return true;
         }
 
-        if (dfs(maze, x, y+1, path)) {
+        if (dfs(maze, x, y + 1, path)) {
             return true;
         }
 
@@ -54,7 +54,7 @@ public class RatMaze {
     }
 
     public static void main(String[] args) {
-        int maze[][] = {{1, 0, 0, 0},
+        int[][] maze = {{1, 0, 0, 0},
                 {1, 1, 1, 0},
                 {1, 0, 1, 1},
                 {0, 0, 0, 1}

@@ -3,6 +3,22 @@ package interview.amazon;
 import java.util.*;
 
 public class ShoppingPairs {
+    public static int getMinScore(int productNodes, int[] productsFrom, int[] productsTo) {
+        if (productNodes < 3) {
+            return -1;
+        }
+
+
+        int minScore = Integer.MAX_VALUE;
+
+
+        return minScore;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(getMinScore(6, new int[]{1, 2, 2, 3, 4, 5}, new int[]{2, 4, 5, 5, 5, 6}));
+    }
+
     class Graph {
         int numberOfVertices;
         Map<Integer, Set<Integer>> edges;
@@ -25,22 +41,5 @@ public class ShoppingPairs {
         public int getDegree(int u) {
             return degree[u];
         }
-    }
-
-    public static int getMinScore(int productNodes, int[] productsFrom, int[] productsTo) {
-        if (productNodes < 3) {
-            return -1;
-        }
-
-
-
-        int minScore = Integer.MAX_VALUE;
-
-
-        return minScore;
-    }
-
-    public static void main(String[] args) {
-        System.out.println(getMinScore(6, new int[]{1,2,2,3,4,5}, new int[]{2,4,5,5,5,6}));
     }
 }

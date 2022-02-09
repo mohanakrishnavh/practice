@@ -3,7 +3,8 @@ package designpatterns.singleton;
 public class SingletonSynchronized {
     private static SingletonSynchronized instance;
 
-    private SingletonSynchronized() {}
+    private SingletonSynchronized() {
+    }
 
     public static synchronized SingletonSynchronized getInstance() {
         if (instance == null) {

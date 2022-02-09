@@ -14,14 +14,14 @@ class Solution {
 
         Map<Integer, Integer> elementCountMap = new HashMap<>();
         for (Integer element : arr) {
-          int diff = sum-element;
-          int elementCount = elementCountMap.getOrDefault(diff, 0);
-          if (elementCount > 0) {
-              count += 1;
-              elementCountMap.put(diff, elementCount-1);
-          }
+            int diff = sum - element;
+            int elementCount = elementCountMap.getOrDefault(diff, 0);
+            if (elementCount > 0) {
+                count += 1;
+                elementCountMap.put(diff, elementCount - 1);
+            }
 
-          elementCountMap.put(element, elementCountMap.getOrDefault(element, 0)+1);
+            elementCountMap.put(element, elementCountMap.getOrDefault(element, 0) + 1);
         }
 
         return count;
@@ -32,7 +32,7 @@ class Solution {
         Arrays.sort(arr);
 
         for (Integer element : arr) {
-            int index = Arrays.binarySearch(arr, sum-element);
+            int index = Arrays.binarySearch(arr, sum - element);
 
             if (index != -1) {
                 count++;

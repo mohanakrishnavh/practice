@@ -7,7 +7,7 @@ public class MedianFinder {
     PriorityQueue<Integer> large;
 
     public MedianFinder() {
-        small = new PriorityQueue<>((a,b) -> b-a);
+        small = new PriorityQueue<>((a, b) -> b - a);
         large = new PriorityQueue<>();
     }
 
@@ -25,6 +25,6 @@ public class MedianFinder {
             return large.peek();
         }
 
-        return (small.peek()+large.peek())/2.0;
+        return (small.peek() + large.peek()) / 2.0;
     }
 }

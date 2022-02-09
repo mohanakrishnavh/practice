@@ -15,16 +15,10 @@ Explanation: Since Jessica's average is greater than Bob's, Mike's and Jason's a
  */
 
 public class HighestAverageScore {
-    class Student {
-        private String name;
-        private int marksSum;
-        private int marksCount;
-
-        public Student(String name) {
-            this.name = name;
-            this.marksSum = 0;
-            this.marksCount = 0;
-        }
+    public static void main(String[] args) {
+        String[][] marks = {{"Bob", "87"}, {"Mike", "35"}, {"Bob", "52"}, {"Jason", "35"}, {"Mike", "55"}, {"Jessica", "99"}};
+        HighestAverageScore obj = new HighestAverageScore();
+        System.out.println(obj.getHighestAverageScore(marks));
     }
 
     private int getHighestAverageScore(String[][] marks) {
@@ -54,9 +48,15 @@ public class HighestAverageScore {
         return highestAverageScore;
     }
 
-    public static void main(String[] args) {
-        String[][] marks = {{"Bob", "87"}, {"Mike", "35"}, {"Bob", "52"}, {"Jason", "35"}, {"Mike", "55"}, {"Jessica", "99"}};
-        HighestAverageScore obj = new HighestAverageScore();
-        System.out.println(obj.getHighestAverageScore(marks));
+    class Student {
+        private final String name;
+        private int marksSum;
+        private int marksCount;
+
+        public Student(String name) {
+            this.name = name;
+            this.marksSum = 0;
+            this.marksCount = 0;
+        }
     }
 }

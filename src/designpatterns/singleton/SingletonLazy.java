@@ -3,7 +3,8 @@ package designpatterns.singleton;
 public class SingletonLazy {
     private static SingletonLazy instance;
 
-    private SingletonLazy() {}
+    private SingletonLazy() {
+    }
 
     public static SingletonLazy getInstance() {
         if (instance == null) {

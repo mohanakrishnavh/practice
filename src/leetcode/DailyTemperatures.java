@@ -7,7 +7,7 @@ public class DailyTemperatures {
         int[] waitTimes = new int[T.length];
         Stack<Integer> stack = new Stack<>();
 
-        for (int i=T.length-1; i >= 0; i--) {
+        for (int i = T.length - 1; i >= 0; i--) {
             if (stack.isEmpty()) {
                 waitTimes[i] = 0;
             } else if (T[stack.peek()] > T[i]) {
@@ -17,7 +17,7 @@ public class DailyTemperatures {
                     stack.pop();
                 }
 
-                waitTimes[i] = stack.isEmpty() ? 0 : stack.peek()-i;
+                waitTimes[i] = stack.isEmpty() ? 0 : stack.peek() - i;
             }
 
             stack.push(i);

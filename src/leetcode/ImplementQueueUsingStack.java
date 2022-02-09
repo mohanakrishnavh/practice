@@ -5,8 +5,8 @@ import java.util.Stack;
 public class ImplementQueueUsingStack {
     public class Queue {
 
-        private Stack<Integer> s1;
-        private Stack<Integer> s2;
+        private final Stack<Integer> s1;
+        private final Stack<Integer> s2;
 
         public Queue() {
             s1 = new Stack<>();

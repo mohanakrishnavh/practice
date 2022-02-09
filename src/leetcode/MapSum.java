@@ -4,22 +4,19 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class MapSum {
-    class PrefixValueNode {
-        Map<Character, PrefixValueNode> children;
-        int value;
-
-        public PrefixValueNode() {
-            children = new HashMap<>();
-            value = 0;
-        }
-    }
-
-    private PrefixValueNode root;
-    private Map<String, Integer> valueMap;
-
+    private final PrefixValueNode root;
+    private final Map<String, Integer> valueMap;
     public MapSum() {
         root = new PrefixValueNode();
         valueMap = new HashMap<>();
+    }
+
+    public static void main(String[] args) {
+        MapSum mapSum = new MapSum();
+        mapSum.insert("a", 3);
+        System.out.println(mapSum.sum("ap"));
+        mapSum.insert("b", 2);
+        System.out.println(mapSum.sum("a"));
     }
 
     public void insert(String key, int val) {
@@ -54,11 +51,13 @@ public class MapSum {
         return current.value;
     }
 
-    public static void main(String[] args) {
-        MapSum mapSum = new MapSum();
-        mapSum.insert("a", 3);
-        System.out.println(mapSum.sum("ap"));
-        mapSum.insert("b", 2);
-        System.out.println(mapSum.sum("a"));
+    class PrefixValueNode {
+        Map<Character, PrefixValueNode> children;
+        int value;
+
+        public PrefixValueNode() {
+            children = new HashMap<>();
+            value = 0;
+        }
     }
 }

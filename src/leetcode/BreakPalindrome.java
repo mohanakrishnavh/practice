@@ -6,13 +6,13 @@ public class BreakPalindrome {
             return "";
         }
 
-        for (int i=0; i<palindrome.length()/2; i++) {
+        for (int i = 0; i < palindrome.length() / 2; i++) {
             if (palindrome.charAt(i) != 'a') {
                 return palindrome.replaceFirst(String.valueOf(palindrome.charAt(i)), "a");
             }
         }
 
-        palindrome = palindrome.substring(0, palindrome.length()-1) + "b";
+        palindrome = palindrome.substring(0, palindrome.length() - 1) + "b";
         return palindrome;
     }
 

@@ -21,8 +21,8 @@ public class ReformatDate {
 
         String[] dateComponents = date.split(" ");
 
-        String dayPart = dateComponents[0].substring(0, dateComponents[0].length()-2);
-        String day = Integer.parseInt(dayPart) < 10  ? "0" + dayPart : dayPart;
+        String dayPart = dateComponents[0].substring(0, dateComponents[0].length() - 2);
+        String day = Integer.parseInt(dayPart) < 10 ? "0" + dayPart : dayPart;
 
         return dateComponents[2] + "-" + months.get(dateComponents[1]) + "-" + day;
     }

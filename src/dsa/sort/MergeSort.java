@@ -28,8 +28,7 @@ public class MergeSort {
         while (i < left && j < right) {
             if (l[i] <= r[j]) {
                 a[k++] = l[i++];
-            }
-            else {
+            } else {
                 a[k++] = r[j++];
             }
         }

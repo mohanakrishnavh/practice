@@ -2,6 +2,14 @@ package leetcode;
 
 public class FirstUniqueCharacter {
 
+    public static void main(String[] args) {
+        FirstUniqueCharacter obj = new FirstUniqueCharacter();
+        System.out.println(obj.getFirstUniqueCharIndex("leetcode"));
+        System.out.println(obj.getFirstUniqueCharIndex("loveleetcode"));
+        System.out.println(obj.getFirstUniqueCharIndex("aabbcc"));
+        System.out.println(obj.getFirstUniqueCharIndex("aabbcc"));
+    }
+
     private int getFirstUniqueCharIndex(String s) {
         int[] count = new int[26];
         int n = s.length();
@@ -17,13 +25,5 @@ public class FirstUniqueCharacter {
         }
 
         return -1;
-    }
-
-    public static void main(String[] args) {
-        FirstUniqueCharacter obj = new FirstUniqueCharacter();
-        System.out.println(obj.getFirstUniqueCharIndex("leetcode"));
-        System.out.println(obj.getFirstUniqueCharIndex("loveleetcode"));
-        System.out.println(obj.getFirstUniqueCharIndex("aabbcc"));
-        System.out.println(obj.getFirstUniqueCharIndex("aabbcc"));
     }
 }

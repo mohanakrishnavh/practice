@@ -51,7 +51,7 @@ public class ElementCount {
             return 0;
         }
 
-        return maxIndex-minIndex+1;
+        return maxIndex - minIndex + 1;
     }
 
     public static void main(String[] args) {

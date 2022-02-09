@@ -29,7 +29,7 @@ public class BinarySearchTree {
                     return;
                 }
                 currentNode = currentNode.left;
-              // Case 3: When the value is greater than the current node
+                // Case 3: When the value is greater than the current node
             } else {
                 if (currentNode.right == null) {
                     currentNode.right = newNode;

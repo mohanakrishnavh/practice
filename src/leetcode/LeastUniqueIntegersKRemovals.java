@@ -18,7 +18,7 @@ public class LeastUniqueIntegersKRemovals {
             });
         }
 
-        PriorityQueue<Integer> minHeap = new PriorityQueue<>((a, b) -> counts.get(a)-counts.get(b));
+        PriorityQueue<Integer> minHeap = new PriorityQueue<>((a, b) -> counts.get(a) - counts.get(b));
         minHeap.addAll(counts.keySet());
 
         int removed = 0;
@@ -40,7 +40,7 @@ public class LeastUniqueIntegersKRemovals {
     }
 
     public static void main(String[] args) {
-        System.out.println(LeastUniqueIntegersKRemovals.findLeastNumOfUniqueInts(new int[]{5,5,4}, 1));
-        System.out.println(LeastUniqueIntegersKRemovals.findLeastNumOfUniqueInts(new int[]{4,3,1,1,3,3,2}, 3));
+        System.out.println(LeastUniqueIntegersKRemovals.findLeastNumOfUniqueInts(new int[]{5, 5, 4}, 1));
+        System.out.println(LeastUniqueIntegersKRemovals.findLeastNumOfUniqueInts(new int[]{4, 3, 1, 1, 3, 3, 2}, 3));
     }
 }

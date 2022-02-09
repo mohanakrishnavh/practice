@@ -4,11 +4,7 @@ import java.util.Stack;
 
 public class ValidParentheses {
     private boolean isPair(char open, char close) {
-        if (open == '(' && close == ')' || open == '{' && close == '}' || open == '[' && close == ']') {
-            return true;
-        }
-
-        return false;
+        return open == '(' && close == ')' || open == '{' && close == '}' || open == '[' && close == ']';
     }
 
     public boolean isValid(String s) {
@@ -28,10 +24,6 @@ public class ValidParentheses {
             }
         }
 
-        if (!stack.isEmpty()) {
-            return false;
-        }
-
-        return true;
+        return stack.isEmpty();
     }
 }
