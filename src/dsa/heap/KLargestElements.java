@@ -4,13 +4,6 @@ import java.util.Arrays;
 import java.util.PriorityQueue;
 
 public class KLargestElements {
-
-    /**
-     * Returns the k largest elements from the given array
-     * <p>
-     * Time Complexity : O(n) - n is the length of the array
-     * Space Complexity : (k) - k is size of the heap
-     */
     public static int[] getKLargestElements(int[] nums, int k) {
         if (nums.length == 0 || k <= 0) {
             return null;
@@ -20,22 +13,22 @@ public class KLargestElements {
             return nums;
         }
 
-        int[] kLargest = new int[k];
-        PriorityQueue<Integer> minHeap = new PriorityQueue<>();
-        for (int i : nums) {
-            minHeap.add(i);
+        PriorityQueue<Integer> priorityQueue = new PriorityQueue<>();
+        for (int num : nums) {
+            priorityQueue.add(num);
 
-            if (minHeap.size() > k) {
-                minHeap.poll();
+            if (priorityQueue.size() > k) {
+                priorityQueue.poll();
             }
         }
 
         int index = 0;
-        while (minHeap.size() > 0) {
-            kLargest[index++] = minHeap.poll();
+        int[] kLargestElements = new int[k];
+        while (!priorityQueue.isEmpty()) {
+           kLargestElements[index++] = priorityQueue.poll();
         }
 
-        return kLargest;
+        return kLargestElements;
     }
 
     public static void main(String[] args) {
