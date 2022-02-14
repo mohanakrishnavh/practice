@@ -7,7 +7,6 @@ import java.util.Map;
 import java.util.PriorityQueue;
 
 public class FrequencySort {
-
     public static int[] sort(int[] nums) {
         if (nums.length == 0) {
             return new int[]{};

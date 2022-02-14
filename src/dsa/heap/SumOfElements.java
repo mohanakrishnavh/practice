@@ -15,7 +15,7 @@ public class SumOfElements {
         int k1thSmallest = KthSmallestElement.getKthSmallestElement(arr, k1);
         int k2thSmallest = KthSmallestElement.getKthSmallestElement(arr, k2);
         int total = 0;
-        for (Integer element : arr) {
+        for (int element : arr) {
             if (element > k1thSmallest && element < k2thSmallest) {
                 total += element;
             }
