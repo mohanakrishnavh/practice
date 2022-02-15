@@ -28,5 +28,7 @@ public class StockSpanProblem {
     public static void main(String[] args) {
         int[] nums = new int[]{100, 80, 60, 70, 60, 75, 85};
         System.out.println(Arrays.toString((getStockSpan(nums))));
+
+
     }
 }
