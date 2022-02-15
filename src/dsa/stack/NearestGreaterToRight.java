@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Stack;
 
 public class NearestGreaterToRight {
-    public static int[] getNearestGreaterToRight(int[] nums) {
+    private static int[] getNearestGreaterToRight(int[] nums) {
         int[] ngr = new int[nums.length];
         Stack<Integer> stack = new Stack<>();
 

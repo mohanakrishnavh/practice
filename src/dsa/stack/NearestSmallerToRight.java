@@ -4,8 +4,7 @@ import java.util.Arrays;
 import java.util.Stack;
 
 public class NearestSmallerToRight {
-
-    public static int[] getNearestSmallerToRight(int[] nums) {
+    private static int[] getNearestSmallerToRight(int[] nums) {
         int[] nsr = new int[nums.length];
         Stack<Integer> stack = new Stack<>();
 

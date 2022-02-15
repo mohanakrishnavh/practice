@@ -4,8 +4,7 @@ import java.util.Arrays;
 import java.util.Stack;
 
 public class NearestSmallerToLeft {
-
-    public static int[] getNearestSmallerToLeft(int[] nums) {
+    private static int[] getNearestSmallerToLeft(int[] nums) {
         int[] nsl = new int[nums.length];
         Stack<Integer> stack = new Stack<>();
 

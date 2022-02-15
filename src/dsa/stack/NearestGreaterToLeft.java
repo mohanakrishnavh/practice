@@ -4,8 +4,7 @@ import java.util.Arrays;
 import java.util.Stack;
 
 public class NearestGreaterToLeft {
-
-    public static int[] getNearestGreaterToLeft(int[] nums) {
+    private static int[] getNearestGreaterToLeft(int[] nums) {
         int[] ngl = new int[nums.length];
         Stack<Integer> stack = new Stack<>();
 
