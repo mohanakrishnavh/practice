@@ -7,12 +7,12 @@ public class ContainsDuplicates {
     public static boolean hasDuplicates(int[] nums) {
         Set<Integer> uniqueNums = new HashSet<>();
 
-        for (int i = 0; i < nums.length; i++) {
-            if (uniqueNums.contains(nums[i])) {
+        for (int num : nums) {
+            if (uniqueNums.contains(num)) {
                 return true;
             }
 
-            uniqueNums.add(nums[i]);
+            uniqueNums.add(num);
         }
 
         return false;

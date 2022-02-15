@@ -7,13 +7,6 @@ import java.util.Map;
 import java.util.PriorityQueue;
 
 public class TopKFrequentNumbers {
-
-    /**
-     * Returns the top k frequent number
-     * <p>
-     * Time Complexity : O(n log (k))
-     * Space Complexity : O(k)
-     */
     public static int[] getTopKFrequentNumbers(int[] nums, int k) {
         if (nums.length == 0 || k <= 0) {
             return null;

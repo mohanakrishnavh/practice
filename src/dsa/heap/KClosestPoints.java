@@ -35,5 +35,11 @@ public class KClosestPoints {
         for (int[] point : points) {
             System.out.println(Arrays.toString(point));
         }
+
+        int[][] points2 = obj.getKClosestPoints(new int[][]{{3, 3}, {5, -1}, {-2, 4}}, 2);
+        for (int[] point : points2) {
+            System.out.println(Arrays.toString(point));
+        }
+
     }
 }
