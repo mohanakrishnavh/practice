@@ -3,6 +3,7 @@ package dsa.linkedlist;
 public class LinkedList {
 
     ListNode head;
+
     int length;
 
     public LinkedList() {
@@ -14,15 +15,9 @@ public class LinkedList {
         return this.head;
     }
 
-    /**
-     * Get the value of the index-th node in the linked list. If the index is invalid, return -1.
-     * <p>
-     * Time Complexity : O(n)
-     * Space Complexity : O(1)
-     */
     public int get(int index) {
-        if (head == null || index < 0 || index >= length) {
-            return -1;
+        if (head == null) {
+            throw new IndexOutOfBoundsException();
         }
 
         ListNode current = head;
@@ -33,22 +28,16 @@ public class LinkedList {
         return current.value;
     }
 
-    /**
-     * Add a node of value val before the first element of the linked list. After the insertion, the new node will be the first node of the linked list.
-     */
-    public void addAtHead(int val) {
-        ListNode newListNode = new ListNode(val);
-        newListNode.next = head;
-        head = newListNode;
-        length += 1;
+    public void addFirst(int value) {
+        ListNode node = new ListNode(value);
+        node.next = head;
+        head = node;
+        incrementLength();
     }
 
-    /**
-     * Append a node of value val to the last element of the linked list.
-     */
-    public void addAtTail(int val) {
+    public void addLast(int val) {
         if (head == null) {
-            addAtHead(val);
+            addFirst(val);
             return;
         }
 
@@ -58,21 +47,18 @@ public class LinkedList {
         }
 
         current.next = new ListNode(val);
-        length += 1;
+        incrementLength();
     }
 
-    /**
-     * Add a node of value val before the index-th node in the linked list. If index equals to the length of linked list, the node will be appended to the end of linked list. If index is greater than the length, the node will not be inserted.
-     */
     public void addAtIndex(int index, int val) {
         if (index < 0 || index > length) {
-            return;
+            throw new IndexOutOfBoundsException();
         }
 
         if (index == 0) {
-            addAtHead(val);
+            addFirst(val);
         } else if (index == length) {
-            addAtTail(val);
+            addLast(val);
         } else {
             ListNode current = head;
             ListNode previous = null;
@@ -88,12 +74,9 @@ public class LinkedList {
         }
     }
 
-    /**
-     * Delete the index-th node in the linked list, if the index is valid.
-     */
     public void deleteAtIndex(int index) {
-        if (head == null || index < 0 || index >= length) {
-            return;
+        if (head == null) {
+            throw new IndexOutOfBoundsException();
         }
 
         if (index == 0) {
@@ -109,6 +92,14 @@ public class LinkedList {
             previous.next = current.next;
         }
 
+        decrementLength();
+    }
+
+    private void incrementLength() {
+        length += 1;
+    }
+
+    private void decrementLength() {
         length -= 1;
     }
 }

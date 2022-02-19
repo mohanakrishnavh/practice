@@ -46,11 +46,11 @@ public class OddEvenLinkedList {
 
     public static void main(String[] args) {
         LinkedList list = new LinkedList();
-        list.addAtTail(1);
-        list.addAtTail(2);
-        list.addAtTail(3);
-        list.addAtTail(4);
-        list.addAtTail(5);
+        list.addLast(1);
+        list.addLast(2);
+        list.addLast(3);
+        list.addLast(4);
+        list.addLast(5);
 
         ListNode head = list.getHead();
 
