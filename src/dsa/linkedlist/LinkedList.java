@@ -11,88 +11,146 @@ public class LinkedList {
         length = 0;
     }
 
-    public ListNode getHead() {
-        return this.head;
-    }
-
     public int get(int index) {
         if (head == null) {
             throw new IndexOutOfBoundsException();
         }
 
-        ListNode current = head;
+        ListNode currentNode = head;
         for (int i = 0; i < index; i++) {
-            current = current.next;
+            currentNode = currentNode.next;
         }
 
-        return current.value;
+        return currentNode.value;
     }
 
     public void addFirst(int value) {
-        ListNode node = new ListNode(value);
-        node.next = head;
-        head = node;
+        ListNode listNode = new ListNode(value);
+        listNode.next = head;
+        head = listNode;
         incrementLength();
     }
 
-    public void addLast(int val) {
+    public void addLast(int value) {
         if (head == null) {
-            addFirst(val);
+            addFirst(value);
             return;
         }
 
-        ListNode current = head;
-        for (int i = 0; i < length - 1; i++) {
-            current = current.next;
+        ListNode currentNode = head;
+        while (currentNode.next != null) {
+            currentNode = currentNode.next;
         }
-
-        current.next = new ListNode(val);
+        currentNode.next = new ListNode(value);
         incrementLength();
     }
 
-    public void addAtIndex(int index, int val) {
+    public void addAtIndex(int value, int index) {
         if (index < 0 || index > length) {
             throw new IndexOutOfBoundsException();
         }
 
         if (index == 0) {
-            addFirst(val);
-        } else if (index == length) {
-            addLast(val);
+            addFirst(value);
         } else {
-            ListNode current = head;
-            ListNode previous = null;
-            for (int i = 0; i < index; i++) {
-                previous = current;
-                current = current.next;
+            ListNode previousNode = head;
+            for (int i = 0; i < index-1; i++) {
+                previousNode = previousNode.next;
             }
+            ListNode currentNode = previousNode.next;
 
-            ListNode newListNode = new ListNode(val);
-            previous.next = newListNode;
-            newListNode.next = current;
-            length += 1;
+            ListNode listNode = getNewListNode(value);
+            previousNode.next = listNode;
+            listNode.next = currentNode;
+            incrementLength();
         }
     }
 
-    public void deleteAtIndex(int index) {
-        if (head == null) {
+    public void remove(int index) {
+        if (index < 0 || index > length) {
             throw new IndexOutOfBoundsException();
         }
 
         if (index == 0) {
             head = head.next;
         } else {
-            ListNode current = head.next;
-            ListNode previous = head;
-            for (int i = 1; i < index; i++) {
-                previous = current;
-                current = current.next;
+            ListNode previousNode = head;
+            for (int i = 0; i < index-1; i++) {
+                previousNode = previousNode.next;
             }
-
-            previous.next = current.next;
+            ListNode currentNode = previousNode.next;
+            previousNode.next = currentNode.next;
         }
 
         decrementLength();
+    }
+
+    public void reverse() {
+        ListNode currentNode, previousNode, nextNode;
+        currentNode = head;
+        previousNode = null;
+
+        while (currentNode != null) {
+            nextNode = currentNode.next;
+            currentNode.next = previousNode;
+            previousNode = currentNode;
+            currentNode = nextNode;
+        }
+
+        head = previousNode;
+    }
+
+    public void print() {
+        ListNode currentNode = head;
+        while (currentNode != null) {
+            System.out.print(currentNode.value + " ");
+            currentNode = currentNode.next;
+        }
+        System.out.println();
+    }
+
+    public static void print(ListNode listNode) {
+        if (listNode == null) {
+            System.out.print("\n");
+            return;
+        }
+
+        System.out.print(listNode.value + " ");
+        print(listNode.next);
+    }
+
+    public static void print(ListNode listNode, boolean reverse) {
+        if (listNode == null) {
+            System.out.print("\n");
+            return;
+        }
+
+        print(listNode.next, reverse);
+        System.out.print(listNode.value + " ");
+    }
+
+    public static ListNode reverse(ListNode head) {
+        return reverseHelper(head);
+    }
+
+    public static ListNode reverseHelper(ListNode listNode) {
+        if (listNode == null || listNode.next == null) {
+            return listNode;
+        }
+
+        ListNode head = reverseHelper(listNode.next);
+        ListNode nextNode = listNode.next;
+        nextNode.next = listNode;
+        listNode.next = null;
+        return head;
+    }
+
+    public ListNode getHead() {
+        return this.head;
+    }
+
+    private ListNode getNewListNode(int value) {
+        return new ListNode(value);
     }
 
     private void incrementLength() {
