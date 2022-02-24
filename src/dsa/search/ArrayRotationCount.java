@@ -15,7 +15,7 @@ public class ArrayRotationCount {
             int next = (mid + 1) % N;
             int prev = (mid + N - 1) % N;
 
-            if (arr[mid] >= arr[next] && arr[mid] >= arr[prev]) {
+            if (arr[mid] <= arr[next] && arr[mid] <= arr[prev]) {
                 return mid;
             }
 

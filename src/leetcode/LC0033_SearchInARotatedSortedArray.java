@@ -1,7 +1,7 @@
-package dsa.search;
+package leetcode;
 
-public class RotatedArraySearch {
-    public static int search(int[] nums, int target) {
+public class LC0033_SearchInARotatedSortedArray {
+    public int search(int[] nums, int target) {
         int start = 0;
         int end = nums.length - 1;
 
@@ -28,9 +28,5 @@ public class RotatedArraySearch {
         }
 
         return -1;
-    }
-
-    public static void main(String[] args) {
-        System.out.println(search(new int[] {4,5,6,7,0,1,2}, 0));
     }
 }
