@@ -1,13 +1,13 @@
 package dsa.search;
 
 public class ArrayRotationCount {
-    private static int findMin(int[] arr) {
-        int N = arr.length;
+    private static int findMin(int[] nums) {
+        int N = nums.length;
         int start = 0;
         int end = N - 1;
 
         while (start <= end) {
-            if (arr[start] <= arr[end]) {
+            if (nums[start] <= nums[end]) {
                 return start;
             }
 
@@ -15,13 +15,13 @@ public class ArrayRotationCount {
             int next = (mid + 1) % N;
             int prev = (mid + N - 1) % N;
 
-            if (arr[mid] <= arr[next] && arr[mid] <= arr[prev]) {
+            if (nums[mid] <= nums[next] && nums[mid] <= nums[prev]) {
                 return mid;
             }
 
-            if (arr[start] <= arr[mid]) {
+            if (nums[start] <= nums[mid]) {
                 start = mid + 1;
-            } else if (arr[mid] <= arr[end]) {
+            } else if (nums[mid] <= nums[end]) {
                 end = mid - 1;
             }
         }

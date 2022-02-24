@@ -1,18 +1,18 @@
 package dsa.search;
 
 public class FirstOccurrenceOfAnElement {
-    public static int getFirstOccurrence(int[] arr, int x) {
+    public static int getFirstOccurrence(int[] nums, int x) {
         int index = -1;
         int start = 0;
-        int end = arr.length - 1;
+        int end = nums.length - 1;
 
         while (start <= end) {
             int mid = start + (end - start) / 2;
 
-            if (x == arr[mid]) {
+            if (x == nums[mid]) {
                 index = mid;
                 end = mid - 1;
-            } else if (x < arr[mid]) {
+            } else if (x < nums[mid]) {
                 end = mid - 1;
             } else {
                 start = mid + 1;

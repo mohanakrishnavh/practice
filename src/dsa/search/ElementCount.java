@@ -1,18 +1,18 @@
 package dsa.search;
 
 public class ElementCount {
-    public static int getFirstOccurrence(int[] arr, int x) {
+    public static int getFirstOccurrence(int[] nums, int x) {
         int index = -1;
         int start = 0;
-        int end = arr.length - 1;
+        int end = nums.length - 1;
 
         while (start <= end) {
             int mid = start + (end - start) / 2;
 
-            if (x == arr[mid]) {
+            if (x == nums[mid]) {
                 index = mid;
                 end = mid - 1;
-            } else if (x < arr[mid]) {
+            } else if (x < nums[mid]) {
                 end = mid - 1;
             } else {
                 start = mid + 1;
@@ -22,18 +22,18 @@ public class ElementCount {
         return index;
     }
 
-    public static int getLastOccurrence(int[] arr, int x) {
+    public static int getLastOccurrence(int[] nums, int x) {
         int maxIndex = -1;
         int start = 0;
-        int end = arr.length - 1;
+        int end = nums.length - 1;
 
         while (start <= end) {
             int mid = start + (end - start) / 2;
 
-            if (x == arr[mid]) {
+            if (x == nums[mid]) {
                 maxIndex = mid;
                 start = mid + 1;
-            } else if (x < arr[mid]) {
+            } else if (x < nums[mid]) {
                 end = mid - 1;
             } else {
                 start = mid + 1;
@@ -43,9 +43,9 @@ public class ElementCount {
         return maxIndex;
     }
 
-    public static int elementCount(int[] arr, int x) {
-        int minIndex = getFirstOccurrence(arr, x);
-        int maxIndex = getLastOccurrence(arr, x);
+    public static int elementCount(int[] nums, int x) {
+        int minIndex = getFirstOccurrence(nums, x);
+        int maxIndex = getLastOccurrence(nums, x);
 
         if (minIndex == -1 && maxIndex == -1) {
             return 0;
