@@ -23,7 +23,7 @@ public class ReverseBinarySearch {
     }
 
     public static void main(String[] args) {
-        System.out.println(ReverseBinarySearch.search(new int[]{20, 17, 15, 14, 13, 12, 10, 9, 8, 4}, 9));
-        System.out.println(ReverseBinarySearch.search(new int[]{20, 17, 15, 14, 13, 12, 10, 9, 8, 4}, 25));
+        System.out.println(search(new int[]{20, 17, 15, 14, 13, 12, 10, 9, 8, 4}, 9));
+        System.out.println(search(new int[]{20, 17, 15, 14, 13, 12, 10, 9, 8, 4}, 25));
     }
 }

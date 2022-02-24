@@ -19,10 +19,10 @@ public class OrderAgnosticSearch {
     }
 
     public static void main(String[] args) {
-        System.out.println(OrderAgnosticSearch.search(new int[]{1, 3, 5, 10, 12, 13}, 12));
-        System.out.println(OrderAgnosticSearch.search(new int[]{1, 3, 5, 10, 12, 13}, 100));
-        System.out.println(OrderAgnosticSearch.search(new int[]{100, 30, 5, 4, 3, 1}, 100));
-        System.out.println(OrderAgnosticSearch.search(new int[]{100, 30, 5, 4, 3, 1}, -1));
+        System.out.println(search(new int[]{1, 3, 5, 10, 12, 13}, 12));
+        System.out.println(search(new int[]{1, 3, 5, 10, 12, 13}, 100));
+        System.out.println(search(new int[]{100, 30, 5, 4, 3, 1}, 100));
+        System.out.println(search(new int[]{100, 30, 5, 4, 3, 1}, -1));
         System.out.println(OrderAgnosticSearch.search(new int[]{1, 1, 1, 1, 1}, 1));
         System.out.println(OrderAgnosticSearch.search(new int[]{1, 1, 1, 1, 1}, -1));
     }
