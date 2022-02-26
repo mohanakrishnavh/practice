@@ -100,6 +100,12 @@ public class LinkedList {
         head = previousNode;
     }
 
+    public void addAll(int[] nums) {
+        for (int i=nums.length-1; i >=0; i--) {
+            addFirst(nums[i]);
+        }
+    }
+
     public void print() {
         ListNode currentNode = head;
         while (currentNode != null) {
