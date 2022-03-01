@@ -1,13 +1,13 @@
-package leetcode;
+package dsa.stack;
 
 import java.util.Stack;
 
-public class ValidParentheses {
-    private boolean isPair(char open, char close) {
+public class CheckForBalancedParentheses {
+    private static boolean isPair(char open, char close) {
         return open == '(' && close == ')' || open == '{' && close == '}' || open == '[' && close == ']';
     }
 
-    public boolean isValid(String s) {
+    private static boolean isValid(String s) {
         Stack<Character> stack = new Stack<>();
         for (int i = 0; i < s.length(); i++) {
             char ch = s.charAt(i);
@@ -25,5 +25,13 @@ public class ValidParentheses {
         }
 
         return stack.isEmpty();
+    }
+
+    public static void main(String[] args) {
+        System.out.println(isValid("(A+B)"));
+        System.out.println(isValid("{(A+B)+(C+D)}"));
+        System.out.println(isValid("{(x+y)*(z)"));
+        System.out.println(isValid("[2+3]+(A)]"));
+        System.out.println(isValid("{a+z)"));
     }
 }

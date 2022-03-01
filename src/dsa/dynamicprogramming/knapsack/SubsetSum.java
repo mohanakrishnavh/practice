@@ -1,4 +1,4 @@
-package dsa.dynamicprogramming;
+package dsa.dynamicprogramming.knapsack;
 
 public class SubsetSum {
     public static boolean hasSubsetSum(int[] arr, int sum) {

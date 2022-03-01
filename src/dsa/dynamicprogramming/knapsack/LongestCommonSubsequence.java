@@ -1,4 +1,4 @@
-package dsa.dynamicprogramming;
+package dsa.dynamicprogramming.knapsack;
 
 public class LongestCommonSubsequence {
     public static int length(String text1, String text2) {

@@ -1,4 +1,4 @@
-package dsa.dynamicprogramming;
+package dsa.dynamicprogramming.knapsack;
 
 public class CountOfSubsetSum {
     public static int subsetSumCount(int[] arr, int sum) {
