@@ -7,7 +7,7 @@ public class EvaluatePrefixExpression {
         int result;
         Stack<Integer> stack = new Stack<>();
 
-        for (int i = tokens.length-1; i>=0; i--) {
+        for (int i = tokens.length - 1; i >= 0; i--) {
             if (isOperator(tokens[i])) {
                 int firstOperand = stack.pop();
                 int secondOperand = stack.pop();
@@ -21,7 +21,7 @@ public class EvaluatePrefixExpression {
         return stack.peek();
     }
 
-    private static  boolean isOperator(String token) {
+    private static boolean isOperator(String token) {
         return token.equals("+") || token.equals("-") || token.equals("*") || token.equals("/");
     }
 
@@ -36,6 +36,6 @@ public class EvaluatePrefixExpression {
     }
 
     public static void main(String[] args) {
-        System.out.println(evaluatePolishNotation(new String[]{"-","+","*","2","3", "*","5","4", "9"}));
+        System.out.println(evaluatePolishNotation(new String[]{"-", "+", "*", "2", "3", "*", "5", "4", "9"}));
     }
 }

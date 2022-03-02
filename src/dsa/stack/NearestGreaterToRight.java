@@ -9,18 +9,15 @@ public class NearestGreaterToRight {
         Stack<Integer> stack = new Stack<>();
 
         for (int i = nums.length - 1; i >= 0; i--) {
-            if (stack.isEmpty()) {
-                ngr[i] = -1;
-            } else if (stack.peek() > nums[i]) {
-                ngr[i] = stack.peek();
-            } else {
+            if (!stack.isEmpty() && stack.peek() <= nums[i]) {
                 while (!stack.isEmpty() && stack.peek() <= nums[i]) {
                     stack.pop();
                 }
-
-                ngr[i] = stack.isEmpty() ? -1 : stack.peek();
             }
 
+            // Stack is empty when we don't have a greater element
+            // If there exists a larger element, it will be available at the peek
+            ngr[i] = stack.isEmpty() ? -1 : stack.peek();
             stack.push(nums[i]);
         }
 

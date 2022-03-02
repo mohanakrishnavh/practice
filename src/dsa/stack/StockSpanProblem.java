@@ -8,7 +8,7 @@ public class StockSpanProblem {
         int[] stockSpan = new int[nums.length];
         Stack<Integer> stack = new Stack<>();
 
-        for (int i=0; i<nums.length; i++) {
+        for (int i = 0; i < nums.length; i++) {
             if (stack.isEmpty() || stack.peek() > nums[i]) {
                 stockSpan[i] = 1;
             } else {
@@ -16,7 +16,7 @@ public class StockSpanProblem {
                     stack.pop();
                 }
 
-                stockSpan[i] = stack.isEmpty() ? 1 : i-stack.peek();
+                stockSpan[i] = stack.isEmpty() ? 1 : i - stack.peek();
             }
 
             stack.push(i);

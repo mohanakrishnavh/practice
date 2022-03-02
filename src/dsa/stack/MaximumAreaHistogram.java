@@ -8,7 +8,7 @@ public class MaximumAreaHistogram {
         int[] nearestSmallerToRight = getNearestSmallerToRight(nums);
         int[] nearestSmallerToLeft = getNearestSmallerToLeft(nums);
 
-        for (int i=0; i < nums.length; i++) {
+        for (int i = 0; i < nums.length; i++) {
             int width = nearestSmallerToRight[i] - nearestSmallerToLeft[i] - 1;
             int area = width * nums[i];
             if (area > maximumArea) {
@@ -24,7 +24,7 @@ public class MaximumAreaHistogram {
         Stack<Integer> stack = new Stack<>();
         int pseudoIndex = nums.length;
 
-        for (int i=nums.length-1; i >= 0; i--) {
+        for (int i = nums.length - 1; i >= 0; i--) {
             if (stack.isEmpty()) {
                 nearestSmallerToRight[i] = pseudoIndex;
             } else if (nums[stack.peek()] < nums[i]) {
@@ -48,7 +48,7 @@ public class MaximumAreaHistogram {
         Stack<Integer> stack = new Stack<>();
         int pseudoIndex = -1;
 
-        for (int i=0; i < nums.length; i++) {
+        for (int i = 0; i < nums.length; i++) {
             if (stack.isEmpty()) {
                 nearestSmallerToLeft[i] = pseudoIndex;
             } else if (nums[stack.peek()] < nums[i]) {
