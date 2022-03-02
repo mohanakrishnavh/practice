@@ -40,7 +40,7 @@ public class NearestGreaterToRight {
             }
 
             // Stack is empty when we don't have a greater element
-            // If there exists a larger element, it will be available at the peek
+            // If there exists a larger element it will be available at the peek
             ngr[i] = stack.isEmpty() ? -1 : stack.peek();
             stack.push(nums[i]);
         }
