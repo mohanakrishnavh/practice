@@ -33,10 +33,8 @@ public class NearestSmallerToLeft {
         Stack<Integer> stack = new Stack<>();
 
         for (int i = 0; i < nums.length; i++) {
-            if (!stack.isEmpty() && stack.peek() >= nums[i]) {
-                while (!stack.isEmpty() && stack.peek() >= nums[i]) {
-                    stack.pop();
-                }
+            while (!stack.isEmpty() && stack.peek() >= nums[i]) {
+                stack.pop();
             }
 
             // Stack is empty when we don't have a smaller element

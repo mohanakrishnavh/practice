@@ -33,10 +33,8 @@ public class NearestSmallerToRight {
         Stack<Integer> stack = new Stack<>();
 
         for (int i = nums.length - 1; i >= 0; i--) {
-            if (!stack.isEmpty() && stack.peek() >= nums[i]) {
-                while (!stack.isEmpty() && stack.peek() >= nums[i]) {
-                    stack.pop();
-                }
+            while (!stack.isEmpty() && stack.peek() >= nums[i]) {
+                stack.pop();
             }
 
             nsr[i] = stack.isEmpty() ? -1 : stack.peek();

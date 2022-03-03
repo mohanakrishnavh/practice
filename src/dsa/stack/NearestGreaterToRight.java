@@ -33,10 +33,8 @@ public class NearestGreaterToRight {
         Stack<Integer> stack = new Stack<>();
 
         for (int i = nums.length - 1; i >= 0; i--) {
-            if (!stack.isEmpty() && stack.peek() <= nums[i]) {
-                while (!stack.isEmpty() && stack.peek() <= nums[i]) {
-                    stack.pop();
-                }
+            while (!stack.isEmpty() && stack.peek() <= nums[i]) {
+                stack.pop();
             }
 
             // Stack is empty when we don't have a greater element
