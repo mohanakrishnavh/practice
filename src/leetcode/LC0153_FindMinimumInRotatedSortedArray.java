@@ -3,7 +3,7 @@ package leetcode;
 public class LC0153_FindMinimumInRotatedSortedArray {
     public int findMin(int[] A) {
         int start = 0;
-        int end = A.length-1;
+        int end = A.length - 1;
         int N = A.length;
 
         while (start <= end) {

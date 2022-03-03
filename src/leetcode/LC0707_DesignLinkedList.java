@@ -11,31 +11,40 @@ package leetcode;
  */
 
 public class LC0707_DesignLinkedList {
-    class ListNode {
-        int val;
-        ListNode next;
-
-        public ListNode(int val) {
-            this.val = val;
-            this.next = null;
-        }
-    }
-
     int length;
     ListNode head;
-
     public LC0707_DesignLinkedList() {
         head = null;
         length = 0;
     }
 
+    /**
+     * ["MyLinkedList","addAtHead","addAtHead","addAtHead","addAtIndex","deleteAtIndex","addAtHead","addAtTail","get","addAtHead","addAtIndex","addAtHead"]
+     * [[],[7],[2],[1],[3,0],[2],[6],[4],[4],[4],[5,0],[6]]
+     */
+    public static void main(String[] args) {
+        LC0707_DesignLinkedList list1 = new LC0707_DesignLinkedList();
+        list1.addAtHead(7);
+        list1.addAtHead(2);
+        list1.addAtHead(1);
+        list1.addAtIndex(3, 0);
+        list1.deleteAtIndex(2);
+        list1.addAtHead(6);
+        list1.addAtTail(4);
+        System.out.println(list1.get(4));
+        list1.addAtHead(4);
+        list1.addAtIndex(5, 0);
+        list1.addAtHead(6);
+        list1.print();
+    }
+
     public int get(int index) {
-        if (index < 0 || index > length-1) {
+        if (index < 0 || index > length - 1) {
             return -1;
         }
 
         ListNode current = head;
-        for (int i=0; i<index; i++) {
+        for (int i = 0; i < index; i++) {
             current = current.next;
         }
 
@@ -112,7 +121,7 @@ public class LC0707_DesignLinkedList {
         ListNode node = new ListNode(val);
         ListNode current = head;
         ListNode previous = null;
-        for (int i=0; i<index; i++) {
+        for (int i = 0; i < index; i++) {
             previous = current;
             current = current.next;
         }
@@ -131,14 +140,14 @@ public class LC0707_DesignLinkedList {
             return;
         }
 
-        if (index == length-1) {
+        if (index == length - 1) {
             deleteAtTail();
             return;
         }
 
         ListNode current = head;
         ListNode previous = null;
-        for (int i=0; i<index; i++) {
+        for (int i = 0; i < index; i++) {
             previous = current;
             current = current.next;
         }
@@ -154,23 +163,13 @@ public class LC0707_DesignLinkedList {
         }
     }
 
-    /**
-     * ["MyLinkedList","addAtHead","addAtHead","addAtHead","addAtIndex","deleteAtIndex","addAtHead","addAtTail","get","addAtHead","addAtIndex","addAtHead"]
-     * [[],[7],[2],[1],[3,0],[2],[6],[4],[4],[4],[5,0],[6]]
-     */
-    public static void main(String[] args) {
-        LC0707_DesignLinkedList list1 = new LC0707_DesignLinkedList();
-        list1.addAtHead(7);
-        list1.addAtHead(2);
-        list1.addAtHead(1);
-        list1.addAtIndex(3, 0);
-        list1.deleteAtIndex(2);
-        list1.addAtHead(6);
-        list1.addAtTail(4);
-        System.out.println(list1.get(4));
-        list1.addAtHead(4);
-        list1.addAtIndex(5,0);
-        list1.addAtHead(6);
-        list1.print();
+    class ListNode {
+        int val;
+        ListNode next;
+
+        public ListNode(int val) {
+            this.val = val;
+            this.next = null;
+        }
     }
 }

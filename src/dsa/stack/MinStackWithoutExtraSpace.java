@@ -3,21 +3,28 @@ package dsa.stack;
 import java.util.EmptyStackException;
 import java.util.Stack;
 
-public class MinStack {
+public class MinStackWithoutExtraSpace {
 
-    private final Stack<Integer> stack;
-    private final Stack<Integer> minimumTracker;
+    private Stack<Integer> stack;
+    private int minimumElement;
 
-    public MinStack() {
+    public MinStackWithoutExtraSpace() {
         stack = new Stack<>();
-        minimumTracker = new Stack<>();
+        minimumElement = -1;
     }
 
     public void push(int x) {
-        stack.push(x);
+        if (stack.isEmpty()) {
+            stack.push(x);
+            minimumElement = x;
+            return;
+        }
 
-        if (minimumTracker.isEmpty() || x <= minimumTracker.peek()) {
-            minimumTracker.push(x);
+        if (x >= minimumElement) {
+            stack.push(x);
+        } else {
+            stack.push(2 * x - minimumElement);
+            minimumElement = x;
         }
     }
 
@@ -26,8 +33,8 @@ public class MinStack {
             throw new EmptyStackException();
         }
 
-        if (stack.peek().equals(minimumTracker.peek())) {
-            minimumTracker.pop();
+        if (stack.peek() < minimumElement) {
+            minimumElement = 2 * minimumElement - stack.peek();
         }
 
         stack.pop();
@@ -38,7 +45,11 @@ public class MinStack {
             throw new EmptyStackException();
         }
 
-        return stack.peek();
+        if (stack.peek() >= minimumElement) {
+            return stack.peek();
+        }
+
+        return minimumElement;
     }
 
     public int getMin() {
@@ -46,11 +57,12 @@ public class MinStack {
             throw new EmptyStackException();
         }
 
-        return minimumTracker.peek();
+        return minimumElement;
     }
 
+
     public static void main(String[] args) {
-        MinStack minStack = new MinStack();
+        MinStackWithoutExtraSpace minStack = new MinStackWithoutExtraSpace();
         minStack.push(512);
         minStack.push(-1024);
         minStack.push(-1024);

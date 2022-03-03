@@ -6,6 +6,7 @@ import java.util.Map;
 public class MapSum {
     private final PrefixValueNode root;
     private final Map<String, Integer> valueMap;
+
     public MapSum() {
         root = new PrefixValueNode();
         valueMap = new HashMap<>();

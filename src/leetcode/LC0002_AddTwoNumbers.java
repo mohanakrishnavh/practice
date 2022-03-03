@@ -12,7 +12,7 @@ public class LC0002_AddTwoNumbers {
             int number2 = l2 != null ? l2.value : 0;
             int sum = number1 + number2 + carry;
             int val = sum % 10;
-            carry = sum/10;
+            carry = sum / 10;
 
             previous.next = new ListNode(val);
             previous = previous.next;

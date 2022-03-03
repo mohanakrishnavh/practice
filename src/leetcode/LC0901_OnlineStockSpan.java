@@ -12,7 +12,7 @@ class LC0901_OnlineStockSpan {
     }
 
     public int next(int price) {
-        while(!stack.isEmpty() && stack.peek()[1] <= price) {
+        while (!stack.isEmpty() && stack.peek()[1] <= price) {
             stack.pop();
         }
 

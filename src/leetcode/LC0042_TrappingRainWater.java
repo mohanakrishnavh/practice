@@ -1,6 +1,7 @@
-package dsa.stack;
+package leetcode;
 
-public class TrappingRainWater {
+public class LC0042_TrappingRainWater {
+
     public static int trap(int[] height) {
         if (height.length <= 1) {
             return 0;
@@ -17,7 +18,6 @@ public class TrappingRainWater {
             trappedWater += Math.min(maxToLeft, maxToRight[i]) - height[i];
         }
 
-
         return trappedWater;
     }
 
@@ -33,6 +33,7 @@ public class TrappingRainWater {
     }
 
     public static void main(String[] args) {
-        System.out.println(TrappingRainWater.trap(new int[]{0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1}));
+        System.out.println(dsa.stack.TrappingRainWater.trap(new int[]{0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1}));
     }
+
 }

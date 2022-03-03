@@ -1,16 +1,21 @@
-package dsa.stack;
+package leetcode;
 
-import java.util.Arrays;
 import java.util.Stack;
 
-public class MaximumAreaRectangleInBinaryMatrix {
-    public static int getMaximumAreaRectangleInBinaryMatrix(int[][] matrix) {
-        int[] histogram = Arrays.copyOf(matrix[0], matrix[0].length);
+public class LC0085_MaximalRectangle {
+
+    public int maximalRectangle(char[][] matrix) {
+        int[] histogram = new int[matrix[0].length];
+
+        for (int j = 0; j < matrix[0].length; j++) {
+            histogram[j] = Character.getNumericValue(matrix[0][j]);
+        }
+
         int maximumArea = getMaximumArea(histogram);
 
         for (int i = 1; i < matrix.length; i++) {
             for (int j = 0; j < matrix[0].length; j++) {
-                histogram[j] = matrix[i][j] == 0 ? 0 : histogram[j] + matrix[i][j];
+                histogram[j] = matrix[i][j] == '0' ? 0 : histogram[j] + Character.getNumericValue(matrix[i][j]);
             }
 
             maximumArea = Math.max(maximumArea, getMaximumArea(histogram));
@@ -19,7 +24,7 @@ public class MaximumAreaRectangleInBinaryMatrix {
         return maximumArea;
     }
 
-    private static int getMaximumArea(int[] nums) {
+    private int getMaximumArea(int[] nums) {
         int maximumArea = 0;
         int[] nearestSmallerToRight = getNearestSmallerToRight(nums);
         int[] nearestSmallerToLeft = getNearestSmallerToLeft(nums);
@@ -35,7 +40,7 @@ public class MaximumAreaRectangleInBinaryMatrix {
         return maximumArea;
     }
 
-    private static int[] getNearestSmallerToRight(int[] nums) {
+    private int[] getNearestSmallerToRight(int[] nums) {
         int[] nsr = new int[nums.length];
         Stack<Integer> stack = new Stack<>();
 
@@ -51,7 +56,7 @@ public class MaximumAreaRectangleInBinaryMatrix {
         return nsr;
     }
 
-    private static int[] getNearestSmallerToLeft(int[] nums) {
+    private int[] getNearestSmallerToLeft(int[] nums) {
         int[] nsl = new int[nums.length];
         Stack<Integer> stack = new Stack<>();
 
@@ -65,10 +70,5 @@ public class MaximumAreaRectangleInBinaryMatrix {
         }
 
         return nsl;
-    }
-
-    public static void main(String[] args) {
-        int[][] matrix = new int[][]{{0, 1, 1, 0}, {1, 1, 1, 1}, {1, 1, 1, 1}, {1, 1, 0, 0}};
-        System.out.println(getMaximumAreaRectangleInBinaryMatrix(matrix));
     }
 }

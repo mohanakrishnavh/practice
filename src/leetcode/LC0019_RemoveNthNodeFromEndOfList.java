@@ -12,7 +12,7 @@ public class LC0019_RemoveNthNodeFromEndOfList {
         sentinel.next = head;
         ListNode slow = sentinel;
         ListNode fast = head;
-        for (int i=0; i<n; i++) {
+        for (int i = 0; i < n; i++) {
             fast = fast.next;
         }
 

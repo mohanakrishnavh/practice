@@ -20,51 +20,35 @@ public class MaximumAreaHistogram {
     }
 
     private static int[] getNearestSmallerToRight(int[] nums) {
-        int[] nearestSmallerToRight = new int[nums.length];
+        int[] nsr = new int[nums.length];
         Stack<Integer> stack = new Stack<>();
-        int pseudoIndex = nums.length;
 
         for (int i = nums.length - 1; i >= 0; i--) {
-            if (stack.isEmpty()) {
-                nearestSmallerToRight[i] = pseudoIndex;
-            } else if (nums[stack.peek()] < nums[i]) {
-                nearestSmallerToRight[i] = stack.peek();
-            } else {
-                while (!stack.isEmpty() && nums[stack.peek()] >= nums[i]) {
-                    stack.pop();
-                }
-
-                nearestSmallerToRight[i] = stack.isEmpty() ? pseudoIndex : stack.peek();
+            while (!stack.isEmpty() && nums[stack.peek()] >= nums[i]) {
+                stack.pop();
             }
 
+            nsr[i] = stack.isEmpty() ? nums.length : stack.peek();
             stack.push(i);
         }
 
-        return nearestSmallerToRight;
+        return nsr;
     }
 
     private static int[] getNearestSmallerToLeft(int[] nums) {
-        int[] nearestSmallerToLeft = new int[nums.length];
+        int[] nsl = new int[nums.length];
         Stack<Integer> stack = new Stack<>();
-        int pseudoIndex = -1;
 
         for (int i = 0; i < nums.length; i++) {
-            if (stack.isEmpty()) {
-                nearestSmallerToLeft[i] = pseudoIndex;
-            } else if (nums[stack.peek()] < nums[i]) {
-                nearestSmallerToLeft[i] = stack.peek();
-            } else {
-                while (!stack.isEmpty() && nums[stack.peek()] >= nums[i]) {
-                    stack.pop();
-                }
-
-                nearestSmallerToLeft[i] = stack.isEmpty() ? pseudoIndex : stack.peek();
+            while (!stack.isEmpty() && nums[stack.peek()] >= nums[i]) {
+                stack.pop();
             }
 
+            nsl[i] = stack.isEmpty() ? -1 : stack.peek();
             stack.push(i);
         }
 
-        return nearestSmallerToLeft;
+        return nsl;
     }
 
     public static void main(String[] args) {

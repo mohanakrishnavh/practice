@@ -26,7 +26,7 @@ public class LC0150_EvaluateReversePolishNotation {
     }
 
     private int evaluate(String operator, int firstOperand, int secondOperand) {
-        switch(operator) {
+        switch (operator) {
             case "+":
                 return firstOperand + secondOperand;
             case "-":
