@@ -24,6 +24,6 @@ public class ClosestNumbers {
     }
 
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(ClosestNumbers.getKClosest(new int[]{5, 6, 6, 7, 8, 9}, 4, 7)));
+        System.out.println(Arrays.toString(getKClosest(new int[]{5, 6, 6, 7, 8, 9}, 4, 7)));
     }
 }

@@ -32,6 +32,6 @@ public class TopKFrequentNumbers {
     }
 
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(TopKFrequentNumbers.getTopKFrequentNumbers(new int[]{1, 1, 1, 3, 2, 2, 4}, 2)));
+        System.out.println(Arrays.toString(getTopKFrequentNumbers(new int[]{1, 1, 1, 3, 2, 2, 4}, 2)));
     }
 }

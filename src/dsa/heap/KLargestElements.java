@@ -25,7 +25,7 @@ public class KLargestElements {
         int index = 0;
         int[] kLargestElements = new int[k];
         while (!priorityQueue.isEmpty()) {
-           kLargestElements[index++] = priorityQueue.poll();
+            kLargestElements[index++] = priorityQueue.poll();
         }
 
         return kLargestElements;

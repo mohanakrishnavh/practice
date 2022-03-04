@@ -38,7 +38,7 @@ public class KSortedArray {
         PriorityQueue<Integer> priorityQueue = new PriorityQueue<>(Collections.reverseOrder());
 
         int index = 0;
-        for (int i= nums.length-1; i>=0; i--) {
+        for (int i = nums.length - 1; i >= 0; i--) {
             priorityQueue.add(nums[i]);
 
             if (priorityQueue.size() > k) {

@@ -3,6 +3,11 @@ package dsa.heap;
 import java.util.PriorityQueue;
 
 public class ConnectRopes {
+    public static void main(String[] args) {
+        ConnectRopes obj = new ConnectRopes();
+        System.out.println(obj.getMinimumCost(new int[]{1, 2, 3, 4, 5}));
+    }
+
     private int getMinimumCost(int[] arr) {
         if (arr.length == 0) {
             return 0;
@@ -22,10 +27,5 @@ public class ConnectRopes {
         }
 
         return cost;
-    }
-
-    public static void main(String[] args) {
-        ConnectRopes obj = new ConnectRopes();
-        System.out.println(obj.getMinimumCost(new int[]{1, 2, 3, 4, 5}));
     }
 }
