@@ -8,7 +8,7 @@ import java.util.Map;
 public class FindAllAnagramsInAString {
     public static List<Integer> findAnagrams(String s, String p) {
         Map<Character, Integer> countMap = new HashMap<>();
-        for (int i=0; i < p.length(); i++) {
+        for (int i = 0; i < p.length(); i++) {
             char character = p.charAt(i);
             countMap.put(character, countMap.getOrDefault(character, 0) + 1);
         }

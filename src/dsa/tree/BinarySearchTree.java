@@ -3,12 +3,10 @@ package dsa.tree;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class BinarySearchTree {
-
-    TreeNode root;
+public class BinarySearchTree extends BinaryTree {
 
     public BinarySearchTree() {
-        this.root = null;
+        super();
     }
 
     public void insert(int value) {
