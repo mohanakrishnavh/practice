@@ -86,6 +86,52 @@ public class BinaryTree extends Tree {
         return visited;
     }
 
+    public static List<Integer> postorderTraversal(TreeNode root) {
+        List<Integer> visited = new ArrayList<>();
+        if (root == null) {
+            return visited;
+        }
+
+        Stack<TreeNode> s1 = new Stack<>();
+        Stack<TreeNode> s2 = new Stack<>();
+        s1.push(root);
+
+        while (!s1.empty()) {
+            TreeNode treeNode = s1.pop();
+            s2.push(treeNode);
+
+            if (treeNode.left != null) {
+                s1.push(treeNode.left);
+            }
+
+            if (treeNode.right != null) {
+                s1.push(treeNode.right);
+            }
+        }
+
+        while (!s2.isEmpty()) {
+            visited.add(s2.pop().value);
+        }
+
+        return visited;
+    }
+
+    public static List<Integer> postorderTraversalRecursive(TreeNode root) {
+        return postorderTraversalRecursive(root, new ArrayList<>());
+    }
+
+    private static List<Integer> postorderTraversalRecursive(TreeNode root, List<Integer> visited) {
+        if (root == null) {
+            return visited;
+        }
+
+        postorderTraversalRecursive(root.left, visited);
+        postorderTraversalRecursive(root.right, visited);
+        visited.add(root.value);
+
+        return visited;
+    }
+
 
     public static List<List<Integer>> levelOrderTraversal(TreeNode root) {
         List<List<Integer>> visited = new ArrayList<>();
