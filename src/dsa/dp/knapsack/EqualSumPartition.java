@@ -1,4 +1,4 @@
-package dsa.dynamicprogramming.knapsack;
+package dsa.dp.knapsack;
 
 public class EqualSumPartition {
     public static boolean hasEqualSum(int[] arr) {

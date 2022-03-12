@@ -1,4 +1,4 @@
-package dsa.dynamicprogramming.knapsack;
+package dsa.dp.knapsack;
 
 import java.util.Arrays;
 
@@ -8,16 +8,16 @@ public class Knapsack {
             return 0;
         }
 
-        if (weights[n-1] <= W) {
-            return Math.max(values[n-1] + getMaxProfit(weights, values, n-1, W-weights[n-1]), getMaxProfit(weights, values, n-1, W));
+        if (weights[n - 1] <= W) {
+            return Math.max(values[n - 1] + getMaxProfit(weights, values, n - 1, W - weights[n - 1]), getMaxProfit(weights, values, n - 1, W));
         }
 
-        return getMaxProfit(weights, values, n-1, W);
+        return getMaxProfit(weights, values, n - 1, W);
     }
 
     private int getMaxProfitMemoized(int[] weights, int[] values, int n, int W) {
-        int[][] dp = new int[n+1][W+1];
-        for (int i=0; i <= n; i++) {
+        int[][] dp = new int[n + 1][W + 1];
+        for (int i = 0; i <= n; i++) {
             Arrays.fill(dp[i], -1);
         }
 
@@ -33,28 +33,10 @@ public class Knapsack {
             return dp[n][W];
         }
 
-        if (weights[n-1] <= W) {
-            dp[n][W] = Math.max(values[n-1] + getMaxProfitMemoizedUtil(weights, values, n-1, W - weights[n-1], dp), getMaxProfitMemoizedUtil(weights, values, n-1, W, dp));
+        if (weights[n - 1] <= W) {
+            dp[n][W] = Math.max(values[n - 1] + getMaxProfitMemoizedUtil(weights, values, n - 1, W - weights[n - 1], dp), getMaxProfitMemoizedUtil(weights, values, n - 1, W, dp));
         } else {
-            dp[n][W] = getMaxProfitMemoizedUtil(weights, values, n-1, W, dp);
-        }
-
-        return dp[n][W];
-    }
-
-    private int getMaxProfitTopDown(int[] weights, int[] values, int n, int W) {
-        // Step 1 : Initialization (No need to do this in Java - Default value is 0)
-        int[][] dp = new int[n+1][W+1];
-
-        // Step 2 : Recursion --> Iterative
-        for (int i=1; i<=n; i++) {
-            for (int j=1; j<=W; j++) {
-                if (weights[i-1] <= j) {
-                    dp[i][j] = Math.max(values[i-1] + dp[i-1][j - weights[i-1]], dp[i-1][j]);
-                } else {
-                    dp[i][j] = dp[i-1][j];
-                }
-            }
+            dp[n][W] = getMaxProfitMemoizedUtil(weights, values, n - 1, W, dp);
         }
 
         return dp[n][W];
@@ -84,6 +66,24 @@ public class Knapsack {
 
         return t[n][W];
     }*/
+
+    private int getMaxProfitTopDown(int[] weights, int[] values, int n, int W) {
+        // Step 1 : Initialization (No need to do this in Java - Default value is 0)
+        int[][] dp = new int[n + 1][W + 1];
+
+        // Step 2 : Recursion --> Iterative
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= W; j++) {
+                if (weights[i - 1] <= j) {
+                    dp[i][j] = Math.max(values[i - 1] + dp[i - 1][j - weights[i - 1]], dp[i - 1][j]);
+                } else {
+                    dp[i][j] = dp[i - 1][j];
+                }
+            }
+        }
+
+        return dp[n][W];
+    }
 
     public static void main(String[] args) {
         Knapsack knapsack = new Knapsack();
