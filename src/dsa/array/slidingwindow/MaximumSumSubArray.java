@@ -1,4 +1,4 @@
-package dsa.slidingwindow;
+package dsa.array.slidingwindow;
 
 public class MaximumSumSubArray {
     private static int getMaximumSumSubArray(int[] arr, int k) {

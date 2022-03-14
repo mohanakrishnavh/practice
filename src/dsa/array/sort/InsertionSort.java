@@ -1,4 +1,4 @@
-package dsa.sort;
+package dsa.array.sort;
 
 public class InsertionSort {
 }

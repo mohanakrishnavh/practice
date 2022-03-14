@@ -1,4 +1,4 @@
-package dsa.slidingwindow;
+package dsa.array.slidingwindow;
 
 import java.util.Deque;
 import java.util.LinkedList;

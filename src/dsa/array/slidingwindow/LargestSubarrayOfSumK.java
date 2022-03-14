@@ -1,4 +1,4 @@
-package dsa.slidingwindow;
+package dsa.array.slidingwindow;
 
 public class LargestSubarrayOfSumK {
 }
