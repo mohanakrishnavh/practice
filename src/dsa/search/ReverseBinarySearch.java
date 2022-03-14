@@ -1,18 +1,39 @@
 package dsa.search;
 
 public class ReverseBinarySearch {
-    public static int search(int[] arr, int x) {
+    public static int search(int[] nums, int target) {
         int start = 0;
-        int end = arr.length - 1;
+        int end = nums.length - 1;
 
         while (start <= end) {
             int mid = start + (end - start) / 2;
 
-            if (x == arr[mid]) {
+            if (target == nums[mid]) {
                 return mid;
             }
 
-            if (x < arr[mid]) {
+            if (target < nums[mid]) {
+                start = mid + 1;
+            } else {
+                end = mid - 1;
+            }
+        }
+
+        return -1;
+    }
+
+    public static int search(int[] nums, int startIndex, int endIndex, int target) {
+        int start = startIndex;
+        int end = endIndex;
+
+        while (start <= end) {
+            int mid = start + (end - start) / 2;
+
+            if (nums[mid] == target) {
+                return mid;
+            }
+
+            if (target < nums[mid]) {
                 start = mid + 1;
             } else {
                 end = mid - 1;

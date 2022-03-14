@@ -7,7 +7,7 @@ public class NextAlphabeticalElement {
         char result = letters[0];
 
         while (start <= end) {
-            int mid = start  + (end - start) / 2;
+      int mid = start + (end - start) / 2;
 
             if (letters[mid] <= target) {
                 start = mid + 1;
@@ -21,6 +21,6 @@ public class NextAlphabeticalElement {
     }
 
     public static void main(String[] args) {
-        System.out.println(nextGreatestLetter(new char[]{ 'a', 'c', 'f', 'h'}, 'f'));
+        System.out.println(nextGreatestLetter(new char[]{'a', 'c', 'f', 'h'}, 'f'));
     }
 }

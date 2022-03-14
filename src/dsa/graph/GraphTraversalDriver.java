@@ -13,7 +13,6 @@ public class GraphTraversalDriver {
 
         System.out.println("Breadth First Traversal : " + g1.breadthFirstTraversal(0));
 
-
         Graph g2 = new Graph(7);
         g2.addDirectedEdge(0, 1);
         g2.addDirectedEdge(0, 2);

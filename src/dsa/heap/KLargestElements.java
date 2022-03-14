@@ -32,6 +32,7 @@ public class KLargestElements {
     }
 
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(KLargestElements.getKLargestElements(new int[]{7, 10, 4, 3, 20, 15}, 3)));
+        System.out.println(
+                Arrays.toString(KLargestElements.getKLargestElements(new int[]{7, 10, 4, 3, 20, 15}, 3)));
     }
 }

@@ -1,6 +1,6 @@
 package designpatterns.decorator;
 
-public class DressDecorator implements Dress{
+public class DressDecorator implements Dress {
 
     protected Dress dress;
 

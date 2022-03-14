@@ -11,6 +11,42 @@ public class LinkedList {
         length = 0;
     }
 
+    public static void print(ListNode listNode) {
+        if (listNode == null) {
+            System.out.print("\n");
+            return;
+        }
+
+        System.out.print(listNode.value + " ");
+        print(listNode.next);
+    }
+
+    public static void print(ListNode listNode, boolean reverse) {
+        if (listNode == null) {
+            System.out.print("\n");
+            return;
+        }
+
+        print(listNode.next, reverse);
+        System.out.print(listNode.value + " ");
+    }
+
+    public static ListNode reverse(ListNode head) {
+        return reverseHelper(head);
+    }
+
+    public static ListNode reverseHelper(ListNode listNode) {
+        if (listNode == null || listNode.next == null) {
+            return listNode;
+        }
+
+        ListNode head = reverseHelper(listNode.next);
+        ListNode nextNode = listNode.next;
+        nextNode.next = listNode;
+        listNode.next = null;
+        return head;
+    }
+
     public int get(int index) {
         if (head == null) {
             throw new IndexOutOfBoundsException();
@@ -54,7 +90,7 @@ public class LinkedList {
             addFirst(value);
         } else {
             ListNode previousNode = head;
-            for (int i = 0; i < index-1; i++) {
+            for (int i = 0; i < index - 1; i++) {
                 previousNode = previousNode.next;
             }
             ListNode currentNode = previousNode.next;
@@ -75,7 +111,7 @@ public class LinkedList {
             head = head.next;
         } else {
             ListNode previousNode = head;
-            for (int i = 0; i < index-1; i++) {
+            for (int i = 0; i < index - 1; i++) {
                 previousNode = previousNode.next;
             }
             ListNode currentNode = previousNode.next;
@@ -101,7 +137,7 @@ public class LinkedList {
     }
 
     public void addAll(int[] nums) {
-        for (int i=nums.length-1; i >=0; i--) {
+        for (int i = nums.length - 1; i >= 0; i--) {
             addFirst(nums[i]);
         }
     }
@@ -113,42 +149,6 @@ public class LinkedList {
             currentNode = currentNode.next;
         }
         System.out.println();
-    }
-
-    public static void print(ListNode listNode) {
-        if (listNode == null) {
-            System.out.print("\n");
-            return;
-        }
-
-        System.out.print(listNode.value + " ");
-        print(listNode.next);
-    }
-
-    public static void print(ListNode listNode, boolean reverse) {
-        if (listNode == null) {
-            System.out.print("\n");
-            return;
-        }
-
-        print(listNode.next, reverse);
-        System.out.print(listNode.value + " ");
-    }
-
-    public static ListNode reverse(ListNode head) {
-        return reverseHelper(head);
-    }
-
-    public static ListNode reverseHelper(ListNode listNode) {
-        if (listNode == null || listNode.next == null) {
-            return listNode;
-        }
-
-        ListNode head = reverseHelper(listNode.next);
-        ListNode nextNode = listNode.next;
-        nextNode.next = listNode;
-        listNode.next = null;
-        return head;
     }
 
     public ListNode getHead() {
