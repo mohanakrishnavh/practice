@@ -1,9 +1,12 @@
-package dsa.trie;
+package leetcode;
 
-public class Trie {
-    private final TrieNode root;
+import java.util.HashMap;
+import java.util.Map;
 
-    public Trie() {
+public class LC0208_ImplementTrie {
+    private TrieNode root;
+
+    public LC0208_ImplementTrie() {
         root = new TrieNode();
     }
 
@@ -51,18 +54,15 @@ public class Trie {
 
         return true;
     }
+}
 
-    public static void main(String[] args) {
-        Trie trie = new Trie();
-        trie.insert("pranam");
-        trie.insert("parvesh");
-        trie.insert("arshi");
-        trie.insert("mohan");
-        trie.insert("vinaya");
+class TrieNode {
+    boolean isEndOfWord;
+    Map<Character, TrieNode> children;
 
-        System.out.println(trie.search("vinaya"));
-        System.out.println(trie.search("trump"));
-        System.out.println(trie.startsWith("be"));
-        System.out.println(trie.startsWith("p"));
+    public TrieNode() {
+        children = new HashMap<>();
     }
 }
+
+

@@ -30,6 +30,6 @@ public class NearlySortedArraySearch {
     }
 
     public static void main(String[] args) {
-        System.out.println(search(new int[] {5, 10, 30, 20, 40}, 20));
+        System.out.println(search(new int[]{5, 10, 30, 20, 40}, 20));
     }
 }

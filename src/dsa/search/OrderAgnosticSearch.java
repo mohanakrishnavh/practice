@@ -1,21 +1,21 @@
 package dsa.search;
 
 public class OrderAgnosticSearch {
-    public static int search(int[] arr, int x) {
+    public static int search(int[] nums, int target) {
         int start = 0;
-        int end = arr.length - 1;
+        int end = nums.length - 1;
 
-        if (arr[start] == arr[end]) {
-            if (x == arr[start]) {
+        if (nums[start] == nums[end]) {
+            if (target == nums[start]) {
                 return 0;
             }
-        } else if (arr[start] < arr[end]) {
-            return BinarySearch.search(arr, x);
-        } else {
-            return ReverseBinarySearch.search(arr, x);
         }
 
-        return -1;
+        if (nums[start] < nums[end]) {
+            return BinarySearch.search(nums, target);
+        } else {
+            return ReverseBinarySearch.search(nums, target);
+        }
     }
 
     public static void main(String[] args) {

@@ -22,6 +22,6 @@ public class CountOfSubsetSum {
     }
 
     public static void main(String[] args) {
-        System.out.println(CountOfSubsetSum.subsetSumCount(new int[]{2, 3, 5, 6, 8, 10}, 10));
+        System.out.println(subsetSumCount(new int[]{2, 3, 5, 6, 8, 10}, 10));
     }
 }

@@ -5,6 +5,7 @@ public class FloorOfAnElement {
         int start = 0;
         int end = nums.length - 1;
         int floor = -1;
+
         while (start <= end) {
             int mid = start + (end - start) / 2;
 
