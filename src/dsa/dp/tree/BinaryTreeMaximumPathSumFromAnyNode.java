@@ -10,7 +10,7 @@ public class BinaryTreeMaximumPathSumFromAnyNode {
         return result[0];
     }
 
-    public int maxPathSumHelper(TreeNode root, int[] result) {
+    private int maxPathSumHelper(TreeNode root, int[] result) {
         if (root == null) {
             return 0;
         }

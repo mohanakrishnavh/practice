@@ -18,4 +18,19 @@ public class MathUtil {
 
         return sum;
     }
+
+    public static int[] findTwoMaxNumbers(int[] nums){
+        int maxOne = 0;
+        int maxTwo = 0;
+        for(int num : nums){
+            if(maxOne < num){
+                maxTwo = maxOne;
+                maxOne =num;
+            } else if(maxTwo < num){
+                maxTwo = num;
+            }
+        }
+
+        return new int[]{maxOne, maxTwo};
+    }
 }
