@@ -8,6 +8,14 @@ public class BinaryTree extends Tree {
         super();
     }
 
+    public int height(TreeNode root) {
+        if (root == null) {
+            return -1;
+        }
+
+        return 1 + height(root.left) + height(root.right);
+    }
+
     public static List<Integer> preorderTraversal(TreeNode root) {
         List<Integer> visited = new ArrayList<>();
         if (root == null) {

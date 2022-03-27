@@ -4,43 +4,50 @@ import dsa.linkedlist.ListNode;
 
 public class LC0160_IntersectionOfTwoLinkedLists {
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
-        ListNode temp1 = headA;
-        int length1 = 0;
-        while (temp1.next != null) {
-            temp1 = temp1.next;
-            length1 += 1;
+        int lengthA = 0, lengthB = 0;
+        ListNode tempA, tempB;
+
+        // Calculating the length of list A
+        tempA = headA;
+        while (tempA.next != null) {
+            lengthA += 1;
+            tempA = tempA.next;
         }
 
-        ListNode temp2 = headB;
-        int length2 = 0;
-        while (temp2.next != null) {
-            temp2 = temp2.next;
-            length2 += 1;
+        // Calculating the length of list B
+        tempB = headB;
+        while (tempB.next != null) {
+            lengthB += 1;
+            tempB = tempB.next;
         }
 
-        if (temp1 != temp2) {
+        // If the last node of the two lists is not the same, the lists don't intersect
+        if (tempA != tempB) {
             return null;
         }
 
-        int difference = Math.abs(length1 - length2);
-        if (length1 > length2) {
-            temp1 = headA;
-            temp2 = headB;
+        int difference = Math.abs(lengthA - lengthB);
+        // Assigning the larger list to tempA and smaller list to tempB
+        if (lengthA > lengthB) {
+            tempA = headA;
+            tempB = headB;
         } else {
-            temp1 = headB;
-            temp2 = headA;
+            tempB = headA;
+            tempA = headB;
         }
 
+        // Giving the pointer to the list A a head start by the difference
+        // in the length of the lists
         while (difference > 0) {
-            temp1 = temp1.next;
-            difference -= 1;
+            tempA = tempA.next;
+            difference--;
         }
 
-        while (temp1 != temp2) {
-            temp1 = temp1.next;
-            temp2 = temp2.next;
+        while (tempA != tempB) {
+            tempA = tempA.next;
+            tempB = tempB.next;
         }
 
-        return temp1;
+        return tempA;
     }
 }
