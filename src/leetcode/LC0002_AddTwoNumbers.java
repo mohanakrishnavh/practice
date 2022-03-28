@@ -4,26 +4,30 @@ import dsa.linkedlist.ListNode;
 
 public class LC0002_AddTwoNumbers {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-        int carry = 0;
         ListNode sentinel = new ListNode(-1);
-        ListNode previous = sentinel;
-        while (l1 != null || l2 != null || carry > 0) {
-            int number1 = l1 != null ? l1.value : 0;
-            int number2 = l2 != null ? l2.value : 0;
-            int sum = number1 + number2 + carry;
-            int val = sum % 10;
-            carry = sum / 10;
+        ListNode current = sentinel;
+        int carry = 0, n1, n2;
 
-            previous.next = new ListNode(val);
-            previous = previous.next;
+        while (l1 != null || l2 != null || carry > 0) {
+            n1 = 0;
+            n2 = 0;
 
             if (l1 != null) {
+                n1 = l1.value;
                 l1 = l1.next;
             }
 
             if (l2 != null) {
+                n2 = l2.value;
                 l2 = l2.next;
             }
+
+            int sum = n1 + n2 + carry;
+            int nodeValue = sum % 10;
+            carry = sum / 10;
+
+            current.next = new ListNode(nodeValue);
+            current = current.next;
         }
 
         return sentinel.next;
