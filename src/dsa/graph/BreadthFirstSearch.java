@@ -8,9 +8,9 @@ import java.util.Queue;
 public class BreadthFirstSearch {
     public static List<Integer> breadthFirstTraversal(int N, List<List<Integer>> adjList) {
         List<Integer> bfsTraversal = new ArrayList<>();
-        boolean[] visited = new boolean[N+1];
+        boolean[] visited = new boolean[N];
 
-        for (int vertex = 0; vertex <= N; vertex++) {
+        for (int vertex = 0; vertex < N; vertex++) {
             if (!visited[vertex]) {
                 bfs(vertex, adjList, visited, bfsTraversal);
             }
@@ -38,11 +38,11 @@ public class BreadthFirstSearch {
     }
 
     public static void main(String[] args) {
-        int N = 7;
-        int[][] edgeList = new int[][]{{0, 1}, {1, 2}, {2, 3}, {3, 5}, {5, 7}, {2, 7}, {4,5}};
+        int N = 8;
+        int[][] edges = new int[][]{{0, 1}, {1, 2}, {2, 3}, {3, 5}, {5, 7}, {2, 7}, {4,5}};
 
         Graph graph = new Graph(N);
-        graph.addUndirectedEdges(edgeList);
-        System.out.println(breadthFirstTraversal(graph.getSize(), graph.getAdjList()));
+        graph.addUndirectedEdges(edges);
+        System.out.println(breadthFirstTraversal(graph.size(), graph.getAdjList()));
     }
 }

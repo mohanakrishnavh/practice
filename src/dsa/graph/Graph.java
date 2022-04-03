@@ -16,25 +16,29 @@ public class Graph {
         return adjMatrix;
     }
 
-    public int getSize() {
+    private int getSize() {
         return size;
     }
 
-    public Graph(int size) {
-        this.size = size;
+    public int size() {
+        return size;
+    }
+
+    public Graph(int N) {
+        this.size = N;
         this.adjList = new ArrayList<>();
 
         // Initializing the Adjacency List
-        for (int i = 0; i <= size; i++) {
+        for (int i = 0; i < N; i++) {
             adjList.add(i, new ArrayList<>());
         }
 
         // Initializing the Adjacency Matrix
-        adjMatrix = new int[size+1][size+1];
+        adjMatrix = new int[N][N];
     }
 
-    public void addUndirectedEdges(int[][] edgeList) {
-        for (int[] edge : edgeList) {
+    public void addUndirectedEdges(int[][] edges) {
+        for (int[] edge : edges) {
             // Building the Adjacency List
             addUndirectedEdge(edge[0], edge[1]);
 
@@ -49,8 +53,8 @@ public class Graph {
         adjList.get(b).add(a);
     }
 
-    public void addDirectedEdges(int[][] edgeList) {
-        for (int[] edge : edgeList) {
+    public void addDirectedEdges(int[][] edges) {
+        for (int[] edge : edges) {
             // Building the Adjacency List
             addDirectedEdge(edge[0], edge[1]);
 
