@@ -27,14 +27,14 @@ public class LC1522_DiameterOfNAryTree {
         return 1 + Math.max(maxValues[0], maxValues[1]);
     }
 
-    public int[] findTwoMaxNumbers(int[] array){
+    public int[] findTwoMaxNumbers(int[] array) {
         int maxOne = 0;
         int maxTwo = 0;
-        for(int num : array){
-            if(maxOne < num){
+        for (int num : array) {
+            if (maxOne < num) {
                 maxTwo = maxOne;
-                maxOne =num;
-            } else if(maxTwo < num){
+                maxOne = num;
+            } else if (maxTwo < num) {
                 maxTwo = num;
             }
         }

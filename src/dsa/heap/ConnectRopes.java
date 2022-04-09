@@ -3,20 +3,15 @@ package dsa.heap;
 import java.util.PriorityQueue;
 
 public class ConnectRopes {
-    public static void main(String[] args) {
-        ConnectRopes obj = new ConnectRopes();
-        System.out.println(obj.getMinimumCost(new int[]{1, 2, 3, 4, 5}));
-    }
-
-    private int getMinimumCost(int[] arr) {
-        if (arr.length == 0) {
+    private static int getMinimumCost(int[] ropeLengths) {
+        if (ropeLengths.length <= 1) {
             return 0;
         }
 
         int cost = 0;
         PriorityQueue<Integer> minHeap = new PriorityQueue<>();
-        for (Integer element : arr) {
-            minHeap.add(element);
+        for (Integer ropeLength : ropeLengths) {
+            minHeap.offer(ropeLength);
         }
 
         while (minHeap.size() >= 2) {
@@ -27,5 +22,9 @@ public class ConnectRopes {
         }
 
         return cost;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(getMinimumCost(new int[]{1, 2, 3, 4, 5}));
     }
 }

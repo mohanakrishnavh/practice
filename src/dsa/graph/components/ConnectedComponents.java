@@ -1,4 +1,6 @@
-package dsa.graph;
+package dsa.graph.components;
+
+import dsa.graph.GraphUtil;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -38,7 +40,7 @@ public class ConnectedComponents {
 
     public static void main(String[] args) {
         int N = 8;
-        int[][] edges = new int[][]{{0, 1}, {1, 2}, {2, 3}, {3, 5}, {5, 7}, {2, 7}, {4,5}};
+        int[][] edges = new int[][]{{0, 1}, {1, 2}, {2, 3}, {3, 5}, {5, 7}, {2, 7}, {4, 5}};
 
         System.out.println(countComponents(N, edges));
     }

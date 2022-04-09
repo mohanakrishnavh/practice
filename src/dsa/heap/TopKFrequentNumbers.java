@@ -1,37 +1,40 @@
 package dsa.heap;
 
-import dsa.util.FrequencyUtil;
-
-import java.util.Arrays;
-import java.util.Map;
-import java.util.PriorityQueue;
+import java.util.*;
 
 public class TopKFrequentNumbers {
-  public static int[] getTopKFrequentNumbers(int[] nums, int k) {
-    if (nums.length == 0 || k <= 0) {
-      return null;
+  public static List<Integer> getTopKFrequentNumbers(int[] nums, int k) {
+    List<Integer> topKFrequentNumbers = new ArrayList<>();
+    if (nums == null || nums.length <= 1 || k == 0) {
+      return topKFrequentNumbers;
     }
 
-    Map<Integer, Integer> countMap = FrequencyUtil.getCountMap(nums);
-    PriorityQueue<int[]> minHeap = new PriorityQueue<>((a, b) -> a[0] == b[0] ? a[0] : a[0] - b[0]);
-    for (Map.Entry<Integer, Integer> entry : countMap.entrySet()) {
-      minHeap.add(new int[]{entry.getValue(), entry.getKey()});
+    Map<Integer, Integer> countMap = new HashMap<>();
+    for (int num : nums) {
+      countMap.put(num, countMap.getOrDefault(num, 0) + 1);
+    }
 
-      if (minHeap.size() > k) {
-        minHeap.poll();
+    PriorityQueue<int[]> minHeap = new PriorityQueue<>((a, b) -> a[0] - b[0]);
+    for (Map.Entry<Integer, Integer> entry : countMap.entrySet()) {
+      int[] frequencyNumberPair = new int[]{entry.getValue(), entry.getKey()};
+      if (minHeap.size() < k) {
+        minHeap.offer(frequencyNumberPair);
+      } else {
+        if (frequencyNumberPair[0] > minHeap.peek()[0]) {
+          minHeap.offer(frequencyNumberPair);
+          minHeap.poll();
+        }
       }
     }
 
-    int[] topKFrequentNumbers = new int[k];
-    int index = 0;
-    while (minHeap.size() > 0) {
-      topKFrequentNumbers[index++] = minHeap.poll()[1];
+    while (!minHeap.isEmpty()) {
+      topKFrequentNumbers.add(minHeap.poll()[1]);
     }
 
     return topKFrequentNumbers;
   }
 
   public static void main(String[] args) {
-    System.out.println(Arrays.toString(getTopKFrequentNumbers(new int[]{1, 1, 1, 3, 2, 2, 4}, 2)));
+    System.out.println(getTopKFrequentNumbers(new int[]{1, 1, 1, 3, 2, 2, 4}, 2));
   }
 }

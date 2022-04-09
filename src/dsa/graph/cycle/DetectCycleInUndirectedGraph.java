@@ -1,4 +1,6 @@
-package dsa.graph;
+package dsa.graph.cycle;
+
+import dsa.graph.Graph;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -78,12 +80,12 @@ public class DetectCycleInUndirectedGraph {
     public static void main(String[] args) {
         int N = 12;
         Graph graph = new Graph(N);
-        graph.addUndirectedEdges(new int[][]{{0, 1}, {1,2}, {2,4}, {3,5}, {5,6}, {6,7}, {7,8}, {5,10}, {10, 9}, {9, 8}, {8,11}});
+        graph.addUndirectedEdges(new int[][]{{0, 1}, {1, 2}, {2, 4}, {3, 5}, {5, 6}, {6, 7}, {7, 8}, {5, 10}, {10, 9}, {9, 8}, {8, 11}});
         System.out.println(hasCycleUsingBfs(graph.size(), graph.getAdjList()));
         System.out.println(hasCycleUsingDfs(graph.size(), graph.getAdjList()));
 
         graph = new Graph(4);
-        graph.addUndirectedEdges(new int[][]{{0,1}, {1, 2}, {2, 3}});
+        graph.addUndirectedEdges(new int[][]{{0, 1}, {1, 2}, {2, 3}});
         System.out.println(hasCycleUsingBfs(graph.size(), graph.getAdjList()));
         System.out.println(hasCycleUsingDfs(graph.size(), graph.getAdjList()));
     }

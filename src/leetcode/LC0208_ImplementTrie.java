@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class LC0208_ImplementTrie {
-    private TrieNode root;
+    private final TrieNode root;
 
     public LC0208_ImplementTrie() {
         root = new TrieNode();

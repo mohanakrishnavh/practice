@@ -1,4 +1,6 @@
-package dsa.graph;
+package dsa.graph.topologicalsort;
+
+import dsa.graph.Graph;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -47,13 +49,13 @@ public class TopologicalSort {
 
     public static void main(String[] args) {
         int N = 6;
-        int[][] edges = new int[][]{{5, 0}, {5,2}, {2,3},{3,1}, {4,0}, {4,1}};
+        int[][] edges = new int[][]{{5, 0}, {5, 2}, {2, 3}, {3, 1}, {4, 0}, {4, 1}};
         Graph graph = new Graph(N);
         graph.addDirectedEdges(edges);
         System.out.println(topologicalSort(N, graph.getAdjList()));
 
         N = 4;
-        edges = new int[][]{{0,1}, {1, 2}, {3,1}, {2,3}};
+        edges = new int[][]{{0, 1}, {1, 2}, {3, 1}, {2, 3}};
         graph = new Graph(N);
         graph.addDirectedEdges(edges);
         assert (topologicalSort(N, graph.getAdjList()) == null);

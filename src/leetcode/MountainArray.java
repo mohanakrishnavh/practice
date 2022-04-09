@@ -1,6 +1,7 @@
 package leetcode;
 
 public interface MountainArray {
-    public int get(int index);
-    public int length();
+    int get(int index);
+
+    int length();
 }

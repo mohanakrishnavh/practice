@@ -5,7 +5,7 @@ public class LC1822_SignOfProductOfAnArray {
         boolean isZero = false;
         boolean isNegative = false;
         for (int num : nums) {
-            if (num == 0)  {
+            if (num == 0) {
                 isZero = true;
             } else if (num < 0) {
                 isNegative = !isNegative;

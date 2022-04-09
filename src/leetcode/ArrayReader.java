@@ -1,5 +1,5 @@
 package leetcode;
 
 public interface ArrayReader {
-    public int get(int index);
+    int get(int index);
 }

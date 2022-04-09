@@ -13,6 +13,7 @@ package leetcode;
 public class LC0707_DesignLinkedList {
     int length;
     ListNode head;
+
     public LC0707_DesignLinkedList() {
         head = null;
         length = 0;

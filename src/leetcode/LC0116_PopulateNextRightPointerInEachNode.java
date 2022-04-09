@@ -4,13 +4,6 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class LC0116_PopulateNextRightPointerInEachNode {
-    static class Node {
-        int value;
-        Node left;
-        Node next;
-        Node right;
-    }
-
     public Node connect(Node root) {
         if (root == null) {
             return root;
@@ -19,7 +12,7 @@ public class LC0116_PopulateNextRightPointerInEachNode {
         Queue<Node> q = new LinkedList<>();
         q.offer(root);
 
-        while(!q.isEmpty()) {
+        while (!q.isEmpty()) {
             int size = q.size();
             while (size > 0) {
                 Node current = q.poll();
@@ -40,5 +33,12 @@ public class LC0116_PopulateNextRightPointerInEachNode {
         }
 
         return root;
+    }
+
+    static class Node {
+        int value;
+        Node left;
+        Node next;
+        Node right;
     }
 }

@@ -3,7 +3,7 @@ package leetcode;
 public class LC0704_BinarySearch {
     public int search(int[] nums, int target) {
         int start = 0;
-        int end = nums.length-1;
+        int end = nums.length - 1;
 
         while (start <= end) {
             int mid = start + (end - start) / 2;

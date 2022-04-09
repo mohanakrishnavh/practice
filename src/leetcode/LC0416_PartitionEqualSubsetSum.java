@@ -8,7 +8,7 @@ public class LC0416_PartitionEqualSubsetSum {
             return false;
         }
 
-        return hasSubsetSum(nums, sum/2);
+        return hasSubsetSum(nums, sum / 2);
     }
 
     private int findSum(int[] nums) {
@@ -22,7 +22,7 @@ public class LC0416_PartitionEqualSubsetSum {
 
     private boolean hasSubsetSum(int[] nums, int sum) {
         int i = 0, j = 0;
-        boolean[][] t = new boolean[nums.length+1][sum+1];
+        boolean[][] t = new boolean[nums.length + 1][sum + 1];
 
         for (i = 0; i <= nums.length; i++) {
             t[i][j] = true;
@@ -31,9 +31,9 @@ public class LC0416_PartitionEqualSubsetSum {
         for (i = 1; i <= nums.length; i++) {
             for (j = 1; j <= sum; j++) {
                 if (nums[i - 1] <= j) {
-                    t[i][j] = t[i-1][j - nums[i - 1]] || t[i-1][j];
+                    t[i][j] = t[i - 1][j - nums[i - 1]] || t[i - 1][j];
                 } else {
-                    t[i][j] = t[i-1][j];
+                    t[i][j] = t[i - 1][j];
                 }
             }
         }

@@ -20,6 +20,6 @@ public class LC0724_FindPivotIndex {
     }
 
     public static void main(String[] args) {
-        System.out.println(pivotIndex(new int[]{-1,-1,0,0,-1,-1}));
+        System.out.println(pivotIndex(new int[]{-1, -1, 0, 0, -1, -1}));
     }
 }

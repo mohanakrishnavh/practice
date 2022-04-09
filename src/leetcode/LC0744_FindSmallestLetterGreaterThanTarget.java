@@ -7,7 +7,7 @@ public class LC0744_FindSmallestLetterGreaterThanTarget {
         char result = letters[0];
 
         while (start <= end) {
-            int mid = start  + (end - start) / 2;
+            int mid = start + (end - start) / 2;
 
             if (letters[mid] <= target) {
                 start = mid + 1;

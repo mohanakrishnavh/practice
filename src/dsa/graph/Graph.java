@@ -8,6 +8,19 @@ public class Graph {
     int[][] adjMatrix;
     int size;
 
+    public Graph(int N) {
+        this.size = N;
+        this.adjList = new ArrayList<>();
+
+        // Initializing the Adjacency List
+        for (int i = 0; i < N; i++) {
+            adjList.add(i, new ArrayList<>());
+        }
+
+        // Initializing the Adjacency Matrix
+        adjMatrix = new int[N][N];
+    }
+
     public List<List<Integer>> getAdjList() {
         return adjList;
     }
@@ -22,19 +35,6 @@ public class Graph {
 
     public int size() {
         return size;
-    }
-
-    public Graph(int N) {
-        this.size = N;
-        this.adjList = new ArrayList<>();
-
-        // Initializing the Adjacency List
-        for (int i = 0; i < N; i++) {
-            adjList.add(i, new ArrayList<>());
-        }
-
-        // Initializing the Adjacency Matrix
-        adjMatrix = new int[N][N];
     }
 
     public void addUndirectedEdges(int[][] edges) {

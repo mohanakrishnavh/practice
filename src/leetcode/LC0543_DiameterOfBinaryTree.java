@@ -9,7 +9,7 @@ public class LC0543_DiameterOfBinaryTree {
 
         // result[0] returns the numbers of nodes in the diameter of the tree
         // Tree with N nodes has (N-1) edges
-         return result[0] - 1;
+        return result[0] - 1;
     }
 
     public int height(TreeNode root, int[] result) {

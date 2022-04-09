@@ -1,4 +1,6 @@
-package dsa.graph;
+package dsa.graph.traversal;
+
+import dsa.graph.Graph;
 
 import java.util.ArrayList;
 import java.util.List;

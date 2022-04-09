@@ -1,4 +1,6 @@
-package dsa.graph;
+package dsa.graph.traversal;
+
+import dsa.graph.Graph;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -39,7 +41,7 @@ public class BreadthFirstSearch {
 
     public static void main(String[] args) {
         int N = 8;
-        int[][] edges = new int[][]{{0, 1}, {1, 2}, {2, 3}, {3, 5}, {5, 7}, {2, 7}, {4,5}};
+        int[][] edges = new int[][]{{0, 1}, {1, 2}, {2, 3}, {3, 5}, {5, 7}, {2, 7}, {4, 5}};
 
         Graph graph = new Graph(N);
         graph.addUndirectedEdges(edges);

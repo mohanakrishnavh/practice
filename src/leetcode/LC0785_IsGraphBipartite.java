@@ -26,7 +26,7 @@ public class LC0785_IsGraphBipartite {
         q.add(node);
         color[node] = 1;
 
-        while(!q.isEmpty()) {
+        while (!q.isEmpty()) {
             int n = q.poll();
 
             for (int it : graph[n]) {

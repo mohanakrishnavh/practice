@@ -7,6 +7,20 @@ public class Trie {
         root = new TrieNode();
     }
 
+    public static void main(String[] args) {
+        Trie trie = new Trie();
+        trie.insert("pranam");
+        trie.insert("parvesh");
+        trie.insert("arshi");
+        trie.insert("mohan");
+        trie.insert("vinaya");
+
+        System.out.println(trie.search("vinaya"));
+        System.out.println(trie.search("trump"));
+        System.out.println(trie.startsWith("be"));
+        System.out.println(trie.startsWith("p"));
+    }
+
     public void insert(String word) {
         TrieNode current = root;
         for (int i = 0; i < word.length(); i++) {
@@ -50,19 +64,5 @@ public class Trie {
         }
 
         return true;
-    }
-
-    public static void main(String[] args) {
-        Trie trie = new Trie();
-        trie.insert("pranam");
-        trie.insert("parvesh");
-        trie.insert("arshi");
-        trie.insert("mohan");
-        trie.insert("vinaya");
-
-        System.out.println(trie.search("vinaya"));
-        System.out.println(trie.search("trump"));
-        System.out.println(trie.startsWith("be"));
-        System.out.println(trie.startsWith("p"));
     }
 }

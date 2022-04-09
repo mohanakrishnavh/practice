@@ -7,8 +7,8 @@ public class LC0739_DailyTemperatures {
         int[] answers = new int[temperatures.length];
         Stack<Integer> stack = new Stack<>();
 
-        for (int i=temperatures.length-1; i>=0; i--) {
-            while(!stack.isEmpty() && temperatures[stack.peek()] <= temperatures[i]) {
+        for (int i = temperatures.length - 1; i >= 0; i--) {
+            while (!stack.isEmpty() && temperatures[stack.peek()] <= temperatures[i]) {
                 stack.pop();
             }
 
