@@ -6,11 +6,11 @@ import java.util.List;
 
 public class FindDigits {
     public static List<Integer> getDigits(int n, int base) {
-        if (n == 0 || base == 0) {
-            return List.of(0);
+        List<Integer> digits = new ArrayList<>();
+        if (n == 0) {
+            return digits;
         }
 
-        List<Integer> digits = new ArrayList<>();
         while (n != 0) {
             int remainder = n % base;
             digits.add(remainder);

@@ -73,10 +73,10 @@ public class Prime {
     // Going over the elements i= 0 -> sqrt(n), we mark all the multiples of i as not primes
     // Time Complexity : O(log(log(n))
     public static List<Integer> findPrimesOptimized(int n) {
-        Integer[] primes = new Integer[n+1];
-        for (int i=2; i <= n; i++) {
-            primes[i] = 1;
-        }
+        int[] primes = new int[n+1];
+        Arrays.fill(primes, 1);
+        primes[0] = 0;
+        primes[1] = 0;
 
         for (int i = 2; i <= Math.sqrt(n); i++) {
             if (primes[i] == 1) {
@@ -86,7 +86,14 @@ public class Prime {
             }
         }
 
-        return Arrays.asList(primes);
+        List<Integer> primesList = new ArrayList<>();
+        for (int i = 2; i <= n; i++) {
+            if (primes[i] == 1) {
+                primesList.add(i);
+            }
+        }
+
+        return primesList;
     }
 
     public static void main(String[] args) {
@@ -115,6 +122,6 @@ public class Prime {
         System.out.println(findPrimes(15));
 
         System.out.print("Test Method 5 - findPrimesOptimized()");
-        System.out.println(findPrimes(15));
+        System.out.println(findPrimesOptimized(15));
     }
 }
