@@ -1,7 +1,5 @@
 package leetcode;
 
-import dsa.tree.Node;
-
 public class LC0138_CopyListWithRandomPointer {
     class Node {
         int val;
@@ -12,7 +10,6 @@ public class LC0138_CopyListWithRandomPointer {
             this.val = val;
         }
     }
-
 
     public Node copyRandomList(Node head) {
         if (head == null) {
