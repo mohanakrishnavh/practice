@@ -34,6 +34,6 @@ public class FrequencySort {
   }
 
   public static void main(String[] args) {
-    System.out.println(Arrays.toString(FrequencySort.sort(new int[]{2, 2, 4, 3, 1, 1, 1})));
+    System.out.println(Arrays.toString(sort(new int[]{2, 2, 4, 3, 1, 1, 1})));
   }
 }

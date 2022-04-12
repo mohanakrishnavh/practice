@@ -30,6 +30,6 @@ public class ArrayRotationCount {
     }
 
     public static void main(String[] args) {
-        System.out.println(ArrayRotationCount.findMin(new int[]{10, 11, 12, 15, 18, 2, 5, 6, 8}));
+        System.out.println(findMin(new int[]{10, 11, 12, 15, 18, 2, 5, 6, 8}));
     }
 }

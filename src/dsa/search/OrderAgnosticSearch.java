@@ -6,9 +6,7 @@ public class OrderAgnosticSearch {
         int end = nums.length - 1;
 
         if (nums[start] == nums[end]) {
-            if (target == nums[start]) {
-                return 0;
-            }
+            return target == nums[start] ? 0 : -1;
         }
 
         if (nums[start] < nums[end]) {
