@@ -1,6 +1,7 @@
 package dsa.dp.knapsack;
 
-public class SubsetSum {
+public class
+SubsetSum {
     public static boolean hasSubsetSum(int[] arr, int sum) {
         boolean[][] t = new boolean[arr.length + 1][sum + 1];
 
