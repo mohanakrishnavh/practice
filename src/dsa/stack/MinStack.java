@@ -13,6 +13,21 @@ public class MinStack {
         minimumTracker = new Stack<>();
     }
 
+    public static void main(String[] args) {
+        MinStack minStack = new MinStack();
+        minStack.push(512);
+        minStack.push(-1024);
+        minStack.push(-1024);
+        minStack.push(512);
+        System.out.println(minStack.getMin());
+        minStack.pop();
+        System.out.println(minStack.getMin());
+        minStack.pop();
+        System.out.println(minStack.getMin());
+        minStack.pop();
+        System.out.println(minStack.top());
+    }
+
     public void push(int x) {
         stack.push(x);
 
@@ -47,20 +62,5 @@ public class MinStack {
         }
 
         return minimumTracker.peek();
-    }
-
-    public static void main(String[] args) {
-        MinStack minStack = new MinStack();
-        minStack.push(512);
-        minStack.push(-1024);
-        minStack.push(-1024);
-        minStack.push(512);
-        System.out.println(minStack.getMin());
-        minStack.pop();
-        System.out.println(minStack.getMin());
-        minStack.pop();
-        System.out.println(minStack.getMin());
-        minStack.pop();
-        System.out.println(minStack.top());
     }
 }

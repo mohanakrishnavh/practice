@@ -20,7 +20,7 @@ public class InfixToPostfixExpression {
         String[] postfix = new String[infix.length];
         for (String token : infix) {
             if (isOperator(token)) {
-                while(!stack.isEmpty() && hasHigherPrecedence(stack.peek(), token)) {
+                while (!stack.isEmpty() && hasHigherPrecedence(stack.peek(), token)) {
                     postfix[index++] = stack.pop();
                 }
                 stack.push(token);
@@ -44,7 +44,7 @@ public class InfixToPostfixExpression {
         String[] postfix = new String[infix.length];
         for (String token : infix) {
             if (isOperator(token)) {
-                while(!stack.isEmpty() && !isOpeningParenthesis(token) && hasHigherPrecedence(stack.peek(), token)) {
+                while (!stack.isEmpty() && !isOpeningParenthesis(token) && hasHigherPrecedence(stack.peek(), token)) {
                     postfix[index++] = stack.pop();
                 }
                 stack.push(token);
