@@ -13,12 +13,12 @@ public class Print1ToN {
     }
 
     // Using Backtracking
-    public static void printNumbersUsingBacktracking(int i, int n) {
+    public static void printNumbersUsingBacktracking(int i) {
         if (i < 1) {
             return;
         }
 
-        printNumbersUsingBacktracking(i-1, n);
+        printNumbersUsingBacktracking(i - 1);
         System.out.println(i);
     }
 
@@ -27,6 +27,6 @@ public class Print1ToN {
         int n = sc.nextInt();
         printNumbers(1, n);
 
-        printNumbersUsingBacktracking(n, n);
+        printNumbersUsingBacktracking(n);
     }
 }

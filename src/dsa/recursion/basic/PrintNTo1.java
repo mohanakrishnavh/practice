@@ -9,7 +9,7 @@ public class PrintNTo1 {
         }
 
         System.out.println(i);
-        printNumbers(i-1, n);
+        printNumbers(i - 1, n);
     }
 
     public static void printNumbersUsingBacktracking(int i, int n) {
@@ -17,7 +17,7 @@ public class PrintNTo1 {
             return;
         }
 
-        printNumbersUsingBacktracking(i+1, n);
+        printNumbersUsingBacktracking(i + 1, n);
         System.out.println(i);
     }
 
