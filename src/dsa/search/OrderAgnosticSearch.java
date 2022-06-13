@@ -1,19 +1,19 @@
 package dsa.search;
 
 public class OrderAgnosticSearch {
-    public static int search(int[] nums, int target) {
+    public static int search(int[] nums, int key) {
         int start = 0;
         int end = nums.length - 1;
 
-        if (nums[start] == nums[end]) {
-            return target == nums[start] ? 0 : -1;
+        if (nums.length > 0) {
+            if (nums[start] == nums[end]) {
+                return nums[start] == key ? 0 : -1;
+            }
+
+            return nums[start] < nums[end] ? BinarySearch.search(nums, key) : ReverseBinarySearch.search(nums, key);
         }
 
-        if (nums[start] < nums[end]) {
-            return BinarySearch.search(nums, target);
-        } else {
-            return ReverseBinarySearch.search(nums, target);
-        }
+        return -1;
     }
 
     public static void main(String[] args) {
