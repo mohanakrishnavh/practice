@@ -7,7 +7,7 @@ public class DiameterOfBinaryTree {
         int[] result = new int[]{Integer.MIN_VALUE};
         int h = height(root, result);
 
-        // result[0] returns the numbers of nodes in the diameter of the tree
+        // returns the numbers of nodes in the diameter of the tree
         return result[0];
     }
 
@@ -18,6 +18,8 @@ public class DiameterOfBinaryTree {
 
         int leftHeight = height(root.left, result);
         int rightHeight = height(root.right, result);
+        // If the diameter is represented using edges
+        // result[0] = Math.max(result[0], leftHeight + rightHeight);
         result[0] = Math.max(result[0], 1 + leftHeight + rightHeight);
 
         return 1 + Math.max(leftHeight, rightHeight);

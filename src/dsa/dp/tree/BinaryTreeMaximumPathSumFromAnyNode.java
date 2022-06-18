@@ -15,8 +15,8 @@ public class BinaryTreeMaximumPathSumFromAnyNode {
             return 0;
         }
 
-        int leftSum = maxPathSumHelper(root.left, result);
-        int rightSum = maxPathSumHelper(root.right, result);
+        int leftSum = Math.max(maxPathSumHelper(root.left, result), 0);
+        int rightSum = Math.max(maxPathSumHelper(root.right, result), 0);
         result[0] = Math.max(result[0], leftSum + rightSum + root.value);
 
         return Math.max(Math.max(leftSum, rightSum) + root.value, root.value);
