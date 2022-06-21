@@ -2,7 +2,7 @@ package leetcode;
 
 import dsa.linkedlist.ListNode;
 
-public class LC00234_PalindromeLinkedList {
+public class LC0234_PalindromeLinkedList {
     public boolean isPalindrome(ListNode head) {
         ListNode slow = head, fast = head;
 
