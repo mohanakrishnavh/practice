@@ -21,7 +21,7 @@ public class FirstNegativeIntegerInWindow {
                 } else {
                     firstNegativeIntegers.add(queue.peek());
 
-                    if (queue.peek().equals(arr[i])) {
+                    if (queue.peek() == arr[i]) {
                         queue.poll();
                     }
                     i++;
