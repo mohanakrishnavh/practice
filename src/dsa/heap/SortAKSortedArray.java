@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.PriorityQueue;
 
-public class KSortedArray {
+public class SortAKSortedArray {
     public static int[] sort(int[] nums, int k) {
         if (nums.length == 0 || k <= 0) {
             return null;
