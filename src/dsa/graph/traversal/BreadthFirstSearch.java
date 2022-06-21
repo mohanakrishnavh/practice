@@ -8,11 +8,11 @@ import java.util.List;
 import java.util.Queue;
 
 public class BreadthFirstSearch {
-    public static List<Integer> breadthFirstTraversal(int N, List<List<Integer>> adjList) {
+    public static List<Integer> breadthFirstTraversal(int n, List<List<Integer>> adjList) {
         List<Integer> bfsTraversal = new ArrayList<>();
-        boolean[] visited = new boolean[N];
+        boolean[] visited = new boolean[n];
 
-        for (int vertex = 0; vertex < N; vertex++) {
+        for (int vertex = 0; vertex < n; vertex++) {
             if (!visited[vertex]) {
                 bfs(vertex, adjList, visited, bfsTraversal);
             }

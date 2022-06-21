@@ -6,11 +6,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DepthFirstSearch {
-    public static List<Integer> depthFirstTraversal(int N, List<List<Integer>> adjList) {
+    public static List<Integer> depthFirstTraversal(int n, List<List<Integer>> adjList) {
         List<Integer> dfsTraversal = new ArrayList<>();
-        boolean[] visited = new boolean[N];
+        boolean[] visited = new boolean[n];
 
-        for (int vertex = 0; vertex < N; vertex++) {
+        for (int vertex = 0; vertex < n; vertex++) {
             if (!visited[vertex]) {
                 dfs(vertex, adjList, visited, dfsTraversal);
             }
