@@ -1,6 +1,8 @@
 package dsa.dp.knapsack;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class Knapsack {
     private int getMaxProfit(int[] weights, int[] values, int n, int W) {
@@ -15,6 +17,42 @@ public class Knapsack {
         }
 
         return getMaxProfit(weights, values, n - 1, W);
+    }
+
+    private List<Integer> getMaxProfitMemoized2(int[] weights, int[] values, int n, int W) {
+        int[][] dp = new int[n + 1][W + 1];
+        for (int i = 0; i <= n; i++) {
+            Arrays.fill(dp[i], -1);
+        }
+
+        List<Integer> result = new ArrayList<>();
+        int max= getMaxProfitMemoizedUtil2(weights, values, n, W, dp, result);
+        return result;
+    }
+
+    private int getMaxProfitMemoizedUtil2(int[] weights, int[] values, int n, int W, int[][] dp, List<Integer> result) {
+        if (n == 0 || W == 0) {
+            return 0;
+        }
+
+        if (dp[n][W] != -1) {
+            return dp[n][W];
+        }
+
+        if (weights[n - 1] <= W) {
+            int left = values[n - 1] + getMaxProfitMemoizedUtil2(weights, values, n - 1, W - weights[n - 1], dp, result);
+            int right = getMaxProfitMemoizedUtil(weights, values, n - 1, W, dp);
+
+            if (left > right) {
+                result.add(n-1);
+            }
+
+            dp[n][W] = Math.max(left, right);
+        } else {
+            dp[n][W] = getMaxProfitMemoizedUtil(weights, values, n - 1, W, dp);
+        }
+
+        return dp[n][W];
     }
 
     private int getMaxProfitMemoized(int[] weights, int[] values, int n, int W) {
@@ -99,6 +137,9 @@ public class Knapsack {
         System.out.println(
                 "Max Profit (Recursive - Memoized) : "
                         + knapsack.getMaxProfitMemoized(new int[]{1, 3, 4, 5}, new int[]{1, 4, 5, 7}, 4, 7));
+        System.out.println(
+                "Max Profit (Recursive - Memoized) : "
+                        + knapsack.getMaxProfitMemoized2(new int[]{1, 3, 4, 5}, new int[]{1, 4, 5, 7}, 4, 7));
         System.out.println(
                 "Max Profit (Top-down) : "
                         + knapsack.getMaxProfitTopDown(new int[]{1, 3, 4, 5}, new int[]{1, 4, 5, 7}, 4, 7));
