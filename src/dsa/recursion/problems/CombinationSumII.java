@@ -6,13 +6,15 @@ import java.util.List;
 
 public class CombinationSumII {
     public static List<List<Integer>> combinationSum2(int[] candidates, int target) {
-        List<List<Integer>> result = new ArrayList<>();
+        List<List<Integer>> combinations = new ArrayList<>();
+        // The combinations are in sorted order. This will also help us avoid duplicate candidates
         Arrays.sort(candidates);
-        combinationSum2(candidates, target, 0, new ArrayList<>(), result);
-        return result;
+        findCombinations(candidates, target, 0, new ArrayList<>(), combinations);
+
+        return combinations;
     }
 
-    private static void combinationSum2(int[] candidates, int target, int index, List<Integer> combination, List<List<Integer>> result) {
+    private static void findCombinations(int[] candidates, int target, int index, List<Integer> combination, List<List<Integer>> result) {
         if (target == 0) {
             result.add(new ArrayList<>(combination));
             return;
@@ -28,7 +30,7 @@ public class CombinationSumII {
             }
 
             combination.add(candidates[i]);
-            combinationSum2(candidates, target - candidates[i], i + 1, combination, result);
+            findCombinations(candidates, target - candidates[i], i + 1, combination, result);
             combination.remove(combination.size() - 1);
         }
     }

@@ -5,26 +5,30 @@ import java.util.List;
 
 public class CombinationSum {
     public static List<List<Integer>> combinationSum(int[] candidates, int target) {
-        List<List<Integer>> result = new ArrayList<>();
-        combinationSum(candidates, target, 0, new ArrayList<>(), result);
-        return result;
+        List<List<Integer>> combinations = new ArrayList<>();
+        findCombinations(candidates, target, 0, new ArrayList<>(), combinations);
+
+        return combinations;
     }
 
-    private static void combinationSum(int[] candidates, int target, int index, List<Integer> combination, List<List<Integer>> result) {
+    private static void findCombinations(int[] candidates, int target, int index, List<Integer> combination, List<List<Integer>> combinations) {
         if (index == candidates.length) {
             if (target == 0) {
-                result.add(new ArrayList<>(combination));
+                combinations.add(new ArrayList<>(combination));
             }
+
             return;
         }
 
+        // Pick the element at the current index (only if it is left that or equal to current target value)
         if (candidates[index] <= target) {
             combination.add(candidates[index]);
-            combinationSum(candidates, target - candidates[index], index, combination, result);
+            findCombinations(candidates, target - candidates[index], index, combination, combinations);
             combination.remove(combination.size() - 1);
         }
 
-        combinationSum(candidates, target, index + 1, combination, result);
+        // Do not pick element at the current index
+        findCombinations(candidates, target, index + 1, combination, combinations);
     }
 
     public static void main(String[] args) {
