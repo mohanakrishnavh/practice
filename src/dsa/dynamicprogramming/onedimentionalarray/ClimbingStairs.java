@@ -1,6 +1,6 @@
-package leetcode;
+package dsa.dynamicprogramming.onedimentionalarray;
 
-public class LC0070_ClimbingStairs {
+public class ClimbingStairs {
     public int climbStairs(int n) {
         if (n <= 1) {
             return 1;
