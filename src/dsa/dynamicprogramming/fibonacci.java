@@ -26,6 +26,8 @@ public class fibonacci {
     }
 
     // Bottom-Up Approach
+    // Time Complexity: O(n)
+    // Space Complexity: O(n)
     public static int fib2(int n) {
         int[] dp = new int[n+1];
         dp[0] = 0;
@@ -38,7 +40,9 @@ public class fibonacci {
         return dp[n];
     }
 
-    // Optimized Solution
+    // Space Optimized Solution
+    // Time Complexity: O(n)
+    // Space Complexity: O(1)
     public static int fib3(int n) {
         if (n <= 1) {
             return n;
@@ -46,15 +50,14 @@ public class fibonacci {
 
         int first = 1;
         int second = 0;
-        int result = 0;
         for (int i = 2; i <= n; i++) {
-            result = first + second;
+            int result = first + second;
 
             second = first;
             first = result;
         }
 
-        return result;
+        return first;
     }
 
     public static void main(String[] args) {
