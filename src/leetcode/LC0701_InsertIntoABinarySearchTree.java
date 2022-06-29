@@ -10,7 +10,7 @@ public class LC0701_InsertIntoABinarySearchTree {
 
         TreeNode current = root;
         while(true) {
-            if (val < current.value) {
+            if (val < current.val) {
                 if (current.left == null) {
                     current.left = new TreeNode(val);
                     break;

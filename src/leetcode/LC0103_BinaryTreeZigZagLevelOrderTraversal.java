@@ -34,9 +34,9 @@ public class LC0103_BinaryTreeZigZagLevelOrderTraversal {
                 }
 
                 if (leftToRight) {
-                    level.add(current.value);
+                    level.add(current.val);
                 } else {
-                    level.addFirst(current.value);
+                    level.addFirst(current.val);
                 }
 
                 size--;

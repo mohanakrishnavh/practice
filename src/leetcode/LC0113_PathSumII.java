@@ -18,13 +18,13 @@ public class LC0113_PathSumII {
             return;
         }
 
-        path.add(root.value);
-        if (root.left == null && root.right == null && root.value == targetSum) {
+        path.add(root.val);
+        if (root.left == null && root.right == null && root.val == targetSum) {
             paths.add(new ArrayList<>(path));
 
         } else {
-            pathSumUtil(root.left, targetSum - root.value, path, paths);
-            pathSumUtil(root.right, targetSum - root.value, path, paths);
+            pathSumUtil(root.left, targetSum - root.val, path, paths);
+            pathSumUtil(root.right, targetSum - root.val, path, paths);
         }
 
         path.remove(path.size() - 1);

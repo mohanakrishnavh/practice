@@ -21,7 +21,7 @@ public class BinarySearchTree extends BinaryTree {
         TreeNode currentNode = root;
         while (true) {
             // Case 2: When the value is smaller than the current node
-            if (value <= currentNode.value) {
+            if (value <= currentNode.val) {
                 if (currentNode.left == null) {
                     currentNode.left = newNode;
                     return;
@@ -49,7 +49,7 @@ public class BinarySearchTree extends BinaryTree {
             currentNode = currentNode.left;
         }
 
-        return currentNode.value;
+        return currentNode.val;
     }
 
     public TreeNode minNode() {
@@ -77,7 +77,7 @@ public class BinarySearchTree extends BinaryTree {
             currentNode = currentNode.right;
         }
 
-        return currentNode.value;
+        return currentNode.val;
     }
 
     public TreeNode maxNode() {
@@ -105,7 +105,7 @@ public class BinarySearchTree extends BinaryTree {
         System.out.print("Level Order Traversal : ");
         while (!queue.isEmpty()) {
             TreeNode node = queue.poll();
-            System.out.print(node.value + " ");
+            System.out.print(node.val + " ");
 
             if (node.left != null) {
                 queue.add(node.left);
@@ -128,7 +128,7 @@ public class BinarySearchTree extends BinaryTree {
             return;
         }
 
-        System.out.print(root.value + " ");
+        System.out.print(root.val + " ");
         preOrderTraversalUtil(root.left);
         preOrderTraversalUtil(root.right);
     }
@@ -145,7 +145,7 @@ public class BinarySearchTree extends BinaryTree {
         }
 
         inOrderTraversalUtil(root.left);
-        System.out.print(root.value + " ");
+        System.out.print(root.val + " ");
         inOrderTraversalUtil(root.right);
     }
 
@@ -162,6 +162,6 @@ public class BinarySearchTree extends BinaryTree {
 
         postOrderTraversalUtil(root.left);
         postOrderTraversalUtil(root.right);
-        System.out.print(root.value + " ");
+        System.out.print(root.val + " ");
     }
 }

@@ -12,6 +12,6 @@ public class LC0098_ValidateBinarySearchTree {
             return true;
         }
 
-        return min < root.value && root.value < max && isValidBST(root.left, min, root.value) && isValidBST(root.right, root.value, max);
+        return min < root.val && root.val < max && isValidBST(root.left, min, root.val) && isValidBST(root.right, root.val, max);
     }
 }

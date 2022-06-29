@@ -10,7 +10,7 @@ public class LC0285_InorderSuccessorInBST {
 
         TreeNode successor = null;
         while (root != null) {
-            if (p.value >= root.value) {
+            if (p.val >= root.val) {
                 root = root.right;
             } else {
                 successor = root;

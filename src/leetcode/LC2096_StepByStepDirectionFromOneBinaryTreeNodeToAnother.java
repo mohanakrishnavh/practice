@@ -39,7 +39,7 @@ public class LC2096_StepByStepDirectionFromOneBinaryTreeNodeToAnother {
             return false;
         }
 
-        if (root.value == value) {
+        if (root.val == value) {
             return true;
         }
 

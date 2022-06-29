@@ -19,7 +19,7 @@ public class LC0230_KthSmallestElementInBST {
             current = stack.pop();
             count++;
             if (count == k) {
-                return current.value;
+                return current.val;
             }
 
             current = current.right;

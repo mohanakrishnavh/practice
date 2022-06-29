@@ -16,7 +16,7 @@ public class LC0173_BinarySearchTreeIterator {
     public int next() {
         TreeNode current = stack.pop();
         pushNodes(current.right);
-        return current.value;
+        return current.val;
     }
 
     public boolean hasNext() {

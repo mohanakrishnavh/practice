@@ -7,14 +7,14 @@ public class FindCeil {
         int ceil = -1;
 
         while (root != null) {
-            if (root.value == key) {
-                return root.value;
+            if (root.val == key) {
+                return root.val;
             }
 
-            if (root.value < key) {
+            if (root.val < key) {
                 root = root.right;
             } else {
-                ceil = root.value;
+                ceil = root.val;
                 root = root.left;
             }
         }

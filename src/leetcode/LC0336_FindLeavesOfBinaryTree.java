@@ -29,7 +29,7 @@ public class LC0336_FindLeavesOfBinaryTree {
         }
 
         if (root.left == null && root.right == null) {
-            currentLeaves.add(root.value);
+            currentLeaves.add(root.val);
             return true;
         }
 

@@ -7,14 +7,14 @@ public class FindFloor {
         int floor = -1;
 
         while (root != null) {
-            if (root.value == key) {
-                return root.value;
+            if (root.val == key) {
+                return root.val;
             }
 
-            if (root.value > key) {
+            if (root.val > key) {
                 root = root.left;
             } else {
-                floor = root.value;
+                floor = root.val;
                 root = root.right;
             }
         }

@@ -26,7 +26,7 @@ public class BinaryTree extends Tree {
         stack.push(root);
         while (!stack.isEmpty()) {
             TreeNode treeNode = stack.pop();
-            visited.add(treeNode.value);
+            visited.add(treeNode.val);
 
             if (treeNode.right != null) {
                 stack.add(treeNode.right);
@@ -49,7 +49,7 @@ public class BinaryTree extends Tree {
             return visited;
         }
 
-        visited.add(root.value);
+        visited.add(root.val);
         preorderTraversalRecursive(root.left, visited);
         preorderTraversalRecursive(root.right, visited);
 
@@ -71,7 +71,7 @@ public class BinaryTree extends Tree {
             }
 
             current = stack.pop();
-            visited.add(current.value);
+            visited.add(current.val);
             current = current.right;
         }
 
@@ -88,7 +88,7 @@ public class BinaryTree extends Tree {
         }
 
         inorderTraversalRecursive(root.left, visited);
-        visited.add(root.value);
+        visited.add(root.val);
         inorderTraversalRecursive(root.right, visited);
 
         return visited;
@@ -118,7 +118,7 @@ public class BinaryTree extends Tree {
         }
 
         while (!s2.isEmpty()) {
-            visited.add(s2.pop().value);
+            visited.add(s2.pop().val);
         }
 
         return visited;
@@ -135,7 +135,7 @@ public class BinaryTree extends Tree {
 
         postorderTraversalRecursive(root.left, visited);
         postorderTraversalRecursive(root.right, visited);
-        visited.add(root.value);
+        visited.add(root.val);
 
         return visited;
     }
@@ -155,7 +155,7 @@ public class BinaryTree extends Tree {
 
             for (int i = 0; i < length; i++) {
                 TreeNode current = q.poll();
-                level.add(current.value);
+                level.add(current.val);
 
                 if (current.left != null) {
                     q.add(current.left);
@@ -196,7 +196,7 @@ public class BinaryTree extends Tree {
                 }
 
                 if (i == length - 1) {
-                    visited.add(current.value);
+                    visited.add(current.val);
                 }
             }
         }
@@ -213,6 +213,6 @@ public class BinaryTree extends Tree {
             return true;
         }
 
-        return root.value > minValue && root.value < maxValue && isBSTUtil(root.left, minValue, root.value) && isBSTUtil(root.right, root.value, maxValue);
+        return root.val > minValue && root.val < maxValue && isBSTUtil(root.left, minValue, root.val) && isBSTUtil(root.right, root.val, maxValue);
     }
 }

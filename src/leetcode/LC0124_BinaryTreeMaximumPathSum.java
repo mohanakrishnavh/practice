@@ -19,8 +19,8 @@ public class LC0124_BinaryTreeMaximumPathSum {
         int leftSum = Math.max(maxPathSumHelper(root.left, result), 0);
         int rightSum = Math.max(maxPathSumHelper(root.right, result), 0);
 
-        result[0] = Math.max(result[0], leftSum + rightSum + root.value);
+        result[0] = Math.max(result[0], leftSum + rightSum + root.val);
 
-        return Math.max(leftSum, rightSum) + root.value;
+        return Math.max(leftSum, rightSum) + root.val;
     }
 }

@@ -8,9 +8,9 @@ public class Delete {
             return root;
         }
 
-        if (key < root.value) {
+        if (key < root.val) {
             root.left = deleteNode(root.left, key);
-        } else if (key > root.value) {
+        } else if (key > root.val) {
             root.right = deleteNode(root.right, key);
         } else {
             // Case 1 : No Children
@@ -29,8 +29,8 @@ public class Delete {
             // Case 3 : Two Children
             else {
                 TreeNode node = findMin(root.right);
-                root.value = node.value;
-                root.right = deleteNode(root.right, node.value);
+                root.val = node.val;
+                root.right = deleteNode(root.right, node.val);
             }
         }
 

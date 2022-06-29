@@ -18,7 +18,7 @@ public class LC0404_SumOfLeftLeaves {
         }
 
         if (root.left == null && root.right == null && parent.left == root) {
-            return root.value;
+            return root.val;
         }
 
         int total = 0;
