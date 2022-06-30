@@ -9,7 +9,17 @@ import java.util.Queue;
 import java.util.Map;
 import java.util.HashMap;
 
-public class TopView {
+public class BottomView {
+    static class Pair{
+        TreeNode node;
+        int column;
+
+        public Pair(TreeNode node, int column) {
+            this.node = node;
+            this.column = column;
+        }
+    }
+
     public static List<Integer> getTopView(TreeNode root) {
         List<Integer> result = new ArrayList<>();
         if (root == null) {
@@ -19,16 +29,16 @@ public class TopView {
         int minCol = Integer.MAX_VALUE;
         int maxCol = Integer.MIN_VALUE;
         Map<Integer, Integer> nodeColumnMap = new HashMap<>();
-        Queue<Pair> q = new LinkedList<>();
-        q.offer(new Pair(root, 0));
-        while (!q.isEmpty()) {
+        Queue<TopView.Pair> q = new LinkedList<>();
+        q.offer(new TopView.Pair(root, 0));
+        while(!q.isEmpty()) {
             int size = q.size();
             for (int i = 0; i < size; i++) {
-                Pair pair = q.poll();
+                TopView.Pair pair = q.poll();
                 TreeNode node = pair.node;
                 int column = pair.column;
 
-                nodeColumnMap.computeIfAbsent(column, k -> node.val);
+                nodeColumnMap.put(column, node.val);
 
                 if (column < minCol) {
                     minCol = column;
@@ -38,11 +48,11 @@ public class TopView {
                 }
 
                 if (node.left != null) {
-                    q.add(new Pair(node.left, column - 1));
+                    q.add(new TopView.Pair(node.left, column - 1));
                 }
 
                 if (node.right != null) {
-                    q.add(new Pair(node.right, column + 1));
+                    q.add(new TopView.Pair(node.right, column + 1));
                 }
             }
         }
@@ -56,15 +66,5 @@ public class TopView {
         }
 
         return result;
-    }
-
-    static class Pair {
-        TreeNode node;
-        int column;
-
-        public Pair(TreeNode node, int column) {
-            this.node = node;
-            this.column = column;
-        }
     }
 }
