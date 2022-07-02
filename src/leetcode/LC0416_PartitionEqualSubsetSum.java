@@ -1,43 +1,44 @@
 package leetcode;
 
 public class LC0416_PartitionEqualSubsetSum {
-    public boolean canPartition(int[] nums) {
-        int sum = findSum(nums);
+    public boolean canPartition(int[] arr) {
+        int sum = 0;
+        for (int i = 0; i < arr.length; i++) {
+            sum += arr[i];
+        }
 
         if (sum % 2 != 0) {
             return false;
         }
 
-        return hasSubsetSum(nums, sum / 2);
+        return hasSubsetSum(arr, sum/2);
     }
 
-    private int findSum(int[] nums) {
-        int sum = 0;
-        for (int num : nums) {
-            sum += num;
+    public static boolean hasSubsetSum(int[] arr, int k) {
+        boolean[] previous = new boolean[k+1];
+        previous[0] = true;
+
+        if (arr[0] <= k) {
+            previous[arr[0]] = true;
         }
 
-        return sum;
-    }
+        for (int index = 1; index < arr.length; index++) {
+            boolean[] current = new boolean[k+1];
+            current[0] = true;
 
-    private boolean hasSubsetSum(int[] nums, int sum) {
-        int i = 0, j = 0;
-        boolean[][] t = new boolean[nums.length + 1][sum + 1];
-
-        for (i = 0; i <= nums.length; i++) {
-            t[i][j] = true;
-        }
-
-        for (i = 1; i <= nums.length; i++) {
-            for (j = 1; j <= sum; j++) {
-                if (nums[i - 1] <= j) {
-                    t[i][j] = t[i - 1][j - nums[i - 1]] || t[i - 1][j];
-                } else {
-                    t[i][j] = t[i - 1][j];
+            for (int target = 1; target <= k; target++) {
+                boolean notTake = previous[target];
+                boolean take = false;
+                if (arr[index] <= target) {
+                    take = previous[target - arr[index]];
                 }
+
+                current[target] = take || notTake;
             }
+
+            previous = current;
         }
 
-        return t[nums.length][sum];
+        return previous[k];
     }
 }

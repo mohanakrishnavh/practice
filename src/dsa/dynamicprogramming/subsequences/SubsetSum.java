@@ -2,7 +2,7 @@ package dsa.dynamicprogramming.subsequences;
 
 import java.util.Arrays;
 
-public class SubsetSumEqualToK {
+public class SubsetSum {
     // Approach 1: Recursion
     public static boolean hasSubsetSum(int[] arr, int k) {
         return subsetSumHelper(arr, arr.length-1, k);
