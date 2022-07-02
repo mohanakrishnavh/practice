@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class SubsetSumEqualToK {
     // Approach 1: Recursion
-    public static boolean subsetSumEqualsK(int[] arr, int k) {
+    public static boolean hasSubsetSum(int[] arr, int k) {
         return subsetSumHelper(arr, arr.length-1, k);
     }
 
@@ -27,7 +27,7 @@ public class SubsetSumEqualToK {
     }
 
     // Approach 2 : Memoization
-    public static boolean subsetSumEqualsK2(int[] arr, int k) {
+    public static boolean hasSubsetSum2(int[] arr, int k) {
         int[][] dp = new int[arr.length][k+1];
         for (int i = 0; i < arr.length; i++) {
             Arrays.fill(dp[i], -1);
@@ -60,7 +60,7 @@ public class SubsetSumEqualToK {
     }
 
     // Approach 3 : Bottom-Up
-    public static boolean subsetSumEqualsK3(int[] arr, int k) {
+    public static boolean hasSubsetSum3(int[] arr, int k) {
         boolean[][] dp = new boolean[arr.length][k+1];
         for (int i = 0; i < arr.length; i++) {
             dp[i][0] = true;
@@ -83,7 +83,7 @@ public class SubsetSumEqualToK {
     }
 
     // Approach 4 : Space Optimization
-    public static boolean subsetSumEqualsK4(int[] arr, int k) {
+    public static boolean hasSubsetSum4(int[] arr, int k) {
         boolean[] previous = new boolean[k+1];
         previous[0] = true;
 
@@ -112,7 +112,7 @@ public class SubsetSumEqualToK {
     }
 
     public static void main(String[] args) {
-        System.out.println(subsetSumEqualsK4(new int[]{2, 3, 1, 1}, 4));
-        System.out.println(subsetSumEqualsK4(new int[]{2, 3, 1, 1}, 10));
+        System.out.println(hasSubsetSum4(new int[]{2, 3, 1, 1}, 4));
+        System.out.println(hasSubsetSum4(new int[]{2, 3, 1, 1}, 10));
     }
 }
