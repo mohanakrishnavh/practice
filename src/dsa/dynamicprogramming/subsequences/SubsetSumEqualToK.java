@@ -87,6 +87,10 @@ public class SubsetSumEqualToK {
         boolean[] previous = new boolean[k+1];
         previous[0] = true;
 
+        if (arr[0] <= k) {
+            previous[arr[0]] = true;
+        }
+
         for (int index = 1; index < arr.length; index++) {
             boolean[] current = new boolean[k+1];
             current[0] = true;
