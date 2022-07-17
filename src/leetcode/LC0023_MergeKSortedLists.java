@@ -14,7 +14,7 @@ public class LC0023_MergeKSortedLists {
         ListNode current = sentinel;
 
         int k = lists.length;
-        PriorityQueue<Pair> minHeap = new PriorityQueue<>((a, b) -> a.node.value - b.node.value);
+        PriorityQueue<Pair> minHeap = new PriorityQueue<>((a, b) -> a.node.val - b.node.val);
         for (int i = 0; i < k; i++) {
             if (lists[i] != null) {
                 minHeap.add(new Pair(i, lists[i]));

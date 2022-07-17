@@ -13,7 +13,7 @@ public class MergeKSortedLists {
         ListNode sentinel = new ListNode();
         ListNode current = sentinel;
 
-        PriorityQueue<ListNode> pq = new PriorityQueue<>((a, b) -> a.value - b.value);
+        PriorityQueue<ListNode> pq = new PriorityQueue<>((a, b) -> a.val - b.val);
         int k = lists.length;
         // Append the first elements from all the lists
         for (int i=0; i < k; i++) {

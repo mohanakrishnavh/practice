@@ -1,8 +1,8 @@
-package leetcode;
+package apple.linkedlist;
 
 import dsa.linkedlist.ListNode;
 
-public class LC0002_AddTwoNumbers {
+public class AddTwoNumbers {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         if (l1 == null) {
             return l2;

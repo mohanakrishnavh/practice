@@ -17,9 +17,9 @@ public class LC1721_SwapNodesInLinkedList {
         }
         secondNode = slow;
 
-        int temp = firstNode.value;
-        firstNode.value = secondNode.value;
-        secondNode.value = temp;
+        int temp = firstNode.val;
+        firstNode.val = secondNode.val;
+        secondNode.val = temp;
 
         return head;
     }

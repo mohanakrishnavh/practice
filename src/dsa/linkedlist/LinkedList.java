@@ -17,7 +17,7 @@ public class LinkedList {
             return;
         }
 
-        System.out.print(listNode.value + " ");
+        System.out.print(listNode.val + " ");
         print(listNode.next);
     }
 
@@ -28,7 +28,7 @@ public class LinkedList {
         }
 
         print(listNode.next, reverse);
-        System.out.print(listNode.value + " ");
+        System.out.print(listNode.val + " ");
     }
 
     public static ListNode reverse(ListNode head) {
@@ -57,7 +57,7 @@ public class LinkedList {
             currentNode = currentNode.next;
         }
 
-        return currentNode.value;
+        return currentNode.val;
     }
 
     public void addFirst(int value) {
@@ -145,7 +145,7 @@ public class LinkedList {
     public void print() {
         ListNode currentNode = head;
         while (currentNode != null) {
-            System.out.print(currentNode.value + " ");
+            System.out.print(currentNode.val + " ");
             currentNode = currentNode.next;
         }
         System.out.println();

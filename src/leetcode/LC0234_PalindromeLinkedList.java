@@ -16,7 +16,7 @@ public class LC0234_PalindromeLinkedList {
         slow = reverse(slow);
 
         // Check if the list is a palindrome
-        while (slow != null && slow.value == head.value) {
+        while (slow != null && slow.val == head.val) {
             slow = slow.next;
             head = head.next;
         }

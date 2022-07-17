@@ -9,7 +9,7 @@ public class LC0203_RemoveLinkedListElements {
 
         ListNode current = head, previous = sentinel;
         while (current != null) {
-            if (current.value == value) {
+            if (current.val == value) {
                 previous.next = current.next;
             } else {
                 previous = current;

@@ -16,7 +16,7 @@ public class LC0021_MergeTwoSortedLists {
         ListNode sentinel = new ListNode(-1);
         ListNode previous = sentinel;
         while (list1 != null && list2 != null) {
-            if (list1.value <= list2.value) {
+            if (list1.val <= list2.val) {
                 previous.next = list1;
                 list1 = list1.next;
             } else {
