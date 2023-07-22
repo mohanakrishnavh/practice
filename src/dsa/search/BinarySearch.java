@@ -43,21 +43,18 @@ public class BinarySearch {
         return BinarySearch.searchRecursive(arr, 0, mid - 1, target);
     }
 
-    public static int search(int[] nums, int startIndex, int endIndex, int target) {
-        int start = startIndex;
-        int end = endIndex;
+    public static int search(int[] arr, int low, int high, int target) {
+        while (low <= high) {
+            int mid = low + (high - low) / 2;
 
-        while (start <= end) {
-            int mid = start + (end - start) / 2;
-
-            if (target == nums[mid]) {
+            if (target == arr[mid]) {
                 return mid;
             }
 
-            if (target < nums[mid]) {
-                end = mid - 1;
+            if (target < arr[mid]) {
+                high = mid - 1;
             } else {
-                start = mid + 1;
+                low = mid + 1;
             }
         }
 
