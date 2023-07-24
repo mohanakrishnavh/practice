@@ -7,6 +7,7 @@ public class fibonacci {
     public static int fib(int n) {
         int[] dp = new int[n+1];
         Arrays.fill(dp, -1);
+        fib(n, dp);
 
         return dp[n];
     }
@@ -61,6 +62,8 @@ public class fibonacci {
     }
 
     public static void main(String[] args) {
+        System.out.println(fib(5));
+        System.out.println(fib2(5));
         System.out.println(fib3(5));
     }
 }
