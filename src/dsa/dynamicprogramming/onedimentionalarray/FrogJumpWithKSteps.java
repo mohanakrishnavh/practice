@@ -1,6 +1,10 @@
 package dsa.dynamicprogramming.onedimentionalarray;
 
 public class FrogJumpWithKSteps {
+
+    // Bottom-up Approach
+    // Time Complexity : O(N * K)
+    // Space Complexity : O(N)
     public static int minimizeCost(int n, int k, int[] height) {
         int[] dp = new int[n];
         dp[0] = 0;
