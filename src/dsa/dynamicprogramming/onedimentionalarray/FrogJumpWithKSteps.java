@@ -1,21 +1,20 @@
 package dsa.dynamicprogramming.onedimentionalarray;
 
 public class FrogJumpWithKSteps {
-    public static int frogJump(int n, int[] heights, int k) {
+    public static int minimizeCost(int n, int k, int[] height) {
         int[] dp = new int[n];
+        dp[0] = 0;
         for (int i = 1; i < n; i++) {
-            int minCost = Integer.MAX_VALUE;
+            int minCostAtIndex = Integer.MAX_VALUE;
             for (int j = 1; j <= k; j++) {
-                if (i - j < 0) {
-                    break;
+                if (i - j >= 0) {
+                    minCostAtIndex = Math.min(minCostAtIndex, Math.abs(height[i] - height[i - j]) + dp[i - j]);
                 }
-
-                int currentSteps = dp[i-j] + Math.abs(heights[i]-heights[i-j]);
-                minCost = Math.min(currentSteps, minCost);
             }
-            dp[i] = minCost;
+
+            dp[i] = minCostAtIndex;
         }
 
-        return dp[n-1];
+        return dp[n - 1];
     }
 }
