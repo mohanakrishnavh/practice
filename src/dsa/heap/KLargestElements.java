@@ -11,7 +11,7 @@ public class KLargestElements {
 
         PriorityQueue<Integer> minHeap = new PriorityQueue<>();
         for (int num : nums) {
-            minHeap.offer(num);
+            minHeap.add(num);
 
             if (minHeap.size() > k) {
                 minHeap.poll();

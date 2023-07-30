@@ -4,29 +4,29 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.PriorityQueue;
 
-public class SortAKSortedArray {
+public class SortKSortedArray {
     public static int[] sort(int[] nums, int k) {
         if (nums.length == 0 || k <= 0) {
             return null;
         }
 
-        int[] sortedNums = new int[nums.length];
-        PriorityQueue<Integer> priorityQueue = new PriorityQueue<>();
+        int[] result = new int[nums.length];
+        PriorityQueue<Integer> minHeap = new PriorityQueue<>();
 
-        int index = 0;
+        int idx = 0;
         for (int num : nums) {
-            priorityQueue.add(num);
+            minHeap.add(num);
 
-            if (priorityQueue.size() > k) {
-                sortedNums[index++] = priorityQueue.poll();
+            if (minHeap.size() > k) {
+                result[idx++] = minHeap.poll();
             }
         }
 
-        while (!priorityQueue.isEmpty()) {
-            sortedNums[index++] = priorityQueue.poll();
+        while (!minHeap.isEmpty()) {
+            result[idx++] = minHeap.poll();
         }
 
-        return sortedNums;
+        return result;
     }
 
     public static int[] sortInDescendingOrder(int[] nums, int k) {
