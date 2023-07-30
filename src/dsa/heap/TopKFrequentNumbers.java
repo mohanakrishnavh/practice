@@ -1,5 +1,7 @@
 package dsa.heap;
 
+import dsa.util.FrequencyUtil;
+
 import java.util.*;
 
 public class TopKFrequentNumbers {
@@ -9,16 +11,13 @@ public class TopKFrequentNumbers {
             return topKFrequentNumbers;
         }
 
-        Map<Integer, Integer> countMap = new HashMap<>();
-        for (int num : nums) {
-            countMap.put(num, countMap.getOrDefault(num, 0) + 1);
-        }
+        Map<Integer, Integer> countMap = FrequencyUtil.getCountMap(nums);
 
         PriorityQueue<int[]> minHeap = new PriorityQueue<>((a, b) -> a[0] - b[0]);
         for (Map.Entry<Integer, Integer> entry : countMap.entrySet()) {
             int[] frequencyNumberPair = new int[]{entry.getValue(), entry.getKey()};
             if (minHeap.size() < k) {
-                minHeap.offer(frequencyNumberPair);
+                minHeap.add(frequencyNumberPair);
             } else {
                 if (frequencyNumberPair[0] > minHeap.peek()[0]) {
                     minHeap.offer(frequencyNumberPair);
