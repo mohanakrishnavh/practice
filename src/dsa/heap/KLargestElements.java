@@ -4,34 +4,24 @@ import java.util.Arrays;
 import java.util.PriorityQueue;
 
 public class KLargestElements {
-    public static int[] getKLargestElements(int[] nums, int k) {
+    public static Integer[] getKLargestElements(Integer[] nums, int k) {
         if (nums.length == 0 || k <= 0) {
             return null;
         }
 
-        if (nums.length == k) {
-            return nums;
-        }
-
-        PriorityQueue<Integer> priorityQueue = new PriorityQueue<>();
+        PriorityQueue<Integer> minHeap = new PriorityQueue<>();
         for (int num : nums) {
-            priorityQueue.offer(num);
+            minHeap.offer(num);
 
-            if (priorityQueue.size() > k) {
-                priorityQueue.poll();
+            if (minHeap.size() > k) {
+                minHeap.poll();
             }
         }
 
-        int index = 0;
-        int[] kLargestElements = new int[k];
-        while (!priorityQueue.isEmpty()) {
-            kLargestElements[index++] = priorityQueue.poll();
-        }
-
-        return kLargestElements;
+        return minHeap.toArray(Integer[]::new);
     }
 
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(getKLargestElements(new int[]{7, 10, 4, 3, 20, 15}, 3)));
+        System.out.println(Arrays.toString(getKLargestElements(new Integer[]{7, 10, 4, 3, 20, 15}, 3)));
     }
 }
