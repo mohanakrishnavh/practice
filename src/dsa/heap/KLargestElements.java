@@ -18,7 +18,10 @@ public class KLargestElements {
             }
         }
 
-        return minHeap.toArray(Integer[]::new);
+        // Converting Priority Queue to Array
+        // https://stackoverflow.com/questions/65306475/how-to-cast-object-into-int-in-java
+        // return minHeap.toArray(Integer[]:new);
+        return minHeap.toArray(new Integer[]{});
     }
 
     public static void main(String[] args) {
