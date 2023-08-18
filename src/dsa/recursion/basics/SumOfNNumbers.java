@@ -1,13 +1,12 @@
 package dsa.recursion.basics;
 
 public class SumOfNNumbers {
-    public static void sumParameterized(int i, int sum) {
+    public static int sumParameterized(int i, int sum) {
         if (i < 1) {
-            System.out.println(sum);
-            return;
+            return sum;
         }
 
-        sumParameterized(i - 1, sum + i);
+        return sumParameterized(i - 1, sum + i);
     }
 
     public static int sumFunctional(int n) {
@@ -16,5 +15,10 @@ public class SumOfNNumbers {
         }
 
         return n + sumFunctional(n - 1);
+    }
+
+    public static void main(String[] args) {
+        System.out.println(sumParameterized(5, 0));
+        System.out.println(sumFunctional(5));
     }
 }

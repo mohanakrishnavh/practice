@@ -122,18 +122,18 @@ public class LinkedList {
     }
 
     public void reverse() {
-        ListNode currentNode, previousNode, nextNode;
-        currentNode = head;
-        previousNode = null;
+        ListNode current, prev, next;
+        current = head;
+        prev = null;
 
-        while (currentNode != null) {
-            nextNode = currentNode.next;
-            currentNode.next = previousNode;
-            previousNode = currentNode;
-            currentNode = nextNode;
+        while (current != null) {
+            next = current.next;
+            current.next = prev;
+            prev = current;
+            current = next;
         }
 
-        head = previousNode;
+        head = prev;
     }
 
     public void addAll(int[] nums) {

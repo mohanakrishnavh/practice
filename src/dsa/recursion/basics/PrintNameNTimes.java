@@ -3,13 +3,13 @@ package dsa.recursion.basics;
 import java.util.Scanner;
 
 public class PrintNameNTimes {
-    public static void printName(int i, int n, String name) {
-        if (i > n) {
+    public static void printName(int index, int n, String name) {
+        if (index == n) {
             return;
         }
 
         System.out.println(name);
-        printName(++i, n, name);
+        printName(++index, n, name);
     }
 
     public static void main(String[] args) {
@@ -17,6 +17,6 @@ public class PrintNameNTimes {
         int n = sc.nextInt();
         String name = sc.next();
 
-        printName(1, n, name);
+        printName(0, n, name);
     }
 }
