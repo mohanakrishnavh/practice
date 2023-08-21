@@ -1,5 +1,7 @@
 package dsa.linkedlist;
 
+import dsa.tree.Node;
+
 public class LinkedList {
 
     ListNode head;
@@ -32,19 +34,15 @@ public class LinkedList {
     }
 
     public static ListNode reverse(ListNode head) {
-        return reverseHelper(head);
-    }
-
-    public static ListNode reverseHelper(ListNode listNode) {
-        if (listNode == null || listNode.next == null) {
-            return listNode;
+        if (head == null || head.next == null) {
+            return head;
         }
 
-        ListNode head = reverseHelper(listNode.next);
-        ListNode nextNode = listNode.next;
-        nextNode.next = listNode;
-        listNode.next = null;
-        return head;
+        ListNode newHead = reverse(head.next);
+        head.next.next = head;
+        head.next = null;
+
+        return newHead;
     }
 
     public int get(int index) {
