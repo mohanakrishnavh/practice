@@ -7,19 +7,19 @@ import java.util.List;
 import java.util.Queue;
 
 public class ConnectedComponents {
-    public static int countComponents(int N, int[][] edges) {
-        int numberOfComponents = 0;
-        boolean[] visited = new boolean[N];
-        List<List<Integer>> adjList = GraphUtil.getAdjList(N, edges);
+    public static int countComponents(int n, int[][] edges) {
+        int components = 0;
+        boolean[] visited = new boolean[n];
+        List<List<Integer>> adjList = GraphUtil.getAdjList(n, edges);
 
-        for (int vertex = 0; vertex < N; vertex++) {
+        for (int vertex = 0; vertex < n; vertex++) {
             if (!visited[vertex]) {
                 bfs(vertex, adjList, visited);
-                numberOfComponents++;
+                components++;
             }
         }
 
-        return numberOfComponents;
+        return components;
     }
 
     private static void bfs(int vertex, List<List<Integer>> adjList, boolean[] visited) {

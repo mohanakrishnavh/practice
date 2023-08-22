@@ -35,8 +35,7 @@ public class LC0002_AddTwoNumbers {
             carry = sum / 10;
             nodeVal = sum % 10;
 
-            ListNode node = new ListNode(nodeVal);
-            current.next = node;
+            current.next = new ListNode(nodeVal);
             current = current.next;
         }
 

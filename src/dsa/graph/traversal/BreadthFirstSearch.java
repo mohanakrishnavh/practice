@@ -40,10 +40,10 @@ public class BreadthFirstSearch {
     }
 
     public static void main(String[] args) {
-        int N = 8;
+        int n = 8;
         int[][] edges = new int[][]{{0, 1}, {1, 2}, {2, 3}, {3, 5}, {5, 7}, {2, 7}, {4, 5}};
 
-        Graph graph = new Graph(N);
+        Graph graph = new Graph(n);
         graph.addUndirectedEdges(edges);
         System.out.println(breadthFirstTraversal(graph.size(), graph.getAdjList()));
     }

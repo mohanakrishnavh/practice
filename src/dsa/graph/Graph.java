@@ -8,17 +8,17 @@ public class Graph {
     int[][] adjMatrix;
     int size;
 
-    public Graph(int N) {
-        this.size = N;
+    public Graph(int n) {
+        this.size = n;
         this.adjList = new ArrayList<>();
 
         // Initializing the Adjacency List
-        for (int i = 0; i < N; i++) {
+        for (int i = 0; i < n; i++) {
             adjList.add(i, new ArrayList<>());
         }
 
         // Initializing the Adjacency Matrix
-        adjMatrix = new int[N][N];
+        adjMatrix = new int[n][n];
     }
 
     public List<List<Integer>> getAdjList() {
