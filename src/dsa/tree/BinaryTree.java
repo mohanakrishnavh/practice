@@ -57,9 +57,9 @@ public class BinaryTree extends Tree {
     }
 
     public static List<Integer> inorderTraversal(TreeNode root) {
-        List<Integer> visited = new ArrayList<>();
+        List<Integer> traversal = new ArrayList<>();
         if (root == null) {
-            return visited;
+            return traversal;
         }
 
         Stack<TreeNode> stack = new Stack<>();
@@ -71,11 +71,11 @@ public class BinaryTree extends Tree {
             }
 
             current = stack.pop();
-            visited.add(current.val);
+            traversal.add(current.val);
             current = current.right;
         }
 
-        return visited;
+        return traversal;
     }
 
     public static List<Integer> inorderTraversalRecursive(TreeNode root) {
@@ -100,25 +100,25 @@ public class BinaryTree extends Tree {
             return visited;
         }
 
-        Stack<TreeNode> s1 = new Stack<>();
-        Stack<TreeNode> s2 = new Stack<>();
-        s1.push(root);
+        Stack<TreeNode> stack1 = new Stack<>();
+        Stack<TreeNode> stack2 = new Stack<>();
+        stack1.push(root);
 
-        while (!s1.empty()) {
-            TreeNode treeNode = s1.pop();
-            s2.push(treeNode);
+        while (!stack1.empty()) {
+            TreeNode treeNode = stack1.pop();
+            stack2.push(treeNode);
 
             if (treeNode.left != null) {
-                s1.push(treeNode.left);
+                stack1.push(treeNode.left);
             }
 
             if (treeNode.right != null) {
-                s1.push(treeNode.right);
+                stack1.push(treeNode.right);
             }
         }
 
-        while (!s2.isEmpty()) {
-            visited.add(s2.pop().val);
+        while (!stack2.isEmpty()) {
+            visited.add(stack2.pop().val);
         }
 
         return visited;
