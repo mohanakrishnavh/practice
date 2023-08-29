@@ -6,39 +6,36 @@ import java.util.Queue;
 
 public class LC0785_IsGraphBipartite {
     public boolean isBipartite(int[][] graph) {
-        int n = graph.length;
-        int[] color = new int[n];
+        int V = graph.length;
+        int[] color = new int[V];
         Arrays.fill(color, -1);
 
-        for (int i = 0; i < n; i++) {
-            if (color[i] == -1) {
-                if (!bfs(i, color, graph)) {
-                    return false;
-                }
+        for (int v = 0; v < V; v++) {
+            if (color[v] == -1 && hasOddLengthCycle(v, graph, color)) {
+                return false;
             }
         }
 
         return true;
     }
 
-    public boolean bfs(int node, int[] color, int[][] graph) {
+    private boolean hasOddLengthCycle(int v, int[][] graph, int[] color) {
         Queue<Integer> q = new LinkedList<>();
-        q.add(node);
-        color[node] = 1;
+        q.offer(v);
+        color[v] = 1;
 
         while (!q.isEmpty()) {
-            int n = q.poll();
-
-            for (int it : graph[n]) {
+            Integer node = q.poll();
+            for (int it : graph[node]) {
                 if (color[it] == -1) {
-                    color[it] = 1 - color[n];
+                    color[it] = 1 - color[node];
                     q.add(it);
-                } else if (color[it] == color[n]) {
-                    return false;
+                } else if (color[it] == color[node]) {
+                    return true;
                 }
             }
         }
 
-        return true;
+        return false;
     }
 }
