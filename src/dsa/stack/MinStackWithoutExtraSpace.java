@@ -13,21 +13,6 @@ public class MinStackWithoutExtraSpace {
         minimumElement = -1;
     }
 
-    public static void main(String[] args) {
-        MinStackWithoutExtraSpace minStack = new MinStackWithoutExtraSpace();
-        minStack.push(512);
-        minStack.push(-1024);
-        minStack.push(-1024);
-        minStack.push(512);
-        System.out.println(minStack.getMin());
-        minStack.pop();
-        System.out.println(minStack.getMin());
-        minStack.pop();
-        System.out.println(minStack.getMin());
-        minStack.pop();
-        System.out.println(minStack.top());
-    }
-
     public void push(int x) {
         if (stack.isEmpty()) {
             stack.push(x);
@@ -74,4 +59,20 @@ public class MinStackWithoutExtraSpace {
 
         return minimumElement;
     }
+
+    public static void main(String[] args) {
+        MinStackWithoutExtraSpace minStack = new MinStackWithoutExtraSpace();
+        minStack.push(512);
+        minStack.push(-1024);
+        minStack.push(-1024);
+        minStack.push(512);
+        System.out.println(minStack.getMin());
+        minStack.pop();
+        System.out.println(minStack.getMin());
+        minStack.pop();
+        System.out.println(minStack.getMin());
+        minStack.pop();
+        System.out.println(minStack.top());
+    }
+
 }

@@ -5,29 +5,6 @@ import java.util.Stack;
 
 public class NearestGreaterToLeft {
 
-    /*private static int[] getNearestGreaterToLeft(int[] nums) {
-        int[] ngl = new int[nums.length];
-        Stack<Integer> stack = new Stack<>();
-
-        for (int i = 0; i < nums.length; i++) {
-            if (stack.isEmpty()) {
-                ngl[i] = -1;
-            } else if (stack.peek() > nums[i]) {
-                ngl[i] = stack.peek();
-            } else {
-                while (!stack.isEmpty() && stack.peek() <= nums[i]) {
-                    stack.pop();
-                }
-
-                ngl[i] = stack.isEmpty() ? -1 : stack.peek();
-            }
-
-            stack.push(nums[i]);
-        }
-
-        return ngl;
-    }*/
-
     private static int[] getNearestGreaterToLeft(int[] nums) {
         int[] ngl = new int[nums.length];
         Stack<Integer> stack = new Stack<>();

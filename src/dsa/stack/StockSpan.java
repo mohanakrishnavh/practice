@@ -3,7 +3,7 @@ package dsa.stack;
 import java.util.Arrays;
 import java.util.Stack;
 
-public class StockSpanProblem {
+public class StockSpan {
     private static int[] getStockSpan(int[] nums) {
         int[] stockSpan = new int[nums.length];
         Stack<Integer> stack = new Stack<>();

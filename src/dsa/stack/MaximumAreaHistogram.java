@@ -52,7 +52,7 @@ public class MaximumAreaHistogram {
     }
 
     public static void main(String[] args) {
-        int[] nums = new int[]{6, 2, 5, 4, 5, 1, 6};
+        int[] nums = new int[]{2, 1, 5, 6, 2, 3};
         System.out.println(getMaximumArea(nums));
     }
 }
