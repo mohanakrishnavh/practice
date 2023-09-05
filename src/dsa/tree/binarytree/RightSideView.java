@@ -10,34 +10,32 @@ import java.util.Queue;
 public class RightSideView {
     // Approach 1 : Level Order Traversal
     public List<Integer> rightSideView(TreeNode root) {
-        List<Integer> result = new ArrayList<>();
+        List<Integer> rightSideNodes = new ArrayList<>();
         if (root == null) {
-            return result;
+            return rightSideNodes;
         }
 
         Queue<TreeNode> q = new LinkedList<>();
         q.add(root);
-        while (!q.isEmpty()) {
+        while(!q.isEmpty()) {
             int size = q.size();
-
             for (int i = 0; i < size; i++) {
                 TreeNode node = q.poll();
-
-                if (i == size-1) {
-                    result.add(node.val);
+                if (i == size - 1) {
+                    rightSideNodes.add(node.val);
                 }
 
                 if (node.left != null) {
-                    q.add(node.left);
+                    q.offer(node.left);
                 }
 
                 if (node.right != null) {
-                    q.add(node.right);
+                    q.offer(node.right);
                 }
             }
         }
 
-        return result;
+        return rightSideNodes;
     }
 
     // Approach 2 : Depth First Traversal

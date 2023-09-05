@@ -1,13 +1,15 @@
-package leetcode;
-
-import dsa.tree.TreeNode;
+package dsa.tree.binarytree;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-public class LC0297_SerializeAndDeserializeBinaryTree {
+import dsa.tree.BinaryTree;
+import dsa.tree.TreeNode;
+
+public class SerializeAndDeserializeBinaryTree {
+
     // Encodes a tree to a single string.
     public String serialize(TreeNode root) {
         if (root == null) {
@@ -64,4 +66,20 @@ public class LC0297_SerializeAndDeserializeBinaryTree {
 
         return root;
     }
+
+    public static void main(String[] args){
+        TreeNode root = new TreeNode(1);
+        // Level 1
+        root.left = new TreeNode(2);
+        root.right = new TreeNode(13);
+        // Level 2
+        root.right.left = new TreeNode(4);
+        root.right.right = new TreeNode(5);
+
+        SerializeAndDeserializeBinaryTree codec = new SerializeAndDeserializeBinaryTree();
+        String data = codec.serialize(root);
+        System.out.println(data);
+        System.out.println(BinaryTree.levelOrderTraversal(codec.deserialize(data)));
+    }
+
 }

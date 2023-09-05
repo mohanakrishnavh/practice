@@ -27,12 +27,12 @@ public class VerticalOrderTraversal {
             return traversal;
         }
 
-        int minColumnIndex = Integer.MAX_VALUE;
-        int maxColumnIndex = Integer.MIN_VALUE;
+        int columnMin = Integer.MAX_VALUE;
+        int columnMax = Integer.MIN_VALUE;
 
         Queue<Pair> q = new LinkedList<>();
         q.add(new Pair(root, 0));
-        Map<Integer, List<Integer>> columnMap = new HashMap<>();
+        Map<Integer, List<Integer>> columnPairs = new HashMap<>();
 
         while (!q.isEmpty()) {
             int size = q.size();
@@ -42,14 +42,14 @@ public class VerticalOrderTraversal {
                 int column = pair.column;
                 TreeNode node = pair.node;
 
-                columnMap.computeIfAbsent(column, k -> new ArrayList<>());
-                columnMap.get(column).add(node.val);
-                if (column < minColumnIndex) {
-                    minColumnIndex = column;
+                columnPairs.computeIfAbsent(column, k -> new ArrayList<>());
+                columnPairs.get(column).add(node.val);
+                if (column < columnMin) {
+                    columnMin = column;
                 }
 
-                if (column > maxColumnIndex) {
-                    maxColumnIndex = column;
+                if (column > columnMax) {
+                    columnMax = column;
                 }
 
                 if (node.left != null) {
@@ -62,9 +62,9 @@ public class VerticalOrderTraversal {
             }
         }
 
-        for (int i = minColumnIndex; i <= maxColumnIndex; i++) {
-            if (columnMap.containsKey(i)) {
-                traversal.add(columnMap.get(i));
+        for (int i = columnMin; i <= columnMax; i++) {
+            if (columnPairs.containsKey(i)) {
+                traversal.add(columnPairs.get(i));
             }
         }
 

@@ -67,4 +67,5 @@ public class BottomView {
 
         return result;
     }
+
 }

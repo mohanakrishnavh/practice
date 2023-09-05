@@ -9,17 +9,23 @@ import java.util.Stack;
 public class BoundaryTraversal {
     public List<Integer> boundaryOfBinaryTree(TreeNode root) {
         List<Integer> boundary = new ArrayList<>();
+        if (root == null) {
+            return boundary;
+        }
+
         if (!isLeaf(root)) {
             boundary.add(root.val);
         }
-
         addLeftBoundary(root, boundary);
-        addLeaves(root, boundary);
+        addLeafNodes(root, boundary);
         addRightBoundary(root, boundary);
 
         return boundary;
     }
 
+    private boolean isLeaf(TreeNode root) {
+        return root.left == null && root.right == null;
+    }
 
     private void addLeftBoundary(TreeNode root, List<Integer> boundary) {
         TreeNode current = root.left;
@@ -32,7 +38,7 @@ public class BoundaryTraversal {
         }
     }
 
-    private void addLeaves(TreeNode root, List<Integer> boundary) {
+    private void addLeafNodes(TreeNode root, List<Integer> boundary) {
         if (root == null) {
             return;
         }
@@ -42,8 +48,8 @@ public class BoundaryTraversal {
             return;
         }
 
-        addLeaves(root.left, boundary);
-        addLeaves(root.right, boundary);
+        addLeafNodes(root.left, boundary);
+        addLeafNodes(root.right, boundary);
     }
 
     private void addRightBoundary(TreeNode root, List<Integer> boundary) {
@@ -62,7 +68,4 @@ public class BoundaryTraversal {
         }
     }
 
-    private boolean isLeaf(TreeNode root) {
-        return root.left == null && root.right == null;
-    }
 }
