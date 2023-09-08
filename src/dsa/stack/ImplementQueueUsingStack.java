@@ -3,42 +3,60 @@ package dsa.stack;
 import java.util.Stack;
 
 public class ImplementQueueUsingStack {
-    private Stack<Integer> s1;
-    private Stack<Integer> s2;
+
+    Stack<Integer> input;
+    Stack<Integer> output;
 
     public ImplementQueueUsingStack() {
-        s1 = new Stack<>();
-        s2 = new Stack<>();
+        input = new Stack<>();
+        output = new Stack<>();
     }
 
     public void push(int x) {
-        s1.push(x);
+        input.push(x);
     }
 
     public int pop() {
-        if (s2.isEmpty()) {
+        if (empty()) {
+            return -1;
+        }
+
+        if (output.isEmpty()) {
             move();
         }
 
-        return s2.pop();
-    }
-
-    private void move() {
-        while (!s1.isEmpty()) {
-            s2.push(s1.pop());
-        }
+        return output.pop();
     }
 
     public int peek() {
-        if (s2.isEmpty()) {
+        if (empty()) {
+            return -1;
+        }
+
+        if (output.isEmpty()) {
             move();
         }
 
-        return s2.peek();
+        return output.peek();
+    }
+
+    private void move() {
+        while(!input.isEmpty()) {
+            output.push(input.pop());
+        }
     }
 
     public boolean empty() {
-        return s1.isEmpty() && s2.isEmpty();
+        return input.isEmpty() && output.isEmpty();
+    }
+
+    public static void main(String[] args){
+        ImplementQueueUsingStack q = new ImplementQueueUsingStack();
+        q.push(1);
+        q.push(2);
+        System.out.println(q.peek());
+        System.out.println(q.pop());
+        System.out.println(q.empty());
     }
 
 }

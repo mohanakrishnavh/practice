@@ -8,39 +8,40 @@ import java.util.Queue;
 public class FirstNegativeIntegerInSubArray {
 
     public static List<Integer> getFirstNegativeInteger(int[] arr, int k) {
-        List<Integer> firstNegativeIntegers = new ArrayList<>();
+        List<Integer> firstNegatives = new ArrayList<>();
         if (arr.length == 0 || k == 0) {
-            return firstNegativeIntegers;
+            return firstNegatives;
         }
 
-        int start = 0, end = 0;
+        int left = 0, right = 0;
         Queue<Integer> negatives = new LinkedList<>();
-        while (end < arr.length) {
-            if (arr[end] < 0) {
-                negatives.add(arr[end]);
+        while (right < arr.length) {
+            if (arr[right] < 0) {
+                negatives.add(arr[right]);
             }
 
-            if (end - start + 1 == k) {
-                int windowResult = 0;
+            if (right - left + 1 == k) {
+                int firstNegative = 0;
                 if (!negatives.isEmpty()) {
-                    windowResult = negatives.peek();
+                    firstNegative = negatives.peek();
 
-                    if (arr[start] == negatives.peek()) {
+                    if (arr[left] == negatives.peek()) {
                         negatives.poll();
                     }
                 }
 
-                firstNegativeIntegers.add(windowResult);
-                start++;
+                firstNegatives.add(firstNegative);
+                left++;
             }
 
-            end++;
+            right++;
         }
 
-        return firstNegativeIntegers;
+        return firstNegatives;
     }
     public static void main(String[] args) {
         System.out.println(getFirstNegativeInteger(new int[]{12, -1, -7, 8, -15, 30, 13, 28}, 3));
+        System.out.println(getFirstNegativeInteger(new int[]{12, 1, 7, 8, -15, 30, 13, 28}, 3));
         System.out.println(getFirstNegativeInteger(new int[]{12, -1, -7, 8, -15, 30, 13, 28}, 0));
         System.out.println(getFirstNegativeInteger(new int[]{}, 3));
     }

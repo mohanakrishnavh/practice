@@ -6,41 +6,27 @@ import java.util.List;
 
 public class SlidingWindowMaximum {
     public static int[] maxSlidingWindow(int[] nums, int k) {
-        if (k == nums.length) {
-            int maximum = Integer.MIN_VALUE;
-            for (int num : nums) {
-                maximum = Math.max(maximum, num);
-            }
-
-            return new int[]{maximum};
-        }
-
-        int i = 0;
-        int j = 0;
-        int index = 0;
-        int[] maximum = new int[nums.length - k + 1];
+        int left = 0, right = 0, idx = 0;
+        int[] max = new int[nums.length - k + 1];
         Deque<Integer> deque = new LinkedList<>();
-        while (j < nums.length) {
-            while (!deque.isEmpty() && deque.peekLast() < nums[j]) {
+        while (right < nums.length) {
+            while (!deque.isEmpty() && deque.peekLast() < nums[right]) {
                 deque.pollLast();
             }
+            deque.addLast(nums[right]);
 
-            deque.addLast(nums[j]);
+            if (right - left + 1 == k) {
+                max[idx++] = deque.peekFirst();
 
-            if (j - i + 1 == k) {
-                maximum[index++] = deque.peekFirst();
-
-                if (nums[i] == deque.peekFirst()) {
+                if (nums[left] == deque.peekFirst()) {
                     deque.pollFirst();
                 }
-
-                i++;
+                left++;
             }
-
-            j++;
+            right++;
         }
 
-        return maximum;
+        return max;
     }
 
     public static void main(String[] args) {

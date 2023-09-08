@@ -3,43 +3,45 @@ package dsa.design;
 import java.util.Stack;
 
 public class MinStack {
-    Stack<Integer> stack;
-    Stack<Integer> minimumTracker;
+    Stack<int[]> stack;
 
     public MinStack() {
         stack = new Stack<>();
-        minimumTracker = new Stack<>();
     }
 
     public void push(int val) {
-        stack.push(val);
-
-        if (minimumTracker.isEmpty() || val <= minimumTracker.peek()) {
-            minimumTracker.push(val);
+        int min = stack.isEmpty() ? val : stack.peek()[1];
+        if (val < min) {
+            min = val;
         }
+
+        stack.push(new int[]{val, min});
     }
 
     public void pop() {
-        if (stack.isEmpty()) {
-            return;
-        }
-
-        if (stack.peek().equals(minimumTracker.peek())) {
-            minimumTracker.pop();
-        }
-
         stack.pop();
     }
 
     public int top() {
-        return stack.peek();
+        return stack.isEmpty() ? -1 : stack.peek()[0];
     }
 
     public int getMin() {
-        if (minimumTracker.isEmpty()) {
-            return -1;
-        }
+        return stack.isEmpty() ? -1 : stack.peek()[1];
+    }
 
-        return minimumTracker.peek();
+    public static void main(String[] args) {
+        dsa.stack.MinStack minStack = new dsa.stack.MinStack();
+        minStack.push(512);
+        minStack.push(-1024);
+        minStack.push(-1024);
+        minStack.push(512);
+        System.out.println(minStack.getMin());
+        minStack.pop();
+        System.out.println(minStack.getMin());
+        minStack.pop();
+        System.out.println(minStack.getMin());
+        minStack.pop();
+        System.out.println(minStack.top());
     }
 }

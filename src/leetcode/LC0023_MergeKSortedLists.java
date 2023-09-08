@@ -6,44 +6,29 @@ import java.util.PriorityQueue;
 
 public class LC0023_MergeKSortedLists {
     public ListNode mergeKLists(ListNode[] lists) {
-        if (lists.length == 0) {
-            return null;
+        PriorityQueue<ListNode> minHeap = new PriorityQueue<>((a, b) -> a.val - b.val);
+        for (ListNode node: lists) {
+            if (node != null) {
+                minHeap.add(node);
+            }
         }
 
         ListNode sentinel = new ListNode(-1);
         ListNode current = sentinel;
+        ListNode next;
+        while(!minHeap.isEmpty()) {
+            ListNode node = minHeap.poll();
+            next = node.next;
 
-        int k = lists.length;
-        PriorityQueue<Pair> minHeap = new PriorityQueue<>((a, b) -> a.node.val - b.node.val);
-        for (int i = 0; i < k; i++) {
-            if (lists[i] != null) {
-                minHeap.add(new Pair(i, lists[i]));
-            }
-        }
-
-        while (!minHeap.isEmpty()) {
-            Pair pair = minHeap.poll();
-            int index = pair.index;
-            current.next = pair.node;
+            current.next = node;
+            node.next = null;
             current = current.next;
 
-            lists[index] = lists[index].next;
-
-            if (lists[index] != null) {
-                minHeap.add(new Pair(index, lists[index]));
+            if (next != null) {
+                minHeap.add(next);
             }
         }
 
         return sentinel.next;
-    }
-
-    class Pair {
-        int index;
-        ListNode node;
-
-        public Pair(int index, ListNode node) {
-            this.index = index;
-            this.node = node;
-        }
     }
 }

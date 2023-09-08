@@ -4,32 +4,31 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class LRUCache {
-    class Node {
-        int key, value;
-        Node previous, next;
+    static class Node {
+        int key;
+        int value;
+        Node next;
+        Node prev;
 
         public Node(int key, int value) {
             this.key = key;
             this.value = value;
         }
-
-        public Node() {}
     }
 
-
+    int capacity;
     Node head, tail;
     Map<Integer, Node> cache;
-    int capacity;
 
     public LRUCache(int capacity) {
-        head = new Node();
-        tail = new Node();
+        this.capacity = capacity;
         cache = new HashMap<>();
 
-        head.next = tail;
-        tail.previous = head;
+        head = new Node(-1, -1);
+        tail = new Node(-1, -1);
 
-        this.capacity = capacity;
+        head.next = tail;
+        tail.prev = head;
     }
 
     public int get(int key) {
@@ -40,6 +39,7 @@ public class LRUCache {
         Node node = cache.get(key);
         remove(node);
         insert(node);
+
         return node.value;
     }
 
@@ -49,7 +49,7 @@ public class LRUCache {
         }
 
         if (cache.size() == capacity) {
-            remove(tail.previous);
+            remove(tail.prev);
         }
 
         insert(new Node(key, value));
@@ -60,15 +60,15 @@ public class LRUCache {
 
         Node temp = head.next;
         head.next = node;
-        node.previous = head;
+        node.prev = head;
 
         node.next = temp;
-        temp.previous = node;
+        temp.prev = node;
     }
 
     private void remove(Node node) {
         cache.remove(node.key);
-        node.previous.next = node.next;
-        node.next.previous = node.previous;
+        node.prev.next = node.next;
+        node.next.prev = node.prev;
     }
 }

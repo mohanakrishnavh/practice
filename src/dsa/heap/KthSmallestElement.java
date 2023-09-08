@@ -9,16 +9,16 @@ public class KthSmallestElement {
             return -1;
         }
 
-        PriorityQueue<Integer> priorityQueue = new PriorityQueue<>(Collections.reverseOrder());
+        PriorityQueue<Integer> maxHeap = new PriorityQueue<>(Collections.reverseOrder());
         for (int num : nums) {
-            priorityQueue.add(num);
+            maxHeap.add(num);
 
-            if (priorityQueue.size() > k) {
-                priorityQueue.poll();
+            if (maxHeap.size() > k) {
+                maxHeap.poll();
             }
         }
 
-        return priorityQueue.isEmpty() ? -1 : priorityQueue.peek();
+        return maxHeap.isEmpty() ? -1 : maxHeap.peek();
     }
 
     public static void main(String[] args) {

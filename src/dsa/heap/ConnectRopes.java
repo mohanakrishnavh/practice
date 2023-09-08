@@ -15,8 +15,8 @@ public class ConnectRopes {
         }
 
         while (minHeap.size() >= 2) {
-            int first = minHeap.poll();
-            int second = minHeap.poll();
+            Integer first = minHeap.poll();
+            Integer second = minHeap.poll();
             cost = cost + first + second;
             minHeap.add(first + second);
         }

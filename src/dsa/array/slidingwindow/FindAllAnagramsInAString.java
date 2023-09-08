@@ -7,43 +7,62 @@ import java.util.Map;
 
 public class FindAllAnagramsInAString {
     public static List<Integer> findAnagrams(String s, String p) {
-        Map<Character, Integer> countMap = new HashMap<>();
-        for (int i = 0; i < p.length(); i++) {
-            char character = p.charAt(i);
-            countMap.put(character, countMap.getOrDefault(character, 0) + 1);
-        }
-
-        int k = p.length();
-        int numberOfCharacters = countMap.size();
-
-        int i = 0;
-        int j = 0;
         List<Integer> anagrams = new ArrayList<>();
-        while (j < s.length()) {
-            countMap.put(s.charAt(j), countMap.getOrDefault(s.charAt(j), 0) - 1);
 
-            if (countMap.get(s.charAt(j)) == 0) {
-                numberOfCharacters--;
-            }
-
-            if (j - i + 1 == k) {
-                if (numberOfCharacters == 0) {
-                    anagrams.add(i);
-                }
-
-                countMap.put(s.charAt(i), countMap.get(s.charAt(i)) + 1);
-                if (countMap.get(s.charAt(i)) == 1) {
-                    numberOfCharacters++;
-                }
-
-                i++;
-            }
-
-            j++;
+        if (s == null || p == null || s.length() == 0 || p.length() == 0) {
+            return anagrams;
         }
 
+
+        Map<Character, Integer> counts = getCounts(p);
+        int noOfChars = counts.size();
+        int K = p.length();
+        int left = 0, right = 0;
+        while (right < s.length()) {
+            char leftChar = s.charAt(left);
+            char rightChar = s.charAt(right);
+
+            if (counts.containsKey(rightChar)) {
+                int rightCharCount = counts.get(rightChar) - 1;
+                counts.put(rightChar, rightCharCount);
+
+                if (rightCharCount == 0) {
+                    noOfChars--;
+                }
+            }
+
+            if (right - left + 1 == K) {
+                // Found an anagram
+                if (noOfChars == 0) {
+                    anagrams.add(left);
+                }
+
+                // If anagram is part of anagram string
+                if (counts.containsKey(leftChar)) {
+                    int leftCharCount = counts.get(leftChar);
+                    if (leftCharCount == 0) {
+                        noOfChars++;
+                    }
+
+                    counts.put(leftChar, leftCharCount + 1);
+                }
+
+                left++;
+            }
+
+            right++;
+        }
 
         return anagrams;
+    }
+
+    private static Map<Character, Integer> getCounts(String s) {
+        Map<Character, Integer> counts = new HashMap<>();
+        for (char ch : s.toCharArray()) {
+            counts.put(ch, counts.getOrDefault(ch, 0) + 1);
+        }
+
+        return counts;
     }
 
     public static void main(String[] args) {
