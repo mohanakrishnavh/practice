@@ -16,24 +16,77 @@ public class BestTimeToBuyAndSellStockII {
         return maxProfit(prices, 0, 1, dp);
     }
 
-    private static int maxProfit(int[] prices, int index, int buy, int[][] dp) {
-        if (index == prices.length -1) {
+    private static int maxProfit(int[] prices, int idx, int buy, int[][] dp) {
+        if (idx == prices.length) {
             return 0;
         }
 
-        if (dp[index][buy] != -1) {
-            return dp[index][buy];
+        if (dp[idx][buy] != -1) {
+            return dp[idx][buy];
         }
 
 
         int profit = 0;
         if (buy == 1) {
-            profit = Math.max(-prices[index] + maxProfit(prices, index+1, 0, dp), maxProfit(prices, index+1, 1, dp));
+            profit = Math.max(-prices[idx] + maxProfit(prices, idx+1, 0, dp), maxProfit(prices, idx+1, 1, dp));
         } else {
-            profit = Math.max(prices[index] + maxProfit(prices, index+1, 1, dp), maxProfit(prices, index+1, 0, dp));
+            profit = Math.max(prices[idx] + maxProfit(prices, idx+1, 1, dp), maxProfit(prices, idx+1, 0, dp));
         }
 
-        dp[index][buy] = profit;
+        dp[idx][buy] = profit;
         return profit;
+    }
+
+
+    public static int maxProfit2(int[] prices) {
+        int n = prices.length;
+        int profit = 0;
+        if (n <= 1) {
+            return profit;
+        }
+
+        int[][] dp = new int[n + 1][2];
+        dp[n][0] = 0;
+        dp[n][1] = 0;
+
+        for (int idx = n - 1; idx >= 0; idx--) {
+            for (int buy = 0; buy <= 1; buy++) {
+                if (buy == 1) {
+                    profit = Math.max(-prices[idx] + dp[idx +1][0], dp[idx +1][1]);
+                } else {
+                    profit = Math.max(prices[idx] + dp[idx +1][1], dp[idx +1][0]);
+                }
+
+                dp[idx][buy] = profit;
+            }
+        }
+
+        return dp[0][1];
+    }
+
+    public static int maxProfit3(int[] prices) {
+        int n = prices.length;
+        int profit = 0;
+        if (n <= 1) {
+            return profit;
+        }
+
+        int[] next = new int[2];
+        int[] current = new int[2];
+        for (int idx = n - 1; idx >= 0; idx--) {
+            for (int buy = 0; buy <= 1; buy++) {
+                if (buy == 1) {
+                    profit = Math.max(-prices[idx] + next[0], next[1]);
+                } else {
+                    profit = Math.max(prices[idx] + next[1], next[0]);
+                }
+
+                current[buy] = profit;
+            }
+
+            next = current;
+        }
+
+        return next[1];
     }
 }

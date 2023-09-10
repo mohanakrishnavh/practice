@@ -3,19 +3,18 @@ package dsa.array.sort;
 import java.util.Arrays;
 
 public class SelectionSort {
-    public static void sort(int[] A) {
-        int n = A.length;
-        for (int i = 0; i < n - 1; i++) {
+    public static void sort(int[] arr) {
+        for (int i = 0; i < arr.length - 1; i++) {
             int minIndex = i;
-            for (int j = i + 1; j < n; j++) {
-                if (A[j] < A[minIndex]) {
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[j] < arr[minIndex]) {
                     minIndex = j;
                 }
             }
 
-            int temp = A[i];
-            A[i] = A[minIndex];
-            A[minIndex] = temp;
+            int temp = arr[i];
+            arr[i] = arr[minIndex];
+            arr[minIndex] = temp;
         }
     }
 

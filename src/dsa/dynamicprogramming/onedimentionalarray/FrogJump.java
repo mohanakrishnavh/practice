@@ -45,18 +45,17 @@ public class FrogJump {
 
     // Space Optimized
     public static int frogJump3(int n, int[] heights) {
-        int prev = 0;
-        int prev2 = 0;
+        int first = 0, second = 0;
         for (int i = 1; i < n; i++) {
-            int left = prev + Math.abs(heights[i]-heights[i-1]);
-            int right = i > 1 ? prev2 + Math.abs(heights[i]-heights[i-2]) : Integer.MAX_VALUE;
+            int left = second + Math.abs(heights[i]-heights[i-1]);
+            int right = i > 1 ? first + Math.abs(heights[i]-heights[i-2]) : Integer.MAX_VALUE;
 
             int result = Math.min(left, right);
-            prev2 = prev;
-            prev = result;
+            first = second;
+            second = result;
         }
 
-        return prev;
+        return second;
     }
 
     public static void main(String[] args) {
