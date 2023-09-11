@@ -49,19 +49,19 @@ public class SerializeAndDeserializeBinaryTree {
 
         Queue<TreeNode> q = new LinkedList<>();
         q.add(root);
-        int index = 0;
-        while (!q.isEmpty() && index < nodes.length) {
+        int idx = 0;
+        while (!q.isEmpty() && idx < nodes.length) {
             TreeNode node = q.poll();
-            if (!nodes[index+1].equals("#")) {
-                node.left = new TreeNode(Integer.parseInt(nodes[index+1]));
+            if (!nodes[idx+1].equals("#")) {
+                node.left = new TreeNode(Integer.parseInt(nodes[idx+1]));
                 q.offer(node.left);
             }
-            if (!nodes[index+2].equals("#")) {
-                node.right = new TreeNode(Integer.parseInt(nodes[index+2]));
+            if (!nodes[idx+2].equals("#")) {
+                node.right = new TreeNode(Integer.parseInt(nodes[idx+2]));
                 q.offer(node.right);
             }
 
-            index += 2;
+            idx += 2;
         }
 
         return root;

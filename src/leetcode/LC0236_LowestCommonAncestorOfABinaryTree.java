@@ -13,10 +13,12 @@ public class LC0236_LowestCommonAncestorOfABinaryTree {
 
         if (left == null) {
             return right;
-        } else if (right == null) {
-            return left;
-        } else {
-            return root;
         }
+
+        if (right == null) {
+            return left;
+        }
+
+        return root;
     }
 }
