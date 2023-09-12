@@ -26,14 +26,14 @@ public class DetectCycleInUndirectedGraph {
 
         while (!q.isEmpty()) {
             int node = q.peek()[0];
-            int previous = q.peek()[1];
+            int prev = q.peek()[1];
             q.remove();
 
             for (int adj : adjList.get(node)) {
                 if (!visited[adj]) {
                     q.offer(new int[]{adj, node});
                     visited[adj] = true;
-                } else if (adj != previous) {
+                } else if (adj != prev) {
                     return true;
                 }
             }
