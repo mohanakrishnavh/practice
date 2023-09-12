@@ -5,25 +5,23 @@ import dsa.tree.TreeNode;
 public class Diameter {
 
     public int diameterOfBinaryTree(TreeNode root) {
-        if (root == null) {
-            return 0;
-        }
+        int[] result = new int[]{Integer.MIN_VALUE};
+        int h = height(root, result);
 
-        int[] dp = new int[1];
-        height(root, dp);
-        return dp[0] - 1;
+        // returns the numbers of nodes in the diameter of the tree
+        return result[0];
     }
 
-    private int height(TreeNode root, int[] dp) {
+    private int height(TreeNode root, int[] result) {
         if (root == null) {
             return 0;
         }
 
-
-        int leftHeight = height(root.left, dp);
-        int rightHeight = height(root.right, dp);
-
-        dp[0] = Math.max(dp[0], 1 + leftHeight + rightHeight);
+        int leftHeight = height(root.left, result);
+        int rightHeight = height(root.right, result);
+        // If the diameter is represented using edges
+        // result[0] = Math.max(result[0], leftHeight + rightHeight);
+        result[0] = Math.max(result[0], 1 + leftHeight + rightHeight);
 
         return 1 + Math.max(leftHeight, rightHeight);
     }
