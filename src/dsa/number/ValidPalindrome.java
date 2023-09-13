@@ -1,4 +1,4 @@
-package dsa.array.twopointers;public class ValidPalindrome {
+package dsa.number;public class ValidPalindrome {
 
     public static boolean isPalindrome(String s) {
         if (s == null || s.length() == 0) {
