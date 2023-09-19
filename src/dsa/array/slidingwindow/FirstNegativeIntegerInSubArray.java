@@ -13,28 +13,28 @@ public class FirstNegativeIntegerInSubArray {
             return firstNegatives;
         }
 
-        int left = 0, right = 0;
+        int i = 0, j = 0;
         Queue<Integer> negatives = new LinkedList<>();
-        while (right < arr.length) {
-            if (arr[right] < 0) {
-                negatives.add(arr[right]);
+        while (j < arr.length) {
+            if (arr[j] < 0) {
+                negatives.add(arr[j]);
             }
 
-            if (right - left + 1 == k) {
+            if (j - i + 1 == k) {
                 int firstNegative = 0;
                 if (!negatives.isEmpty()) {
                     firstNegative = negatives.peek();
 
-                    if (arr[left] == negatives.peek()) {
+                    if (arr[i] == negatives.peek()) {
                         negatives.poll();
                     }
                 }
 
                 firstNegatives.add(firstNegative);
-                left++;
+                i++;
             }
 
-            right++;
+            j++;
         }
 
         return firstNegatives;

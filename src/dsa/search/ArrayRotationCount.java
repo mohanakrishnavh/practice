@@ -29,6 +29,29 @@ public class ArrayRotationCount {
         return -1;
     }
 
+    public int findMin2(int[] nums) {
+        int low = 0, high = nums.length - 1;
+        int min = Integer.MAX_VALUE;
+
+        while (low <= high) {
+            int mid = low + (high - low)/2;
+
+            if (nums[mid] <= nums[high]) {
+                if (nums[mid] < min) {
+                    min = nums[mid];
+                }
+                high = mid - 1;
+            } else {
+                if (nums[low] < min) {
+                    min = nums[low];
+                }
+                low = mid + 1;
+            }
+        }
+
+        return min;
+    }
+
     public static void main(String[] args) {
         System.out.println(findMin(new int[]{10, 11, 12, 15, 18, 2, 5, 6, 8}));
     }

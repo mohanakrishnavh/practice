@@ -17,10 +17,10 @@ public class FindAllAnagramsInAString {
         Map<Character, Integer> counts = getCounts(p);
         int noOfChars = counts.size();
         int K = p.length();
-        int left = 0, right = 0;
-        while (right < s.length()) {
-            char leftChar = s.charAt(left);
-            char rightChar = s.charAt(right);
+        int i = 0, j = 0;
+        while (j < s.length()) {
+            char leftChar = s.charAt(i);
+            char rightChar = s.charAt(j);
 
             if (counts.containsKey(rightChar)) {
                 int rightCharCount = counts.get(rightChar) - 1;
@@ -31,10 +31,10 @@ public class FindAllAnagramsInAString {
                 }
             }
 
-            if (right - left + 1 == K) {
+            if (j - i + 1 == K) {
                 // Found an anagram
                 if (noOfChars == 0) {
-                    anagrams.add(left);
+                    anagrams.add(i);
                 }
 
                 // If anagram is part of anagram string
@@ -47,10 +47,10 @@ public class FindAllAnagramsInAString {
                     counts.put(leftChar, leftCharCount + 1);
                 }
 
-                left++;
+                i++;
             }
 
-            right++;
+            j++;
         }
 
         return anagrams;

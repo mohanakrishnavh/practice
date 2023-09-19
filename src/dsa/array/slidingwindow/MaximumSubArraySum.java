@@ -7,21 +7,21 @@ public class MaximumSubArraySum {
             return 0;
         }
 
-        int left = 0, right = 0, sum = 0;
+        int i = 0, j = 0, sum = 0;
         int max = Integer.MIN_VALUE;
-        while (right < arr.length) {
-            sum += arr[right];
+        while (j < arr.length) {
+            sum += arr[j];
             // To maintain the window of size k
-            if (right - left + 1 == k) {
+            if (j - i + 1 == k) {
                 // Calculate the max for sub array
                 max = Math.max(max, sum);
 
                 // Remove start index element and move start
-                sum -= arr[left];
-                left++;
+                sum -= arr[i];
+                i++;
             }
 
-            right++;
+            j++;
         }
 
         return max;
