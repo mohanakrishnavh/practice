@@ -4,6 +4,18 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * LeetCode Problem 56: Merge Intervals
+ * Difficulty: Medium
+ * 
+ * <p>Merge all overlapping intervals.
+ * 
+ * <p>Time Complexity: O(?) - TODO: Analyze complexity
+ * <p>Space Complexity: O(?) - TODO: Analyze complexity
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LC0056_MergeIntervals {
     public int[][] merge(int[][] intervals) {
         if (intervals.length < 2) {

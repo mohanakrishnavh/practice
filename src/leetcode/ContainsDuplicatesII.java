@@ -3,6 +3,14 @@ package leetcode;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * ContainsDuplicatesII
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class ContainsDuplicatesII {
     public static boolean containsNearbyDuplicates(int[] nums, int k) {
         Map<Integer, Integer> valueIndexMap = new HashMap<>();

@@ -4,6 +4,14 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * NQueens
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class NQueens {
     public List<List<String>> solveNQueens(int n) {
         char[][] board = new char[n][n];

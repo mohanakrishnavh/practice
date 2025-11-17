@@ -3,6 +3,14 @@ package dsa.stack;
 import java.util.EmptyStackException;
 import java.util.Stack;
 
+/**
+ * MinStackWithoutExtraSpace
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class MinStackWithoutExtraSpace {
 
     private final Stack<Integer> stack;

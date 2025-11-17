@@ -1,5 +1,17 @@
 package leetcode;
 
+/**
+ * LeetCode Problem 81: Search in Rotated Sorted Array II
+ * Difficulty: Medium
+ * 
+ * <p>Search in rotated sorted array with duplicates.
+ * 
+ * <p>Time Complexity: O(?) - TODO: Analyze complexity
+ * <p>Space Complexity: O(?) - TODO: Analyze complexity
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LC0081_SearchInRotatedSortedArrayII {
     public static boolean search(int[] arr, int target) {
         int low = 0; int high = arr.length - 1;

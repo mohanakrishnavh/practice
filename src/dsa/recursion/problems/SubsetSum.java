@@ -4,6 +4,14 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * SubsetSum
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class SubsetSum {
     public static List<Integer> subsetSums(int[] arr){
         ArrayList<Integer> sums = new ArrayList<>();

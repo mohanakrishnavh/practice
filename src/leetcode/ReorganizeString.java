@@ -4,6 +4,14 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.PriorityQueue;
 
+/**
+ * ReorganizeString
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class ReorganizeString {
     public String reorganizeString(String S) {
         Map<Character, Integer> counts = new HashMap<>();

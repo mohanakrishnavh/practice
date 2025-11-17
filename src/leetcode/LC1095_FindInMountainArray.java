@@ -1,5 +1,17 @@
 package leetcode;
 
+/**
+ * LeetCode Problem 1095: Find in Mountain Array
+ * Difficulty: Hard
+ * 
+ * <p>Find target in a mountain array with minimum queries.
+ * 
+ * <p>Time Complexity: O(?) - TODO: Analyze complexity
+ * <p>Space Complexity: O(?) - TODO: Analyze complexity
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LC1095_FindInMountainArray {
     public int findInMountainArray(int target, MountainArray mountainArr) {
         int length = mountainArr.length();

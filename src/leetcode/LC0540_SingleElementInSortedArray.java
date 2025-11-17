@@ -1,5 +1,17 @@
 package leetcode;
 
+/**
+ * LeetCode Problem 540: Single Element in a Sorted Array
+ * Difficulty: Medium
+ * 
+ * <p>Find the element that appears once in a sorted array.
+ * 
+ * <p>Time Complexity: O(?) - TODO: Analyze complexity
+ * <p>Space Complexity: O(?) - TODO: Analyze complexity
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LC0540_SingleElementInSortedArray {
     public int singleNonDuplicate(int[] arr) {
         int n = arr.length;

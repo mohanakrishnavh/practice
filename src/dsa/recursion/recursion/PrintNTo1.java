@@ -1,5 +1,13 @@
 package dsa.recursion.recursion;
 
+/**
+ * PrintNTo1
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class PrintNTo1 {
     public static void print(int n) {
         if (n == 1) {

@@ -2,6 +2,14 @@ package dsa.tree.bst;
 
 import dsa.tree.TreeNode;
 
+/**
+ * Search
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class Search {
     public TreeNode searchBST(TreeNode root, int val) {
         if (root == null || root.val == val) {

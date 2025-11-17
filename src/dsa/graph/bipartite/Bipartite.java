@@ -4,6 +4,14 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
 
+/**
+ * Bipartite
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class Bipartite {
 
     public boolean isBipartite(int[][] graph) {

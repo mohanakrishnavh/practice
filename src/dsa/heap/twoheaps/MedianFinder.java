@@ -3,6 +3,14 @@ package dsa.heap.twoheaps;
 import java.util.Collections;
 import java.util.PriorityQueue;
 
+/**
+ * MedianFinder
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class MedianFinder {
 
     PriorityQueue<Integer> maxHeap;

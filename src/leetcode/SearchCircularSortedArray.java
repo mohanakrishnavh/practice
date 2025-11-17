@@ -1,5 +1,13 @@
 package leetcode;
 
+/**
+ * SearchCircularSortedArray
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class SearchCircularSortedArray {
     public static int search(int[] nums, int target) {
         int start = 0;

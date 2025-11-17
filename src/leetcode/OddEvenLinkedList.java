@@ -3,6 +3,14 @@ package leetcode;
 import dsa.linkedlist.LinkedList;
 import dsa.linkedlist.ListNode;
 
+/**
+ * OddEvenLinkedList
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class OddEvenLinkedList {
     public static ListNode getOddEvenLinkedList(ListNode head) {
         if (head == null) {

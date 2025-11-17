@@ -1,5 +1,13 @@
 package dsa.recursion.basics;
 
+/**
+ * Palindrome
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class Palindrome {
     public static boolean isPalindrome(String s) {
         return isPalindrome(s, 0);

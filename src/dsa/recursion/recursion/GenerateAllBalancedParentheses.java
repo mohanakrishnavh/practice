@@ -3,6 +3,14 @@ package dsa.recursion.recursion;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * GenerateAllBalancedParentheses
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class GenerateAllBalancedParentheses {
     public static List<String> generateParenthesis(int n) {
         List<String> result = new ArrayList<>();

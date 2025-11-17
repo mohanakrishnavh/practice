@@ -3,6 +3,18 @@ package leetcode;
 import java.util.Collections;
 import java.util.PriorityQueue;
 
+/**
+ * LeetCode Problem 703: Kth Largest Element in a Stream
+ * Difficulty: Easy
+ * 
+ * <p>Design a class to find the kth largest element in a stream.
+ * 
+ * <p>Time Complexity: O(?) - TODO: Analyze complexity
+ * <p>Space Complexity: O(?) - TODO: Analyze complexity
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LC0703_KthLargestElementInAStream {
     PriorityQueue<Integer> pq;
     int k;

@@ -1,5 +1,17 @@
 package leetcode;
 
+/**
+ * LeetCode Problem 138: Copy List with Random Pointer
+ * Difficulty: Medium
+ * 
+ * <p>Deep copy a linked list with random pointers.
+ * 
+ * <p>Time Complexity: O(?) - TODO: Analyze complexity
+ * <p>Space Complexity: O(?) - TODO: Analyze complexity
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LC0138_CopyListWithRandomPointer {
     class Node {
         int val;

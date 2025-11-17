@@ -3,6 +3,14 @@ package dsa.tree;
 import java.util.LinkedList;
 import java.util.Queue;
 
+/**
+ * BinarySearchTree
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class BinarySearchTree extends BinaryTree {
 
     public BinarySearchTree() {

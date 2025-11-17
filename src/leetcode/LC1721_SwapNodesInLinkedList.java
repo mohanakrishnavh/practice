@@ -2,6 +2,18 @@ package leetcode;
 
 import dsa.linkedlist.ListNode;
 
+/**
+ * LeetCode Problem 1721: Swapping Nodes in a Linked List
+ * Difficulty: Medium
+ * 
+ * <p>Swap the values of the kth node from beginning and end.
+ * 
+ * <p>Time Complexity: O(?) - TODO: Analyze complexity
+ * <p>Space Complexity: O(?) - TODO: Analyze complexity
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LC1721_SwapNodesInLinkedList {
     public ListNode swapNodes(ListNode head, int k) {
         ListNode slow = head, fast = head, firstNode, secondNode;

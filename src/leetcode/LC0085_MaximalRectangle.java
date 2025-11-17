@@ -2,6 +2,18 @@ package leetcode;
 
 import java.util.Stack;
 
+/**
+ * LeetCode Problem 85: Maximal Rectangle
+ * Difficulty: Hard
+ * 
+ * <p>Find the largest rectangle containing only 1s in a binary matrix.
+ * 
+ * <p>Time Complexity: O(?) - TODO: Analyze complexity
+ * <p>Space Complexity: O(?) - TODO: Analyze complexity
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LC0085_MaximalRectangle {
 
     public int maximalRectangle(char[][] matrix) {

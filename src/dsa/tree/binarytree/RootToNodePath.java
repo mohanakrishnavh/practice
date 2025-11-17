@@ -5,6 +5,14 @@ import dsa.tree.TreeNode;
 import java.util.LinkedList;
 import java.util.List;
 
+/**
+ * RootToNodePath
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class RootToNodePath {
     public List<Integer> getPath(TreeNode root, int x) {
         List<Integer> path = new LinkedList<>();

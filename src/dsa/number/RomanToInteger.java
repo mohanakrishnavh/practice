@@ -4,6 +4,14 @@ package dsa.number;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * RomanToInteger
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class RomanToInteger {
 
     private static Map<Character, Integer> romans = Map.of(

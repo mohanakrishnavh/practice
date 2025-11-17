@@ -1,5 +1,13 @@
 package dsa.recursion.recursion;
 
+/**
+ * KthSymbolInGrammar
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class KthSymbolInGrammar {
     /*
     N = 0, Pattern: 0

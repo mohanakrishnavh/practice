@@ -2,6 +2,14 @@ package dsa.tree.bst;
 
 import dsa.tree.TreeNode;
 
+/**
+ * RecoverBST
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class RecoverBST {
 
     TreeNode x = null, y = null, prev = null;

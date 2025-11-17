@@ -4,6 +4,14 @@ import dsa.graph.Graph;
 
 import java.util.*;
 
+/**
+ * TopologicalSort
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class TopologicalSort {
     // Kahn's Algorithm to find the topological order of nodes in a DAG
     public static List<Integer> topologicalSort(int n, List<List<Integer>> adjList) {

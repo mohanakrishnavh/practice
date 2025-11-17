@@ -2,6 +2,14 @@ package dsa.array.sort;
 
 import java.util.Arrays;
 
+/**
+ * SelectionSort
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class SelectionSort {
     public static void sort(int[] arr) {
         for (int i = 0; i < arr.length - 1; i++) {

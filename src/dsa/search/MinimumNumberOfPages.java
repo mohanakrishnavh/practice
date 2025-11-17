@@ -2,6 +2,14 @@ package dsa.search;
 
 import dsa.util.MathUtil;
 
+/**
+ * MinimumNumberOfPages
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class MinimumNumberOfPages {
     public static int getMinimumPages(int[] nums, int k) {
         if (nums.length < k) {

@@ -3,6 +3,14 @@ package dsa.array.slidingwindow;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * LongestSubstringWithoutRepeatingCharacters
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LongestSubstringWithoutRepeatingCharacters {
     public static int lengthOfLongestSubstring(String s) {
         if (s == null || s.length() == 0) {

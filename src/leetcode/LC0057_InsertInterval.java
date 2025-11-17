@@ -3,6 +3,18 @@ package leetcode;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * LeetCode Problem 57: Insert Interval
+ * Difficulty: Medium
+ * 
+ * <p>Insert a new interval and merge if necessary.
+ * 
+ * <p>Time Complexity: O(?) - TODO: Analyze complexity
+ * <p>Space Complexity: O(?) - TODO: Analyze complexity
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LC0057_InsertInterval {
     public int[][] insert(int[][] intervals, int[] newInterval) {
         List<int[]> merged = new ArrayList<>();

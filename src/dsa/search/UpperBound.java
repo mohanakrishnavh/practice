@@ -1,5 +1,13 @@
 package dsa.search;
 
+/**
+ * UpperBound
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class UpperBound {
     public static int findUpperBound(int []arr, int x){
         int low = 0, high = arr.length - 1;

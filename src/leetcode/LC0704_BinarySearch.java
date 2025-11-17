@@ -1,5 +1,17 @@
 package leetcode;
 
+/**
+ * LeetCode Problem 704: Binary Search
+ * Difficulty: Easy
+ * 
+ * <p>Search for a target value in a sorted array.
+ * 
+ * <p>Time Complexity: O(?) - TODO: Analyze complexity
+ * <p>Space Complexity: O(?) - TODO: Analyze complexity
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LC0704_BinarySearch {
     public int search(int[] nums, int target) {
         int start = 0;

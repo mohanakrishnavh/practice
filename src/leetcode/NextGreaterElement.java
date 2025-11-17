@@ -5,6 +5,14 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Stack;
 
+/**
+ * NextGreaterElement
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class NextGreaterElement {
     public static int[] nextGreaterElement(int[] nums1, int[] nums2) {
         Map<Integer, Integer> ngrMap = new HashMap<>();

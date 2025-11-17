@@ -1,4 +1,12 @@
-package dsa.number;public class ValidPalindrome {
+package dsa.number;/**
+ * ValidPalindrome
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
+public class ValidPalindrome {
 
     public static boolean isPalindrome(String s) {
         if (s == null || s.length() == 0) {

@@ -2,6 +2,27 @@ package dsa.dynamicprogramming.subsequences;
 
 import java.util.Arrays;
 
+/**
+ * Subset Sum Problem.
+ * 
+ * <p>Given an array of non-negative integers and a target sum K,
+ * determine if there exists a subset of the array with sum equal to K.
+ * 
+ * <p>This is a classic DP problem with decision at each element: include it or exclude it.
+ * 
+ * <p>This implementation provides four approaches:
+ * <ul>
+ *   <li>Recursion - Explores all possibilities, O(2^n)</li>
+ *   <li>Memoization (Top-Down DP) - O(n*K) time, O(n*K) space</li>
+ *   <li>Tabulation (Bottom-Up DP) - O(n*K) time, O(n*K) space</li>
+ *   <li>Space Optimization - O(n*K) time, O(K) space</li>
+ * </ul>
+ * 
+ * <p>Example: For [3, 34, 4, 12, 5, 2] and K=9, subset [4, 5] exists
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class SubsetSum {
     // Approach 1: Recursion
     public static boolean hasSubsetSum(int[] arr, int k) {

@@ -3,6 +3,18 @@ package leetcode;
 import dsa.linkedlist.LinkedList;
 import dsa.linkedlist.ListNode;
 
+/**
+ * LeetCode Problem 876: Middle of the Linked List
+ * Difficulty: Easy
+ * 
+ * <p>Find the middle node of a linked list.
+ * 
+ * <p>Time Complexity: O(?) - TODO: Analyze complexity
+ * <p>Space Complexity: O(?) - TODO: Analyze complexity
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LC0876_MiddleOfTheLinkedList {
     public static ListNode middleNode(ListNode head) {
         ListNode slow = head;

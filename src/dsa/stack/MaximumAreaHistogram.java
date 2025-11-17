@@ -2,6 +2,14 @@ package dsa.stack;
 
 import java.util.Stack;
 
+/**
+ * MaximumAreaHistogram
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class MaximumAreaHistogram {
     private static int getMaximumArea(int[] nums) {
         int maximumArea = 0;

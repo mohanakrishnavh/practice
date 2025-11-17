@@ -1,5 +1,17 @@
 package leetcode;
 
+/**
+ * LeetCode Problem 702: Search in a Sorted Array of Unknown Size
+ * Difficulty: Medium
+ * 
+ * <p>Search in an array of unknown size.
+ * 
+ * <p>Time Complexity: O(?) - TODO: Analyze complexity
+ * <p>Space Complexity: O(?) - TODO: Analyze complexity
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LC0702_SearchInASortedArrayOfUnknownSize {
     public int search(ArrayReader reader, int target) {
         int start = 0;

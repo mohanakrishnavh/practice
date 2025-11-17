@@ -5,6 +5,18 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
+/**
+ * LeetCode Problem 207: Course Schedule
+ * Difficulty: Medium
+ * 
+ * <p>Determine if all courses can be finished given prerequisites.
+ * 
+ * <p>Time Complexity: O(?) - TODO: Analyze complexity
+ * <p>Space Complexity: O(?) - TODO: Analyze complexity
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LC0207_CourseSchedule {
     public boolean canFinish(int numCourses, int[][] prerequisites) {
         List<List<Integer>> adjList = new ArrayList<>();

@@ -6,6 +6,14 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.PriorityQueue;
 
+/**
+ * FrequencySort
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class FrequencySort {
     public static int[] sort(int[] nums) {
         if (nums.length == 0) {

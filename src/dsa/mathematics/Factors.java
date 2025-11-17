@@ -5,6 +5,14 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * Factors
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class Factors {
     // All numbers from 1 to n that divide the number n
     // are the Factors on n.

@@ -1,5 +1,13 @@
 package dsa.search;
 
+/**
+ * FirstOccurrenceOfAnElement
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class FirstOccurrenceOfAnElement {
     public static int getFirstOccurrence(int[] nums, int x) {
         int index = -1;

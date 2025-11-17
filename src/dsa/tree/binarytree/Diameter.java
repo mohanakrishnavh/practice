@@ -2,6 +2,14 @@ package dsa.tree.binarytree;
 
 import dsa.tree.TreeNode;
 
+/**
+ * Diameter
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class Diameter {
 
     public int diameterOfBinaryTree(TreeNode root) {

@@ -2,6 +2,18 @@ package leetcode;
 
 import java.util.PriorityQueue;
 
+/**
+ * LeetCode Problem 973: K Closest Points to Origin
+ * Difficulty: Medium
+ * 
+ * <p>Find the k closest points to the origin.
+ * 
+ * <p>Time Complexity: O(?) - TODO: Analyze complexity
+ * <p>Space Complexity: O(?) - TODO: Analyze complexity
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LC0973_KClosestPoints {
     public int[][] kClosest(int[][] points, int k) {
         if (points.length == k) {

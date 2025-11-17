@@ -2,6 +2,26 @@ package dsa.dynamicprogramming.subsequences;
 
 import java.util.Arrays;
 
+/**
+ * Coin Change Problem (Minimum Coins).
+ * 
+ * <p>Given an infinite supply of coins of different denominations and a target amount,
+ * find the minimum number of coins needed to make the target amount.
+ * If the amount cannot be made, return -1.
+ * 
+ * <p>This implementation provides four approaches:
+ * <ul>
+ *   <li>Recursion - Explores all possibilities</li>
+ *   <li>Memoization - Caches subproblem results</li>
+ *   <li>Tabulation - Bottom-up DP</li>
+ *   <li>Space Optimization - Uses 1D array</li>
+ * </ul>
+ * 
+ * <p>Example: For coins [1, 2, 5] and amount=11, minimum coins = 3 (5+5+1)
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class CoinChange {
     // Approach 1 : Recursion
     public static int minCoins(int[] coins, int target) {

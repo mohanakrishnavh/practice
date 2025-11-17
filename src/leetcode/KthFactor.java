@@ -3,6 +3,14 @@ package leetcode;
 import java.util.Collections;
 import java.util.PriorityQueue;
 
+/**
+ * KthFactor
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class KthFactor {
     public static int kthFactor(int n, int k) {
         if (n < 0 || k < 0) {

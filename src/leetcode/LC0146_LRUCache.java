@@ -3,6 +3,18 @@ package leetcode;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * LeetCode Problem 146: LRU Cache
+ * Difficulty: Medium
+ * 
+ * <p>Design and implement an LRU cache.
+ * 
+ * <p>Time Complexity: O(?) - TODO: Analyze complexity
+ * <p>Space Complexity: O(?) - TODO: Analyze complexity
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LC0146_LRUCache {
     Node head, tail;
     int capacity;

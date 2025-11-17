@@ -9,6 +9,14 @@ import java.util.Queue;
 import java.util.Map;
 import java.util.HashMap;
 
+/**
+ * BottomView
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class BottomView {
     static class Pair{
         TreeNode node;

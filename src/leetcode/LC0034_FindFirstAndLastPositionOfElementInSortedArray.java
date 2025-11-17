@@ -1,5 +1,17 @@
 package leetcode;
 
+/**
+ * LeetCode Problem 34: Find First and Last Position of Element in Sorted Array
+ * Difficulty: Medium
+ * 
+ * <p>Find starting and ending position of a given target value.
+ * 
+ * <p>Time Complexity: O(?) - TODO: Analyze complexity
+ * <p>Space Complexity: O(?) - TODO: Analyze complexity
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LC0034_FindFirstAndLastPositionOfElementInSortedArray {
     public int[] searchRange(int[] nums, int target) {
         int firstIndex = getFirstIndex(nums, target);

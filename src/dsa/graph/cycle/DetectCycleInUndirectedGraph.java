@@ -6,6 +6,14 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
+/**
+ * DetectCycleInUndirectedGraph
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class DetectCycleInUndirectedGraph {
     public static boolean detectCycleUsingBFS(int N, List<List<Integer>> adjList) {
         boolean[] visited = new boolean[N];

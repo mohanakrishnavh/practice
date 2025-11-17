@@ -3,6 +3,14 @@ package leetcode;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * SpiralMatrix
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class SpiralMatrix {
     public static List<Integer> spiralOrder(int[][] matrix) {
         List<Integer> spiralList = new ArrayList<>();

@@ -2,12 +2,37 @@ package dsa.dp.mcm;
 
 import java.util.Arrays;
 
+/**
+ * MatrixChainMultiplication
+ * 
+ * <p>This class solves the Matrix Chain Multiplication problem, which finds the minimum number
+ * of scalar multiplications needed to multiply a chain of matrices. The order of multiplication
+ * matters because matrix multiplication is associative: (A*B)*C ≠ A*(B*C) in terms of cost.
+ * Given dimensions array where matrix i has dimensions [nums[i-1] x nums[i]], we find the
+ * optimal parenthesization. Provides both recursive and memoized solutions.
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class MatrixChainMultiplication {
+    /**
+     * Calculates the minimum cost using naive recursion.
+     * 
+     * <p>Time Complexity: O(2^n) - exponential due to overlapping subproblems
+     * <p>Space Complexity: O(n) for recursion stack
+     * 
+     * @param nums array where nums[i-1] x nums[i] are dimensions of matrix i
+     * @return minimum number of scalar multiplications needed
+     */
     public static int getCost(int[] nums) {
         int n = nums.length;
         return solve(nums, 1, n - 1);
     }
 
+    /**
+     * Helper method for recursive solution.
+     * Tries all possible split points k between i and j.
+     */
     private static int solve(int[] nums, int i, int j) {
         if (i >= j) {
             return 0;
@@ -27,6 +52,15 @@ public class MatrixChainMultiplication {
         return min;
     }
 
+    /**
+     * Calculates the minimum cost using memoization (top-down DP).
+     * 
+     * <p>Time Complexity: O(n^3) where n is the number of matrices
+     * <p>Space Complexity: O(n^2) for the DP table
+     * 
+     * @param nums array where nums[i-1] x nums[i] are dimensions of matrix i
+     * @return minimum number of scalar multiplications needed
+     */
     public static int getCostOptimized(int[] nums) {
         int n = nums.length;
         int[][] dp = new int[nums.length][nums.length];
@@ -37,6 +71,10 @@ public class MatrixChainMultiplication {
         return solve(nums, 1, n - 1, dp);
     }
 
+    /**
+     * Helper method for memoized solution.
+     * Uses DP table to avoid recomputing overlapping subproblems.
+     */
     private static int solve(int[] nums, int i, int j, int[][] dp) {
         if (i >= j) {
             return 0;

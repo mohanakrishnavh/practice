@@ -2,6 +2,14 @@ package dsa.recursion.basics;
 
 import java.util.Scanner;
 
+/**
+ * PrintNTo1
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class PrintNTo1 {
     public static void printNumbers(int i, int n) {
         if (i < 1) {

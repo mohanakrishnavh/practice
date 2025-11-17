@@ -2,6 +2,14 @@ package dsa.recursion.recursion;
 
 import java.util.Stack;
 
+/**
+ * SortAStack
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class SortAStack {
     public static void sort(Stack<Integer> stack) {
         if (stack.size() <= 1) {

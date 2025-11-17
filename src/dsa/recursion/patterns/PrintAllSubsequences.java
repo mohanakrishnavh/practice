@@ -3,6 +3,14 @@ package dsa.recursion.patterns;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * PrintAllSubsequences
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class PrintAllSubsequences {
     public static void printSubsequences(int[] arr, int index, List<Integer> subsequence) {
         if (index == arr.length) {

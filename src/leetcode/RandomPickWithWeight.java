@@ -1,5 +1,13 @@
 package leetcode;
 
+/**
+ * RandomPickWithWeight
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class RandomPickWithWeight {
     int[] cumulativeSum;
     int totalSum;

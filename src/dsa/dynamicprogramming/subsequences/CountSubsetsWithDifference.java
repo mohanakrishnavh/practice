@@ -2,6 +2,25 @@ package dsa.dynamicprogramming.subsequences;
 
 import java.util.Arrays;
 
+/**
+ * Count Subsets with Given Difference.
+ * 
+ * <p>Given an array and a target difference D, count the number of ways to partition
+ * the array into two subsets S1 and S2 such that |S1 - S2| = D.
+ * 
+ * <p>This problem reduces to the subset sum problem:
+ * - If S1 + S2 = totalSum and S1 - S2 = D
+ * - Then S1 = (totalSum + D) / 2
+ * - Problem becomes: count subsets with sum = (totalSum + D) / 2
+ * 
+ * <p>Time Complexity: O(n * sum) where sum = (totalSum + D) / 2
+ * <p>Space Complexity: Depends on subset sum implementation used
+ * 
+ * <p>Example: For [1, 1, 2, 3] and D=1, there are 3 ways
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class CountSubsetsWithDifference {
     public static int countSubsets(int[] arr, int sum) {
         int[][] dp = new int[arr.length][sum+1];

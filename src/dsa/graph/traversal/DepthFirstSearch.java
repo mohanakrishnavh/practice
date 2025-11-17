@@ -5,6 +5,14 @@ import dsa.graph.Graph;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * DepthFirstSearch
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class DepthFirstSearch {
     public static List<Integer> depthFirstTraversal(int n, List<List<Integer>> adjList) {
         List<Integer> dfsTraversal = new ArrayList<>();

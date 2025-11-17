@@ -3,6 +3,14 @@ package dsa.string;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * ValidAnagram
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class ValidAnagram {
 
     public boolean isAnagram(String s, String t) {

@@ -9,6 +9,14 @@ import java.util.Queue;
 import java.util.Map;
 import java.util.HashMap;
 
+/**
+ * VerticalOrderTraversal
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class VerticalOrderTraversal {
     static class Pair {
         TreeNode node;

@@ -3,6 +3,14 @@ package dsa.recursion.problems;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Permutations
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class Permutations {
     // Approach 1: Using used map/array to keep of elements that has been picked
     public static List<List<Integer>> permute(int[] arr) {

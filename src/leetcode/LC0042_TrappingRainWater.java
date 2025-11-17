@@ -1,5 +1,17 @@
 package leetcode;
 
+/**
+ * LeetCode Problem 42: Trapping Rain Water
+ * Difficulty: Hard
+ * 
+ * <p>Compute how much water can be trapped after raining.
+ * 
+ * <p>Time Complexity: O(?) - TODO: Analyze complexity
+ * <p>Space Complexity: O(?) - TODO: Analyze complexity
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LC0042_TrappingRainWater {
 
     public static int trap(int[] height) {

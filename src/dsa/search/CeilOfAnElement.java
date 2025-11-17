@@ -1,5 +1,13 @@
 package dsa.search;
 
+/**
+ * CeilOfAnElement
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class CeilOfAnElement {
     public static int getCeil(int[] nums, int target) {
         int start = 0;

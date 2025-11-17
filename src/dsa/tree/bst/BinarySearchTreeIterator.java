@@ -4,6 +4,14 @@ import dsa.tree.TreeNode;
 
 import java.util.Stack;
 
+/**
+ * BinarySearchTreeIterator
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class BinarySearchTreeIterator {
 
     Stack<TreeNode> stack;

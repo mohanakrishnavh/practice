@@ -4,6 +4,14 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * FindDigits
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class FindDigits {
     public static List<Integer> getDigits(int n, int base) {
         List<Integer> digits = new ArrayList<>();

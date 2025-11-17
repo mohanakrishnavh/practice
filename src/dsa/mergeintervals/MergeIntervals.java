@@ -4,6 +4,14 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * MergeIntervals
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class MergeIntervals {
     public int[][] merge(int[][] intervals) {
         if (intervals.length < 2) {

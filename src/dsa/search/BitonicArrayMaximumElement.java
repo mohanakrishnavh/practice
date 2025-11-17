@@ -1,5 +1,13 @@
 package dsa.search;
 
+/**
+ * BitonicArrayMaximumElement
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class BitonicArrayMaximumElement {
     public static int getMaximumElement(int[] nums) {
         int start = 0;

@@ -3,6 +3,14 @@ package dsa.tree.binarytree;
 import dsa.tree.TreeNode;
 import java.util.Stack;
 
+/**
+ * FlattenBinaryTreeToLinkedList
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class FlattenBinaryTreeToLinkedList {
 
     public void flatten(TreeNode root) {

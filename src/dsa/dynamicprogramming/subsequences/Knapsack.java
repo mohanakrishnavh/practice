@@ -2,6 +2,29 @@ package dsa.dynamicprogramming.subsequences;
 
 import java.util.Arrays;
 
+/**
+ * 0/1 Knapsack Problem.
+ * 
+ * <p>Given weights and values of n items and a knapsack capacity W,
+ * find the maximum value that can be obtained by selecting items such that
+ * the total weight does not exceed W. Each item can be selected at most once.
+ * 
+ * <p>This is a classic DP problem with decision at each item: take it or leave it.
+ * 
+ * <p>This implementation provides five approaches:
+ * <ul>
+ *   <li>Recursion - Explores all possibilities, O(2^n)</li>
+ *   <li>Memoization (Top-Down DP) - O(n*W) time, O(n*W) space</li>
+ *   <li>Tabulation (Bottom-Up DP) - O(n*W) time, O(n*W) space</li>
+ *   <li>Space Optimization (Two Arrays) - O(n*W) time, O(W) space</li>
+ *   <li>Space Optimization (Single Array) - O(n*W) time, O(W) space</li>
+ * </ul>
+ * 
+ * <p>Example: wt=[3,4,5], val=[30,50,60], W=8 → max value = 90 (items 0 and 2)
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class Knapsack {
     // Approach 1 : Recursion
     public static int getMaxProfit(int[] wt, int[] val, int W) {

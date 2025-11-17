@@ -4,6 +4,18 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
 
+/**
+ * LeetCode Problem 785: Is Graph Bipartite
+ * Difficulty: Medium
+ * 
+ * <p>Determine if a graph is bipartite.
+ * 
+ * <p>Time Complexity: O(?) - TODO: Analyze complexity
+ * <p>Space Complexity: O(?) - TODO: Analyze complexity
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LC0785_IsGraphBipartite {
     public boolean isBipartite(int[][] graph) {
         int V = graph.length;

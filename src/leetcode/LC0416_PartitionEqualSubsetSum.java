@@ -1,5 +1,17 @@
 package leetcode;
 
+/**
+ * LeetCode Problem 416: Partition Equal Subset Sum
+ * Difficulty: Medium
+ * 
+ * <p>Determine if array can be partitioned into two subsets with equal sum.
+ * 
+ * <p>Time Complexity: O(?) - TODO: Analyze complexity
+ * <p>Space Complexity: O(?) - TODO: Analyze complexity
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LC0416_PartitionEqualSubsetSum {
     public boolean canPartition(int[] arr) {
         int sum = 0;

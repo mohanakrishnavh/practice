@@ -1,5 +1,17 @@
 package leetcode;
 
+/**
+ * LeetCode Problem 1351: Count Negative Numbers in a Sorted Matrix
+ * Difficulty: Easy
+ * 
+ * <p>Count negative numbers in a sorted matrix.
+ * 
+ * <p>Time Complexity: O(?) - TODO: Analyze complexity
+ * <p>Space Complexity: O(?) - TODO: Analyze complexity
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LC1351_CountNegativeNumberInASortedMatrix {
     public int countNegatives(int[][] grid) {
         int count = 0;

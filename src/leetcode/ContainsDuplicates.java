@@ -3,6 +3,14 @@ package leetcode;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * ContainsDuplicates
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class ContainsDuplicates {
     public static boolean hasDuplicates(int[] nums) {
         Set<Integer> uniqueNums = new HashSet<>();

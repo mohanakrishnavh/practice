@@ -3,6 +3,14 @@ package dsa.stack;
 import java.util.Arrays;
 import java.util.Stack;
 
+/**
+ * NearestSmallerToRight
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class NearestSmallerToRight {
 
     private static int[] getNearestSmallerToRight(int[] nums) {

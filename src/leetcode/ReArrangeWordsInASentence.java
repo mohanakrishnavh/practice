@@ -4,6 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.TreeMap;
 
+/**
+ * ReArrangeWordsInASentence
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class ReArrangeWordsInASentence {
     public static String arrangeWords(String text) {
         if (text == null || text.length() == 0) {

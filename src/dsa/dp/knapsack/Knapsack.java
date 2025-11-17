@@ -4,7 +4,30 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * Knapsack
+ * 
+ * <p>This class implements solutions to the classic 0/1 Knapsack problem where we need to
+ * maximize the total value of items placed in a knapsack without exceeding its weight capacity.
+ * Each item can only be used once (0 or 1 times). Provides multiple implementations:
+ * recursive, memoized (top-down DP), and tabulation (bottom-up DP).
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class Knapsack {
+    /**
+     * Finds the maximum profit using naive recursion.
+     * 
+     * <p>Time Complexity: O(2^n) - explores all possible combinations
+     * <p>Space Complexity: O(n) for recursion stack
+     * 
+     * @param weights array of item weights
+     * @param values array of item values
+     * @param n number of items
+     * @param W knapsack capacity
+     * @return maximum profit achievable
+     */
     private int getMaxProfit(int[] weights, int[] values, int n, int W) {
         if (n == 0 || W == 0) {
             return 0;
@@ -19,6 +42,18 @@ public class Knapsack {
         return getMaxProfit(weights, values, n - 1, W);
     }
 
+    /**
+     * Finds the maximum profit and returns the indices of selected items.
+     * 
+     * <p>Time Complexity: O(n * W) with memoization
+     * <p>Space Complexity: O(n * W) for the DP table
+     * 
+     * @param weights array of item weights
+     * @param values array of item values
+     * @param n number of items
+     * @param W knapsack capacity
+     * @return list of indices of selected items
+     */
     private List<Integer> getMaxProfitMemoized2(int[] weights, int[] values, int n, int W) {
         int[][] dp = new int[n + 1][W + 1];
         for (int i = 0; i <= n; i++) {
@@ -26,10 +61,13 @@ public class Knapsack {
         }
 
         List<Integer> result = new ArrayList<>();
-        int max= getMaxProfitMemoizedUtil2(weights, values, n, W, dp, result);
+        getMaxProfitMemoizedUtil2(weights, values, n, W, dp, result);
         return result;
     }
 
+    /**
+     * Helper method for memoized solution that tracks selected items.
+     */
     private int getMaxProfitMemoizedUtil2(int[] weights, int[] values, int n, int W, int[][] dp, List<Integer> result) {
         if (n == 0 || W == 0) {
             return 0;
@@ -55,6 +93,18 @@ public class Knapsack {
         return dp[n][W];
     }
 
+    /**
+     * Finds the maximum profit using memoization (top-down DP).
+     * 
+     * <p>Time Complexity: O(n * W)
+     * <p>Space Complexity: O(n * W) for DP table and recursion stack
+     * 
+     * @param weights array of item weights
+     * @param values array of item values
+     * @param n number of items
+     * @param W knapsack capacity
+     * @return maximum profit achievable
+     */
     private int getMaxProfitMemoized(int[] weights, int[] values, int n, int W) {
         int[][] dp = new int[n + 1][W + 1];
         for (int i = 0; i <= n; i++) {
@@ -64,31 +114,9 @@ public class Knapsack {
         return getMaxProfitMemoizedUtil(weights, values, n, W, dp);
     }
 
-  /*private int getMaxProfitTopDown(int[] weights, int[] values, int n, int W) {
-      int[][] t = new int[n + 1][W + 1];
-      // Step 1 : Initialization (No need to do this in Java - Default value is 0)
-      for (int i = 0; i <= n; i++) {
-          for (int j = 0; j <= W; j++) {
-              if (i == 0 || j == 0) {
-                  t[i][j] = 0;
-              }
-          }
-      }
-
-      // Step 2 : Recursion --> Iterative
-      for (int i = 1; i <= n; i++) {
-          for (int j = 1; j <= W; j++) {
-              if (weights[i - 1] <= j) {
-                  t[i][j] = Math.max(values[i - 1] + t[i - 1][j - weights[i - 1]], t[i - 1][j]);
-              } else {
-                  t[i][j] = t[i - 1][j];
-              }
-          }
-      }
-
-      return t[n][W];
-  }*/
-
+    /**
+     * Helper method for memoized solution.
+     */
     private int getMaxProfitMemoizedUtil(int[] weights, int[] values, int n, int W, int[][] dp) {
         if (n == 0 || W == 0) {
             return 0;
@@ -111,6 +139,21 @@ public class Knapsack {
         return dp[n][W];
     }
 
+    /**
+     * Finds the maximum profit using tabulation (bottom-up DP).
+     * 
+     * <p>Builds a DP table iteratively where dp[i][j] represents the maximum profit
+     * achievable using the first i items with capacity j.
+     * 
+     * <p>Time Complexity: O(n * W)
+     * <p>Space Complexity: O(n * W) for the DP table
+     * 
+     * @param weights array of item weights
+     * @param values array of item values
+     * @param n number of items
+     * @param W knapsack capacity
+     * @return maximum profit achievable
+     */
     private int getMaxProfitTopDown(int[] weights, int[] values, int n, int W) {
         // Step 1 : Initialization (No need to do this in Java - Default value is 0)
         int[][] dp = new int[n + 1][W + 1];

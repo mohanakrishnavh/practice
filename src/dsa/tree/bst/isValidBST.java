@@ -2,6 +2,14 @@ package dsa.tree.bst;
 
 import dsa.tree.TreeNode;
 
+/**
+ * isValidBST
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class isValidBST {
     public boolean isValidBST(TreeNode root) {
         return isValidBST(root, Long.MIN_VALUE, Long.MAX_VALUE);

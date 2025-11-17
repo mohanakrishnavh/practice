@@ -2,6 +2,14 @@ package dsa.search;
 
 import leetcode.ArrayReader;
 
+/**
+ * SearchInASortedArrayOfUnknownSize
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class SearchInASortedArrayOfUnknownSize {
     public int search(ArrayReader reader, int target) {
         int start = 0;

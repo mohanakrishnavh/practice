@@ -2,6 +2,18 @@ package leetcode;
 
 import dsa.tree.TreeNode;
 
+/**
+ * LeetCode Problem 450: Delete Node in a BST
+ * Difficulty: Medium
+ * 
+ * <p>Delete a node in a binary search tree.
+ * 
+ * <p>Time Complexity: O(?) - TODO: Analyze complexity
+ * <p>Space Complexity: O(?) - TODO: Analyze complexity
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LC0450_DeleteNodeInABST {
     public TreeNode deleteNode(TreeNode root, int key) {
         if (root == null) {

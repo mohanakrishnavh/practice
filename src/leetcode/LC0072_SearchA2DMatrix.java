@@ -1,5 +1,17 @@
 package leetcode;
 
+/**
+ * LeetCode Problem 72: Search a 2D Matrix
+ * Difficulty: Medium
+ * 
+ * <p>Search for a value in an m x n matrix with sorted properties.
+ * 
+ * <p>Time Complexity: O(?) - TODO: Analyze complexity
+ * <p>Space Complexity: O(?) - TODO: Analyze complexity
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LC0072_SearchA2DMatrix {
     public static boolean searchMatrix(int[][] matrix, int target) {
         int i = 0;

@@ -2,6 +2,18 @@ package leetcode;
 
 import java.util.*;
 
+/**
+ * LeetCode Problem 692: Top K Frequent Words
+ * Difficulty: Medium
+ * 
+ * <p>Return the k most frequent words.
+ * 
+ * <p>Time Complexity: O(?) - TODO: Analyze complexity
+ * <p>Space Complexity: O(?) - TODO: Analyze complexity
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LC0692_TopKFrequentWords {
     public List<String> topKFrequent(String[] words, int k) {
         Map<String, Integer> frequencyMap = new HashMap<>();

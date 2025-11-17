@@ -4,6 +4,18 @@ import java.util.Arrays;
 import java.util.Deque;
 import java.util.LinkedList;
 
+/**
+ * LeetCode Problem 239: Sliding Window Maximum
+ * Difficulty: Hard
+ * 
+ * <p>Find the maximum value in each sliding window of size k.
+ * 
+ * <p>Time Complexity: O(?) - TODO: Analyze complexity
+ * <p>Space Complexity: O(?) - TODO: Analyze complexity
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LC0239_SlidingWindowMaximum {
     public static int[] maxSlidingWindow(int[] nums, int k) {
         if (k == nums.length) {

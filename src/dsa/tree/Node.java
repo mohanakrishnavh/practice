@@ -3,6 +3,14 @@ package dsa.tree;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Node
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class Node {
     public int value;
     public List<Node> children;

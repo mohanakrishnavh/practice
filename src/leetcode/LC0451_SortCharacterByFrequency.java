@@ -4,6 +4,18 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.PriorityQueue;
 
+/**
+ * LeetCode Problem 451: Sort Characters By Frequency
+ * Difficulty: Medium
+ * 
+ * <p>Sort characters in a string by decreasing frequency.
+ * 
+ * <p>Time Complexity: O(?) - TODO: Analyze complexity
+ * <p>Space Complexity: O(?) - TODO: Analyze complexity
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LC0451_SortCharacterByFrequency {
     public String frequencySort(String s) {
         if (s == null || s.isEmpty()) {

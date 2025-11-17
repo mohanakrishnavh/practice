@@ -1,5 +1,13 @@
 package dsa.search;
 
+/**
+ * PeakElement
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class PeakElement {
     public static int getPeakElement(int[] nums) {
         int size = nums.length;

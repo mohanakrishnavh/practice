@@ -6,6 +6,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
+/**
+ * BoundaryTraversal
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class BoundaryTraversal {
     public List<Integer> boundaryOfBinaryTree(TreeNode root) {
         List<Integer> boundary = new ArrayList<>();

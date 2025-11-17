@@ -5,6 +5,18 @@ import dsa.tree.TreeNode;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * LeetCode Problem 336: Find Leaves of Binary Tree
+ * Difficulty: Medium
+ * 
+ * <p>Collect and remove all leaves, repeat until tree is empty.
+ * 
+ * <p>Time Complexity: O(?) - TODO: Analyze complexity
+ * <p>Space Complexity: O(?) - TODO: Analyze complexity
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LC0336_FindLeavesOfBinaryTree {
     public List<List<Integer>> findLeaves(TreeNode root) {
         List<List<Integer>> leaves = new ArrayList<>();

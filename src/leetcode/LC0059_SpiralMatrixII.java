@@ -1,5 +1,17 @@
 package leetcode;
 
+/**
+ * LeetCode Problem 59: Spiral Matrix II
+ * Difficulty: Medium
+ * 
+ * <p>Generate an n x n matrix filled with elements from 1 to n² in spiral order.
+ * 
+ * <p>Time Complexity: O(?) - TODO: Analyze complexity
+ * <p>Space Complexity: O(?) - TODO: Analyze complexity
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LC0059_SpiralMatrixII {
     public int[][] generateMatrix(int n) {
         int[][] matrix = new int[n][n];

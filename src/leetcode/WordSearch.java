@@ -1,5 +1,13 @@
 package leetcode;
 
+/**
+ * WordSearch
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class WordSearch {
     public static boolean exist(char[][] board, String word) {
         if (board == null || board.length == 0 || word == null || word.length() == 0) {

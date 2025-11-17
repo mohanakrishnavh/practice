@@ -3,6 +3,14 @@ package dsa.recursion.problems;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * CombinationSum
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class CombinationSum {
     public static List<List<Integer>> combinationSum(int[] candidates, int target) {
         List<List<Integer>> combinations = new ArrayList<>();

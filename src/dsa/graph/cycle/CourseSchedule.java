@@ -5,6 +5,14 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
+/**
+ * CourseSchedule
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class CourseSchedule {
     public boolean canFinish(int numCourses, int[][] prerequisites) {
         List<List<Integer>> adjList = new ArrayList<>();

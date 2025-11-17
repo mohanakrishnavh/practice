@@ -3,6 +3,14 @@ package dsa.stack;
 import java.util.Arrays;
 import java.util.Stack;
 
+/**
+ * StockSpan
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class StockSpan {
     private static int[] getStockSpan(int[] nums) {
         int[] stockSpan = new int[nums.length];

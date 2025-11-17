@@ -2,6 +2,14 @@ package dsa.recursion.recursion;
 
 import java.util.Stack;
 
+/**
+ * ReverseStack
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class ReverseStack {
     public static Stack<Integer> reverse(Stack<Integer> stack) {
         if (stack.size() <= 1) {

@@ -1,5 +1,13 @@
 package leetcode;
 
+/**
+ * BreakPalindrome
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class BreakPalindrome {
     public static String breakPalindrome(String palindrome) {
         if (palindrome == null || palindrome.length() <= 1) {

@@ -5,6 +5,14 @@ import java.util.Collections;
 import java.util.List;
 import java.util.PriorityQueue;
 
+/**
+ * FindKClosestElements
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class FindKClosestElements {
     public List<Integer> findClosestElements(int[] arr, int k, int x) {
         PriorityQueue<int[]> priorityQueue = new PriorityQueue<>((a, b) -> a[0] == b[0] ? b[1] - a[1] : b[0] - a[0]);

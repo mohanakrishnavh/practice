@@ -2,6 +2,14 @@ package dsa.tree.bst;
 
 import dsa.tree.TreeNode;
 
+/**
+ * InorderSuccessor
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class InorderSuccessor {
     public TreeNode inorderSuccessor(TreeNode root, TreeNode p) {
         TreeNode successor = null;

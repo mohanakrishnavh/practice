@@ -2,6 +2,14 @@ package dsa.tree.binarytree;
 
 import dsa.tree.TreeNode;
 
+/**
+ * BinaryTreeMaximumPathSum
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class BinaryTreeMaximumPathSum {
     public int maxPathSum(TreeNode root) {
         int[] result = new int[]{Integer.MIN_VALUE};

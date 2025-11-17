@@ -2,6 +2,14 @@ package dsa.heap.kwaymerge;
 
 import java.util.PriorityQueue;
 
+/**
+ * KthSmallestNumberInASortedMatrix
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class KthSmallestNumberInASortedMatrix {
     public int kthSmallest(int[][] matrix, int k) {
         // [row, column]

@@ -2,6 +2,18 @@ package leetcode;
 
 import java.util.Stack;
 
+/**
+ * LeetCode Problem 155: Min Stack
+ * Difficulty: Medium
+ * 
+ * <p>Design a stack that supports push, pop, top, and retrieving the minimum element.
+ * 
+ * <p>Time Complexity: O(?) - TODO: Analyze complexity
+ * <p>Space Complexity: O(?) - TODO: Analyze complexity
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LC0155_MinStack {
     Stack<Integer> stack;
     Stack<Integer> minimumTracker;

@@ -1,6 +1,20 @@
 package dsa.linkedlist;
 
+/**
+ * CopyListWithRandomPointer
+ * 
+ * <p>This class provides a solution to create a deep copy of a linked list where each node
+ * contains an additional random pointer that can point to any node in the list or null.
+ * The implementation uses an in-place technique that interweaves the copied nodes with
+ * original nodes, then separates them.
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class CopyListWithRandomPointer {
+    /**
+     * Represents a node in the linked list with a value, next pointer, and random pointer.
+     */
     class Node {
         int val;
         Node next;
@@ -11,6 +25,20 @@ public class CopyListWithRandomPointer {
         }
     }
 
+    /**
+     * Creates a deep copy of a linked list with random pointers.
+     * 
+     * <p>This method uses a three-step approach:
+     * 1. Interweave original and copied nodes in the same list
+     * 2. Assign random pointers to the copied nodes
+     * 3. Separate the copied nodes from the original list
+     * 
+     * <p>Time Complexity: O(n) where n is the number of nodes
+     * <p>Space Complexity: O(1) excluding the space for the copied list
+     * 
+     * @param head the head of the original linked list
+     * @return the head of the deep copied linked list
+     */
     public Node copyRandomList(Node head) {
         if (head == null) {
             return head;

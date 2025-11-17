@@ -4,6 +4,14 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * CombinationSumII
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class CombinationSumII {
     public static List<List<Integer>> combinationSum2(int[] candidates, int target) {
         List<List<Integer>> combinations = new ArrayList<>();

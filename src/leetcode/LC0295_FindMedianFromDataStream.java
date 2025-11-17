@@ -3,6 +3,18 @@ package leetcode;
 import java.util.Collections;
 import java.util.PriorityQueue;
 
+/**
+ * LeetCode Problem 295: Find Median from Data Stream
+ * Difficulty: Hard
+ * 
+ * <p>Find the median from a data stream.
+ * 
+ * <p>Time Complexity: O(?) - TODO: Analyze complexity
+ * <p>Space Complexity: O(?) - TODO: Analyze complexity
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LC0295_FindMedianFromDataStream {
     PriorityQueue<Integer> maxHeap;
     PriorityQueue<Integer> minHeap;

@@ -1,5 +1,17 @@
 package leetcode;
 
+/**
+ * LeetCode Problem 240: Search a 2D Matrix II
+ * Difficulty: Medium
+ * 
+ * <p>Search in a 2D matrix where rows and columns are sorted.
+ * 
+ * <p>Time Complexity: O(?) - TODO: Analyze complexity
+ * <p>Space Complexity: O(?) - TODO: Analyze complexity
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LC0240_SearchA2DMatrixII {
     public boolean searchMatrix(int[][] matrix, int target) {
         int i = 0;

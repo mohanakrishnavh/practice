@@ -2,6 +2,18 @@ package leetcode;
 
 import java.util.Stack;
 
+/**
+ * LeetCode Problem 150: Evaluate Reverse Polish Notation
+ * Difficulty: Medium
+ * 
+ * <p>Evaluate an expression in Reverse Polish Notation.
+ * 
+ * <p>Time Complexity: O(?) - TODO: Analyze complexity
+ * <p>Space Complexity: O(?) - TODO: Analyze complexity
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LC0150_EvaluateReversePolishNotation {
     public int evalRPN(String[] tokens) {
         int result;

@@ -2,6 +2,18 @@ package leetcode;
 
 import dsa.tree.TreeNode;
 
+/**
+ * LeetCode Problem 124: Binary Tree Maximum Path Sum
+ * Difficulty: Hard
+ * 
+ * <p>Find the maximum path sum in a binary tree.
+ * 
+ * <p>Time Complexity: O(?) - TODO: Analyze complexity
+ * <p>Space Complexity: O(?) - TODO: Analyze complexity
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LC0124_BinaryTreeMaximumPathSum {
     public int maxPathSum(TreeNode root) {
         int[] result = new int[]{Integer.MIN_VALUE};

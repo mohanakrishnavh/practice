@@ -3,6 +3,14 @@ package dsa.recursion.problems;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Subsets
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class Subsets {
     public static List<List<Integer>> findSubsets(int[] arr){
         List<List<Integer>> subsets = new ArrayList<>();

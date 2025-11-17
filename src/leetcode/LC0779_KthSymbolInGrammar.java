@@ -1,5 +1,17 @@
 package leetcode;
 
+/**
+ * LeetCode Problem 779: K-th Symbol in Grammar
+ * Difficulty: Medium
+ * 
+ * <p>Find the kth symbol in the nth row of a grammar sequence.
+ * 
+ * <p>Time Complexity: O(?) - TODO: Analyze complexity
+ * <p>Space Complexity: O(?) - TODO: Analyze complexity
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LC0779_KthSymbolInGrammar {
     /*
     N = 0, Pattern: 0

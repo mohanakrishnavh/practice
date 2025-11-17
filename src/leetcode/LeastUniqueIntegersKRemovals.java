@@ -4,6 +4,14 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.PriorityQueue;
 
+/**
+ * LeastUniqueIntegersKRemovals
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LeastUniqueIntegersKRemovals {
     public static int findLeastNumOfUniqueInts(int[] arr, int k) {
         Map<Integer, Integer> counts = new HashMap<>();

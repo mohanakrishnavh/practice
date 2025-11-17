@@ -2,6 +2,14 @@ package dsa.search;
 
 import java.util.Arrays;
 
+/**
+ * SearchInRowWiseColumnWiseSortedArray
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class SearchInRowWiseColumnWiseSortedArray {
     public static int[] search(int[][] matrix, int target) {
         int i = 0;

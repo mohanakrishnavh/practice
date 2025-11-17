@@ -4,6 +4,14 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * Prime
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class Prime {
     // If any number other than 1 & n divides n, then n is not prime
     public static boolean isPrime(int n) {

@@ -2,6 +2,18 @@ package leetcode;
 
 import dsa.tree.Node;
 
+/**
+ * LeetCode Problem 1522: Diameter of N-Ary Tree
+ * Difficulty: Medium
+ * 
+ * <p>Find the diameter of an n-ary tree.
+ * 
+ * <p>Time Complexity: O(?) - TODO: Analyze complexity
+ * <p>Space Complexity: O(?) - TODO: Analyze complexity
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LC1522_DiameterOfNAryTree {
     public int diameter(Node root) {
         int[] result = new int[]{Integer.MIN_VALUE};

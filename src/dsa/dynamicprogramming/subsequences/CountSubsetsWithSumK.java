@@ -2,6 +2,28 @@ package dsa.dynamicprogramming.subsequences;
 
 import java.util.Arrays;
 
+/**
+ * Count Subsets with Sum K.
+ * 
+ * <p>Given an array of integers and a target sum K, count the number of subsets
+ * whose elements sum to K. This implementation handles arrays with zeros specially.
+ * 
+ * <p>This implementation provides seven approaches:
+ * <ul>
+ *   <li>Recursion - Explores all possibilities</li>
+ *   <li>Memoization - Caches subproblem results</li>
+ *   <li>Tabulation - Bottom-up DP</li>
+ *   <li>Space Optimization - Uses 1D array</li>
+ *   <li>Handling zeros - Special case when array contains zeros</li>
+ *   <li>Optimized with zero count - Multiplies result by 2^(zero count)</li>
+ *   <li>Modulo arithmetic - For large results</li>
+ * </ul>
+ * 
+ * <p>Example: For [1, 2, 2, 3] and K=3, there are 2 subsets: {1,2} and {3}
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class CountSubsetsWithSumK {
     // Approach 1 : Recursion
     public static int countSubsets(int[] arr, int sum) {

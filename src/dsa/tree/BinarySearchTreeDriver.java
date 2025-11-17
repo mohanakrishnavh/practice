@@ -1,5 +1,13 @@
 package dsa.tree;
 
+/**
+ * BinarySearchTreeDriver
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class BinarySearchTreeDriver {
 
     public static void main(String[] args) {

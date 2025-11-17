@@ -2,6 +2,14 @@ package dsa.tree.bst;
 
 import dsa.tree.TreeNode;
 
+/**
+ * Delete
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class Delete {
     public TreeNode deleteNode(TreeNode root, int key) {
         if (root == null) {

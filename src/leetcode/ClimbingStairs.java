@@ -1,5 +1,13 @@
 package leetcode;
 
+/**
+ * ClimbingStairs
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class ClimbingStairs {
     public int climbStairs(int n) {
         if (n <= 0) {

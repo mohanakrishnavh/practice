@@ -2,6 +2,14 @@ package dsa.tree;
 
 import java.util.*;
 
+/**
+ * BinaryTree
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class BinaryTree extends Tree {
 
     public BinaryTree() {

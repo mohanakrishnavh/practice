@@ -5,6 +5,14 @@ import dsa.tree.TreeNode;
 import java.util.LinkedList;
 import java.util.Queue;
 
+/**
+ * MaximumWidthOfBinaryTree
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class MaximumWidthOfBinaryTree {
     static class Pair {
         TreeNode node;

@@ -9,6 +9,14 @@ import java.util.Queue;
 import java.util.Map;
 import java.util.HashMap;
 
+/**
+ * TopView
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class TopView {
     public static List<Integer> getTopView(TreeNode root) {
         List<Integer> result = new ArrayList<>();

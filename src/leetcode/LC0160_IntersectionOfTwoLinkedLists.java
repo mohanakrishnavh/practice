@@ -2,6 +2,18 @@ package leetcode;
 
 import dsa.linkedlist.ListNode;
 
+/**
+ * LeetCode Problem 160: Intersection of Two Linked Lists
+ * Difficulty: Easy
+ * 
+ * <p>Find the node where two linked lists intersect.
+ * 
+ * <p>Time Complexity: O(?) - TODO: Analyze complexity
+ * <p>Space Complexity: O(?) - TODO: Analyze complexity
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LC0160_IntersectionOfTwoLinkedLists {
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
         int lengthA = 0, lengthB = 0;

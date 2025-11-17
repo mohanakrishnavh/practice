@@ -2,6 +2,14 @@ package leetcode;
 
 import dsa.linkedlist.ListNode;
 
+/**
+ * RemoveNthFromEndOfList
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class RemoveNthFromEndOfList {
     public ListNode removeNthFromEnd(ListNode head, int n) {
         if (head == null) {

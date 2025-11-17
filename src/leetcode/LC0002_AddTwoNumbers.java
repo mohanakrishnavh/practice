@@ -2,6 +2,18 @@ package leetcode;
 
 import dsa.linkedlist.ListNode;
 
+/**
+ * LeetCode Problem 2: Add Two Numbers
+ * Difficulty: Medium
+ * 
+ * <p>Add two numbers represented by linked lists where each node contains a single digit.
+ * 
+ * <p>Time Complexity: O(?) - TODO: Analyze complexity
+ * <p>Space Complexity: O(?) - TODO: Analyze complexity
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LC0002_AddTwoNumbers {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         if (l1 == null) {

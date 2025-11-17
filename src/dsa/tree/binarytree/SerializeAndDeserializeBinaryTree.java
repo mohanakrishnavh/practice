@@ -8,6 +8,14 @@ import java.util.Queue;
 import dsa.tree.BinaryTree;
 import dsa.tree.TreeNode;
 
+/**
+ * SerializeAndDeserializeBinaryTree
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class SerializeAndDeserializeBinaryTree {
 
     // Encodes a tree to a single string.

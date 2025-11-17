@@ -1,5 +1,13 @@
 package leetcode;
 
+/**
+ * SortColors
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class SortColors {
     public void sortColors(int[] nums) {
         int low = 0;

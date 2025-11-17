@@ -3,6 +3,14 @@ package dsa.stack;
 import java.util.Arrays;
 import java.util.Stack;
 
+/**
+ * MaximumAreaRectangleInBinaryMatrix
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class MaximumAreaRectangleInBinaryMatrix {
     public static int getMaximumAreaRectangleInBinaryMatrix(int[][] matrix) {
         int[] histogram = Arrays.copyOf(matrix[0], matrix[0].length);

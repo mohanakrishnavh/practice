@@ -5,6 +5,18 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
+/**
+ * LeetCode Problem 261: Graph Valid Tree
+ * Difficulty: Medium
+ * 
+ * <p>Determine if a graph is a valid tree.
+ * 
+ * <p>Time Complexity: O(?) - TODO: Analyze complexity
+ * <p>Space Complexity: O(?) - TODO: Analyze complexity
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LC0261_GraphValidTree {
     // Graph is a tree if it has no cycle and has only one strongly connected component
     public boolean validTree(int n, int[][] edges) {

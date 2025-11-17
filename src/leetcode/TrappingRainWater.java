@@ -1,5 +1,13 @@
 package leetcode;
 
+/**
+ * TrappingRainWater
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class TrappingRainWater {
     public static void main(String[] args) {
         TrappingRainWater obj = new TrappingRainWater();

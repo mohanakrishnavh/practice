@@ -10,6 +10,18 @@ import java.util.Map;
 import java.util.HashMap;
 
 
+/**
+ * LeetCode Problem 314: Binary Tree Vertical Order Traversal
+ * Difficulty: Medium
+ * 
+ * <p>Return the vertical order traversal of a binary tree.
+ * 
+ * <p>Time Complexity: O(?) - TODO: Analyze complexity
+ * <p>Space Complexity: O(?) - TODO: Analyze complexity
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LC0314_BinaryTreeVerticalOrderTraversal {
     static class Pair {
         TreeNode node;

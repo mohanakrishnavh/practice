@@ -1,5 +1,13 @@
 package dsa.stack;
 
+/**
+ * TrappingRainWater
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class TrappingRainWater {
     public static int trap(int[] height) {
         if (height.length <= 1) {

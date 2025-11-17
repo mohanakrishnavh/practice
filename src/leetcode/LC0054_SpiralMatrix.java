@@ -3,6 +3,18 @@ package leetcode;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * LeetCode Problem 54: Spiral Matrix
+ * Difficulty: Medium
+ * 
+ * <p>Return all elements of the matrix in spiral order.
+ * 
+ * <p>Time Complexity: O(?) - TODO: Analyze complexity
+ * <p>Space Complexity: O(?) - TODO: Analyze complexity
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LC0054_SpiralMatrix {
 
     public List<Integer> spiralOrder(int[][] matrix) {

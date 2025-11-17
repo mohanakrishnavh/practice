@@ -5,6 +5,14 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
+/**
+ * FirstNegativeIntegerInSubArray
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class FirstNegativeIntegerInSubArray {
 
     public static List<Integer> getFirstNegativeInteger(int[] arr, int k) {

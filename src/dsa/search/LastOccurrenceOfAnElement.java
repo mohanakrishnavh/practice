@@ -1,5 +1,13 @@
 package dsa.search;
 
+/**
+ * LastOccurrenceOfAnElement
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LastOccurrenceOfAnElement {
     public static int getLastOccurrence(int[] nums, int x) {
         int index = -1;

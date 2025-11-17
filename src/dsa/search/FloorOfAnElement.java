@@ -1,5 +1,13 @@
 package dsa.search;
 
+/**
+ * FloorOfAnElement
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class FloorOfAnElement {
     public static int getFloor(int[] nums, int target) {
         int start = 0;

@@ -3,6 +3,14 @@ package dsa.recursion.patterns;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * PrintAnySubsequenceWithSumK
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class PrintAnySubsequenceWithSumK {
     public static void subsequenceSum(int[] nums, int k) {
         subsequenceSum(nums, k, 0, new ArrayList<>(), 0);

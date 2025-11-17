@@ -3,6 +3,18 @@ package leetcode;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * LeetCode Problem 22: Generate Parentheses
+ * Difficulty: Medium
+ * 
+ * <p>Generate all combinations of well-formed parentheses.
+ * 
+ * <p>Time Complexity: O(?) - TODO: Analyze complexity
+ * <p>Space Complexity: O(?) - TODO: Analyze complexity
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LC0022_GenerateParentheses {
     public List<String> generateParenthesis(int n) {
         List<String> result = new ArrayList<>();

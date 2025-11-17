@@ -5,6 +5,18 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
+/**
+ * LeetCode Problem 210: Course Schedule II
+ * Difficulty: Medium
+ * 
+ * <p>Return the ordering of courses to take.
+ * 
+ * <p>Time Complexity: O(?) - TODO: Analyze complexity
+ * <p>Space Complexity: O(?) - TODO: Analyze complexity
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LC0210_CourseScheduleII {
     public int[] findOrder(int numCourses, int[][] prerequisites) {
         List<List<Integer>> adjList = new ArrayList<>();

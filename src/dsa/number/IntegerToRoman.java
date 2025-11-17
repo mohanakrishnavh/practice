@@ -1,4 +1,12 @@
-package dsa.number;public class IntegerToRoman {
+package dsa.number;/**
+ * IntegerToRoman
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
+public class IntegerToRoman {
 
     private static final String[] M = {"", "M", "MM", "MMM"};
     private static final String[] C = {"", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"};

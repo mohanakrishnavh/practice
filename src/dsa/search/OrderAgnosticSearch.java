@@ -1,5 +1,13 @@
 package dsa.search;
 
+/**
+ * OrderAgnosticSearch
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class OrderAgnosticSearch {
     public static int search(int[] nums, int key) {
         int start = 0;

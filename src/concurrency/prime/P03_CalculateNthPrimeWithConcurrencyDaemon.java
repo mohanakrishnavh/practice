@@ -2,6 +2,14 @@ package concurrency.prime;
 
 import java.util.Scanner;
 
+/**
+ * P03_CalculateNthPrimeWithConcurrencyDaemon
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class P03_CalculateNthPrimeWithConcurrencyDaemon {
     public static void main(String[] args){
         // Each execution of while loop start a new thread

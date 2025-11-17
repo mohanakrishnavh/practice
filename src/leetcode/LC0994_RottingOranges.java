@@ -3,6 +3,18 @@ package leetcode;
 import java.util.LinkedList;
 import java.util.Queue;
 
+/**
+ * LeetCode Problem 994: Rotting Oranges
+ * Difficulty: Medium
+ * 
+ * <p>Find the minimum time for all oranges to rot.
+ * 
+ * <p>Time Complexity: O(?) - TODO: Analyze complexity
+ * <p>Space Complexity: O(?) - TODO: Analyze complexity
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LC0994_RottingOranges {
 
     public static int orangesRotting(int[][] grid) {

@@ -2,6 +2,14 @@ package dsa.stack;
 
 import java.util.Stack;
 
+/**
+ * CheckForBalancedParentheses
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class CheckForBalancedParentheses {
     private static boolean isPair(char open, char close) {
         return open == '(' && close == ')' || open == '{' && close == '}' || open == '[' && close == ']';

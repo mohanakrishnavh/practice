@@ -2,6 +2,18 @@ package leetcode;
 
 import dsa.linkedlist.ListNode;
 
+/**
+ * LeetCode Problem 24: Swap Nodes in Pairs
+ * Difficulty: Medium
+ * 
+ * <p>Swap every two adjacent nodes in a linked list.
+ * 
+ * <p>Time Complexity: O(?) - TODO: Analyze complexity
+ * <p>Space Complexity: O(?) - TODO: Analyze complexity
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LC0024_SwapNodesInPairs {
     public ListNode swapPairs(ListNode head) {
         if (head == null || head.next == null) {

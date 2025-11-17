@@ -1,6 +1,13 @@
 package designpatterns.builder;
 
+/**
+ * Demonstrates the Builder design pattern for creating Vehicle objects.
+ */
 public class BuilderDriver {
+    /**
+     * Main method to run the builder pattern example.
+     * @param args command line arguments
+     */
     public static void main(String[] args) {
         Vehicle car = new Vehicle.VehicleBuilder("1500cc", 4).airbags(4).build();
         Vehicle bike = new Vehicle.VehicleBuilder("250cc", 2).build();

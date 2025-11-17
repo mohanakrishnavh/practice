@@ -2,6 +2,14 @@ package dsa.array.sort;
 
 import java.util.Arrays;
 
+/**
+ * MergeSort
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class MergeSort {
     public static void mergeSort(int[] A) {
         int n = A.length;

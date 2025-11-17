@@ -1,5 +1,17 @@
 package leetcode;
 
+/**
+ * LeetCode Problem 708: Insert into a Sorted Circular Linked List
+ * Difficulty: Medium
+ * 
+ * <p>Insert a value into a sorted circular linked list.
+ * 
+ * <p>Time Complexity: O(?) - TODO: Analyze complexity
+ * <p>Space Complexity: O(?) - TODO: Analyze complexity
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LC0708_InsertIntoASortedLinkedList {
     public Node insert(Node head, int insertVal) {
         if (head == null) {

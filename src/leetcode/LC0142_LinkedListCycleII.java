@@ -2,6 +2,18 @@ package leetcode;
 
 import dsa.linkedlist.ListNode;
 
+/**
+ * LeetCode Problem 142: Linked List Cycle II
+ * Difficulty: Medium
+ * 
+ * <p>Return the node where the cycle begins.
+ * 
+ * <p>Time Complexity: O(?) - TODO: Analyze complexity
+ * <p>Space Complexity: O(?) - TODO: Analyze complexity
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LC0142_LinkedListCycleII {
 
     /**

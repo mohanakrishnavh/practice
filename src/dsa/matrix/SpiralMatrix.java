@@ -3,6 +3,14 @@ package dsa.matrix;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * SpiralMatrix
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class SpiralMatrix {
 
     public List<Integer> spiralOrder(int[][] matrix) {

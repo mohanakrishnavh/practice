@@ -1,5 +1,13 @@
 package dsa.recursion.basics;
 
+/**
+ * ReverseArray
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class ReverseArray {
     public static void reverse(int[] arr) {
         reverseHelper(arr, 0);

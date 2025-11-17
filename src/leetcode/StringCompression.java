@@ -3,6 +3,14 @@ package leetcode;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * StringCompression
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class StringCompression {
     public static int compress(char[] chars) {
         if (chars == null || chars.length == 0) {

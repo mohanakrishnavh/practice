@@ -1,5 +1,17 @@
 package leetcode;
 
+/**
+ * LeetCode Problem 58: Length of Last Word
+ * Difficulty: Easy
+ * 
+ * <p>Return the length of the last word in a string.
+ * 
+ * <p>Time Complexity: O(?) - TODO: Analyze complexity
+ * <p>Space Complexity: O(?) - TODO: Analyze complexity
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LC0058_LengthOfTheLastWord {
     public int lengthOfLastWord(String s) {
         if (s == null || s.isEmpty()) {

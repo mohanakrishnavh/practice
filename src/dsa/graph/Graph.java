@@ -3,6 +3,14 @@ package dsa.graph;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Graph
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class Graph {
     List<List<Integer>> adjList;
     int[][] adjMatrix;

@@ -3,6 +3,14 @@ package leetcode;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * MapSum
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class MapSum {
     private final PrefixValueNode root;
     private final Map<String, Integer> valueMap;

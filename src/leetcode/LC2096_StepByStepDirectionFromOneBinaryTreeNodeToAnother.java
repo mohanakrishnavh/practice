@@ -5,6 +5,18 @@ import dsa.tree.TreeNode;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * LeetCode Problem 2096: Step-By-Step Directions From a Binary Tree Node to Another
+ * Difficulty: Medium
+ * 
+ * <p>Find the shortest path between two nodes.
+ * 
+ * <p>Time Complexity: O(?) - TODO: Analyze complexity
+ * <p>Space Complexity: O(?) - TODO: Analyze complexity
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LC2096_StepByStepDirectionFromOneBinaryTreeNodeToAnother {
     public String getDirections(TreeNode root, int startValue, int destValue) {
         List<Character> startPath = new ArrayList<>();

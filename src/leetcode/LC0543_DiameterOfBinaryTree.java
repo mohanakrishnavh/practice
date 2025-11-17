@@ -2,6 +2,18 @@ package leetcode;
 
 import dsa.tree.TreeNode;
 
+/**
+ * LeetCode Problem 543: Diameter of Binary Tree
+ * Difficulty: Easy
+ * 
+ * <p>Find the diameter of a binary tree.
+ * 
+ * <p>Time Complexity: O(?) - TODO: Analyze complexity
+ * <p>Space Complexity: O(?) - TODO: Analyze complexity
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LC0543_DiameterOfBinaryTree {
     public int diameterOfBinaryTree(TreeNode root) {
         int[] result = new int[]{Integer.MIN_VALUE};

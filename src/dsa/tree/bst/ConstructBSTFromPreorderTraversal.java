@@ -2,6 +2,14 @@ package dsa.tree.bst;
 
 import dsa.tree.TreeNode;
 
+/**
+ * ConstructBSTFromPreorderTraversal
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class ConstructBSTFromPreorderTraversal {
     public TreeNode bstFromPreorder(int[] preorder) {
         return bstFromPreorderHelper(preorder, Integer.MAX_VALUE, new int[]{0});

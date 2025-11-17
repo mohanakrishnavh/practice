@@ -3,6 +3,14 @@ package dsa.heap;
 import java.util.Arrays;
 import java.util.PriorityQueue;
 
+/**
+ * KClosestNumbers
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class KClosestNumbers {
     public static int[] getKClosestNumbers(int[] nums, int k, int x) {
         PriorityQueue<int[]> maxHeap = new PriorityQueue<>((a, b) -> a[0] == b[0] ? a[0] : b[0] - a[0]);

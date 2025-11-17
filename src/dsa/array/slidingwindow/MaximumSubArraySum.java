@@ -1,5 +1,13 @@
 package dsa.array.slidingwindow;
 
+/**
+ * MaximumSubArraySum
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class MaximumSubArraySum {
 
     private static int getMaxSubArraySum(int[] arr, int k) {

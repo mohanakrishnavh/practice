@@ -4,6 +4,14 @@ import java.util.Deque;
 import java.util.LinkedList;
 import java.util.List;
 
+/**
+ * SlidingWindowMaximum
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class SlidingWindowMaximum {
     public static int[] maxSlidingWindow(int[] nums, int k) {
         int left = 0, right = 0, idx = 0;

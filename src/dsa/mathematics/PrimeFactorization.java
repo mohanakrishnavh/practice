@@ -4,6 +4,14 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * PrimeFactorization
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class PrimeFactorization {
     public static List<List<Integer>> findPrimeFactors(int n) {
         List<List<Integer>> primeFactors = new ArrayList<>();

@@ -1,5 +1,17 @@
 package leetcode;
 
+/**
+ * LeetCode Problem 162: Find Peak Element
+ * Difficulty: Medium
+ * 
+ * <p>Find a peak element in an array.
+ * 
+ * <p>Time Complexity: O(?) - TODO: Analyze complexity
+ * <p>Space Complexity: O(?) - TODO: Analyze complexity
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LC0162_FindPeakElement {
     public int findPeakElement(int[] nums) {
         int size = nums.length;

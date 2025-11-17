@@ -1,5 +1,17 @@
 package leetcode;
 
+/**
+ * LeetCode Problem 12: Integer to Roman
+ * Difficulty: Medium
+ * 
+ * <p>Convert an integer to a Roman numeral.
+ * 
+ * <p>Time Complexity: O(?) - TODO: Analyze complexity
+ * <p>Space Complexity: O(?) - TODO: Analyze complexity
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LC0012_IntegerToRoman {
 
     private static final String[] M = {"", "M", "MM", "MMM"};

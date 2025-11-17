@@ -1,5 +1,17 @@
 package leetcode;
 
+/**
+ * LeetCode Problem 153: Find Minimum in Rotated Sorted Array
+ * Difficulty: Medium
+ * 
+ * <p>Find the minimum element in a rotated sorted array.
+ * 
+ * <p>Time Complexity: O(?) - TODO: Analyze complexity
+ * <p>Space Complexity: O(?) - TODO: Analyze complexity
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LC0153_FindMinimumInRotatedSortedArray {
     public int findMin(int[] A) {
         int start = 0;

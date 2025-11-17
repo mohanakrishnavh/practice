@@ -3,6 +3,14 @@ package dsa.heap;
 import java.util.Arrays;
 import java.util.PriorityQueue;
 
+/**
+ * KClosestPoints
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class KClosestPoints {
     public static int[][] getKClosestPoints(int[][] points, int k) {
         if (points.length <= k) {

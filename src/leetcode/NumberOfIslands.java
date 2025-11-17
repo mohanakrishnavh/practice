@@ -1,5 +1,13 @@
 package leetcode;
 
+/**
+ * NumberOfIslands
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class NumberOfIslands {
     public static int numIslands(int[][] grid) {
         if (grid == null || grid.length == 0 || grid[0].length == 0) {

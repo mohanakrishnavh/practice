@@ -1,5 +1,17 @@
 package leetcode;
 
+/**
+ * LeetCode Problem 1143: Longest Common Subsequence
+ * Difficulty: Medium
+ * 
+ * <p>Find the length of the longest common subsequence.
+ * 
+ * <p>Time Complexity: O(?) - TODO: Analyze complexity
+ * <p>Space Complexity: O(?) - TODO: Analyze complexity
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LC1143_LongestCommonSubsequence {
     public int longestCommonSubsequence(String text1, String text2) {
         int m = text1.length();

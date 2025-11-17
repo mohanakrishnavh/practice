@@ -1,5 +1,13 @@
 package dsa.recursion.basics;
 
+/**
+ * Fibonacci
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class Fibonacci {
     public static int fibonacci(int n) {
         if (n <= 1) {

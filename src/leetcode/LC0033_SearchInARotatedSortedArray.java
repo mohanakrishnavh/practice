@@ -1,5 +1,17 @@
 package leetcode;
 
+/**
+ * LeetCode Problem 33: Search in Rotated Sorted Array
+ * Difficulty: Medium
+ * 
+ * <p>Search for a target value in a rotated sorted array.
+ * 
+ * <p>Time Complexity: O(?) - TODO: Analyze complexity
+ * <p>Space Complexity: O(?) - TODO: Analyze complexity
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LC0033_SearchInARotatedSortedArray {
     public int search(int[] nums, int target) {
         int start = 0;

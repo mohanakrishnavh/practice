@@ -3,6 +3,18 @@ package leetcode;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * LeetCode Problem 78: Subsets
+ * Difficulty: Medium
+ * 
+ * <p>Return all possible subsets (the power set).
+ * 
+ * <p>Time Complexity: O(?) - TODO: Analyze complexity
+ * <p>Space Complexity: O(?) - TODO: Analyze complexity
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LC0078_Subsets {
     public static List<List<Integer>> subsets(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();

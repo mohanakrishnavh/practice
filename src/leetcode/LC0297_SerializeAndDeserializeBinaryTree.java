@@ -7,6 +7,18 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
+/**
+ * LeetCode Problem 297: Serialize and Deserialize Binary Tree
+ * Difficulty: Hard
+ * 
+ * <p>Serialize and deserialize a binary tree.
+ * 
+ * <p>Time Complexity: O(?) - TODO: Analyze complexity
+ * <p>Space Complexity: O(?) - TODO: Analyze complexity
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LC0297_SerializeAndDeserializeBinaryTree {
     // Encodes a tree to a single string.
     public String serialize(TreeNode root) {

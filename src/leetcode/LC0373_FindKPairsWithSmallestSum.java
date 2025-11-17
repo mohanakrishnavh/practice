@@ -2,6 +2,18 @@ package leetcode;
 
 import java.util.*;
 
+/**
+ * LeetCode Problem 373: Find K Pairs with Smallest Sums
+ * Difficulty: Medium
+ * 
+ * <p>Find k pairs with the smallest sums.
+ * 
+ * <p>Time Complexity: O(?) - TODO: Analyze complexity
+ * <p>Space Complexity: O(?) - TODO: Analyze complexity
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LC0373_FindKPairsWithSmallestSum {
     // TODO: Time Limit Exceeded - Need to come up with optimal solution
     public List<List<Integer>> kSmallestPairs(int[] nums1, int[] nums2, int k) {

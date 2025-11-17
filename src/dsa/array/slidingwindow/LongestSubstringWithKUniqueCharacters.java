@@ -3,6 +3,14 @@ package dsa.array.slidingwindow;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * LongestSubstringWithKUniqueCharacters
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LongestSubstringWithKUniqueCharacters {
     public static int lengthOfLongestSubstring(String s, int k) {
         if (s == null || s.length() == 0) {

@@ -1,6 +1,30 @@
 package dsa.linkedlist;
 
+/**
+ * MergeTwoSortedLists
+ * 
+ * <p>This class provides a solution to merge two sorted linked lists into one sorted list.
+ * The merge is done by splicing together the nodes of the two lists using a sentinel node
+ * to simplify edge cases.
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class MergeTwoSortedLists {
+    /**
+     * Merges two sorted linked lists into a single sorted linked list.
+     * 
+     * <p>Uses a sentinel (dummy) node to simplify the logic and avoid handling
+     * special cases for the head. Compares nodes from both lists and appends
+     * the smaller one to the result list.
+     * 
+     * <p>Time Complexity: O(m + n) where m and n are the lengths of the two lists
+     * <p>Space Complexity: O(1) as we only rearrange pointers
+     * 
+     * @param list1 the head of the first sorted linked list
+     * @param list2 the head of the second sorted linked list
+     * @return the head of the merged sorted linked list
+     */
     public static ListNode mergeTwoLists(ListNode list1, ListNode list2) {
         if (list1 == null) {
             return list2;

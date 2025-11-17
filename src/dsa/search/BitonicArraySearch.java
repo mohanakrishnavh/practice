@@ -1,5 +1,13 @@
 package dsa.search;
 
+/**
+ * BitonicArraySearch
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class BitonicArraySearch {
     public static int findInBitonicArray(int[] nums, int target) {
         int max = BitonicArrayMaximumElement.getMaximumElement(nums);

@@ -2,7 +2,38 @@ package dsa.dynamicprogramming.lcs;
 
 import java.util.Arrays;
 
+/**
+ * Longest Common Subsequence (LCS) Problem.
+ * 
+ * <p>Given two strings, find the length of the longest subsequence present in both of them.
+ * A subsequence is a sequence that appears in the same relative order but not necessarily contiguous.
+ * 
+ * <p>This implementation provides four approaches with increasing optimization:
+ * <ul>
+ *   <li>Recursion - Explores all possibilities</li>
+ *   <li>Memoization (Top-Down DP) - Caches overlapping subproblems</li>
+ *   <li>Tabulation (Bottom-Up DP) - Iteratively fills DP table</li>
+ *   <li>Space Optimization - Uses only two arrays instead of 2D table</li>
+ * </ul>
+ * 
+ * <p>Example: For s1 = "abcde" and s2 = "ace", the LCS is "ace" with length 3.
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LongestCommonSubsequence {
+    /**
+     * Finds the length of LCS using memoization (Top-Down DP).
+     * 
+     * <p>Caches results of subproblems to avoid redundant calculations.
+     * 
+     * <p>Time Complexity: O(m*n) - Each state computed once
+     * <p>Space Complexity: O(m*n) - DP table + recursion stack
+     * 
+     * @param text1 first string
+     * @param text2 second string
+     * @return length of longest common subsequence
+     */
     public static int lcs(String text1, String text2) {
         int n = text1.length();
         int m = text2.length();
@@ -15,6 +46,16 @@ public class LongestCommonSubsequence {
         return lcs(n - 1, m - 1, text1, text2, dp);
     }
 
+    /**
+     * Helper method for memoized LCS calculation.
+     * 
+     * @param i current index in text1
+     * @param j current index in text2
+     * @param text1 first string
+     * @param text2 second string
+     * @param dp memoization table
+     * @return LCS length from indices i and j
+     */
     private static int lcs(int i, int j, String text1, String text2, int[][] dp) {
         if (i < 0 || j < 0) {
             return 0;
@@ -33,6 +74,18 @@ public class LongestCommonSubsequence {
         return dp[i][j];
     }
 
+    /**
+     * Finds the length of LCS using tabulation (Bottom-Up DP).
+     * 
+     * <p>Builds the DP table iteratively from base cases to final answer.
+     * 
+     * <p>Time Complexity: O(m*n) - Fills entire DP table
+     * <p>Space Complexity: O(m*n) - DP table
+     * 
+     * @param text1 first string
+     * @param text2 second string
+     * @return length of longest common subsequence
+     */
     public static int lcs2(String text1, String text2) {
         int m = text1.length();
         int n = text2.length();
@@ -52,6 +105,18 @@ public class LongestCommonSubsequence {
         return dp[m][n];
     }
 
+    /**
+     * Finds the length of LCS with space optimization.
+     * 
+     * <p>Uses only two arrays (previous and current row) instead of full 2D table.
+     * 
+     * <p>Time Complexity: O(m*n) - Same as tabulation
+     * <p>Space Complexity: O(m) - Only two arrays of size m
+     * 
+     * @param text1 first string
+     * @param text2 second string
+     * @return length of longest common subsequence
+     */
     public static int lcs3(String text1, String text2) {
         int m = text1.length();
         int n = text2.length();

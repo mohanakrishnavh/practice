@@ -7,6 +7,14 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
+/**
+ * BreadthFirstSearch
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class BreadthFirstSearch {
     public static List<Integer> breadthFirstTraversal(int n, List<List<Integer>> adjList) {
         List<Integer> bfsTraversal = new ArrayList<>();

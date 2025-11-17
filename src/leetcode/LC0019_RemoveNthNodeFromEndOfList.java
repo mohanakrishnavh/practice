@@ -2,6 +2,18 @@ package leetcode;
 
 import dsa.linkedlist.ListNode;
 
+/**
+ * LeetCode Problem 19: Remove Nth Node From End of List
+ * Difficulty: Medium
+ * 
+ * <p>Remove the nth node from the end of a linked list.
+ * 
+ * <p>Time Complexity: O(?) - TODO: Analyze complexity
+ * <p>Space Complexity: O(?) - TODO: Analyze complexity
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LC0019_RemoveNthNodeFromEndOfList {
     public ListNode removeNthFromEnd(ListNode head, int n) {
         ListNode sentinel = new ListNode(-1);

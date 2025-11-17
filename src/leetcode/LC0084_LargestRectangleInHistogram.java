@@ -2,6 +2,18 @@ package leetcode;
 
 import java.util.Stack;
 
+/**
+ * LeetCode Problem 84: Largest Rectangle in Histogram
+ * Difficulty: Hard
+ * 
+ * <p>Find the largest rectangle in a histogram.
+ * 
+ * <p>Time Complexity: O(?) - TODO: Analyze complexity
+ * <p>Space Complexity: O(?) - TODO: Analyze complexity
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LC0084_LargestRectangleInHistogram {
     public int largestRectangleArea(int[] heights) {
         int maximumArea = 0;

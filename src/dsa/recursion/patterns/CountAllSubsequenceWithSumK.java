@@ -3,6 +3,14 @@ package dsa.recursion.patterns;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * CountAllSubsequenceWithSumK
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class CountAllSubsequenceWithSumK {
     public static int subsequenceSum(int[] nums, int k) {
         return subsequenceSum(nums, k, 0, new ArrayList<>(), 0);

@@ -3,6 +3,14 @@ package dsa.stack;
 import java.util.Arrays;
 import java.util.Stack;
 
+/**
+ * InfixToPostfixExpression
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class InfixToPostfixExpression {
     static int precedence(String operator) {
         return switch (operator) {

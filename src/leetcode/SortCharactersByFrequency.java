@@ -4,6 +4,14 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.PriorityQueue;
 
+/**
+ * SortCharactersByFrequency
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class SortCharactersByFrequency {
     public static String frequencySort(String s) {
         if (s == null || s.length() == 0) {

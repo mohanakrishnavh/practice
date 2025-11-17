@@ -5,6 +5,18 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
+/**
+ * LeetCode Problem 323: Number of Connected Components in an Undirected Graph
+ * Difficulty: Medium
+ * 
+ * <p>Find the number of connected components.
+ * 
+ * <p>Time Complexity: O(?) - TODO: Analyze complexity
+ * <p>Space Complexity: O(?) - TODO: Analyze complexity
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LC0323_NumberOfConnectedComponentsInUndirectedGraph {
     public int countComponents(int n, int[][] edges) {
         int component = 0;

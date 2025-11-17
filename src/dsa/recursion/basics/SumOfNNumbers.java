@@ -1,5 +1,13 @@
 package dsa.recursion.basics;
 
+/**
+ * SumOfNNumbers
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class SumOfNNumbers {
     public static int sumParameterized(int i, int sum) {
         if (i < 1) {

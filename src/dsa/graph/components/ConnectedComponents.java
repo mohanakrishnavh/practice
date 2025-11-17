@@ -6,6 +6,14 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
+/**
+ * ConnectedComponents
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class ConnectedComponents {
     public static int countComponents(int n, int[][] edges) {
         int components = 0;

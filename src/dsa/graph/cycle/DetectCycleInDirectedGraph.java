@@ -2,6 +2,14 @@ package dsa.graph.cycle;
 
 import java.util.ArrayList;
 
+/**
+ * DetectCycleInDirectedGraph
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class DetectCycleInDirectedGraph {
 
     private boolean dfsCheck(int node, ArrayList<ArrayList<Integer>> adj, int vis[], int pathVis[]) {

@@ -4,6 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.PriorityQueue;
 
+/**
+ * KthSmallestInMSortedList
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class KthSmallestInMSortedList {
     public static int findKthSmallest(List<int[]> lists, int k) {
         // [value, arrayIndex, elementIndex]

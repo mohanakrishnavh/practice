@@ -5,6 +5,14 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
+/**
+ * CourseScheduleII
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class CourseScheduleII {
     public int[] findOrder(int numCourses, int[][] prerequisites) {
         List<List<Integer>> adjList = new ArrayList<>();

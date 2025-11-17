@@ -3,6 +3,14 @@ package leetcode;
 import java.util.Arrays;
 import java.util.PriorityQueue;
 
+/**
+ * MeetingRoomsII
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class MeetingRoomsII {
     public int minMeetingRooms(int[][] intervals) {
         if (intervals == null || intervals.length == 0) {

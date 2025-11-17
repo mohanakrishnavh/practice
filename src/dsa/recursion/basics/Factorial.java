@@ -1,5 +1,13 @@
 package dsa.recursion.basics;
 
+/**
+ * Factorial
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class Factorial {
     public static int factorial(int n) {
         if (n == 1) {

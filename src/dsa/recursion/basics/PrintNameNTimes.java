@@ -2,6 +2,14 @@ package dsa.recursion.basics;
 
 import java.util.Scanner;
 
+/**
+ * PrintNameNTimes
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class PrintNameNTimes {
     public static void printName(int index, int n, String name) {
         if (index == n) {

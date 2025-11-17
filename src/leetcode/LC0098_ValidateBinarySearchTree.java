@@ -2,6 +2,18 @@ package leetcode;
 
 import dsa.tree.TreeNode;
 
+/**
+ * LeetCode Problem 98: Validate Binary Search Tree
+ * Difficulty: Medium
+ * 
+ * <p>Determine if a binary tree is a valid BST.
+ * 
+ * <p>Time Complexity: O(?) - TODO: Analyze complexity
+ * <p>Space Complexity: O(?) - TODO: Analyze complexity
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LC0098_ValidateBinarySearchTree {
     public boolean isValidBST(TreeNode root) {
         return isValidBST(root, Long.MIN_VALUE, Long.MAX_VALUE);

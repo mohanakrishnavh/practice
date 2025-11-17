@@ -1,6 +1,13 @@
 package designpatterns.composite;
 
+/**
+ * Client class to demonstrate the composite account pattern.
+ */
 public class Client {
+    /**
+     * Main method to run the composite account example.
+     * @param args command line arguments
+     */
     public static void main(String[] args) {
         CompositeAccount component = new CompositeAccount();
 

@@ -5,6 +5,14 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
+/**
+ * ComparatorExample
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class ComparatorExample {
 
     static class Obj{

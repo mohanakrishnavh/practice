@@ -6,6 +6,18 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
+/**
+ * LeetCode Problem 545: Boundary of Binary Tree
+ * Difficulty: Medium
+ * 
+ * <p>Return the boundary of a binary tree in counter-clockwise order.
+ * 
+ * <p>Time Complexity: O(?) - TODO: Analyze complexity
+ * <p>Space Complexity: O(?) - TODO: Analyze complexity
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LC0545_BoundaryOfBinaryTree {
     public List<Integer> boundaryOfBinaryTree(TreeNode root) {
         List<Integer> boundary = new ArrayList<>();

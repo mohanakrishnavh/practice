@@ -1,5 +1,13 @@
 package dsa.search;
 
+/**
+ * BinarySearch
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class BinarySearch {
     public static int search(int[] arr, int target) {
         int low = 0;

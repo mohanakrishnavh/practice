@@ -3,6 +3,14 @@ package dsa.mergeintervals;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * InsertInterval
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class InsertInterval {
     public int[][] insert(int[][] intervals, int[] newInterval) {
         List<int[]> merged = new ArrayList<>();

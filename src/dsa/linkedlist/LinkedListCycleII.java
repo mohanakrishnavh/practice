@@ -1,15 +1,38 @@
 package dsa.linkedlist;
 
+/**
+ * LinkedListCycleII
+ * 
+ * <p>This class provides solutions to detect a cycle in a linked list and find the starting
+ * node of the cycle. Implements Floyd's Cycle Detection Algorithm with mathematical proof
+ * to locate the exact entry point of the cycle.
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LinkedListCycleII {
 
     /**
-     Total distance travelled:
-     S -> L1 + L2
-     F -> L1 + L2 + nC (where C is the length of the cycle)
-     F pointer has travelled twice the distance covered by S
-     => 2 (L1 + L2) = L1 + L2 + nC
-     => L1 + L2 = nC
-     => L1 = nC - L2
+     * Detects the starting node of the cycle in a linked list.
+     * 
+     * <p>Mathematical proof:
+     * Let L1 = distance from head to cycle start
+     * Let L2 = distance from cycle start to meeting point
+     * Let C = cycle length
+     * 
+     * Slow pointer travels: L1 + L2
+     * Fast pointer travels: L1 + L2 + nC (where n is number of complete cycles)
+     * Since fast travels twice the distance of slow: 2(L1 + L2) = L1 + L2 + nC
+     * Simplifying: L1 = nC - L2
+     * 
+     * This means the distance from head to cycle start equals the distance from
+     * meeting point to cycle start (going around the cycle).
+     * 
+     * <p>Time Complexity: O(n) where n is the number of nodes
+     * <p>Space Complexity: O(1)
+     * 
+     * @param head the head of the linked list
+     * @return the node where the cycle begins, or null if no cycle exists
      */
     public static ListNode detectCycle(ListNode head) {
         if (head == null || head.next == null) {
@@ -36,21 +59,19 @@ public class LinkedListCycleII {
         return null;
     }
 
-    private static boolean hasCycle(ListNode slow, ListNode fast) {
-        while (fast != null && fast.next != null) {
-            slow = slow.next;
-            fast = fast.next.next;
-
-            // Cycle detected
-            if (slow == fast) {
-                return true;
-            }
-        }
-
-        return false;
-    }
-
-
+    /**
+     * Alternative approach to detect the cycle starting node.
+     * 
+     * <p>This method first detects if a cycle exists, then calculates the cycle length,
+     * and finally uses two pointers with a gap equal to the cycle length to find the
+     * entry point.
+     * 
+     * <p>Time Complexity: O(n) where n is the number of nodes
+     * <p>Space Complexity: O(1)
+     * 
+     * @param head the head of the linked list
+     * @return the node where the cycle begins, or null if no cycle exists
+     */
     public ListNode detectCycle2(ListNode head) {
         if (head == null) {
             return null;
@@ -79,6 +100,12 @@ public class LinkedListCycleII {
         return findLoopStart(head, length);
     }
 
+    /**
+     * Calculates the length of the cycle.
+     * 
+     * @param head a node within the cycle
+     * @return the number of nodes in the cycle
+     */
     private int calculateLength(ListNode head) {
         ListNode current = head;
         int length = 0;
@@ -90,6 +117,13 @@ public class LinkedListCycleII {
         return length;
     }
 
+    /**
+     * Finds the starting node of the cycle using two pointers with a fixed gap.
+     * 
+     * @param head the head of the linked list
+     * @param length the length of the cycle
+     * @return the node where the cycle begins
+     */
     private ListNode findLoopStart(ListNode head, int length) {
         ListNode first = head;
         ListNode second = head;

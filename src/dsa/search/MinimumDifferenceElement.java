@@ -1,5 +1,13 @@
 package dsa.search;
 
+/**
+ * MinimumDifferenceElement
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class MinimumDifferenceElement {
     // Approach 1 : Find the ceil and floor of the element
     // Return the min(ceil, floor) of the given element

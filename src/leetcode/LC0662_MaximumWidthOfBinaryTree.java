@@ -5,6 +5,18 @@ import dsa.tree.TreeNode;
 import java.util.LinkedList;
 import java.util.Queue;
 
+/**
+ * LeetCode Problem 662: Maximum Width of Binary Tree
+ * Difficulty: Medium
+ * 
+ * <p>Find the maximum width of a binary tree.
+ * 
+ * <p>Time Complexity: O(?) - TODO: Analyze complexity
+ * <p>Space Complexity: O(?) - TODO: Analyze complexity
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LC0662_MaximumWidthOfBinaryTree {
     static class Pair {
         TreeNode node;

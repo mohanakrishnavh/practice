@@ -1,5 +1,17 @@
 package leetcode;
 
+/**
+ * LeetCode Problem 852: Peak Index in a Mountain Array
+ * Difficulty: Easy
+ * 
+ * <p>Find the peak index in a mountain array.
+ * 
+ * <p>Time Complexity: O(?) - TODO: Analyze complexity
+ * <p>Space Complexity: O(?) - TODO: Analyze complexity
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LC0852_PeakIndexInAMountainArray {
     public int peakIndexInMountainArray(int[] nums) {
         int start = 0;

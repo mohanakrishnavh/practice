@@ -2,6 +2,14 @@ package dsa.stack;
 
 import java.util.Stack;
 
+/**
+ * ImplementQueueUsingStack
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class ImplementQueueUsingStack {
 
     Stack<Integer> input;

@@ -4,6 +4,14 @@ import dsa.linkedlist.ListNode;
 
 import java.util.PriorityQueue;
 
+/**
+ * MergeKSortedLists
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class MergeKSortedLists {
     public ListNode mergeKLists(ListNode[] lists) {
         if (lists.length == 0) {

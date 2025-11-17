@@ -2,6 +2,14 @@ package leetcode;
 
 import java.util.Arrays;
 
+/**
+ * FindPivotIndex
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class FindPivotIndex {
 
     public static void main(String[] args) {

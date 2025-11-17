@@ -1,5 +1,17 @@
 package leetcode;
 
+/**
+ * LeetCode Problem 213: House Robber II
+ * Difficulty: Medium
+ * 
+ * <p>Houses are arranged in a circle. Maximum money to rob.
+ * 
+ * <p>Time Complexity: O(?) - TODO: Analyze complexity
+ * <p>Space Complexity: O(?) - TODO: Analyze complexity
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LC0213_HouseRobberII {
     public int rob(int[] nums) {
         int n = nums.length;

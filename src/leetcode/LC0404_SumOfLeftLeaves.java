@@ -3,6 +3,18 @@ package leetcode;
 
 import dsa.tree.TreeNode;
 
+/**
+ * LeetCode Problem 404: Sum of Left Leaves
+ * Difficulty: Easy
+ * 
+ * <p>Find the sum of all left leaves in a binary tree.
+ * 
+ * <p>Time Complexity: O(?) - TODO: Analyze complexity
+ * <p>Space Complexity: O(?) - TODO: Analyze complexity
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LC0404_SumOfLeftLeaves {
     public int sumOfLeftLeaves(TreeNode root) {
         if (root == null || root.left == null && root.right == null) {

@@ -3,6 +3,14 @@ package leetcode;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * ReformatDate
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class ReformatDate {
     public String reformatDate(String date) {
         Map<String, String> months = new HashMap<>();

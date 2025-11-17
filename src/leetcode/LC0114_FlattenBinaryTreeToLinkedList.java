@@ -4,6 +4,18 @@ import dsa.tree.TreeNode;
 
 import java.util.Stack;
 
+/**
+ * LeetCode Problem 114: Flatten Binary Tree to Linked List
+ * Difficulty: Medium
+ * 
+ * <p>Flatten a binary tree to a linked list in-place.
+ * 
+ * <p>Time Complexity: O(?) - TODO: Analyze complexity
+ * <p>Space Complexity: O(?) - TODO: Analyze complexity
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LC0114_FlattenBinaryTreeToLinkedList {
     public void flatten(TreeNode root) {
         if (root == null) {

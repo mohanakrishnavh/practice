@@ -3,6 +3,14 @@ package dsa.stack;
 import java.util.Arrays;
 import java.util.Stack;
 
+/**
+ * NearestGreaterToRight
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class NearestGreaterToRight {
 
     private static int[] getNearestGreaterToRight(int[] nums) {

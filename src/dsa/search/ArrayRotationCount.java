@@ -1,5 +1,13 @@
 package dsa.search;
 
+/**
+ * ArrayRotationCount
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class ArrayRotationCount {
     private static int findMin(int[] nums) {
         int N = nums.length;

@@ -3,6 +3,18 @@ package leetcode;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * LeetCode Problem 208: Implement Trie
+ * Difficulty: Medium
+ * 
+ * <p>Implement a trie with insert, search, and startsWith operations.
+ * 
+ * <p>Time Complexity: O(?) - TODO: Analyze complexity
+ * <p>Space Complexity: O(?) - TODO: Analyze complexity
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LC0208_ImplementTrie {
     private final TrieNode root;
 

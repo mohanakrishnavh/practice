@@ -1,6 +1,14 @@
 package dsa.tree.binarytree;
 
 import dsa.tree.TreeNode;
+/**
+ * BalancedBinaryTree
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class BalancedBinaryTree {
     public boolean isBalanced(TreeNode root) {
         if (root == null) {

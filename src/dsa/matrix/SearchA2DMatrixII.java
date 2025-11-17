@@ -1,5 +1,13 @@
 package dsa.matrix;
 
+/**
+ * SearchA2DMatrixII
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class SearchA2DMatrixII {
     public boolean searchMatrix(int[][] matrix, int target) {
         int i = 0;

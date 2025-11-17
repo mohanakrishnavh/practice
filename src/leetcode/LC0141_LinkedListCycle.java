@@ -2,6 +2,18 @@ package leetcode;
 
 import dsa.linkedlist.ListNode;
 
+/**
+ * LeetCode Problem 141: Linked List Cycle
+ * Difficulty: Easy
+ * 
+ * <p>Determine if a linked list has a cycle.
+ * 
+ * <p>Time Complexity: O(?) - TODO: Analyze complexity
+ * <p>Space Complexity: O(?) - TODO: Analyze complexity
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LC0141_LinkedListCycle {
     public static boolean hasCycle(ListNode head) {
         ListNode slow = head;

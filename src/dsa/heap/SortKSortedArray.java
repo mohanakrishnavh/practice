@@ -4,6 +4,14 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.PriorityQueue;
 
+/**
+ * SortKSortedArray
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class SortKSortedArray {
     public static int[] sort(int[] nums, int k) {
         if (nums.length == 0 || k <= 0) {

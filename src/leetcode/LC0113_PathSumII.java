@@ -5,6 +5,18 @@ import dsa.tree.TreeNode;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * LeetCode Problem 113: Path Sum II
+ * Difficulty: Medium
+ * 
+ * <p>Find all root-to-leaf paths where each path's sum equals the target.
+ * 
+ * <p>Time Complexity: O(?) - TODO: Analyze complexity
+ * <p>Space Complexity: O(?) - TODO: Analyze complexity
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LC0113_PathSumII {
     public List<List<Integer>> pathSum(TreeNode root, int targetSum) {
         List<List<Integer>> paths = new ArrayList<>();

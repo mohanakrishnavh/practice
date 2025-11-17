@@ -2,6 +2,14 @@ package dsa.stack;
 
 import java.util.Stack;
 
+/**
+ * EvaluatePrefixExpression
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class EvaluatePrefixExpression {
     public static int evaluatePolishNotation(String[] tokens) {
         int result;

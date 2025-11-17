@@ -3,6 +3,14 @@ package dsa.array.slidingwindow;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * MinimumWindowSubstring
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class MinimumWindowSubstring {
     public static String minimumWindow(String s, String t) {
         int start = -1;

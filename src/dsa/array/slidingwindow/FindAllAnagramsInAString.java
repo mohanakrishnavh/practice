@@ -5,6 +5,14 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * FindAllAnagramsInAString
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class FindAllAnagramsInAString {
     public static List<Integer> findAnagrams(String s, String p) {
         List<Integer> anagrams = new ArrayList<>();

@@ -1,5 +1,13 @@
 package dsa.search;
 
+/**
+ * LowerBound
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LowerBound {
     public static int findLowerBound(int []arr, int x) {
         // Write your code here

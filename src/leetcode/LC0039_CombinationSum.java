@@ -3,6 +3,18 @@ package leetcode;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * LeetCode Problem 39: Combination Sum
+ * Difficulty: Medium
+ * 
+ * <p>Find all unique combinations where candidate numbers sum to a target.
+ * 
+ * <p>Time Complexity: O(?) - TODO: Analyze complexity
+ * <p>Space Complexity: O(?) - TODO: Analyze complexity
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LC0039_CombinationSum {
     public static List<List<Integer>> combinationSum(int[] candidates, int target) {
         List<List<Integer>> result = new ArrayList<>();

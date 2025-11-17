@@ -5,6 +5,18 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * LeetCode Problem 811: Subdomain Visit Count
+ * Difficulty: Medium
+ * 
+ * <p>Count the number of visits to each subdomain.
+ * 
+ * <p>Time Complexity: O(?) - TODO: Analyze complexity
+ * <p>Space Complexity: O(?) - TODO: Analyze complexity
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LC0811_SubdomainVisitCount {
     public static List<String> subdomainVisits(String[] cpdomains) {
         List<String> countSubdomainPairs = new ArrayList<>();

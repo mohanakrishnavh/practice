@@ -7,6 +7,14 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
+/**
+ * LeftSideView
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LeftSideView {
     // Approach 1 : Level Order Traversal
     public List<Integer> leftSideView(TreeNode root) {

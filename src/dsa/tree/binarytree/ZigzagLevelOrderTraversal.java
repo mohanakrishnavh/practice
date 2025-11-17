@@ -7,6 +7,14 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
+/**
+ * ZigzagLevelOrderTraversal
+ * 
+ * <p>TODO: Add class description
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class ZigzagLevelOrderTraversal {
     public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
         List<List<Integer>> traversal = new ArrayList<>();

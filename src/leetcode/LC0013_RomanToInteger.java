@@ -2,6 +2,18 @@ package leetcode;
 
 import java.util.Map;
 
+/**
+ * LeetCode Problem 13: Roman to Integer
+ * Difficulty: Easy
+ * 
+ * <p>Convert a Roman numeral to an integer.
+ * 
+ * <p>Time Complexity: O(?) - TODO: Analyze complexity
+ * <p>Space Complexity: O(?) - TODO: Analyze complexity
+ * 
+ * @author Practice Repository
+ * @version 1.0
+ */
 public class LC0013_RomanToInteger {
 
     private static Map<Character, Integer> romans = Map.of(
