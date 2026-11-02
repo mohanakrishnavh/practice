@@ -21,24 +21,24 @@ public class LinkedList {
         length = 0;
     }
 
-    public static void print(ListNode listNode) {
-        if (listNode == null) {
+    public static void print(ListNode node) {
+        if (node == null) {
             System.out.print("\n");
             return;
         }
 
-        System.out.print(listNode.val + " ");
-        print(listNode.next);
+        System.out.print(node.val + " ");
+        print(node.next);
     }
 
-    public static void print(ListNode listNode, boolean reverse) {
-        if (listNode == null) {
+    public static void print(ListNode node, boolean reverse) {
+        if (node == null) {
             System.out.print("\n");
             return;
         }
 
-        print(listNode.next, reverse);
-        System.out.print(listNode.val + " ");
+        print(node.next, reverse);
+        System.out.print(node.val + " ");
     }
 
     public static ListNode reverse(ListNode head) {
@@ -46,11 +46,11 @@ public class LinkedList {
             return head;
         }
 
-        ListNode newHead = reverse(head.next);
+        ListNode temp = reverse(head.next);
         head.next.next = head;
         head.next = null;
 
-        return newHead;
+        return temp;
     }
 
     public int get(int index) {
