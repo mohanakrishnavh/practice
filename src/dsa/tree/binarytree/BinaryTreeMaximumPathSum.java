@@ -7,10 +7,16 @@ import dsa.tree.TreeNode;
  * 
  * <p>TODO: Add class description
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class BinaryTreeMaximumPathSum {
+    /**
+     * Returns the maximum sum of any path in the tree. A path may start and end at any node.
+     *
+     * @param root root of the tree
+     * @return maximum path sum
+     */
     public int maxPathSum(TreeNode root) {
         int[] result = new int[]{Integer.MIN_VALUE};
         int max = maxPathSumHelper(root, result);
@@ -18,6 +24,14 @@ public class BinaryTreeMaximumPathSum {
         return result[0];
     }
 
+    /**
+     * Returns the best downward path sum starting at {@code root}, and updates {@code result[0]} with the best
+     * path that bends at {@code root} (left + node + right). Negative branches are dropped.
+     *
+     * @param root   current node
+     * @param result single-element holder for the global maximum
+     * @return best downward path sum starting at {@code root}
+     */
     private int maxPathSumHelper(TreeNode root, int[] result) {
         if (root == null) {
             return 0;

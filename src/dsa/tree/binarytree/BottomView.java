@@ -14,20 +14,36 @@ import java.util.HashMap;
  * 
  * <p>TODO: Add class description
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class BottomView {
+    /**
+     * Pairs a node with its horizontal column.
+     */
     static class Pair{
         TreeNode node;
         int column;
 
+        /**
+         * Creates a node/column pair.
+         *
+         * @param node   tree node
+         * @param column horizontal distance from the root (left is negative)
+         */
         public Pair(TreeNode node, int column) {
             this.node = node;
             this.column = column;
         }
     }
 
+    /**
+     * Returns the bottom view of the tree: for each column the last node reached in level order (the lowest one),
+     * read left to right. Despite its name this method computes the bottom view.
+     *
+     * @param root root of the tree
+     * @return bottom-view values from leftmost to rightmost column
+     */
     public static List<Integer> getTopView(TreeNode root) {
         List<Integer> result = new ArrayList<>();
         if (root == null) {

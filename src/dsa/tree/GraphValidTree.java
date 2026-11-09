@@ -10,11 +10,18 @@ import java.util.Queue;
  * 
  * <p>TODO: Add class description
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class GraphValidTree {
     // Graph is a tree if it has no cycle and has only one strongly connected component
+    /**
+     * Checks whether an undirected graph is a valid tree: connected (one component) and acyclic.
+     *
+     * @param n     number of nodes, labelled {@code 0..n-1}
+     * @param edges undirected edges {@code [a, b]}
+     * @return {@code true} if the graph is a tree
+     */
     public boolean validTree(int n, int[][] edges) {
         if (n <= 1) {
             return true;
@@ -39,6 +46,14 @@ public class GraphValidTree {
         return true;
     }
 
+    /**
+     * BFS from {@code start} marking nodes visited; a visited neighbour that is not the node we came from means a cycle.
+     *
+     * @param start   node to start the BFS from
+     * @param visited shared visited flags, updated as the component is explored
+     * @param adjList adjacency list of the graph
+     * @return {@code true} if the component containing {@code start} has a cycle
+     */
     private boolean hasCycle(int start, boolean[] visited, List<List<Integer>> adjList) {
         Queue<int[]> q = new LinkedList<>();
         q.add(new int[]{start, -1});
@@ -62,6 +77,13 @@ public class GraphValidTree {
         return false;
     }
 
+    /**
+     * Builds an undirected adjacency list.
+     *
+     * @param n     number of nodes
+     * @param edges undirected edges {@code [a, b]}
+     * @return adjacency list indexed by node
+     */
     private List<List<Integer>> getAdjList(int n, int[][] edges) {
         List<List<Integer>> adjList = new ArrayList<>();
         for (int i = 0; i < n; i++) {

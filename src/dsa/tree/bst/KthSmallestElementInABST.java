@@ -9,10 +9,17 @@ import java.util.Stack;
  * 
  * <p>TODO: Add class description
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class KthSmallestElementInABST {
+    /**
+     * Returns the k-th smallest value using an iterative inorder traversal.
+     *
+     * @param root root of the BST
+     * @param k    1-based rank
+     * @return the k-th smallest value
+     */
     public int kthSmallest(TreeNode root, int k) {
         Stack<TreeNode> stack = new Stack<>();
         TreeNode current = root;

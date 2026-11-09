@@ -7,11 +7,17 @@ import dsa.tree.TreeNode;
  * 
  * <p>TODO: Add class description
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class Diameter {
 
+    /**
+     * Returns the diameter: the number of nodes on the longest path between any two nodes.
+     *
+     * @param root root of the tree
+     * @return diameter measured in nodes
+     */
     public int diameterOfBinaryTree(TreeNode root) {
         int[] result = new int[]{Integer.MIN_VALUE};
         int h = height(root, result);
@@ -20,6 +26,13 @@ public class Diameter {
         return result[0];
     }
 
+    /**
+     * Computes height in nodes while updating {@code result[0]} with the longest path through each node.
+     *
+     * @param root   current node
+     * @param result single-element holder for the best diameter
+     * @return height of {@code root}
+     */
     private int height(TreeNode root, int[] result) {
         if (root == null) {
             return 0;

@@ -7,10 +7,18 @@ import dsa.tree.TreeNode;
  * 
  * <p>TODO: Add class description
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class LowestCommonAncestor {
+    /**
+     * Finds the lowest common ancestor in a BST: descend until the two values split to different sides.
+     *
+     * @param root root of the BST
+     * @param p    first node
+     * @param q    second node
+     * @return the lowest common ancestor
+     */
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
         if (root == null) {
             return null;

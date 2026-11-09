@@ -7,14 +7,28 @@ import dsa.tree.TreeNode;
  * 
  * <p>TODO: Add class description
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class isValidBST {
+    /**
+     * Checks whether the tree is a valid BST.
+     *
+     * @param root root of the tree
+     * @return {@code true} if valid
+     */
     public boolean isValidBST(TreeNode root) {
         return isValidBST(root, Long.MIN_VALUE, Long.MAX_VALUE);
     }
 
+    /**
+     * Checks that each node lies strictly within bounds inherited from its ancestors (long bounds handle {@code Integer} extremes).
+     *
+     * @param root current node
+     * @param min  exclusive lower bound
+     * @param max  exclusive upper bound
+     * @return {@code true} if the subtree is valid
+     */
     private boolean isValidBST(TreeNode root, long min, long max) {
         if (root == null) {
             return true;

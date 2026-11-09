@@ -7,10 +7,17 @@ import dsa.tree.TreeNode;
  * 
  * <p>TODO: Add class description
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class FindFloor {
+    /**
+     * Finds the largest value less than or equal to {@code key}.
+     *
+     * @param root root of the BST
+     * @param key  value to look up
+     * @return the floor, or -1 if none exists
+     */
     public static int findFloor(TreeNode root, int key) {
         int floor = -1;
 

@@ -8,11 +8,16 @@ import java.util.Stack;
  * 
  * <p>TODO: Add class description
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class FlattenBinaryTreeToLinkedList {
 
+    /**
+     * Flattens the tree in place into a right-skewed list in preorder, using a stack.
+     *
+     * @param root root of the tree
+     */
     public void flatten(TreeNode root) {
         if (root == null) {
             return;

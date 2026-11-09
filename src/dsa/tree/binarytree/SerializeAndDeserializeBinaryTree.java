@@ -13,12 +13,17 @@ import dsa.tree.TreeNode;
  * 
  * <p>TODO: Add class description
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class SerializeAndDeserializeBinaryTree {
 
-    // Encodes a tree to a single string.
+    /**
+     * Encodes a tree to a comma-separated level-order string, using {@code #} for null children.
+     *
+     * @param root root of the tree
+     * @return serialized form ("" for an empty tree)
+     */
     public String serialize(TreeNode root) {
         if (root == null) {
             return "";
@@ -46,7 +51,12 @@ public class SerializeAndDeserializeBinaryTree {
         return String.join(",", result);
     }
 
-    // Decodes your encoded data to tree.
+    /**
+     * Rebuilds a tree from the string produced by {@link #serialize}.
+     *
+     * @param data serialized tree
+     * @return root of the rebuilt tree, or {@code null} if empty
+     */
     public TreeNode deserialize(String data) {
         if (data == null || data.isEmpty()) {
             return null;
@@ -75,6 +85,9 @@ public class SerializeAndDeserializeBinaryTree {
         return root;
     }
 
+    /**
+     * Round-trips a sample tree through serialize and deserialize and prints the results.
+     */
     public static void main(String[] args){
         TreeNode root = new TreeNode(1);
         // Level 1

@@ -10,20 +10,35 @@ import java.util.Queue;
  * 
  * <p>TODO: Add class description
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class MaximumWidthOfBinaryTree {
+    /**
+     * Pairs a node with its heap-style index within its level.
+     */
     static class Pair {
         TreeNode node;
         int index;
 
+        /**
+         * Creates a node/index pair.
+         *
+         * @param node  tree node
+         * @param index position index in a complete-tree numbering
+         */
         public Pair(TreeNode node, int index) {
             this.node = node;
             this.index = index;
         }
     }
 
+    /**
+     * Returns the maximum width: the largest distance (counting nulls between) between the first and last node of a level. Indices are re-based per level to avoid overflow.
+     *
+     * @param root root of the tree
+     * @return maximum width
+     */
     public int widthOfBinaryTree(TreeNode root) {
         if (root == null) {
             return 0;

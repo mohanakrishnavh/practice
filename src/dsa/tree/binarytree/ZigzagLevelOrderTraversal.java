@@ -12,10 +12,16 @@ import java.util.Queue;
  * 
  * <p>TODO: Add class description
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class ZigzagLevelOrderTraversal {
+    /**
+     * Level-order traversal that alternates direction each level (left-to-right, then right-to-left).
+     *
+     * @param root root of the tree
+     * @return values grouped by level in zigzag order
+     */
     public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
         List<List<Integer>> traversal = new ArrayList<>();
 

@@ -8,15 +8,23 @@ import java.util.Queue;
  * 
  * <p>TODO: Add class description
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class BinarySearchTree extends BinaryTree {
 
+    /**
+     * Creates an empty BST.
+     */
     public BinarySearchTree() {
         super();
     }
 
+    /**
+     * Inserts a value iteratively; values less than or equal to a node go left, larger values go right.
+     *
+     * @param value value to insert
+     */
     public void insert(int value) {
         TreeNode newNode = new TreeNode(value);
 
@@ -46,6 +54,11 @@ public class BinarySearchTree extends BinaryTree {
         }
     }
 
+    /**
+     * Returns the smallest value (leftmost node).
+     *
+     * @return minimum value, or -1 if the tree is empty
+     */
     public int min() {
         if (root == null) {
             return -1;
@@ -60,6 +73,11 @@ public class BinarySearchTree extends BinaryTree {
         return currentNode.val;
     }
 
+    /**
+     * Returns the node holding the smallest value (leftmost node).
+     *
+     * @return minimum node, or {@code null} if the tree is empty
+     */
     public TreeNode minNode() {
         if (root == null) {
             return null;
@@ -74,6 +92,11 @@ public class BinarySearchTree extends BinaryTree {
         return currentNode;
     }
 
+    /**
+     * Returns the largest value (rightmost node).
+     *
+     * @return maximum value, or -1 if the tree is empty
+     */
     public int max() {
         if (root == null) {
             return -1;
@@ -88,6 +111,11 @@ public class BinarySearchTree extends BinaryTree {
         return currentNode.val;
     }
 
+    /**
+     * Returns the node holding the largest value (rightmost node).
+     *
+     * @return maximum node, or {@code null} if the tree is empty
+     */
     public TreeNode maxNode() {
         if (root == null) {
             return null;
@@ -102,6 +130,9 @@ public class BinarySearchTree extends BinaryTree {
         return currentNode;
     }
 
+    /**
+     * Prints the values level by level (BFS), space separated.
+     */
     public void levelOrderTraversal() {
         if (root == null) {
             return;
@@ -125,12 +156,20 @@ public class BinarySearchTree extends BinaryTree {
         System.out.println();
     }
 
+    /**
+     * Prints the values in preorder (root, left, right).
+     */
     public void preOrderTraversal() {
         System.out.print("PreOrder Traversal : ");
         preOrderTraversalUtil(root);
         System.out.println();
     }
 
+    /**
+     * Recursive helper that prints the subtree in preorder.
+     *
+     * @param root current node
+     */
     private void preOrderTraversalUtil(TreeNode root) {
         if (root == null) {
             return;
@@ -141,12 +180,20 @@ public class BinarySearchTree extends BinaryTree {
         preOrderTraversalUtil(root.right);
     }
 
+    /**
+     * Prints the values in inorder (left, root, right), i.e. sorted order for a BST.
+     */
     public void inOrderTraversal() {
         System.out.print("InOrder Traversal : ");
         inOrderTraversalUtil(root);
         System.out.println();
     }
 
+    /**
+     * Recursive helper that prints the subtree in inorder.
+     *
+     * @param root current node
+     */
     private void inOrderTraversalUtil(TreeNode root) {
         if (root == null) {
             return;
@@ -157,12 +204,20 @@ public class BinarySearchTree extends BinaryTree {
         inOrderTraversalUtil(root.right);
     }
 
+    /**
+     * Prints the values in postorder (left, right, root).
+     */
     public void postOrderTraversal() {
         System.out.print("PostOrder Traversal : ");
         postOrderTraversalUtil(root);
         System.out.println();
     }
 
+    /**
+     * Recursive helper that prints the subtree in postorder.
+     *
+     * @param root current node
+     */
     private void postOrderTraversalUtil(TreeNode root) {
         if (root == null) {
             return;

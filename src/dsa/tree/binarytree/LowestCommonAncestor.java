@@ -7,10 +7,18 @@ import dsa.tree.TreeNode;
  * 
  * <p>TODO: Add class description
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class LowestCommonAncestor {
+    /**
+     * Finds the lowest common ancestor of {@code p} and {@code q}: if they are found in different subtrees, the current node is the answer.
+     *
+     * @param root root of the tree
+     * @param p    first node
+     * @param q    second node
+     * @return the lowest common ancestor
+     */
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
         if (root == null || root == p || root == q) {
             return root;

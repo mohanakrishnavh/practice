@@ -5,11 +5,14 @@ package dsa.tree;
  * 
  * <p>TODO: Add class description
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class BinarySearchTreeDriver {
 
+    /**
+     * Builds a sample BST and prints its min, max and all four traversals.
+     */
     public static void main(String[] args) {
         BinarySearchTree bst = new BinarySearchTree();
         bst.insert(15);

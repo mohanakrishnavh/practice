@@ -6,10 +6,16 @@ import dsa.tree.TreeNode;
  * 
  * <p>TODO: Add class description
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class BalancedBinaryTree {
+    /**
+     * Checks that at every node the left and right subtree heights differ by at most 1.
+     *
+     * @param root root of the tree
+     * @return {@code true} if the tree is height-balanced
+     */
     public boolean isBalanced(TreeNode root) {
         if (root == null) {
             return true;
@@ -20,6 +26,12 @@ public class BalancedBinaryTree {
                 && isBalanced(root.right);
     }
 
+    /**
+     * Height of a subtree in edges (an empty subtree is -1).
+     *
+     * @param root root of the subtree
+     * @return height
+     */
     private int height(TreeNode root) {
         if (root == null) {
             return -1;

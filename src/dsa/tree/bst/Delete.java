@@ -7,10 +7,17 @@ import dsa.tree.TreeNode;
  * 
  * <p>TODO: Add class description
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class Delete {
+    /**
+     * Deletes {@code key} from the BST: leaf is removed, a single child replaces the node, and with two children the node takes its inorder successor's value.
+     *
+     * @param root root of the BST
+     * @param key  value to delete
+     * @return new root of the subtree
+     */
     public TreeNode deleteNode(TreeNode root, int key) {
         if (root == null) {
             return root;
@@ -45,6 +52,10 @@ public class Delete {
         return root;
     }
 
+    /**
+     * @param root subtree root
+     * @return leftmost (smallest) node, or {@code null} if empty
+     */
     private TreeNode findMin(TreeNode root) {
         if (root == null) {
             return null;

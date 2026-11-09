@@ -7,11 +7,18 @@ import dsa.tree.TreeNode;
  * 
  * <p>TODO: Add class description
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class Insert {
 
+    /**
+     * Inserts a value iteratively as a new leaf (equal values go left).
+     *
+     * @param root root of the BST
+     * @param val  value to insert
+     * @return root of the BST
+     */
     public TreeNode insertIntoBST(TreeNode root, int val) {
         if (root == null) {
             return new TreeNode(val);

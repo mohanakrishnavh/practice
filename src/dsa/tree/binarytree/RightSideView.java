@@ -12,11 +12,16 @@ import java.util.Queue;
  * 
  * <p>TODO: Add class description
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class RightSideView {
-    // Approach 1 : Level Order Traversal
+    /**
+     * Right side view using level-order traversal: the last node of each level.
+     *
+     * @param root root of the tree
+     * @return rightmost value of each level, top to bottom
+     */
     public List<Integer> rightSideView(TreeNode root) {
         List<Integer> rightSideNodes = new ArrayList<>();
         if (root == null) {
@@ -46,7 +51,12 @@ public class RightSideView {
         return rightSideNodes;
     }
 
-    // Approach 2 : Depth First Traversal
+    /**
+     * Right side view using DFS (right first): the first node reached at each depth.
+     *
+     * @param root root of the tree
+     * @return rightmost value of each level, top to bottom
+     */
     public List<Integer> rightSideView2(TreeNode root) {
         List<Integer> rightView = new LinkedList<>();
         rightViewHelper(root, 0, rightView);
@@ -54,6 +64,13 @@ public class RightSideView {
         return rightView;
     }
 
+    /**
+     * Visits right before left and records a value the first time a level is reached.
+     *
+     * @param root      current node
+     * @param level     current depth
+     * @param rightView accumulator list
+     */
     private void rightViewHelper(TreeNode root, int level, List<Integer> rightView) {
         if (root == null) {
             return;

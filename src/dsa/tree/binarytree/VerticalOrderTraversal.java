@@ -14,20 +14,35 @@ import java.util.HashMap;
  * 
  * <p>TODO: Add class description
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class VerticalOrderTraversal {
+    /**
+     * Pairs a node with its horizontal column.
+     */
     static class Pair {
         TreeNode node;
         int column;
 
+        /**
+         * Creates a node/column pair.
+         *
+         * @param node   tree node
+         * @param column horizontal distance from the root (left is negative)
+         */
         public Pair(TreeNode node, int column) {
             this.node = node;
             this.column = column;
         }
     }
 
+    /**
+     * Groups node values by column, left to right, using BFS so values within a column are top to bottom.
+     *
+     * @param root root of the tree
+     * @return one list per column
+     */
     public List<List<Integer>> verticalOrder(TreeNode root) {
         List<List<Integer>> traversal = new ArrayList<>();
 

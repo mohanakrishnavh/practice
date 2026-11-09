@@ -10,22 +10,32 @@ import java.util.Stack;
  * 
  * <p>TODO: Add class description
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class TwoSum {
 
+    /**
+     * In-order iterator that can run ascending or, with {@code reverse}, descending.
+     */
     static class BSTIterator {
 
         Stack<TreeNode> stack;
         boolean reverse;
 
+        /**
+         * @param root    root of the BST
+         * @param reverse {@code true} to iterate in descending order
+         */
         public BSTIterator(TreeNode root, boolean reverse) {
             stack = new Stack<>();
             this.reverse = reverse;
             addElements(root);
         }
 
+        /**
+         * @return next value in the iteration order
+         */
         public int next() {
             TreeNode node = stack.pop();
             if (reverse) {
@@ -37,10 +47,18 @@ public class TwoSum {
             return node.val;
         }
 
+        /**
+         * @return {@code true} if more values remain
+         */
         public boolean hasNext() {
             return !stack.isEmpty();
         }
 
+        /**
+         * Pushes the chain of left (or right, if reversed) descendants onto the stack.
+         *
+         * @param root subtree root
+         */
         private void addElements(TreeNode root) {
             TreeNode current = root;
             while(current != null) {
@@ -56,6 +74,13 @@ public class TwoSum {
     }
 
 
+    /**
+     * Checks whether two distinct nodes sum to {@code k}, using an ascending and a descending iterator as two pointers (O(h) space).
+     *
+     * @param root root of the BST
+     * @param k    target sum
+     * @return {@code true} if such a pair exists
+     */
     public boolean findTarget(TreeNode root, int k) {
         if (root == null) {
             return false;

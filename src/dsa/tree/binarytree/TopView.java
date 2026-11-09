@@ -14,10 +14,16 @@ import java.util.HashMap;
  * 
  * <p>TODO: Add class description
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class TopView {
+    /**
+     * Returns the top view: for each column the first node reached in level order (the highest one), read left to right.
+     *
+     * @param root root of the tree
+     * @return top-view values from leftmost to rightmost column
+     */
     public static List<Integer> getTopView(TreeNode root) {
         List<Integer> result = new ArrayList<>();
         if (root == null) {
@@ -66,10 +72,19 @@ public class TopView {
         return result;
     }
 
+    /**
+     * Pairs a node with its horizontal column.
+     */
     static class Pair {
         TreeNode node;
         int column;
 
+        /**
+         * Creates a node/column pair.
+         *
+         * @param node   tree node
+         * @param column horizontal distance from the root (left is negative)
+         */
         public Pair(TreeNode node, int column) {
             this.node = node;
             this.column = column;

@@ -7,14 +7,22 @@ import dsa.tree.TreeNode;
  * 
  * <p>TODO: Add class description
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class LargestBSTSubtree {
 
+    /**
+     * Summary of a subtree: its min, max and the size of the largest BST inside it.
+     */
     class NodeValue {
         public int maxNode, minNode, maxSize;
 
+        /**
+         * @param minNode smallest value in the subtree
+         * @param maxNode largest value in the subtree
+         * @param maxSize size of the largest BST in the subtree
+         */
         NodeValue(int minNode, int maxNode, int maxSize) {
             this.maxNode = maxNode;
             this.minNode = minNode;
@@ -22,6 +30,12 @@ public class LargestBSTSubtree {
         }
     };
 
+    /**
+     * Post-order computation: if the node fits between the left max and right min the subtree is a BST; otherwise return an impossible range so ancestors fail.
+     *
+     * @param root current node
+     * @return summary for the subtree
+     */
     public NodeValue largestBSTSubtreeHelper(TreeNode root) {
         // An empty tree is a BST of size 0.
         if (root == null) {
@@ -44,6 +58,12 @@ public class LargestBSTSubtree {
                 Math.max(left.maxSize, right.maxSize));
     }
 
+    /**
+     * Returns the number of nodes in the largest BST subtree.
+     *
+     * @param root root of the tree
+     * @return size of the largest BST subtree
+     */
     public int largestBSTSubtree(TreeNode root) {
         return largestBSTSubtreeHelper(root).maxSize;
     }
