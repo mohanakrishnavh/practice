@@ -8,7 +8,9 @@ import java.util.List;
 /**
  * RootToNodePath
  * 
- * <p>TODO: Add class description
+ * Finds the path of values from the root to a node with a given value using DFS with backtracking.
+ *
+ * <p><b>Complexity:</b> Time O(n), Space O(h).
  * 
  * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0

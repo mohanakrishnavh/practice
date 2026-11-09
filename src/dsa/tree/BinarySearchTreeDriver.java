@@ -3,7 +3,7 @@ package dsa.tree;
 /**
  * BinarySearchTreeDriver
  * 
- * <p>TODO: Add class description
+ * Demo driver that builds a sample {@link BinarySearchTree} and prints its min, max and traversals.
  * 
  * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0

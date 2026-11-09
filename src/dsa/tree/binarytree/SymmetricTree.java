@@ -4,7 +4,10 @@ import dsa.tree.TreeNode;
 /**
  * SymmetricTree
  * 
- * <p>TODO: Add class description
+ * Symmetric Tree (LeetCode 101): checks that the left and right subtrees of the root are mirror images by comparing
+ * outer and inner children in pairs.
+ *
+ * <p><b>Complexity:</b> Time O(n), Space O(h).
  * 
  * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0

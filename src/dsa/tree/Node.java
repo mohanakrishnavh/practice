@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * Node
  * 
- * <p>TODO: Add class description
+ * N-ary tree node: an integer value plus a list of child nodes.
  * 
  * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0

@@ -7,7 +7,9 @@ import java.util.Stack;
 /**
  * BinarySearchTreeIterator
  * 
- * <p>TODO: Add class description
+ * BST Iterator (LeetCode 173): iterates a BST in ascending order, holding only the current left spine on a stack.
+ *
+ * <p><b>Complexity:</b> {@code next} is amortised O(1), {@code hasNext} is O(1), Space O(h).
  * 
  * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0

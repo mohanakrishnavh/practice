@@ -5,7 +5,10 @@ import dsa.tree.TreeNode;
 /**
  * Delete
  * 
- * <p>TODO: Add class description
+ * Delete Node in a BST (LeetCode 450). Handles three cases: leaf, one child, and two children (replace the value with
+ * the inorder successor, then delete the successor).
+ *
+ * <p><b>Complexity:</b> Time O(h), Space O(h).
  * 
  * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0

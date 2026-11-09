@@ -4,7 +4,10 @@ import dsa.tree.TreeNode;
 /**
  * BalancedBinaryTree
  * 
- * <p>TODO: Add class description
+ * Balanced Binary Tree (LeetCode 110): a tree is height-balanced if at every node the subtree heights differ by at
+ * most 1.
+ *
+ * <p><b>Complexity:</b> Time O(n^2) in the worst case because height is recomputed per node, Space O(h).
  * 
  * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0

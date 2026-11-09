@@ -6,7 +6,10 @@ import java.util.Queue;
 /**
  * BinarySearchTree
  * 
- * <p>TODO: Add class description
+ * Binary search tree of ints built on {@link BinaryTree}: iterative insert, min/max lookups and printing traversals.
+ * Duplicates go to the left subtree.
+ *
+ * <p><b>Complexity:</b> insert, min and max are O(h) where h is the tree height.
  * 
  * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0

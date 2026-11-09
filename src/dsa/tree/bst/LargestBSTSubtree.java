@@ -5,7 +5,10 @@ import dsa.tree.TreeNode;
 /**
  * LargestBSTSubtree
  * 
- * <p>TODO: Add class description
+ * Largest BST Subtree (LeetCode 333): finds the size of the largest subtree that is a valid BST. Each node reports its
+ * min, max and best size from its children in a single post-order pass.
+ *
+ * <p><b>Complexity:</b> Time O(n), Space O(h).
  * 
  * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0

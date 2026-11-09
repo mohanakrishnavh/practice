@@ -8,7 +8,10 @@ import java.util.Stack;
 /**
  * TwoSum
  * 
- * <p>TODO: Add class description
+ * Two Sum IV - Input is a BST (LeetCode 653): checks whether two nodes sum to a target. Two inorder iterators (ascending
+ * and descending) act as two pointers without copying the tree to an array.
+ *
+ * <p><b>Complexity:</b> Time O(n), Space O(h).
  * 
  * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0

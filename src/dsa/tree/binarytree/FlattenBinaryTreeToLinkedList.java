@@ -6,7 +6,10 @@ import java.util.Stack;
 /**
  * FlattenBinaryTreeToLinkedList
  * 
- * <p>TODO: Add class description
+ * Flatten Binary Tree to Linked List (LeetCode 114): rewires the tree in place so each node's right pointer is the
+ * next node in preorder and left pointers are null.
+ *
+ * <p><b>Complexity:</b> Time O(n), Space O(h) for the stack.
  * 
  * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0

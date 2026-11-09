@@ -5,7 +5,10 @@ import dsa.tree.TreeNode;
 /**
  * InorderSuccessor
  * 
- * <p>TODO: Add class description
+ * Inorder Successor in a BST (LeetCode 285): the smallest value greater than the given node. Walks down, remembering
+ * the last node where we went left.
+ *
+ * <p><b>Complexity:</b> Time O(h), Space O(1).
  * 
  * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0

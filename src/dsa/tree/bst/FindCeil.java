@@ -5,7 +5,10 @@ import dsa.tree.TreeNode;
 /**
  * FindCeil
  * 
- * <p>TODO: Add class description
+ * Ceil in a BST: the smallest value greater than or equal to a key. Walks down, remembering the last node that was
+ * larger than the key.
+ *
+ * <p><b>Complexity:</b> Time O(h), Space O(1).
  * 
  * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0

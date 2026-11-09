@@ -10,7 +10,10 @@ import java.util.Queue;
 /**
  * ZigzagLevelOrderTraversal
  * 
- * <p>TODO: Add class description
+ * Binary Tree Zigzag Level Order Traversal (LeetCode 103): level order where direction alternates every level,
+ * implemented by adding to the front or back of each level's list.
+ *
+ * <p><b>Complexity:</b> Time O(n), Space O(n).
  * 
  * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0

@@ -5,7 +5,10 @@ import dsa.tree.TreeNode;
 /**
  * isValidBST
  * 
- * <p>TODO: Add class description
+ * Validate Binary Search Tree (LeetCode 98): every node must lie strictly between bounds inherited from its ancestors.
+ * {@code long} bounds handle nodes equal to {@code Integer.MIN_VALUE} or {@code MAX_VALUE}.
+ *
+ * <p><b>Complexity:</b> Time O(n), Space O(h).
  * 
  * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0

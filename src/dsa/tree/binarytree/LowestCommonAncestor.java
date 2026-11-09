@@ -5,7 +5,10 @@ import dsa.tree.TreeNode;
 /**
  * LowestCommonAncestor
  * 
- * <p>TODO: Add class description
+ * Lowest Common Ancestor of a Binary Tree (LeetCode 236): the deepest node having both targets in its subtree.
+ * Returns a target when it is found; if both sides return non-null the current node is the LCA.
+ *
+ * <p><b>Complexity:</b> Time O(n), Space O(h).
  * 
  * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0

@@ -7,7 +7,9 @@ import java.util.Stack;
 /**
  * KthSmallestElementInABST
  * 
- * <p>TODO: Add class description
+ * Kth Smallest Element in a BST (LeetCode 230) via iterative inorder traversal, stopping at the k-th visited node.
+ *
+ * <p><b>Complexity:</b> Time O(h + k), Space O(h).
  * 
  * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0

@@ -12,7 +12,10 @@ import java.util.HashMap;
 /**
  * TopView
  * 
- * <p>TODO: Add class description
+ * Top view of a binary tree: the nodes visible when looking from above, one per horizontal column. BFS ensures the
+ * first node seen in each column is the highest.
+ *
+ * <p><b>Complexity:</b> Time O(n), Space O(n).
  * 
  * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0

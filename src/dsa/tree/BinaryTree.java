@@ -5,7 +5,8 @@ import java.util.*;
 /**
  * BinaryTree
  * 
- * <p>TODO: Add class description
+ * Binary tree with the classic traversals (preorder, inorder, postorder in iterative and recursive forms, level order),
+ * a right-side view and a BST validity check. Extended by {@link BinarySearchTree}.
  * 
  * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0

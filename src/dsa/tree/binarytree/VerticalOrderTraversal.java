@@ -12,7 +12,10 @@ import java.util.HashMap;
 /**
  * VerticalOrderTraversal
  * 
- * <p>TODO: Add class description
+ * Vertical order traversal: groups node values by horizontal column (left child is column - 1, right child is
+ * column + 1). BFS keeps values in a column ordered top to bottom.
+ *
+ * <p><b>Complexity:</b> Time O(n + c), Space O(n), where c is the number of columns.
  * 
  * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
