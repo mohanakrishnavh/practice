@@ -22,7 +22,7 @@ import java.util.PriorityQueue;
  * By maintaining the k smallest elements in a max heap, the largest among
  * these k elements (at the top) is exactly the kth smallest element.
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class KthSmallestElement {

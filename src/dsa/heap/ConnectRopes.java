@@ -49,7 +49,7 @@ import java.util.PriorityQueue;
  * 
  * <p>Space Complexity: O(n) for the min heap
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class ConnectRopes {
