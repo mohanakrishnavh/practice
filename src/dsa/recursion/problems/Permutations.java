@@ -5,10 +5,20 @@ import java.util.List;
 
 /**
  * Permutations
- * 
- * <p>TODO: Add class description
- * 
- * @author Practice Repository
+ *
+ * <p>Generates all permutations of an array of distinct integers (LeetCode 46). Two approaches:
+ * <ol>
+ *   <li><b>Used-array:</b> build a permutation slot by slot, trying every unused element for each slot.</li>
+ *   <li><b>Swapping:</b> fix position {@code index} by swapping each later element into it, recurse on
+ *       {@code index + 1}, then swap back. Uses no extra {@code used} array or temporary list.</li>
+ * </ol>
+ *
+ * <p><b>Complexity (both):</b> Time O(n! * n), Space O(n) recursion depth (approach 1 also O(n) for {@code used}).
+ *
+ * <p><b>NOTE:</b> approaches produce the same set but in a different order; the swap version mutates
+ * {@code nums} during the search but restores it before returning.
+ *
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class Permutations {
@@ -22,16 +32,19 @@ public class Permutations {
     }
 
     private static void permute(int[] arr, List<Integer> permutation, List<List<Integer>> permutations, boolean[] used) {
+        // Base case: every slot filled -> store a copy
         if (permutation.size() == arr.length) {
             permutations.add(new ArrayList<>(permutation));
             return;
         }
 
         for (int i = 0; i < arr.length; i++) {
+            // Only use elements not already in the current permutation
             if (!used[i]) {
                 used[i] = true;
                 permutation.add(arr[i]);
                 permute(arr, permutation, permutations, used);
+                // Backtrack: free the element for other positions/branches
                 permutation.remove(permutation.size() - 1);
                 used[i] = false;
             }
@@ -47,6 +60,7 @@ public class Permutations {
     }
 
     private static void findPermutations(int index, int[] nums, List<List<Integer>> permutations) {
+        // Base case: positions 0..n-1 are all fixed; the array itself is one permutation
         if (index == nums.length) {
             List<Integer> permutation = new ArrayList<>();
             for (int i = 0; i < nums.length; i++) {
@@ -57,10 +71,11 @@ public class Permutations {
             return;
         }
 
+        // Try each remaining element (i >= index) in position `index`
         for (int i = index; i < nums.length; i++) {
             swap(nums, i, index);
             findPermutations(index+1, nums, permutations);
-            swap(nums, i, index);
+            swap(nums, i, index); // backtrack: undo the swap
         }
     }
 

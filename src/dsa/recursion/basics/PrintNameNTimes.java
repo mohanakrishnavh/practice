@@ -4,20 +4,25 @@ import java.util.Scanner;
 
 /**
  * PrintNameNTimes
- * 
- * <p>TODO: Add class description
- * 
- * @author Practice Repository
+ *
+ * <p>Prints a given name N times — the simplest "replace a loop with recursion" example.
+ *
+ * <p><b>Idea:</b> {@code i} plays the role of the loop counter; each call prints once and
+ * moves to {@code i + 1} until it reaches {@code n}.
+ *
+ * <p><b>Complexity:</b> Time O(n), Space O(n) call stack.
+ *
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class PrintNameNTimes {
-    public static void printName(int index, int n, String name) {
-        if (index == n) {
+    public static void printName(int i, int n, String name) {
+        if (i == n) {
             return;
         }
 
         System.out.println(name);
-        printName(++index, n, name);
+        printName(++i, n, name);
     }
 
     public static void main(String[] args) {
