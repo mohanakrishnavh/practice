@@ -7,7 +7,7 @@ package dsa.linkedlist;
  * only access to that node is provided (not the head). The solution copies the value
  * from the next node and bypasses the next node.
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class DeleteNodeInALinkedList {

@@ -7,7 +7,7 @@ package dsa.linkedlist;
  * at odd positions together followed by nodes at even positions. The relative order
  * within odd and even groups is preserved. Position counting starts at 1.
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class OddEvenLinkedList {

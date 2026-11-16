@@ -7,7 +7,7 @@ package dsa.linkedlist;
  * A palindrome list reads the same forwards and backwards. The algorithm finds
  * the middle, reverses the second half, and compares both halves.
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class PalindromeLinkedList {
@@ -20,6 +20,11 @@ public class PalindromeLinkedList {
      * 3. Compare the first half with the reversed second half
      * 4. If all values match, the list is a palindrome
      * 
+     * <p>An empty list ({@code null}) and a single-node list are palindromes.
+     *
+     * <p><b>NOTE:</b> the list is modified — the second half is left reversed and is not restored.
+     * Do not reuse the list afterwards unless you reverse that half back.
+     *
      * <p>Time Complexity: O(n) where n is the number of nodes
      * <p>Space Complexity: O(1)
      * 

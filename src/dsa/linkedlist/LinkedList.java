@@ -7,7 +7,7 @@ import dsa.tree.Node;
  * 
  * <p>TODO: Add class description
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class LinkedList {

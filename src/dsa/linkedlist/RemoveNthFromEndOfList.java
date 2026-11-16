@@ -7,7 +7,7 @@ package dsa.linkedlist;
  * Uses a two-pointer technique with a fixed gap to identify the node to remove in a
  * single pass through the list.
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class RemoveNthFromEndOfList {

@@ -7,7 +7,7 @@ package dsa.linkedlist;
  * If the two lists intersect, they share all nodes from the intersection point onwards.
  * The solution uses a two-pass approach to handle lists of different lengths.
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class IntersectionOfTwoLinkedLists {

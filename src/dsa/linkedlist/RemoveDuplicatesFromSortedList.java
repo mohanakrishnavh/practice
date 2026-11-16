@@ -7,7 +7,7 @@ package dsa.linkedlist;
  * Each value should appear only once in the resulting list. Since the list is sorted,
  * duplicates are consecutive and can be removed in a single pass.
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class RemoveDuplicatesFromSortedList {

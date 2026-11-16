@@ -9,7 +9,7 @@ import java.util.PriorityQueue;
  * Uses a min-heap (priority queue) to efficiently select the smallest node among all list heads
  * at each step, achieving optimal time complexity.
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class MergeKSortedLists {

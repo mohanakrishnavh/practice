@@ -7,7 +7,7 @@ package dsa.linkedlist;
  * Floyd's Cycle Detection Algorithm (also known as the tortoise and hare algorithm).
  * A cycle exists if a node can be reached again by continuously following the next pointer.
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class LinkedListCycle {

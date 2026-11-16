@@ -7,7 +7,7 @@ package dsa.linkedlist;
  * The reversal is done in-place by changing the direction of the next pointers
  * using three pointers: previous, current, and next.
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class ReverseLinkedList {

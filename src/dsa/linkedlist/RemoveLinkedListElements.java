@@ -6,7 +6,7 @@ package dsa.linkedlist;
  * <p>This class provides a solution to remove all nodes from a linked list that have
  * a specific value. Uses a sentinel node to handle edge cases such as removing head nodes.
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class RemoveLinkedListElements {

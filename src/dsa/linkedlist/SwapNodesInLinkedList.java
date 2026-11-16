@@ -7,7 +7,7 @@ package dsa.linkedlist;
  * and the kth node from the end in a linked list. Uses a two-pointer approach to locate
  * both nodes in a single pass.
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class SwapNodesInLinkedList {

@@ -7,7 +7,7 @@ package dsa.linkedlist;
  * while maintaining the sorted order. Handles edge cases including inserting at boundaries
  * (smallest or largest values) and inserting into an empty or single-node list.
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class InsertIntoASortedLinkedList {

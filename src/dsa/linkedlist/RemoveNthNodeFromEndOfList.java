@@ -7,7 +7,7 @@ package dsa.linkedlist;
  * using the two-pointer technique. Maintains a fixed distance of n nodes between two pointers
  * to locate and remove the target node in one pass.
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class RemoveNthNodeFromEndOfList {

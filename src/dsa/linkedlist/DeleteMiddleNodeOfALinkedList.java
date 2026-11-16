@@ -7,7 +7,7 @@ package dsa.linkedlist;
  * The middle node is defined as the node at position floor(n/2) where n is the
  * total number of nodes. Uses the fast and slow pointer technique to find the middle.
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class DeleteMiddleNodeOfALinkedList {

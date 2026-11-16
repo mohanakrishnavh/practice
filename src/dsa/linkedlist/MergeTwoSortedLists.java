@@ -7,7 +7,7 @@ package dsa.linkedlist;
  * The merge is done by splicing together the nodes of the two lists using a sentinel node
  * to simplify edge cases.
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class MergeTwoSortedLists {

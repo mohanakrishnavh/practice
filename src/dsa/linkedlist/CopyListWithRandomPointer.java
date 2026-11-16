@@ -8,7 +8,7 @@ package dsa.linkedlist;
  * The implementation uses an in-place technique that interweaves the copied nodes with
  * original nodes, then separates them.
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class CopyListWithRandomPointer {

@@ -6,7 +6,7 @@ package dsa.linkedlist;
  * Each node contains a single digit and the digits are stored in reverse order.
  * For example, the number 342 is represented as 2 -> 4 -> 3.
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class AddTwoNumbers {
@@ -18,6 +18,9 @@ public class AddTwoNumbers {
      * along with any carry from the previous addition. The result is returned as a new
      * linked list with digits also in reverse order.
      * 
+     * <p>If either list is {@code null} (an empty number), the other list is returned as-is (not copied).
+     * A final carry produces an extra most-significant digit, e.g. 99 + 1 = 100.
+     *
      * <p>Time Complexity: O(max(m, n)) where m and n are the lengths of the two lists
      * <p>Space Complexity: O(max(m, n)) for the result list
      * 
