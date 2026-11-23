@@ -7,12 +7,25 @@ import java.util.PriorityQueue;
 /**
  * ReorganizeString
  * 
- * <p>TODO: Add class description
+ * Rearranges a string so that no two adjacent characters are the same.
+ *
+ * <p>Approach (greedy): Use a max heap by remaining count. Repeatedly take the two most
+ * frequent characters, append both, and push back those with remaining occurrences. A single
+ * leftover character is only valid if it occurs once; otherwise no arrangement exists.
+ *
+ * <p>Time Complexity: O(n log d) where d is the number of distinct characters.
+ * Space Complexity: O(d).
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class ReorganizeString {
+    /**
+     * Returns a rearrangement with no equal adjacent characters, if one exists.
+     *
+     * @param S the input string
+     * @return a valid rearrangement, or an empty string if impossible
+     */
     public String reorganizeString(String S) {
         Map<Character, Integer> counts = new HashMap<>();
         for (int i = 0; i < S.length(); i++) {

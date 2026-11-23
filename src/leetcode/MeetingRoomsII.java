@@ -6,12 +6,24 @@ import java.util.PriorityQueue;
 /**
  * MeetingRoomsII
  * 
- * <p>TODO: Add class description
+ * Computes the minimum number of conference rooms needed for a set of meetings.
+ *
+ * <p>Approach: Sort meetings by start time and keep a min heap of meetings ordered by end time,
+ * one per occupied room. If the next meeting starts after the earliest-ending one finishes,
+ * reuse that room; otherwise allocate a new one. The heap size is the answer.
+ *
+ * <p>Time Complexity: O(n log n). Space Complexity: O(n).
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class MeetingRoomsII {
+    /**
+     * Returns the minimum number of rooms required.
+     *
+     * @param intervals meeting time intervals as {@code [start, end]} pairs (sorted in place)
+     * @return the number of rooms, or 0 if there are no meetings
+     */
     public int minMeetingRooms(int[][] intervals) {
         if (intervals == null || intervals.length == 0) {
             return 0;

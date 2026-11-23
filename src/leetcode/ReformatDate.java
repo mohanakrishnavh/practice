@@ -6,12 +6,23 @@ import java.util.Map;
 /**
  * ReformatDate
  * 
- * <p>TODO: Add class description
+ * Reformats a date from {@code "20th Oct 2052"} style to {@code "2052-10-20"} (YYYY-MM-DD).
+ *
+ * <p>Approach: Split on spaces, strip the ordinal suffix from the day, map the month
+ * abbreviation to its number and zero-pad the day.
+ *
+ * <p>Time Complexity: O(1). Space Complexity: O(1).
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class ReformatDate {
+    /**
+     * Converts a date such as {@code "6th Jun 1933"} to {@code "1933-06-06"}.
+     *
+     * @param date the date in "Day Month Year" form with an ordinal day suffix
+     * @return the date in YYYY-MM-DD format
+     */
     public String reformatDate(String date) {
         Map<String, String> months = new HashMap<>();
         months.put("Jan", "01");

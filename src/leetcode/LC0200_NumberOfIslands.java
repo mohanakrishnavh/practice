@@ -43,7 +43,7 @@ package leetcode;
  * <p>Time Complexity: O(m * n) where m is number of rows and n is number of columns
  * <p>Space Complexity: O(m * n) in worst case for the recursion stack (when entire grid is land)
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class LC0200_NumberOfIslands {

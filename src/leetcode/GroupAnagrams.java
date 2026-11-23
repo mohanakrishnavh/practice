@@ -40,7 +40,7 @@ import java.util.*;
  * <p>Time Complexity: O(n * k) where n is the number of strings and k is the max length
  * <p>Space Complexity: O(n * k) for storing all strings in the hashmap
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class GroupAnagrams {

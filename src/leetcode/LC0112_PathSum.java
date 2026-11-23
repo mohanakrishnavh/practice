@@ -42,7 +42,7 @@ import dsa.tree.TreeNode;
  * <p>Time Complexity: O(n) where n is the number of nodes - must visit all nodes in worst case
  * <p>Space Complexity: O(h) where h is the height - recursion stack depth
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class LC0112_PathSum {

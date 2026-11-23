@@ -7,12 +7,25 @@ import java.util.PriorityQueue;
 /**
  * LeastUniqueIntegersKRemovals
  * 
- * <p>TODO: Add class description
+ * Finds the least number of unique integers left after removing exactly {@code k} elements.
+ *
+ * <p>Approach (greedy): Count occurrences and use a min heap ordered by count. Removing the
+ * least frequent values first eliminates the most distinct integers per removal.
+ *
+ * <p>Time Complexity: O(n + d log d) where d is the number of distinct values.
+ * Space Complexity: O(d).
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class LeastUniqueIntegersKRemovals {
+    /**
+     * Returns the minimum number of distinct integers after removing {@code k} elements.
+     *
+     * @param arr the input array
+     * @param k the number of elements to remove
+     * @return the count of unique integers remaining
+     */
     public static int findLeastNumOfUniqueInts(int[] arr, int k) {
         Map<Integer, Integer> counts = new HashMap<>();
 
@@ -47,6 +60,11 @@ public class LeastUniqueIntegersKRemovals {
         return minHeap.size();
     }
 
+    /**
+     * Demo driver with sample inputs.
+     *
+     * @param args unused command-line arguments
+     */
     public static void main(String[] args) {
         System.out.println(LeastUniqueIntegersKRemovals.findLeastNumOfUniqueInts(new int[]{5, 5, 4}, 1));
         System.out.println(LeastUniqueIntegersKRemovals.findLeastNumOfUniqueInts(new int[]{4, 3, 1, 1, 3, 3, 2}, 3));

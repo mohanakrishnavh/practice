@@ -9,7 +9,7 @@ package leetcode;
  * <p>Time Complexity: O(?) - TODO: Analyze complexity
  * <p>Space Complexity: O(?) - TODO: Analyze complexity
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class LC0042_TrappingRainWater {

@@ -45,7 +45,7 @@ package leetcode;
  * <p>Time Complexity: O(n) where n is the number of houses
  * <p>Space Complexity: O(1) - space optimized using two variables
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class LC0198_HouseRobber {

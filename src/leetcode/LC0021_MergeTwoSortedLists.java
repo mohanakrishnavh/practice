@@ -42,7 +42,7 @@ import dsa.linkedlist.ListNode;
  * <p>Time Complexity: O(n + m) where n and m are the lengths of the two lists
  * <p>Space Complexity: O(1) - only uses a constant amount of extra space
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class LC0021_MergeTwoSortedLists {

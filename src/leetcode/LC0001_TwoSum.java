@@ -39,7 +39,7 @@ import java.util.Map;
  * <p>Time Complexity: O(n) where n is the length of the array
  * <p>Space Complexity: O(n) for the HashMap storage
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class LC0001_TwoSum {

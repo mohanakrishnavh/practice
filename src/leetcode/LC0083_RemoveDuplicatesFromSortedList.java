@@ -31,7 +31,7 @@ import dsa.linkedlist.ListNode;
  * <p>Time Complexity: O(n) where n is the number of nodes in the list
  * <p>Space Complexity: O(1) - in-place modification
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class LC0083_RemoveDuplicatesFromSortedList {

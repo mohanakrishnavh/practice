@@ -40,7 +40,7 @@ import dsa.linkedlist.ListNode;
  * <p>Time Complexity: O(n) where n is the number of nodes
  * <p>Space Complexity: O(1) - no extra data structures used
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class LC0234_PalindromeLinkedList {

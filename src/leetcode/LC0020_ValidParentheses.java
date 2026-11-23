@@ -43,7 +43,7 @@ import java.util.Stack;
  * <p>Time Complexity: O(n) where n is the length of the string
  * <p>Space Complexity: O(n) for the stack in worst case
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class LC0020_ValidParentheses {

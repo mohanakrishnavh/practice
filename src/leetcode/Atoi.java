@@ -54,7 +54,7 @@ package leetcode;
  * <p>Time Complexity: O(n) where n is the length of the string
  * <p>Space Complexity: O(1) - only using constant extra space
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class Atoi {

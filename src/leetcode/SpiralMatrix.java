@@ -6,12 +6,24 @@ import java.util.List;
 /**
  * SpiralMatrix
  * 
- * <p>TODO: Add class description
+ * Returns the elements of a matrix in spiral order.
+ *
+ * <p>Approach: Maintain four boundaries (top, bottom, left, right) and traverse right, down,
+ * left, up, shrinking the boundaries after each side. Traversal stops once every element has
+ * been added, which guards against double-visiting on non-square matrices.
+ *
+ * <p>Time Complexity: O(rows * cols). Space Complexity: O(1) beyond the output.
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class SpiralMatrix {
+    /**
+     * Returns the matrix elements in clockwise spiral order.
+     *
+     * @param matrix the input matrix
+     * @return the elements in spiral order, or an empty list for a null or empty matrix
+     */
     public static List<Integer> spiralOrder(int[][] matrix) {
         List<Integer> spiralList = new ArrayList<>();
 
@@ -50,6 +62,11 @@ public class SpiralMatrix {
         return spiralList;
     }
 
+    /**
+     * Demo driver with sample inputs.
+     *
+     * @param args unused command-line arguments
+     */
     public static void main(String[] args) {
         int[][] matrix = {{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}};
         System.out.println(SpiralMatrix.spiralOrder(matrix));

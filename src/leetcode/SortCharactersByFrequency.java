@@ -7,12 +7,24 @@ import java.util.PriorityQueue;
 /**
  * SortCharactersByFrequency
  * 
- * <p>TODO: Add class description
+ * Sorts the characters of a string by decreasing frequency.
+ *
+ * <p>Approach: Count characters in a map, order them in a max heap by count, then append each
+ * character repeated by its count.
+ *
+ * <p>Time Complexity: O(n + d log d) where d is the number of distinct characters.
+ * Space Complexity: O(n).
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class SortCharactersByFrequency {
+    /**
+     * Returns the string with characters grouped and ordered by descending frequency.
+     *
+     * @param s the input string
+     * @return the sorted string, or an empty string if the input is null or empty
+     */
     public static String frequencySort(String s) {
         if (s == null || s.length() == 0) {
             return "";
@@ -38,6 +50,11 @@ public class SortCharactersByFrequency {
         return sb.toString();
     }
 
+    /**
+     * Demo driver with sample inputs.
+     *
+     * @param args unused command-line arguments
+     */
     public static void main(String[] args) {
         System.out.println(SortCharactersByFrequency.frequencySort("tree"));
         System.out.println(SortCharactersByFrequency.frequencySort("cccaaa"));

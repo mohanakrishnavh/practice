@@ -3,12 +3,25 @@ package leetcode;
 /**
  * WordSearch
  * 
- * <p>TODO: Add class description
+ * Determines whether a word can be formed from adjacent cells of a character grid.
+ *
+ * <p>Approach: Backtracking DFS from every cell matching the first letter. Visited cells are
+ * temporarily marked with '#' so a cell is not reused within one path, and restored on backtrack.
+ *
+ * <p>Time Complexity: O(rows * cols * 3^L) where L is the word length. Space Complexity: O(L)
+ * for the recursion stack.
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class WordSearch {
+    /**
+     * Returns whether {@code word} exists in the board.
+     *
+     * @param board the grid of characters
+     * @param word the word to find
+     * @return true if the word can be built from horizontally or vertically adjacent cells
+     */
     public static boolean exist(char[][] board, String word) {
         if (board == null || board.length == 0 || word == null || word.length() == 0) {
             return false;
@@ -25,6 +38,16 @@ public class WordSearch {
         return false;
     }
 
+    /**
+     * Tries to match {@code word} starting at character index {@code count} from cell {@code (i, j)}.
+     *
+     * @param board the grid (cells are marked and restored during the search)
+     * @param i the current row
+     * @param j the current column
+     * @param count the index of the next word character to match
+     * @param word the target word
+     * @return true if the remainder of the word is found
+     */
     private static boolean dfs(char[][] board, int i, int j, int count, String word) {
         if (count == word.length()) {
             return true;
@@ -45,6 +68,11 @@ public class WordSearch {
         return found;
     }
 
+    /**
+     * Demo driver with sample inputs.
+     *
+     * @param args unused command-line arguments
+     */
     public static void main(String[] args) {
         char[][] board = {
                 {'A', 'B', 'C', 'E'},

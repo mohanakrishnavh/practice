@@ -47,7 +47,7 @@ package leetcode;
  * <p>Time Complexity: O(n) where n is the length of cost array
  * <p>Space Complexity: O(1) - uses only two variables
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class LC0746_MinCostClimbingStairs {

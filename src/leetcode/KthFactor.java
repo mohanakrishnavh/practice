@@ -6,12 +6,25 @@ import java.util.PriorityQueue;
 /**
  * KthFactor
  * 
- * <p>TODO: Add class description
+ * Finds the k-th smallest factor of {@code n}.
+ *
+ * <p>Approach: Walk candidate divisors up to sqrt(n); each divisor {@code i} also yields the
+ * paired factor {@code n / i}. A max heap capped at size {@code k} keeps the k smallest factors,
+ * so its top is the k-th smallest.
+ *
+ * <p>Time Complexity: O(sqrt(n) log k). Space Complexity: O(k).
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class KthFactor {
+    /**
+     * Returns the k-th factor of {@code n} in ascending order.
+     *
+     * @param n the number to factorise
+     * @param k the 1-based factor position
+     * @return the k-th factor, or -1 if {@code n} has fewer than {@code k} factors
+     */
     public static int kthFactor(int n, int k) {
         if (n < 0 || k < 0) {
             return -1;
@@ -45,6 +58,11 @@ public class KthFactor {
         return maxHeap.isEmpty() ? -1 : maxHeap.peek();
     }
 
+    /**
+     * Demo driver with sample inputs.
+     *
+     * @param args unused command-line arguments
+     */
     public static void main(String[] args) {
         System.out.println(KthFactor.kthFactor(12, 3));
         System.out.println(KthFactor.kthFactor(7, 2));

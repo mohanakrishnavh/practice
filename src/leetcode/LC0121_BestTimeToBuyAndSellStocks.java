@@ -36,7 +36,7 @@ package leetcode;
  * <p>Time Complexity: O(n) where n is the length of the prices array
  * <p>Space Complexity: O(1) - only uses constant extra space
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class LC0121_BestTimeToBuyAndSellStocks {

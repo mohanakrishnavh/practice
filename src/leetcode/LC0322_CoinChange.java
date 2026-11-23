@@ -49,7 +49,7 @@ package leetcode;
  * <p>Time Complexity: O(n * amount) where n is the number of coin types
  * <p>Space Complexity: O(amount) - space optimized using 1D array
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class LC0322_CoinChange {

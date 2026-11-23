@@ -40,7 +40,7 @@ package leetcode;
  * <p>Time Complexity: O(n)
  * <p>Space Complexity: O(1) - uses only two variables instead of array
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class LC0070_ClimbingStairs {

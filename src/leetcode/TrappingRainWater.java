@@ -3,17 +3,33 @@ package leetcode;
 /**
  * TrappingRainWater
  * 
- * <p>TODO: Add class description
+ * Computes how much rain water is trapped between bars of an elevation map.
+ *
+ * <p>Approach: The water above bar {@code i} is {@code min(maxLeft[i], maxRight[i]) - height[i]}.
+ * Precompute the running maximum from the left and right, then sum the water over all bars.
+ *
+ * <p>Time Complexity: O(n). Space Complexity: O(n).
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class TrappingRainWater {
+    /**
+     * Demo driver with sample inputs.
+     *
+     * @param args unused command-line arguments
+     */
     public static void main(String[] args) {
         TrappingRainWater obj = new TrappingRainWater();
         System.out.println(obj.trap(new int[]{0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1}));
     }
 
+    /**
+     * Returns the total units of trapped water.
+     *
+     * @param height the bar heights (must be non-empty)
+     * @return the trapped water volume
+     */
     public int trap(int[] height) {
         int trappedWater = 0;
 

@@ -3,15 +3,25 @@ package leetcode;
 /**
  * RandomPickWithWeight
  * 
- * <p>TODO: Add class description
+ * Picks an index at random with probability proportional to its weight.
+ *
+ * <p>Approach: Precompute prefix sums of the weights. To pick, draw a random target in
+ * [0, totalSum) and binary search for the first prefix sum that is not less than it.
+ *
+ * <p>Time Complexity: O(n) to construct, O(log n) per pick. Space Complexity: O(n).
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class RandomPickWithWeight {
     int[] cumulativeSum;
     int totalSum;
 
+    /**
+     * Builds the cumulative weight table.
+     *
+     * @param w the weight of each index
+     */
     public RandomPickWithWeight(int[] w) {
         cumulativeSum = new int[w.length];
         totalSum = 0;
@@ -21,11 +31,21 @@ public class RandomPickWithWeight {
         }
     }
 
+    /**
+     * Demo driver with sample inputs.
+     *
+     * @param args unused command-line arguments
+     */
     public static void main(String[] args) {
         RandomPickWithWeight random = new RandomPickWithWeight(new int[]{1, 2, 3});
         System.out.println(random.pickIndex());
     }
 
+    /**
+     * Returns a randomly chosen index, weighted by the supplied weights.
+     *
+     * @return the picked index
+     */
     public int pickIndex() {
         double target = Math.random() * totalSum;
         int start = 0;
