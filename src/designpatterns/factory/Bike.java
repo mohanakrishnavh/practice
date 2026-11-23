@@ -4,7 +4,7 @@ package designpatterns.factory;
  * Concrete implementation of Vehicle representing a Bike.
  * This class is created by the VehicleFactory when a bike type is requested.
  *
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class Bike extends Vehicle {

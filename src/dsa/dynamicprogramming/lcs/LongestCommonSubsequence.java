@@ -18,7 +18,7 @@ import java.util.Arrays;
  * 
  * <p>Example: For s1 = "abcde" and s2 = "ace", the LCS is "ace" with length 3.
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class LongestCommonSubsequence {

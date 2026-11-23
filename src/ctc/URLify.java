@@ -8,7 +8,7 @@ package ctc;
  * 
  * <p>Example: "Mr John Smith    " with true length 13 becomes "Mr%20John%20Smith"
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class URLify {

@@ -7,13 +7,30 @@ import java.util.*;
 /**
  * TopologicalSort
  * 
- * <p>TODO: Add class description
- * 
+ * Topological sorting of a directed acyclic graph (DAG): a linear ordering of vertices such
+ * that for every edge u -> v, u appears before v.
+ *
+ * <p>Two implementations are provided: Kahn's algorithm (BFS using in-degrees, which also detects
+ * cycles) and a DFS-based approach that pushes a vertex onto a stack once all its descendants are
+ * processed. Neither can order a graph with a cycle; Kahn's version reports it by returning null.
+ *
+ * <p>Time complexity: O(V + E). Space complexity: O(V).
+ *
  * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class TopologicalSort {
-    // Kahn's Algorithm to find the topological order of nodes in a DAG
+    /**
+     * Computes a topological order using Kahn's algorithm.
+     *
+     * <p>Vertices with in-degree 0 are processed first; removing one decrements the in-degree of its
+     * neighbours, and any neighbour reaching 0 is queued. If fewer than {@code n} vertices were
+     * processed, the graph has a cycle.
+     *
+     * @param n       number of vertices (labelled 0 to n-1)
+     * @param adjList adjacency list of the directed graph
+     * @return the vertices in topological order, or {@code null} if the graph contains a cycle
+     */
     public static List<Integer> topologicalSort(int n, List<List<Integer>> adjList) {
         List<Integer> topologicalOrder = new ArrayList<>();
 
@@ -52,7 +69,15 @@ public class TopologicalSort {
         return topologicalOrder;
     }
 
-    // Topological Sorting using DFS
+    /**
+     * Computes a topological order using DFS.
+     *
+     * <p>Note: this version does not detect cycles; the result is only meaningful for a DAG.
+     *
+     * @param n       number of vertices (labelled 0 to n-1)
+     * @param adjList adjacency list of the directed graph
+     * @return the vertices in topological order
+     */
     public static List<Integer> topologicalSortUsingDfs(int n, List<List<Integer>> adjList) {
         List<Integer> topologicalOrder = new ArrayList<>();
         Stack<Integer> stack = new Stack<>();
@@ -71,6 +96,14 @@ public class TopologicalSort {
         return topologicalOrder;
     }
 
+    /**
+     * DFS helper: visits all unvisited descendants of {@code node}, then pushes {@code node} onto the stack.
+     *
+     * @param node    current vertex
+     * @param adjList adjacency list of the directed graph
+     * @param visited visited flags per vertex; updated in place
+     * @param stack   stack collecting vertices in reverse topological order
+     */
     private static void topologicalSortDfs(int node, List<List<Integer>> adjList, boolean[] visited, Stack<Integer> stack) {
         visited[node] = true;
         for (int adj : adjList.get(node)) {
@@ -81,6 +114,11 @@ public class TopologicalSort {
         stack.push(node);
     }
 
+    /**
+     * Demo driver with sample inputs.
+     *
+     * @param args unused command-line arguments
+     */
     public static void main(String[] args) {
         int n = 6;
         int[][] edges = new int[][]{{5, 0}, {5, 2}, {2, 3}, {3, 1}, {4, 0}, {4, 1}};

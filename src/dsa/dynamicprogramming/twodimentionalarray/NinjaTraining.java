@@ -22,7 +22,7 @@ import java.util.Arrays;
  * 
  * <p>Example: For points [[1,2,5], [3,1,1], [3,3,3]], max points = 11 (5+3+3)
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class NinjaTraining {

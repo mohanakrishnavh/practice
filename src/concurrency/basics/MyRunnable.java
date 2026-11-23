@@ -20,7 +20,7 @@ package concurrency.basics;
  * thread.start();
  * </pre>
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  * @see Runnable
  * @see Thread

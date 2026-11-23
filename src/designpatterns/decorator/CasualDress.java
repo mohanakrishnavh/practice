@@ -4,7 +4,7 @@ package designpatterns.decorator;
  * Concrete decorator that adds casual features to a dress.
  * This decorator enhances the base dress with casual styling elements.
  *
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class CasualDress extends DressDecorator {

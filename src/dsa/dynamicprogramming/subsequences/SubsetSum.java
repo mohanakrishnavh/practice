@@ -20,7 +20,7 @@ import java.util.Arrays;
  * 
  * <p>Example: For [3, 34, 4, 12, 5, 2] and K=9, subset [4, 5] exists
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class SubsetSum {

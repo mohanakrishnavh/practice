@@ -3,12 +3,18 @@ package dsa.linkedlist;
 /**
  * LinkedListDriver
  * 
- * <p>TODO: Add class description
- * 
+ * Demo driver for {@link LinkedList}. Exercises addFirst, addLast, addAtIndex, remove,
+ * iterative and recursive reverse, and recursive forward/backward printing, printing the list after each step.
+ *
  * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class LinkedListDriver {
+    /**
+     * Demo driver with sample inputs.
+     *
+     * @param args unused command-line arguments
+     */
     public static void main(String[] args) {
         // addFirst() - Add at the beginning of the list
         LinkedList list1 = new LinkedList();

@@ -8,7 +8,7 @@ package designpatterns.structural.adaptor;
  * <p>Note: This class uses different method names (findElement, clickElement)
  * instead of the standard WebDriver interface methods (getElement, selectElement).
  *
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class IEDriver {

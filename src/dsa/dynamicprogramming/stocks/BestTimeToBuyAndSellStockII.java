@@ -18,7 +18,7 @@ import java.util.Arrays;
  * <p>Example: For [7, 1, 5, 3, 6, 4], multiple transactions can give profit of 7
  * (buy at 1, sell at 5, buy at 3, sell at 6)
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class BestTimeToBuyAndSellStockII {

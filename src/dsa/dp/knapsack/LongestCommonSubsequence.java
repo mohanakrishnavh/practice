@@ -9,7 +9,7 @@ package dsa.dp.knapsack;
  * with a 2D table where dp[i][j] represents the LCS length of the first i characters of text1
  * and first j characters of text2.
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class LongestCommonSubsequence {

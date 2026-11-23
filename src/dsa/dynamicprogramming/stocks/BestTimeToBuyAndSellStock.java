@@ -15,7 +15,7 @@ package dsa.dynamicprogramming.stocks;
  * 
  * <p>Example: For [7, 1, 5, 3, 6, 4], buy at 1 and sell at 6 for profit of 5
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class BestTimeToBuyAndSellStock {

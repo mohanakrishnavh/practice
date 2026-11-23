@@ -9,7 +9,7 @@ import java.util.Stack;
 /**
  * BoundaryTraversal
  * 
- * Boundary of a binary tree (LeetCode 545), anticlockwise: root, left boundary, leaves left to right, then the right
+ * <p>Boundary of a binary tree (LeetCode 545), anticlockwise: root, left boundary, leaves left to right, then the right
  * boundary bottom-up. Leaves are excluded from the side boundaries so they are not repeated.
  *
  * <p><b>Complexity:</b> Time O(n), Space O(h) for recursion and the right-boundary stack.

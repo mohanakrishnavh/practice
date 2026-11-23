@@ -7,7 +7,7 @@ import java.util.Stack;
 /**
  * KthSmallestElementInABST
  * 
- * Kth Smallest Element in a BST (LeetCode 230) via iterative inorder traversal, stopping at the k-th visited node.
+ * <p>Kth Smallest Element in a BST (LeetCode 230) via iterative inorder traversal, stopping at the k-th visited node.
  *
  * <p><b>Complexity:</b> Time O(h + k), Space O(h).
  * 

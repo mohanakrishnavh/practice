@@ -8,7 +8,7 @@ package designpatterns.singleton;
  * calling getInstance() simultaneously might create multiple instances.
  * Use this only in single-threaded environments.
  *
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class SingletonLazy {

@@ -5,7 +5,7 @@ package designpatterns.factory;
  * This class shows how the VehicleFactory can be used to create
  * different types of vehicles without knowing their concrete classes.
  *
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class FactoryDriver {

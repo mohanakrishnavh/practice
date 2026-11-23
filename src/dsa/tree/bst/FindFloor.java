@@ -5,7 +5,7 @@ import dsa.tree.TreeNode;
 /**
  * FindFloor
  * 
- * Floor in a BST: the largest value less than or equal to a key. Walks down, remembering the last node that was
+ * <p>Floor in a BST: the largest value less than or equal to a key. Walks down, remembering the last node that was
  * smaller than the key.
  *
  * <p><b>Complexity:</b> Time O(h), Space O(1).

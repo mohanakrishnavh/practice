@@ -20,7 +20,12 @@ import java.util.Scanner;
  * @version 1.0
  */
 public class PrintNTo1 {
-    /** Forward style: print i, then recurse with i-1 until i drops below 1. */
+    /**
+     * Forward style: print i, then recurse with i-1 until i drops below 1.
+     *
+     * @param i current number to print; start with n
+     * @param n the original upper bound (unused here, kept for a symmetric signature)
+     */
     public static void printNumbers(int i, int n) {
         // Base case: counted down past 1
         if (i < 1) {
@@ -28,12 +33,16 @@ public class PrintNTo1 {
         }
 
         System.out.println(i);
-        printNumbers(i - 1, n); // note: n is unused here, kept only for a symmetric signature
+        printNumbers(i - 1, n);
     }
 
-    /** Backtracking style: called with i = 1; prints after returning from the deeper calls. */
+    /**
+     * Backtracking style: called with i = 1; prints after returning from the deeper calls.
+     *
+     * @param i current number; start with 1
+     * @param n upper bound; recursion stops once i exceeds it
+     */
     public static void printNumbersUsingBacktracking(int i, int n) {
-        // Base case: counter went past n
         if (i > n) {
             return;
         }
@@ -42,10 +51,15 @@ public class PrintNTo1 {
         System.out.println(i);
     }
 
+    /**
+     * Reads N from standard input and prints N..1.
+     *
+     * @param args unused
+     */
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        printNumbers(n, n);
+        //printNumbers(n, n);
 
         printNumbersUsingBacktracking(1, n);
     }

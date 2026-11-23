@@ -11,7 +11,7 @@ package concurrency.prime;
  * <p>The inefficiency is intentional to make timing differences more observable when
  * comparing single-threaded vs multi-threaded prime number calculations.
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class PrimeNumberUtil {

@@ -3,12 +3,21 @@ package concurrency.basics;
 /**
  * RunnableDriver
  * 
- * <p>TODO: Add class description
+ * Demonstrates the different ways of creating and starting a thread from a {@link Runnable}.
+ *
+ * <p>Covers a named class ({@link MyRunnable}), an anonymous inner class, a lambda, and
+ * starting a thread directly from a lambda. Implementing {@code Runnable} is preferred over
+ * extending {@code Thread}.
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class RunnableDriver {
+    /**
+     * Starts threads using each Runnable syntax.
+     *
+     * @param args unused command-line arguments
+     */
     public static void main(String[] args) {
         // Defining a class that implements Runnable
         MyRunnable myRunnable = new MyRunnable();

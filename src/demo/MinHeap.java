@@ -15,7 +15,7 @@ import java.util.PriorityQueue;
  *   <li>contains(element) - O(n) - Check if element exists</li>
  * </ul>
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class MinHeap {

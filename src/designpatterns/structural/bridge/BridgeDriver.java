@@ -5,7 +5,7 @@ package designpatterns.structural.bridge;
  * This class shows how the TV abstraction and Remote implementation
  * hierarchies can vary independently. Any TV can work with any Remote.
  *
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class BridgeDriver {

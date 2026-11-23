@@ -11,7 +11,7 @@ import dsa.tree.TreeNode;
  * Uses tree DP where for each node, we calculate the maximum path through it by summing
  * the heights of its left and right subtrees.
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class DiameterOfBinaryTree {

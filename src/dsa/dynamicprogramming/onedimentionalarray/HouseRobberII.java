@@ -16,7 +16,7 @@ package dsa.dynamicprogramming.onedimentionalarray;
  * 
  * <p>Example: For [2, 3, 2], cannot rob first and last together, so max = 3
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class HouseRobberII {

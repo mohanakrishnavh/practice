@@ -7,9 +7,14 @@ import java.util.Map;
 /**
  * RomanToInteger
  * 
- * <p>TODO: Add class description
- * 
- * @author Practice Repository
+ * Converts a Roman numeral to an integer (LeetCode 13).
+ *
+ * <p>Symbols are read left to right: a symbol smaller than the one after it (as in IV or IX) is
+ * subtracted, otherwise it is added.
+ *
+ * <p>Time complexity: O(n). Space complexity: O(1).
+ *
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class RomanToInteger {
@@ -24,6 +29,12 @@ public class RomanToInteger {
             'M', 1000
     );
 
+    /**
+     * Converts a Roman numeral to its integer value.
+     *
+     * @param s a valid Roman numeral string
+     * @return the integer value
+     */
     public static int romanToInt(String s) {
         int intVal = 0;
 

@@ -5,7 +5,7 @@ import dsa.tree.TreeNode;
 /**
  * BinaryTreeMaximumPathSum
  * 
- * Binary Tree Maximum Path Sum (LeetCode 124): the maximum sum over any path, which may start and end at any node.
+ * <p>Binary Tree Maximum Path Sum (LeetCode 124): the maximum sum over any path, which may start and end at any node.
  * Negative branches are dropped and the best bent path through each node updates a global maximum.
  *
  * <p><b>Complexity:</b> Time O(n), Space O(h).

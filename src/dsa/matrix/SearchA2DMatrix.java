@@ -3,12 +3,25 @@ package dsa.matrix;
 /**
  * SearchA2DMatrix
  * 
- * <p>TODO: Add class description
- * 
- * @author Practice Repository
+ * Searches for a target in a matrix whose rows are sorted and where the first element of each
+ * row is greater than the last element of the previous row (LeetCode 74).
+ *
+ * <p>The row that could contain the target is located by scanning row bounds, then a binary
+ * search is run within that row.
+ *
+ * <p>Time complexity: O(m + log n) for an m x n matrix. Space complexity: O(1).
+ *
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class SearchA2DMatrix {
+    /**
+     * Returns whether {@code target} exists in the matrix.
+     *
+     * @param matrix matrix with sorted rows, each row starting above the previous row's last value
+     * @param target value to search for
+     * @return true if the target is present, false otherwise
+     */
     public static boolean searchMatrix(int[][] matrix, int target) {
         int i = 0;
         int j = matrix[i].length - 1;
@@ -48,6 +61,11 @@ public class SearchA2DMatrix {
         return false;
     }
 
+    /**
+     * Demo driver with sample inputs.
+     *
+     * @param args unused command-line arguments
+     */
     public static void main(String[] args) {
         System.out.println(searchMatrix(new int[][]{{1, 3, 5, 7}, {10, 11, 16, 20}, {23, 30, 34, 60}}, 3));
         System.out.println(searchMatrix(new int[][]{{1}}, 0));

@@ -5,7 +5,7 @@ import dsa.tree.TreeNode;
 /**
  * Diameter
  * 
- * Diameter of a Binary Tree (LeetCode 543): the longest path between any two nodes. At each node the longest path
+ * <p>Diameter of a Binary Tree (LeetCode 543): the longest path between any two nodes. At each node the longest path
  * through it is leftHeight + rightHeight (+1 when counted in nodes), tracked while computing heights.
  *
  * <p><b>Complexity:</b> Time O(n), Space O(h).

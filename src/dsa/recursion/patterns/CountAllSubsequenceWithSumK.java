@@ -21,10 +21,28 @@ import java.util.List;
  * @version 1.0
  */
 public class CountAllSubsequenceWithSumK {
+    /**
+     * Public entry point: counts the subsequences of {@code nums} whose elements add up to {@code k}.
+     *
+     * @param nums the source array
+     * @param k    the target sum
+     * @return the number of matching subsequences
+     */
     public static int subsequenceSum(int[] nums, int k) {
         return subsequenceSum(nums, k, 0, new ArrayList<>(), 0);
     }
 
+    /**
+     * Pick / not-pick recursion that returns a count: a leaf gives 1 (sum matches) or 0, and each
+     * node returns the sum of its two branches.
+     *
+     * @param nums        the source array
+     * @param k           the target sum
+     * @param index       the element currently being decided; start with 0
+     * @param subsequence the elements picked so far (debug only; restored while backtracking)
+     * @param sum         the sum of the picked elements; start with 0
+     * @return the number of matching subsequences reachable from this state
+     */
     private static int subsequenceSum(int[] nums, int k, int index, List<Integer> subsequence, int sum) {
         if (index == nums.length) {
             // condition is satisfied
@@ -42,14 +60,24 @@ public class CountAllSubsequenceWithSumK {
         int left = subsequenceSum(nums, k, index+1, subsequence, sum + nums[index]);
 
         // Not pick: count of valid subsequences that exclude nums[index]
-        subsequence.remove(subsequence.size() - 1);
+        subsequence.removeLast();
         int right = subsequenceSum(nums, k, index+1, subsequence, sum);
 
         // Total = both branches
         return left + right;
     }
 
+    /**
+     * Demo: counts matches for typical, no-match, empty-target, empty-array and negative-number cases.
+     *
+     * @param args unused
+     */
     public static void main(String[] args) {
-        System.out.println(subsequenceSum(new int[]{1, 2, 1}, 2)); // 2
+        System.out.println(subsequenceSum(new int[]{1, 2, 1}, 2));  // 2  ([1, 1] and [2])
+        System.out.println(subsequenceSum(new int[]{1, 2, 3}, 10)); // 0  (no match)
+        System.out.println(subsequenceSum(new int[]{1, 2, 3}, 0));  // 1  (only the empty subsequence)
+        System.out.println(subsequenceSum(new int[]{}, 0));         // 1  (empty array, empty subsequence)
+        System.out.println(subsequenceSum(new int[]{1, 1, 1}, 2));  // 3  (three ways to choose two 1s)
+        System.out.println(subsequenceSum(new int[]{5, -2, 3}, 3)); // 2  ([5, -2] and [3])
     }
 }

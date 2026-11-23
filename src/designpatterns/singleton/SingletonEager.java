@@ -7,7 +7,7 @@ package designpatterns.singleton;
  * <p>This approach is simple and thread-safe, but the instance is created
  * even if it's never used, which may waste resources.
  *
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class SingletonEager {

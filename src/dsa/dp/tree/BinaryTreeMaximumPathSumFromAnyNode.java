@@ -10,7 +10,7 @@ import dsa.tree.TreeNode;
  * the option of taking just the current node's value even if both subtree paths are positive.
  * This is useful when node values can be negative and we want flexibility in path selection.
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class BinaryTreeMaximumPathSumFromAnyNode {

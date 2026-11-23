@@ -10,7 +10,7 @@ import java.util.Queue;
 /**
  * RightSideView
  * 
- * Binary Tree Right Side View (LeetCode 199): the last node of each level. Provides a level-order (BFS) and a DFS
+ * <p>Binary Tree Right Side View (LeetCode 199): the last node of each level. Provides a level-order (BFS) and a DFS
  * solution that visits right children first.
  *
  * <p><b>Complexity:</b> Time O(n), Space O(w) for BFS and O(h) for DFS.

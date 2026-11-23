@@ -8,7 +8,7 @@ import java.util.Queue;
 /**
  * GraphValidTree
  * 
- * Graph Valid Tree (LeetCode 261): an undirected graph with {@code n} nodes is a tree iff it is connected and has no
+ * <p>Graph Valid Tree (LeetCode 261): an undirected graph with {@code n} nodes is a tree iff it is connected and has no
  * cycle. BFS explores each component, tracking the parent to detect cycles, and fails on a cycle or a second component.
  *
  * <p><b>Complexity:</b> Time O(n + e), Space O(n + e).

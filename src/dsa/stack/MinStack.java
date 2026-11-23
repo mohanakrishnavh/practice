@@ -39,7 +39,7 @@ import java.util.Stack;
  * <p>Time Complexity: O(1) for all operations
  * <p>Space Complexity: O(n) where n is the number of elements
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class MinStack {

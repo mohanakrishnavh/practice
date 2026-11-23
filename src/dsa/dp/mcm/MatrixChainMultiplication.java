@@ -11,7 +11,7 @@ import java.util.Arrays;
  * Given dimensions array where matrix i has dimensions [nums[i-1] x nums[i]], we find the
  * optimal parenthesization. Provides both recursive and memoized solutions.
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class MatrixChainMultiplication {

@@ -16,7 +16,7 @@ package dsa.dynamicprogramming.onedimentionalarray;
  * 
  * <p>Example: For heights [10, 30, 40, 50, 20] and k=3, the frog can jump 1, 2, or 3 steps
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class FrogJumpWithKSteps {

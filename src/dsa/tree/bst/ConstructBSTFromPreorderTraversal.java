@@ -5,7 +5,7 @@ import dsa.tree.TreeNode;
 /**
  * ConstructBSTFromPreorderTraversal
  * 
- * Construct BST from Preorder Traversal (LeetCode 1008). Each recursive call accepts values up to an upper bound, so
+ * <p>Construct BST from Preorder Traversal (LeetCode 1008). Each recursive call accepts values up to an upper bound, so
  * the tree is built in a single pass.
  *
  * <p><b>Complexity:</b> Time O(n), Space O(h).

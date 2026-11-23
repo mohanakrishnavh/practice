@@ -18,6 +18,12 @@ import java.util.List;
  * @version 1.0
  */
 public class Subsets {
+    /**
+     * Public entry point: generates every subset (the power set) of {@code arr}.
+     *
+     * @param arr the source array
+     * @return all 2^n subsets, each as its own list
+     */
     public static List<List<Integer>> findSubsets(int[] arr){
         List<List<Integer>> subsets = new ArrayList<>();
         findSubsets(0, arr, new ArrayList<>(), subsets);
@@ -25,24 +31,40 @@ public class Subsets {
         return subsets;
     }
 
-    private static void findSubsets(int index, int[] arr, List<Integer> subset, List<List<Integer>> subsets) {
+    /**
+     * Pick / not-pick backtracking that records a snapshot of the subset at each leaf.
+     *
+     * @param idx  the element currently being decided; start with 0
+     * @param arr    the source array
+     * @param subset the elements picked so far (restored while backtracking)
+     * @param subsets collects a copy of every completed subset
+     */
+    private static void findSubsets(int idx, int[] arr, List<Integer> subset, List<List<Integer>> subsets) {
         // Base case: all elements decided -> record a snapshot of the current subset
-        if (index == arr.length) {
+        if (idx == arr.length) {
             subsets.add(new ArrayList<>(subset));
             return;
         }
 
-        // Pick the index element
-        subset.add(arr[index]);
-        findSubsets(index + 1, arr, subset, subsets);
-        subset.remove(subset.size()-1); // backtrack
+        // Pick the idx element
+        subset.add(arr[idx]);
+        findSubsets(idx + 1, arr, subset, subsets);
+        subset.removeLast(); // backtrack
 
-        // Do not pick the index element
-        findSubsets(index + 1, arr, subset, subsets);
+        // Do not pick the idx element
+        findSubsets(idx + 1, arr, subset, subsets);
     }
 
+    /**
+     * Demo: prints the power set for typical, empty, single-element and duplicate-value inputs.
+     *
+     * @param args unused
+     */
     public static void main(String[] args) {
-        System.out.println(findSubsets(new int[]{2, 3}));
-        System.out.println(findSubsets(new int[]{3, 1, 2}));
+        System.out.println(findSubsets(new int[]{2, 3}));    // [[2, 3], [2], [3], []]
+        System.out.println(findSubsets(new int[]{3, 1, 2})); // 8 subsets
+        System.out.println(findSubsets(new int[]{}));        // [[]] (just the empty subset)
+        System.out.println(findSubsets(new int[]{7}));       // [[7], []]
+        System.out.println(findSubsets(new int[]{1, 1}));    // [[1, 1], [1], [1], []] (duplicates are not merged)
     }
 }

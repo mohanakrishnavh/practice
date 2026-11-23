@@ -7,7 +7,7 @@ package dsa.design;
  * the winner in O(1) time per move. Uses arrays to track the sum of moves in each row, column,
  * and diagonal. Player 1 adds +1 and Player 2 adds -1, so when any line reaches ±n, that player wins.
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class DesignTicTacToe {

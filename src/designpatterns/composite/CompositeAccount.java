@@ -9,7 +9,7 @@ import java.util.List;
  * of accounts to be treated as a single account.
  * The composite can calculate the total balance of all contained accounts.
  *
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class CompositeAccount extends Account {

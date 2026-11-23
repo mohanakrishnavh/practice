@@ -7,7 +7,7 @@ package dsa.bitmanipulation;
  * element appears twice except for one element. Uses the XOR bitwise operation which has
  * the property that a ⊕ a = 0 and a ⊕ 0 = a, making duplicate numbers cancel each other out.
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class SingleNumber {

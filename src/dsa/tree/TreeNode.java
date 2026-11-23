@@ -3,7 +3,7 @@ package dsa.tree;
 /**
  * TreeNode
  * 
- * Binary tree node holding an int value and left/right child references.
+ * <p>Binary tree node holding an int value and left/right child references.
  * 
  * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0

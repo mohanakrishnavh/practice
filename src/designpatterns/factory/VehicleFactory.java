@@ -6,7 +6,7 @@ package designpatterns.factory;
  * a centralized method for creating different types of vehicles
  * without exposing the instantiation logic to the client.
  *
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class VehicleFactory {

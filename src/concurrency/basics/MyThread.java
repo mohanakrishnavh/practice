@@ -12,7 +12,7 @@ package concurrency.basics;
  * 
  * <p><b>Preferred Approach:</b> Implement Runnable interface instead.
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  * @see MyRunnable
  * @see Runnable

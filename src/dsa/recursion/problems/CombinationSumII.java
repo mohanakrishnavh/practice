@@ -36,16 +36,16 @@ public class CombinationSumII {
         return combinations;
     }
 
-    private static void findCombinations(int[] candidates, int target, int index, List<Integer> combination, List<List<Integer>> result) {
+    private static void findCombinations(int[] candidates, int target, int idx, List<Integer> combination, List<List<Integer>> result) {
         // Base case: target reached exactly -> record a copy of the current combination
         if (target == 0) {
             result.add(new ArrayList<>(combination));
             return;
         }
 
-        for (int i = index; i < candidates.length; i++) {
+        for (int i = idx; i < candidates.length; i++) {
             // Skip duplicates at the same level so the same combination isn't produced twice
-            if (i > index && candidates[i] == candidates[i-1]) {
+            if (i > idx && candidates[i] == candidates[i-1]) {
                 continue;
             }
 
@@ -57,11 +57,12 @@ public class CombinationSumII {
             combination.add(candidates[i]);
             // i + 1: each element can be used only once
             findCombinations(candidates, target - candidates[i], i + 1, combination, result);
-            combination.remove(combination.size() - 1); // backtrack
+            combination.removeLast(); // backtrack
         }
     }
 
     public static void main(String[] args) {
         System.out.println(combinationSum2(new int[]{10,1,2,7,6,1,5}, 8)); // [[1,1,6], [1,2,5], [1,7], [2,6]]
+        System.out.println(combinationSum2(new int[]{1, 1, 1, 2, 2}, 4));   // [[1,1,2], [2,2]] (duplicates must not repeat results)
     }
 }

@@ -5,7 +5,7 @@ package designpatterns.decorator;
  * This class serves as the base component in the Decorator pattern,
  * providing the core functionality that can be enhanced with decorators.
  *
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class BasicDress implements Dress {

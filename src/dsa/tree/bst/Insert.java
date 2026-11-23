@@ -5,7 +5,7 @@ import dsa.tree.TreeNode;
 /**
  * Insert
  * 
- * Insert into a Binary Search Tree (LeetCode 701): walks down from the root and attaches the new value as a leaf.
+ * <p>Insert into a Binary Search Tree (LeetCode 701): walks down from the root and attaches the new value as a leaf.
  *
  * <p><b>Complexity:</b> Time O(h), Space O(1).
  * 

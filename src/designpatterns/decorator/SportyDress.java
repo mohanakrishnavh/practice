@@ -4,7 +4,7 @@ package designpatterns.decorator;
  * Concrete decorator that adds sporty features to a dress.
  * This decorator enhances the base dress with athletic and sporty styling elements.
  *
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class SportyDress extends DressDecorator {

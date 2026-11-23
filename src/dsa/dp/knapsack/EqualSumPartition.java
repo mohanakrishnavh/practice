@@ -8,7 +8,7 @@ package dsa.dp.knapsack;
  * exists. If the total sum is odd, no equal partition is possible. This is a variation of
  * the Subset Sum problem.
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class EqualSumPartition {

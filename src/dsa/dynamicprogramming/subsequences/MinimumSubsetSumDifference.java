@@ -19,7 +19,7 @@ import java.util.Arrays;
  * 
  * <p>Example: For [1, 6, 11, 5], minimum difference = 1 (partition: [11] and [1,6,5])
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class MinimumSubsetSumDifference {

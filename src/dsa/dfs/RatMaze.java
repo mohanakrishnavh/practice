@@ -10,7 +10,7 @@ package dsa.dfs;
  * 
  * <p>The solution finds one valid path (if it exists) and marks it in a separate path matrix.
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class RatMaze {

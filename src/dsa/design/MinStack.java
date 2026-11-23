@@ -10,7 +10,7 @@ import java.util.Stack;
  * knows the minimum value in the stack up to that point. This approach trades space for time
  * efficiency.
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class MinStack {

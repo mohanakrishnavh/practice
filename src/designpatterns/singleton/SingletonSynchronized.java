@@ -8,7 +8,7 @@ package designpatterns.singleton;
  * because synchronization is required on every call to getInstance(),
  * even after the instance has been created.
  *
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class SingletonSynchronized {

@@ -11,7 +11,7 @@ import dsa.tree.TreeNode;
  * Uses tree dynamic programming where each node contributes either its left path, right path,
  * or both to form an optimal path. Handles negative node values by taking max with 0.
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class BinaryTreeMaximumPathSum {

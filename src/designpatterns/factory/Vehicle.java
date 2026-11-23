@@ -5,7 +5,7 @@ package designpatterns.factory;
  * This class defines the common interface for all vehicle types
  * that can be created by the VehicleFactory.
  *
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public abstract class Vehicle {

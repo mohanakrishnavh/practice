@@ -23,6 +23,12 @@ import java.util.List;
  */
 public class Permutations {
     // Approach 1: Using used map/array to keep of elements that has been picked
+    /**
+     * Approach 1 entry point: generates all permutations using a {@code used} array.
+     *
+     * @param arr distinct integers to permute
+     * @return all n! permutations
+     */
     public static List<List<Integer>> permute(int[] arr) {
         List<List<Integer>> permutations = new ArrayList<>();
         boolean[] used = new boolean[arr.length];
@@ -31,6 +37,14 @@ public class Permutations {
         return permutations;
     }
 
+    /**
+     * Fills the next slot with each unused element in turn, recursing until every slot is filled.
+     *
+     * @param arr          the source elements
+     * @param permutation  the elements placed so far (restored while backtracking)
+     * @param permutations collects a copy of each completed permutation
+     * @param used         {@code used[i]} is true while {@code arr[i]} is in {@code permutation}
+     */
     private static void permute(int[] arr, List<Integer> permutation, List<List<Integer>> permutations, boolean[] used) {
         // Base case: every slot filled -> store a copy
         if (permutation.size() == arr.length) {
@@ -45,13 +59,19 @@ public class Permutations {
                 permutation.add(arr[i]);
                 permute(arr, permutation, permutations, used);
                 // Backtrack: free the element for other positions/branches
-                permutation.remove(permutation.size() - 1);
+                permutation.removeLast();
                 used[i] = false;
             }
         }
     }
 
     // Approach 2 : Swapping all elements for an index
+    /**
+     * Approach 2 entry point: generates all permutations by swapping elements into each position.
+     *
+     * @param nums distinct integers to permute (restored to its original order before returning)
+     * @return all n! permutations
+     */
     public static List<List<Integer>> permute2(int[] nums) {
         List<List<Integer>> permutations = new ArrayList<>();
         findPermutations(0, nums, permutations);
@@ -59,9 +79,16 @@ public class Permutations {
         return permutations;
     }
 
-    private static void findPermutations(int index, int[] nums, List<List<Integer>> permutations) {
+    /**
+     * Fixes position {@code idx} by swapping each later element into it, recursing, then swapping back.
+     *
+     * @param idx        the position being fixed; start with 0
+     * @param nums         the array being permuted in place
+     * @param permutations collects a snapshot of {@code nums} at each leaf
+     */
+    private static void findPermutations(int idx, int[] nums, List<List<Integer>> permutations) {
         // Base case: positions 0..n-1 are all fixed; the array itself is one permutation
-        if (index == nums.length) {
+        if (idx == nums.length) {
             List<Integer> permutation = new ArrayList<>();
             for (int i = 0; i < nums.length; i++) {
                 permutation.add(nums[i]);
@@ -71,22 +98,42 @@ public class Permutations {
             return;
         }
 
-        // Try each remaining element (i >= index) in position `index`
-        for (int i = index; i < nums.length; i++) {
-            swap(nums, i, index);
-            findPermutations(index+1, nums, permutations);
-            swap(nums, i, index); // backtrack: undo the swap
+        // Try each remaining element (i >= idx) in position `idx`
+        for (int i = idx; i < nums.length; i++) {
+            swap(nums, i, idx);
+            findPermutations(idx+1, nums, permutations);
+            swap(nums, i, idx); // backtrack: undo the swap
         }
     }
 
+    /**
+     * Swaps the elements at two indices.
+     *
+     * @param nums the array containing both elements
+     * @param i    index of the first element
+     * @param j    index of the second element
+     */
     private static void swap(int[] nums, int i, int j) {
         int temp = nums[i];
         nums[i] = nums[j];
         nums[j] = temp;
     }
 
+    /**
+     * Demo: prints permutations with both approaches for typical, empty, single-element and two-element inputs.
+     *
+     * @param args unused
+     */
     public static void main(String[] args) {
         System.out.println(permute(new int[] {1, 2, 3}));
         System.out.println(permute2(new int[] {1, 2, 3}));
+        System.out.println(permute(new int[] {}));       // [[]] (one permutation: the empty one)
+        System.out.println(permute2(new int[] {}));      // [[]]
+        System.out.println(permute(new int[] {5}));      // [[5]]
+        System.out.println(permute2(new int[] {5}));     // [[5]]
+        System.out.println(permute(new int[] {1, 2}));   // [[1, 2], [2, 1]]
+        System.out.println(permute2(new int[] {1, 2}));  // [[1, 2], [2, 1]]
+        System.out.println(permute(new int[] {1, 2, 3, 4}).size());  // 24 (4!)
+        System.out.println(permute2(new int[] {1, 2, 3, 4}).size()); // 24
     }
 }

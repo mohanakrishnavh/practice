@@ -5,7 +5,7 @@ import dsa.tree.TreeNode;
 /**
  * LowestCommonAncestor
  * 
- * Lowest Common Ancestor of a BST (LeetCode 235): descend while both targets are on the same side; the first node
+ * <p>Lowest Common Ancestor of a BST (LeetCode 235): descend while both targets are on the same side; the first node
  * where they split (or equal a target) is the LCA.
  *
  * <p><b>Complexity:</b> Time O(h), Space O(h) for recursion.

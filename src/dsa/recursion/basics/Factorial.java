@@ -13,16 +13,27 @@ package dsa.recursion.basics;
  * @version 1.0
  */
 public class Factorial {
+    /**
+     * Computes n! recursively: n! = n * (n-1)!.
+     *
+     * @param n the value whose factorial is wanted (must be non-negative, or recursion never stops)
+     * @return n!; note that {@code int} overflows for n > 12
+     */
     public static int factorial(int n) {
-        // Base case: 1! = 1 and 0! = 1 (using <= also stops negative input from recursing forever)
-        if (n <= 1) {
+        // Base case: 0! = 1! = 1
+        if (n == 0 || n == 1) {
             return 1;
         }
 
-        // Recursive case: the multiplication happens on the way back up (after the call returns)
+        // The multiplication happens on the way back up, after the recursive call returns
         return n * factorial(n - 1);
     }
 
+    /**
+     * Demo: prints 5! (120).
+     *
+     * @param args unused
+     */
     public static void main(String[] args) {
         System.out.println(factorial(5)); // 120
     }

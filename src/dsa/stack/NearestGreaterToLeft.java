@@ -6,13 +6,24 @@ import java.util.Stack;
 /**
  * NearestGreaterToLeft
  * 
- * <p>TODO: Add class description
- * 
- * @author Practice Repository
+ * Finds, for every element, the nearest greater element to its left, using a monotonic stack.
+ *
+ * <p>Scanning left to right, smaller or equal values are popped from the stack; whatever remains on
+ * top is the nearest greater element to the left.
+ *
+ * <p>Time complexity: O(n). Space complexity: O(n).
+ *
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class NearestGreaterToLeft {
 
+    /**
+     * Computes the nearest greater element to the left of each element.
+     *
+     * @param nums the input array
+     * @return array where entry i is the nearest greater value left of index i, or -1 if none exists
+     */
     private static int[] getNearestGreaterToLeft(int[] nums) {
         int[] ngl = new int[nums.length];
         Stack<Integer> stack = new Stack<>();
@@ -30,6 +41,11 @@ public class NearestGreaterToLeft {
     }
 
 
+    /**
+     * Demo driver with sample inputs.
+     *
+     * @param args unused command-line arguments
+     */
     public static void main(String[] args) {
         int[] arr = new int[]{1, 3, 2, 4};
         System.out.println(Arrays.toString(getNearestGreaterToLeft(arr)));

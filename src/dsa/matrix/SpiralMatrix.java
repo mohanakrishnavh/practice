@@ -6,13 +6,25 @@ import java.util.List;
 /**
  * SpiralMatrix
  * 
- * <p>TODO: Add class description
- * 
- * @author Practice Repository
+ * Traverses an m x n matrix in spiral order: left to right along the top, down the right
+ * side, right to left along the bottom, then up the left side, working inwards (LeetCode 54).
+ *
+ * <p>Four boundaries (top, bottom, left, right) shrink after each side is traversed. The total
+ * element count is used to stop early, which avoids duplicates when a single row or column remains.
+ *
+ * <p>Time complexity: O(m * n). Space complexity: O(1) beyond the output.
+ *
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class SpiralMatrix {
 
+    /**
+     * Returns the matrix elements in spiral order.
+     *
+     * @param matrix the input matrix
+     * @return the elements in spiral order (empty list if the matrix is null or empty)
+     */
     public List<Integer> spiralOrder(int[][] matrix) {
         List<Integer> spiralList = new ArrayList<>();
 

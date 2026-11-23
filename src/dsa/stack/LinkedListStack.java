@@ -14,7 +14,7 @@ import java.util.EmptyStackException;
  *
  * <p>Space complexity: O(n), one node per element.
  *
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class LinkedListStack {

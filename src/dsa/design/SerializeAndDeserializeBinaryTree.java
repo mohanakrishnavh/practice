@@ -13,7 +13,7 @@ import java.util.Queue;
  * encode the tree structure, with "n" representing null nodes. This approach preserves
  * the complete tree structure including the positions of null nodes.
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class SerializeAndDeserializeBinaryTree {

@@ -5,8 +5,13 @@ import java.util.*;
 /**
  * BinaryTree
  * 
- * Binary tree with the classic traversals (preorder, inorder, postorder in iterative and recursive forms, level order),
- * a right-side view and a BST validity check. Extended by {@link BinarySearchTree}.
+ * <p>Binary tree with the classic traversals: preorder, inorder and postorder (each in an iterative, stack-based form
+ * and a recursive form) and level order (BFS). It also offers a right-side view and a BST validity check. Traversal
+ * methods are {@code static} and take a root; {@link #height}, {@link #rightSideView} and {@link #isBST} work on the
+ * node passed in or the tree's own {@code root}. Extended by {@link BinarySearchTree}.
+ *
+ * <p><b>Complexity:</b> every traversal is Time O(n); Space is O(h) for DFS variants and O(w) for level order, where
+ * h is the height and w the widest level.
  * 
  * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0

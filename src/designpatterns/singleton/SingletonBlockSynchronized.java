@@ -12,7 +12,7 @@ package designpatterns.singleton;
  * <p>Double-checked locking reduces synchronization overhead by checking
  * the instance twice: once without locking and once with locking.
  *
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class SingletonBlockSynchronized {

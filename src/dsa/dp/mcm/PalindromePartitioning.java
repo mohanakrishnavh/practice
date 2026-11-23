@@ -11,7 +11,7 @@ import java.util.Arrays;
  * and choose the one that minimizes the total cuts. Provides both recursive and memoized
  * solutions with optimization to skip already palindromic substrings.
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class PalindromePartitioning {

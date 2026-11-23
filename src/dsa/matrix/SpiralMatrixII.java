@@ -3,13 +3,24 @@ package dsa.matrix;
 /**
  * SpiralMatrixII
  * 
- * <p>TODO: Add class description
- * 
- * @author Practice Repository
+ * Generates an n x n matrix filled with the numbers 1 to n^2 in spiral order (LeetCode 59).
+ *
+ * <p>Uses the same shrinking top/bottom/left/right boundaries as {@link SpiralMatrix}, writing an
+ * incrementing counter instead of reading values.
+ *
+ * <p>Time complexity: O(n^2). Space complexity: O(1) beyond the output.
+ *
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class SpiralMatrixII {
 
+    /**
+     * Builds the spiral matrix.
+     *
+     * @param n the matrix dimension (n x n)
+     * @return the matrix with 1 to n^2 laid out in a clockwise spiral
+     */
     public int[][] generateMatrix(int n) {
         int[][] matrix = new int[n][n];
 

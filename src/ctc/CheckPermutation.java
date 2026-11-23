@@ -10,7 +10,7 @@ import java.util.Map;
  * 
  * <p>Problem from "Cracking the Coding Interview" - Chapter 1.2
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class CheckPermutation {

@@ -5,7 +5,7 @@ package designpatterns.decorator;
  * This class shows how decorators can be stacked to add
  * multiple features to a basic dress object dynamically.
  *
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class Client {

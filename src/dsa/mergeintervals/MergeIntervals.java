@@ -7,12 +7,23 @@ import java.util.List;
 /**
  * MergeIntervals
  * 
- * <p>TODO: Add class description
- * 
- * @author Practice Repository
+ * Merges all overlapping intervals in a collection (LeetCode 56).
+ *
+ * <p>The intervals are sorted by start time; then a running [start, end] is extended while the next
+ * interval begins at or before the current end, and emitted otherwise.
+ *
+ * <p>Time complexity: O(n log n) for the sort. Space complexity: O(n) for the result.
+ *
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class MergeIntervals {
+    /**
+     * Merges overlapping intervals. The input array is sorted in place.
+     *
+     * @param intervals intervals as [start, end] pairs
+     * @return non-overlapping intervals covering the same ranges, sorted by start
+     */
     public int[][] merge(int[][] intervals) {
         if (intervals.length < 2) {
             return intervals;

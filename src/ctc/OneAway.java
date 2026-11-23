@@ -14,7 +14,7 @@ package ctc;
  *   <li>pale, bake -> false (2 edits required)</li>
  * </ul>
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class OneAway {

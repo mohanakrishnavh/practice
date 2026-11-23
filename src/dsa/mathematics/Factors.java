@@ -8,14 +8,21 @@ import java.util.List;
 /**
  * Factors
  * 
- * <p>TODO: Add class description
- * 
- * @author Practice Repository
+ * Finds all factors (divisors) of a number, using three approaches of increasing efficiency:
+ * a full scan up to n, a scan up to n/2, and a scan up to sqrt(n) that records factor pairs.
+ *
+ * <p>Complexity: {@code findAllFactors} and {@code findAllFactors2} are O(n); {@code findAllFactorsOptimized} is O(sqrt(n)).
+ *
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class Factors {
-    // All numbers from 1 to n that divide the number n
-    // are the Factors on n.
+    /**
+     * Finds all factors by checking every number from 2 to n-1 (1 and n are added directly).
+     *
+     * @param n the number to factorise
+     * @return factors of {@code n} in ascending order (empty list if {@code n} is 0)
+     */
     public static List<Integer> findAllFactors(int n) {
         List<Integer> factors = new ArrayList<>();
         if (n == 0) {
@@ -33,8 +40,12 @@ public class Factors {
         return factors;
     }
 
-    // A number is always divisible by 1 and itself
-    // Apart from this, the smallest factor it can have is 2 and the largest factor is n/2
+    /**
+     * Finds all factors by checking only up to n/2, since no factor other than n itself can be larger.
+     *
+     * @param n the number to factorise
+     * @return factors of {@code n} in ascending order (empty list if {@code n} is 0)
+     */
     public static List<Integer> findAllFactors2(int n) {
         List<Integer> factors = new ArrayList<>();
         if (n == 0) {
@@ -52,10 +63,13 @@ public class Factors {
         return factors;
     }
 
-    // The factors of a number exists in pairs a x b = n
-    // If a < b, a < sqrt(n) and b > sqrt(n)
-    // If a == b, a = b = sqrt(n)
-    // So we can run the loop till sqrt(n) and add i and n/i to the factors list
+    /**
+     * Finds all factors by checking only up to sqrt(n). Factors come in pairs (i, n/i), so each
+     * divisor found yields its partner too; the list is sorted at the end.
+     *
+     * @param n the number to factorise
+     * @return factors of {@code n} in ascending order (empty list if {@code n} is 0)
+     */
     public static List<Integer> findAllFactorsOptimized(int n) {
         List<Integer> factors = new ArrayList<>();
         if (n == 0) {
@@ -79,6 +93,11 @@ public class Factors {
         return factors;
     }
 
+    /**
+     * Demo driver with sample inputs.
+     *
+     * @param args unused command-line arguments
+     */
     public static void main(String[] args) {
         System.out.println("findAllFactors():");
         System.out.println(findAllFactors(10));

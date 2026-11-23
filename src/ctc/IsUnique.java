@@ -8,7 +8,7 @@ import java.util.Set;
  * Class to check if a string has all unique characters.
  * Implements multiple algorithms with different time and space complexities.
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class IsUnique {

@@ -8,7 +8,7 @@ package dsa.dp.knapsack;
  * 2D boolean table where dp[i][j] indicates whether a sum of j can be achieved using the
  * first i elements. This is a classic 0/1 Knapsack variation.
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class

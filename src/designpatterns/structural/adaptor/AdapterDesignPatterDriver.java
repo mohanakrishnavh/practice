@@ -5,7 +5,7 @@ package designpatterns.structural.adaptor;
  * This class shows how the adapter enables incompatible interfaces
  * to work together seamlessly.
  *
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class AdapterDesignPatterDriver {

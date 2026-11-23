@@ -8,17 +8,28 @@ import java.util.List;
 /**
  * ComparableExample
  * 
- * <p>TODO: Add class description
+ * Demonstrates natural ordering with {@link Comparable}.
+ *
+ * <p>{@code Obj} implements {@code Comparable<Obj>} so that {@code Collections.sort(list)}
+ * orders instances by their {@code a} field without needing a separate comparator.
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class ComparableExample {
 
+    /**
+     * A simple value holder whose natural ordering is ascending by {@code a}.
+     */
     static class Obj implements Comparable<Obj> {
          int a;
          int b;
 
+         /**
+          * Creates an object with the given sort key.
+          *
+          * @param a the value used for ordering
+          */
          public Obj(int a){
             this.a=a;
          }
@@ -30,6 +41,11 @@ public class ComparableExample {
     }
 
 
+    /**
+     * Sorts a list using the natural ordering and prints it.
+     *
+     * @param args unused command-line arguments
+     */
     public static void main(String[] args) {
         List<Obj> list = new ArrayList<>();
 

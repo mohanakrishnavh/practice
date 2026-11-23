@@ -15,7 +15,7 @@ import java.util.EmptyStackException;
  *
  * <p>Space complexity: O(n).
  *
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class ArrayStack {

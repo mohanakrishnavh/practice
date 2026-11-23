@@ -11,7 +11,7 @@ import java.util.Map;
  * (for O(1) insertion/deletion). The most recently used items are kept at the front of the list,
  * and the least recently used items are at the back, making eviction efficient.
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class LRUCache {

@@ -6,7 +6,7 @@ package designpatterns.structural.bridge;
  * a reference to a Remote (implementor). The bridge allows the TV hierarchy
  * and Remote hierarchy to vary independently.
  *
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public abstract class TV {

@@ -8,22 +8,37 @@ import java.util.List;
 /**
  * ComparatorExample
  * 
- * <p>TODO: Add class description
+ * Demonstrates custom ordering with {@link Comparator}.
+ *
+ * <p>Unlike {@code Comparable}, comparators live outside the class being sorted, so the same
+ * type can be ordered in several ways. Here the list is sorted ascending and then descending
+ * by the {@code a} field.
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class ComparatorExample {
 
+    /**
+     * A simple value holder with no natural ordering.
+     */
     static class Obj{
          int a;
          int b;
 
+         /**
+          * Creates an object with the given sort key.
+          *
+          * @param a the value used for ordering
+          */
          public Obj(int a){
             this.a=a;
          }
     }
 
+    /**
+     * Orders {@link Obj} instances by ascending {@code a}.
+     */
     static class ObjAscComparator implements Comparator<Obj>{
 
         @Override
@@ -32,6 +47,9 @@ public class ComparatorExample {
         }
     }
 
+     /**
+      * Orders {@link Obj} instances by descending {@code a}.
+      */
      static class ObjDescComparator implements Comparator<Obj>{
 
         @Override
@@ -41,6 +59,11 @@ public class ComparatorExample {
     }
 
 
+    /**
+     * Sorts a list with each comparator and prints the result.
+     *
+     * @param args unused command-line arguments
+     */
     public static void main(String[] args) {
         List<Obj> list = new ArrayList<>();
 

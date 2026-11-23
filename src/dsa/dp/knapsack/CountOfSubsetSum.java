@@ -8,7 +8,7 @@ package dsa.dp.knapsack;
  * the count of subsets using the first i elements that sum to j. This is a variation of the
  * classic 0/1 Knapsack problem.
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class CountOfSubsetSum {

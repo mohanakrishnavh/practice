@@ -25,7 +25,7 @@ import java.util.Arrays;
  * Sequence: 0, 1, 1, 2, 3, 5
  * </pre>
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class fibonacci {

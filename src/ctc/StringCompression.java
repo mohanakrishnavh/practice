@@ -7,7 +7,7 @@ package ctc;
  * 
  * <p>Problem from "Cracking the Coding Interview" - Chapter 1.6
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class StringCompression {

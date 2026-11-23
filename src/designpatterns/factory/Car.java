@@ -4,7 +4,7 @@ package designpatterns.factory;
  * Concrete implementation of Vehicle representing a Car.
  * This class is created by the VehicleFactory when a car type is requested.
  *
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class Car extends Vehicle {

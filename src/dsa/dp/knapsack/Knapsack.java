@@ -12,7 +12,7 @@ import java.util.List;
  * Each item can only be used once (0 or 1 times). Provides multiple implementations:
  * recursive, memoized (top-down DP), and tabulation (bottom-up DP).
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class Knapsack {

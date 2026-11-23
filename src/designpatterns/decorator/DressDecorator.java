@@ -5,7 +5,7 @@ package designpatterns.decorator;
  * This class wraps a Dress object and delegates calls to it,
  * allowing subclasses to add additional behavior before or after delegation.
  *
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class DressDecorator implements Dress {

@@ -5,7 +5,7 @@ package designpatterns.composite;
  * This is a leaf component in the Composite pattern, representing
  * an individual account that cannot contain other accounts.
  *
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class SavingAccount extends Account {

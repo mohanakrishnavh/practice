@@ -5,7 +5,7 @@ package designpatterns.structural.bridge;
  * This class provides a specific implementation of the Remote interface
  * with modern features.
  *
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class NewRemote implements Remote {

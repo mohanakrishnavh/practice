@@ -8,7 +8,7 @@ import java.util.Queue;
 /**
  * MaximumWidthOfBinaryTree
  * 
- * Maximum Width of Binary Tree (LeetCode 662): the widest level, measured between its leftmost and rightmost
+ * <p>Maximum Width of Binary Tree (LeetCode 662): the widest level, measured between its leftmost and rightmost
  * non-null nodes counting the gaps. Nodes get heap-style indices (children at 2i+1 and 2i+2), re-based per level to avoid
  * overflow.
  *

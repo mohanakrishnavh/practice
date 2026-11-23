@@ -5,7 +5,7 @@ package designpatterns.decorator;
  * Defines the contract that all dress objects (both concrete components
  * and decorators) must implement.
  *
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public interface Dress {

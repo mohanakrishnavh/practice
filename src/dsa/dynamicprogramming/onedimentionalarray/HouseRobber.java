@@ -22,7 +22,7 @@ import java.util.Arrays;
  * 
  * <p>Example: For [1, 2, 3, 1], maximum rob = 4 (rob houses 0 and 2)
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class HouseRobber {

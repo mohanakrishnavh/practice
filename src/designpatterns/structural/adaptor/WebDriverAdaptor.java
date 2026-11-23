@@ -5,7 +5,7 @@ package designpatterns.structural.adaptor;
  * This class implements the Adapter design pattern by wrapping the IEDriver
  * and translating WebDriver method calls to IEDriver's methods.
  *
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class WebDriverAdaptor implements WebDriver {

@@ -4,7 +4,7 @@ package designpatterns.structural.bridge;
  * Concrete implementation of Remote representing an old-style remote control.
  * This class provides a specific implementation of the Remote interface.
  *
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class OldRemote implements Remote {

@@ -12,7 +12,7 @@ import dsa.util.MathUtil;
  * Uses tree DP where we find the two maximum heights from all children and sum them to get
  * the potential diameter through each node.
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class DiameterOfNAryTree {

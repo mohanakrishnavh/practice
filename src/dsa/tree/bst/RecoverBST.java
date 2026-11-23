@@ -5,7 +5,7 @@ import dsa.tree.TreeNode;
 /**
  * RecoverBST
  * 
- * Recover Binary Search Tree (LeetCode 99): two nodes were swapped by mistake. An inorder traversal of a BST is
+ * <p>Recover Binary Search Tree (LeetCode 99): two nodes were swapped by mistake. An inorder traversal of a BST is
  * ascending, so the (at most two) places where it decreases reveal the swapped nodes, whose values are then exchanged.
  *
  * <p><b>Complexity:</b> Time O(n), Space O(h).

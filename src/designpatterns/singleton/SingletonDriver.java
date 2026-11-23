@@ -5,7 +5,7 @@ package designpatterns.singleton;
  * This class shows how multiple threads can safely access the singleton instance
  * without creating duplicate objects.
  *
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class SingletonDriver {

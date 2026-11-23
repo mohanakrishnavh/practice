@@ -12,7 +12,7 @@ import java.util.HashMap;
 /**
  * BottomView
  * 
- * Bottom view of a binary tree: the nodes visible when looking from below, one per horizontal column. BFS overwrites
+ * <p>Bottom view of a binary tree: the nodes visible when looking from below, one per horizontal column. BFS overwrites
  * the value stored per column so the last (lowest) node wins.
  *
  * <p><b>Complexity:</b> Time O(n), Space O(n).

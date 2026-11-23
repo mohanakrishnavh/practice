@@ -22,7 +22,7 @@ import java.util.Arrays;
  * 
  * <p>Example: wt=[3,4,5], val=[30,50,60], W=8 → max value = 90 (items 0 and 2)
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class Knapsack {

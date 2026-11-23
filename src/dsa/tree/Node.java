@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * Node
  * 
- * N-ary tree node: an integer value plus a list of child nodes.
+ * <p>N-ary tree node: an integer value plus a list of child nodes.
  * 
  * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0

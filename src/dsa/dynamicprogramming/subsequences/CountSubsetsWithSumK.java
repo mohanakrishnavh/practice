@@ -21,7 +21,7 @@ import java.util.Arrays;
  * 
  * <p>Example: For [1, 2, 2, 3] and K=3, there are 2 subsets: {1,2} and {3}
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class CountSubsetsWithSumK {

@@ -20,7 +20,7 @@ import java.util.Arrays;
  * 
  * <p>Example: For heights [10, 30, 40, 20], minimum cost is 30 (10→30→20)
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class FrogJump {

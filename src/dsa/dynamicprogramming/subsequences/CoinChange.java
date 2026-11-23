@@ -19,7 +19,7 @@ import java.util.Arrays;
  * 
  * <p>Example: For coins [1, 2, 5] and amount=11, minimum coins = 3 (5+5+1)
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class CoinChange {

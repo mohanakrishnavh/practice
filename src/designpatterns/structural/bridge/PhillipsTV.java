@@ -5,7 +5,7 @@ package designpatterns.structural.bridge;
  * This class extends TV and provides Phillips-specific implementation
  * while delegating remote control operations to the Remote implementor.
  *
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class PhillipsTV extends TV {

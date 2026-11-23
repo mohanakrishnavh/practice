@@ -92,7 +92,7 @@ class RandomizedSet {
  * <p>This class demonstrates the RandomizedSet implementation that supports
  * insert, delete, and getRandom operations all in O(1) average time complexity.
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class InsertDeleteGetRandom {

@@ -11,7 +11,7 @@ import java.util.List;
  * Each digit from 2-9 maps to a set of letters. The solution uses an iterative approach
  * to build combinations by progressively combining letters from each digit.
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class LetterCominationOfPhoneNumber {

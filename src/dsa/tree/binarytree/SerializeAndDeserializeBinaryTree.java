@@ -11,7 +11,7 @@ import dsa.tree.TreeNode;
 /**
  * SerializeAndDeserializeBinaryTree
  * 
- * Serialize and Deserialize Binary Tree (LeetCode 297) using level-order traversal. Null children are written as
+ * <p>Serialize and Deserialize Binary Tree (LeetCode 297) using level-order traversal. Null children are written as
  * {@code #} and values are comma separated; deserialization rebuilds the tree level by level with a queue.
  *
  * <p><b>Complexity:</b> Time O(n), Space O(n).

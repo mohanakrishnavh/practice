@@ -5,7 +5,7 @@ import dsa.tree.TreeNode;
 /**
  * Search
  * 
- * Search in a Binary Search Tree (LeetCode 700), in recursive and iterative forms.
+ * <p>Search in a Binary Search Tree (LeetCode 700), in recursive and iterative forms.
  *
  * <p><b>Complexity:</b> Time O(h), Space O(h) recursive and O(1) iterative.
  * 

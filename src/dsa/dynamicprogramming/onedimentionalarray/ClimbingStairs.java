@@ -21,7 +21,7 @@ import java.util.Arrays;
  * 
  * <p>Example: For n=3, there are 3 ways: (1+1+1), (1+2), (2+1)
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class ClimbingStairs {

@@ -5,7 +5,7 @@ package designpatterns.structural.adaptor;
  * Defines the standard interface that clients expect to work with.
  * All compatible drivers should implement this interface.
  *
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public interface WebDriver {

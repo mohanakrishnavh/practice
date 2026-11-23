@@ -20,7 +20,7 @@ import java.util.Arrays;
  * 
  * <p>Example: For [10, 9, 2, 5, 3, 7, 101, 18], the LIS is [2, 3, 7, 101] with length 4.
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class LongestIncreasingSubsequence {

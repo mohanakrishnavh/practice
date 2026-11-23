@@ -18,7 +18,7 @@ import java.util.Arrays;
  * 
  * <p>Example: For [1, 1, 2, 3] and D=1, there are 3 ways
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class CountSubsetsWithDifference {

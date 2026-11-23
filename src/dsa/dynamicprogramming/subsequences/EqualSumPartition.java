@@ -17,7 +17,7 @@ import static dsa.dynamicprogramming.subsequences.SubsetSum.hasSubsetSum4;
  * 
  * <p>Example: For [1, 5, 11, 5], can partition into [1, 5, 5] and [11]
  * 
- * @author Practice Repository
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class EqualSumPartition {
