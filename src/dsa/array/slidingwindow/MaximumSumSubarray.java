@@ -3,13 +3,25 @@ package dsa.array.slidingwindow;
 /**
  * MaximumSubArraySum
  * 
- * <p>TODO: Add class description
- * 
- * @author Practice Repository
+ * Finds the maximum sum of any subarray of fixed size {@code k} using a fixed-size sliding window.
+ *
+ * <p>The window sum is updated in O(1) per step by adding the entering element and subtracting
+ * the one that leaves, instead of recomputing the sum for each window.
+ *
+ * <p>Time complexity: O(n). Space complexity: O(1).
+ *
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
-public class MaximumSubArraySum {
+public class MaximumSumSubarray {
 
+    /**
+     * Returns the maximum sum over all windows of size {@code k}.
+     *
+     * @param arr the input array
+     * @param k   the window size
+     * @return the maximum window sum, or 0 if the array is empty or {@code k} is 0
+     */
     private static int getMaxSubArraySum(int[] arr, int k) {
         if (arr.length == 0 || k == 0) {
             return 0;
@@ -35,6 +47,11 @@ public class MaximumSubArraySum {
         return max;
     }
 
+    /**
+     * Demo driver with sample inputs.
+     *
+     * @param args unused command-line arguments
+     */
     public static void main(String[] args) {
         System.out.println(getMaxSubArraySum(new int[]{2, 5, 1, 8, 2, 9, 1}, 3));
         System.out.println(getMaxSubArraySum(new int[]{2, 5, 1, 8, 2, 9, 1}, 0));

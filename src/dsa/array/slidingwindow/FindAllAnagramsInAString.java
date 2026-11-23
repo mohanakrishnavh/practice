@@ -8,12 +8,26 @@ import java.util.Map;
 /**
  * FindAllAnagramsInAString
  * 
- * <p>TODO: Add class description
- * 
- * @author Practice Repository
+ * Finds the start indices of all anagrams of a pattern {@code p} inside a string {@code s}
+ * (LeetCode 438) using a fixed-size sliding window of length {@code p.length()}.
+ *
+ * <p>A frequency map of {@code p} is kept and decremented as characters enter the window and
+ * incremented as they leave. A counter tracks how many distinct characters still have a
+ * non-zero requirement; when it reaches zero the window is an anagram.
+ *
+ * <p>Time complexity: O(n). Space complexity: O(k) where k is the number of distinct characters in {@code p}.
+ *
+ * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class FindAllAnagramsInAString {
+    /**
+     * Finds all start indices of anagrams of {@code p} in {@code s}.
+     *
+     * @param s the text to search
+     * @param p the pattern whose anagrams are searched for
+     * @return list of start indices (empty if either input is null or empty)
+     */
     public static List<Integer> findAnagrams(String s, String p) {
         List<Integer> anagrams = new ArrayList<>();
 
@@ -64,6 +78,12 @@ public class FindAllAnagramsInAString {
         return anagrams;
     }
 
+    /**
+     * Builds a character frequency map for a string.
+     *
+     * @param s the string to count
+     * @return map from character to its number of occurrences
+     */
     private static Map<Character, Integer> getCounts(String s) {
         Map<Character, Integer> counts = new HashMap<>();
         for (char ch : s.toCharArray()) {
@@ -73,6 +93,11 @@ public class FindAllAnagramsInAString {
         return counts;
     }
 
+    /**
+     * Demo driver with sample inputs.
+     *
+     * @param args unused command-line arguments
+     */
     public static void main(String[] args) {
         System.out.println(findAnagrams("cbaebabacd", "abc"));
         System.out.println(findAnagrams("abab", "ab"));
