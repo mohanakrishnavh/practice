@@ -1,4 +1,4 @@
-package dsa.array.slidingwindow;
+package dsa.array.slidingwindow.fixedwindow;
 
 /**
  * MaximumSubArraySum

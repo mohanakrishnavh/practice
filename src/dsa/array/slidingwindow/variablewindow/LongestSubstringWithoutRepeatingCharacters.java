@@ -1,4 +1,4 @@
-package dsa.array.slidingwindow;
+package dsa.array.slidingwindow.variablewindow;
 
 import java.util.HashMap;
 import java.util.Map;

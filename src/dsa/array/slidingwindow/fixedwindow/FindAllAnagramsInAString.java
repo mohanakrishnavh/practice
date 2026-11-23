@@ -1,4 +1,4 @@
-package dsa.array.slidingwindow;
+package dsa.array.slidingwindow.fixedwindow;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -31,14 +31,14 @@ public class FindAllAnagramsInAString {
     public static List<Integer> findAnagrams(String s, String p) {
         List<Integer> anagrams = new ArrayList<>();
 
-        if (s == null || p == null || s.length() == 0 || p.length() == 0) {
+        if (s == null || p == null || s.isEmpty() || p.isEmpty()) {
             return anagrams;
         }
 
 
         Map<Character, Integer> counts = getCounts(p);
         int noOfChars = counts.size();
-        int K = p.length();
+        int k = p.length();
         int i = 0, j = 0;
         while (j < s.length()) {
             char leftChar = s.charAt(i);
@@ -53,7 +53,7 @@ public class FindAllAnagramsInAString {
                 }
             }
 
-            if (j - i + 1 == K) {
+            if (j - i + 1 == k) {
                 // Found an anagram
                 if (noOfChars == 0) {
                     anagrams.add(i);
