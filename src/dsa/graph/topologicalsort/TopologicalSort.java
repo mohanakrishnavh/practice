@@ -72,20 +72,24 @@ public class TopologicalSort {
     /**
      * Computes a topological order using DFS.
      *
-     * <p>Note: this version does not detect cycles; the result is only meaningful for a DAG.
+     * <p>Cycles are detected with a three-state visited array (0 = unvisited, 2 = on the current
+     * DFS path, 1 = fully explored), as in {@code DetectCycleInDirectedGraph}. Reaching a vertex that
+     * is still on the current path means a back edge, so no topological order exists.
      *
      * @param n       number of vertices (labelled 0 to n-1)
      * @param adjList adjacency list of the directed graph
-     * @return the vertices in topological order
+     * @return the vertices in topological order, or {@code null} if the graph contains a cycle
      */
     public static List<Integer> topologicalSortUsingDfs(int n, List<List<Integer>> adjList) {
         List<Integer> topologicalOrder = new ArrayList<>();
         Stack<Integer> stack = new Stack<>();
-        boolean[] visited = new boolean[n];
+        int[] visited = new int[n];
 
         for (int i = 0; i < n; i++) {
-            if (!visited[i]) {
-                topologicalSortDfs(i, adjList, visited, stack);
+            if (visited[i] == 0) {
+                if (topologicalSortDfs(i, adjList, visited, stack)) {
+                    return null;
+                }
             }
         }
 
@@ -97,21 +101,31 @@ public class TopologicalSort {
     }
 
     /**
-     * DFS helper: visits all unvisited descendants of {@code node}, then pushes {@code node} onto the stack.
+     * DFS helper: visits all unvisited descendants of {@code vertex}, then pushes {@code vertex} onto the stack.
+     * Also detects cycles by watching for a neighbour that is still on the current DFS path.
      *
-     * @param node    current vertex
+     * @param vertex    current vertex
      * @param adjList adjacency list of the directed graph
-     * @param visited visited flags per vertex; updated in place
+     * @param visited state per vertex: 0 = unvisited, 2 = on the current DFS path, 1 = fully explored;
+     *                updated in place
      * @param stack   stack collecting vertices in reverse topological order
+     * @return true if a cycle is reachable from {@code vertex}, false otherwise
      */
-    private static void topologicalSortDfs(int node, List<List<Integer>> adjList, boolean[] visited, Stack<Integer> stack) {
-        visited[node] = true;
-        for (int adj : adjList.get(node)) {
-            if (!visited[adj]) {
-                topologicalSortDfs(adj, adjList, visited, stack);
+    private static boolean topologicalSortDfs(int vertex, List<List<Integer>> adjList, int[] visited, Stack<Integer> stack) {
+        visited[vertex] = 2;
+        for (int adj : adjList.get(vertex)) {
+            if (visited[adj] == 0) {
+                if (topologicalSortDfs(adj, adjList, visited, stack)) {
+                    return true;
+                }
+            } else if (visited[adj] == 2) {
+                // back edge: adj is an ancestor on the current path, so this is a cycle
+                return true;
             }
         }
-        stack.push(node);
+        visited[vertex] = 1;
+        stack.push(vertex);
+        return false;
     }
 
     /**
@@ -137,5 +151,40 @@ public class TopologicalSort {
         graph = new Graph(n);
         graph.addDirectedEdges(edges);
         System.out.println(topologicalSortUsingDfs(n, graph.getAdjList()));
+
+        // DFS version: valid DAG gives an order, a cycle gives null
+        // Sample DAG
+        n = 6;
+        edges = new int[][]{{5, 0}, {5, 2}, {2, 3}, {3, 1}, {4, 0}, {4, 1}};
+        graph = new Graph(n);
+        graph.addDirectedEdges(edges);
+        List<Integer> order = topologicalSortUsingDfs(n, graph.getAdjList());
+        System.out.println((order != null && order.equals(Arrays.asList(5, 4, 2, 3, 1, 0)) ? "PASS" : "FAIL")
+                + " - sample DAG: " + order);
+
+        // Diamond: 3 is reached twice but already finished the second time, so no cycle
+        n = 4;
+        edges = new int[][]{{0, 1}, {0, 2}, {1, 3}, {2, 3}};
+        graph = new Graph(n);
+        graph.addDirectedEdges(edges);
+        order = topologicalSortUsingDfs(n, graph.getAdjList());
+        System.out.println((order != null && order.equals(Arrays.asList(0, 2, 1, 3)) ? "PASS" : "FAIL")
+                + " - diamond: " + order);
+
+        // Cycle 1 -> 2 -> 3 -> 1
+        n = 4;
+        edges = new int[][]{{0, 1}, {1, 2}, {3, 1}, {2, 3}};
+        graph = new Graph(n);
+        graph.addDirectedEdges(edges);
+        order = topologicalSortUsingDfs(n, graph.getAdjList());
+        System.out.println((order == null ? "PASS" : "FAIL") + " - cycle: " + order);
+
+        // Self-loop
+        n = 1;
+        edges = new int[][]{{0, 0}};
+        graph = new Graph(n);
+        graph.addDirectedEdges(edges);
+        order = topologicalSortUsingDfs(n, graph.getAdjList());
+        System.out.println((order == null ? "PASS" : "FAIL") + " - self-loop: " + order);
     }
 }
