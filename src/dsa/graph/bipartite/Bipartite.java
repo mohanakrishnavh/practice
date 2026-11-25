@@ -33,7 +33,7 @@ public class Bipartite {
         Arrays.fill(color, -1);
 
         for (int v = 0; v < V; v++) {
-            if (color[v] == -1 && hasOddLengthCycle(v, graph, color)) {
+            if (color[v] == -1 && bfs(v, graph, color)) {
                 return false;
             }
         }
@@ -49,7 +49,7 @@ public class Bipartite {
      * @param color colour per vertex: -1 uncoloured, 0 or 1 coloured; updated in place
      * @return true if an odd-length cycle (colour conflict) is found in this component
      */
-    private boolean hasOddLengthCycle(int v, int[][] graph, int[] color) {
+    private boolean bfs(int v, int[][] graph, int[] color) {
         Queue<Integer> q = new LinkedList<>();
         q.offer(v);
         color[v] = 1;
@@ -67,5 +67,50 @@ public class Bipartite {
         }
 
         return false;
+    }
+
+    /**
+     * Runs one test case and prints PASS or FAIL.
+     *
+     * @param name     a short description of the case
+     * @param graph    adjacency list of the graph
+     * @param expected whether the graph should be bipartite
+     */
+    private static void check(String name, int[][] graph, boolean expected) {
+        boolean actual = new Bipartite().isBipartite(graph);
+        System.out.println((actual == expected ? "PASS" : "FAIL")
+                + " - " + name + " (expected " + expected + ", got " + actual + ")");
+    }
+
+    /**
+     * Test driver covering typical and edge cases.
+     *
+     * @param args unused command-line arguments
+     */
+    public static void main(String[] args) {
+        // Bipartite graphs
+        check("4-cycle (even cycle)", new int[][]{{1, 3}, {0, 2}, {1, 3}, {0, 2}}, true);
+        check("6-cycle (even cycle)", new int[][]{{1, 5}, {0, 2}, {1, 3}, {2, 4}, {3, 5}, {4, 0}}, true);
+        check("single edge", new int[][]{{1}, {0}}, true);
+        check("path", new int[][]{{1}, {0, 2}, {1, 3}, {2}}, true);
+        check("star", new int[][]{{1, 2, 3}, {0}, {0}, {0}}, true);
+        // Trees and forests have no cycles, so they are always bipartite
+        check("two separate components, both bipartite", new int[][]{{1}, {0}, {3}, {2}}, true);
+
+        // Not bipartite
+        // Triangle 0-1-2: vertices 1 and 2 get the same colour but share an edge
+        check("triangle (odd cycle)", new int[][]{{1, 2}, {0, 2}, {0, 1}}, false);
+        check("5-cycle (odd cycle)", new int[][]{{1, 4}, {0, 2}, {1, 3}, {2, 4}, {3, 0}}, false);
+        // LeetCode 785 example 1: triangle 0-1-2 plus vertex 3 attached to 0 and 2
+        check("LeetCode 785 example 1", new int[][]{{1, 2, 3}, {0, 2}, {0, 1, 3}, {0, 2}}, false);
+        // The odd cycle is in a component not reachable from vertex 0, so every component must be checked
+        check("odd cycle only in a later component", new int[][]{{1}, {0}, {3, 4}, {2, 4}, {2, 3}}, false);
+        // A self-loop connects a vertex to itself, i.e. a cycle of length 1
+        check("self-loop", new int[][]{{0}}, false);
+
+        // Trivial inputs
+        check("empty graph", new int[][]{}, true);
+        check("single vertex, no edges", new int[][]{{}}, true);
+        check("two isolated vertices", new int[][]{{}, {}}, true);
     }
 }
