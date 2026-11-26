@@ -1,88 +1,117 @@
 package dsa.dynamicprogramming.onedimentionalarray;
 
+import java.util.Arrays;
+
 /**
  * House Robber II Problem.
  * 
- * <p>Extension of House Robber where all houses are arranged in a circle.
+ * <p>Extension of {@link HouseRobber} where all houses are arranged in a circle.
  * This means the first and last houses are adjacent, so you cannot rob both.
  * 
- * <p>Solution approach:
- * - Case 1: Rob houses from index 0 to n-2 (exclude last house)
- * - Case 2: Rob houses from index 1 to n-1 (exclude first house)
- * - Return max of both cases
+ * <p><b>Idea:</b> any valid plan leaves out the first house or the last house (or both). So break
+ * the circle into two straight streets and solve each with the House Robber recurrence
+ * {@code best(i) = max(best(i - 1), nums[i] + best(i - 2))}:
+ * <ul>
+ *   <li>Case 1: houses {@code 0..n-2} (exclude the last house)</li>
+ *   <li>Case 2: houses {@code 1..n-1} (exclude the first house)</li>
+ * </ul>
+ * The answer is the larger of the two. Each street uses the space-optimized version, keeping only
+ * the last two values.
  * 
  * <p>Time Complexity: O(n) - Two passes through array
  * <p>Space Complexity: O(1) - Only constant space
  * 
- * <p>Example: For [2, 3, 2], cannot rob first and last together, so max = 3
+ * <p>Example: For [2, 3, 2], houses 0 and 2 are adjacent in the circle, so the best is to rob only
+ * house 1: max = 3.
  * 
  * @author Mohanakrishna, Vanamala Hariprasad
  * @version 1.0
  */
 public class HouseRobberII {
+
     /**
-     * Finds maximum rob amount in circular arrangement.
+     * Finds the maximum amount that can be robbed from houses arranged in a circle.
      * 
-     * <p>Solves by considering two scenarios: exclude first or exclude last house.
-     * 
-     * <p>Time Complexity: O(n) - Two linear passes
-     * <p>Space Complexity: O(1) - Only constant space
+     * <p>Handles the empty and single-house cases directly (a single house has no neighbour), then
+     * returns the better of robbing without the last house and robbing without the first house.
      * 
      * @param nums array of money in each house
-     * @return maximum amount that can be robbed
+     * @return maximum amount that can be robbed without robbing two adjacent houses
      */
-    public static int rob(int[] nums) {
+    public int rob(int[] nums) {
+        if (nums.length == 0) {
+            return 0;
+        }
+
         if (nums.length == 1) {
             return nums[0];
         }
 
-        int[] excludingFirst = excludeIndex(nums, 0);
-        int[] excludingLast = excludeIndex(nums, nums.length - 1);
+        // houses 0..n-2 and houses 1..n-1: neither range contains both ends of the circle
+        int maxExcludingLast = rob(nums, 0, nums.length - 1);
+        int maxIncludingFirst = rob(nums, 1, nums.length);
 
-        return Math.max(robHelper(excludingFirst), robHelper(excludingLast));
+        return Math.max(maxExcludingLast, maxIncludingFirst);
     }
 
     /**
-     * Helper method to exclude an index from the array.
+     * Space-optimized House Robber on the straight street {@code nums[start..end-1]}.
      * 
-     * @param arr original array
-     * @param excludeIndex index to exclude
-     * @return new array without the excluded index
+     * <p>{@code second} holds the best up to house {@code i - 1} and {@code first} the best up to
+     * house {@code i - 2}. They start at the first two houses of the range, so the loop begins at
+     * {@code start + 2}.
+     * 
+     * @param nums  array of money in each house
+     * @param start first house in the range (inclusive)
+     * @param end   end of the range (exclusive); the range must contain at least one house
+     * @return maximum amount that can be robbed from {@code nums[start..end-1]}
      */
-    private static int[] excludeIndex(int[] arr, int excludeIndex) {
-        int[] excludedArr = new int[arr.length - 1];
-        int idx = 0;
-        for (int i = 0; i < arr.length; i++) {
-            if (i != excludeIndex) {
-                excludedArr[idx++] = arr[i];
-            }
+    private int rob(int[] nums, int start, int end) {
+        // a single house in the range: rob it
+        if (end - start < 2) {
+            return nums[start];
         }
 
-        return excludedArr;
+        int first = nums[start], second = Math.max(nums[start], nums[start + 1]);
+        int pick, notPick, rob;
+        for (int i = start + 2; i < end; i++) {
+            pick = nums[i] + first;
+            notPick = second;
+
+            rob = Math.max(pick, notPick);
+
+            first = second;
+            second = rob;
+        }
+
+        return second;
     }
 
     /**
-     * Helper method to calculate max rob amount for a linear array.
-     * 
-     * <p>Uses space-optimized approach with two variables.
-     * 
-     * @param arr array of money in each house
-     * @return maximum amount that can be robbed
+     * Test driver covering typical and edge cases.
+     *
+     * @param args unused command-line arguments
      */
-    private static int robHelper(int[] arr) {
-        int n = arr.length;
+    public static void main(String[] args) {
+        int[][] inputs = {
+                {2, 3, 2},             // houses 0 and 2 are adjacent in the circle: only house 1
+                {1, 2, 3, 1},          // houses 0 and 2: 1 + 3
+                {1, 2, 3},             // house 2 alone beats houses 0 + 2, which are adjacent
+                {2, 7, 9, 3, 1},       // 2 + 9 is best; 2 + 9 + 1 is not allowed in a circle
+                {200, 3, 140, 20, 10}, // houses 0 and 2: 200 + 140
+                {1, 3, 1, 3, 100},     // excluding the first house: 3 + 100
+                {5},                   // a single house has no neighbour
+                {1, 2},                // two houses are adjacent: take the larger
+                {2, 1},
+                {},                    // no houses
+        };
+        int[] expected = {3, 4, 3, 11, 340, 103, 5, 2, 2, 0};
 
-        int prev = arr[0], prev2 = 0;
-        for (int i = 1; i < n; i++) {
-            int take = i > 1 ? arr[i] + prev2 : arr[i];
-            int notTake = prev;
-
-            int result = Math.max(take, notTake);
-
-            prev2 = prev;
-            prev = result;
+        HouseRobberII solver = new HouseRobberII();
+        for (int t = 0; t < inputs.length; t++) {
+            int result = solver.rob(inputs[t]);
+            System.out.println((result == expected[t] ? "PASS" : "FAIL") + " - " + Arrays.toString(inputs[t])
+                    + " (expected " + expected[t] + ", got " + result + ")");
         }
-
-        return prev;
     }
 }

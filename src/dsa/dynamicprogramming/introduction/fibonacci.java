@@ -40,10 +40,10 @@ public class fibonacci {
      * @return the nth Fibonacci number
      */
     // Top-Down Approach
-    public static int fib(int n) {
+    public static int fibonacciTopDown(int n) {
         int[] dp = new int[n+1];
         Arrays.fill(dp, -1);
-        fib(n, dp);
+        fibonacciTopDownHelper(n, dp);
 
         return dp[n];
     }
@@ -55,7 +55,7 @@ public class fibonacci {
      * @param dp memoization array
      * @return the nth Fibonacci number
      */
-    private static int fib(int n, int[] dp) {
+    private static int fibonacciTopDownHelper(int n, int[] dp) {
         if (n <= 1) {
             return n;
         }
@@ -64,7 +64,7 @@ public class fibonacci {
             return dp[n];
         }
 
-        dp[n] = fib(n - 1, dp) + fib(n - 2, dp);
+        dp[n] = fibonacciTopDownHelper(n - 1, dp) + fibonacciTopDownHelper(n - 2, dp);
         return dp[n];
     }
 
@@ -82,7 +82,7 @@ public class fibonacci {
     // Bottom-Up Approach
     // Time Complexity: O(n)
     // Space Complexity: O(n)
-    public static int fib2(int n) {
+    public static int fibonacciBottomUp(int n) {
         int[] dp = new int[n+1];
         dp[0] = 0;
         dp[1] = 1;
@@ -109,7 +109,7 @@ public class fibonacci {
     // Space Optimized Solution
     // Time Complexity: O(n)
     // Space Complexity: O(1)
-    public static int fib3(int n) {
+    public static int fibonacciSpaceOptimized(int n) {
         if (n <= 1) {
             return n;
         }
@@ -127,8 +127,8 @@ public class fibonacci {
     }
 
     public static void main(String[] args) {
-        System.out.println(fib(5));
-        System.out.println(fib2(5));
-        System.out.println(fib3(5));
+        System.out.println(fibonacciTopDown(5));
+        System.out.println(fibonacciBottomUp(5));
+        System.out.println(fibonacciSpaceOptimized(5));
     }
 }
