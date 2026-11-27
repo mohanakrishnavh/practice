@@ -1,5 +1,9 @@
 package dsa.linkedlist;
 
+import java.util.Arrays;
+import java.util.IdentityHashMap;
+import java.util.Map;
+
 /**
  * CopyListWithRandomPointer
  * 
@@ -85,5 +89,82 @@ public class CopyListWithRandomPointer {
         }
 
         return sentinel.next;
+    }
+
+    /**
+     * Test driver using the LeetCode format: each node is {@code [val, randomIndex]}, where
+     * {@code randomIndex} is the position of the node its random pointer targets, or {@code null}.
+     *
+     * <p>A copy passes when:
+     * <ul>
+     *   <li>serialising it gives back the input (same values and random indices);</li>
+     *   <li>none of its nodes is an original node, so it is a real deep copy;</li>
+     *   <li>the original list is unchanged afterwards (same {@code next} and {@code random}
+     *       links), since step 1 temporarily rewires it.</li>
+     * </ul>
+     *
+     * @param args unused command-line arguments
+     */
+    public static void main(String[] args) {
+        Integer[][][] inputs = {
+                {{7, null}, {13, 0}, {11, 4}, {10, 2}, {1, 0}},  // Example 1
+                {{1, 1}, {2, 1}},                                // Example 2: random pointing to itself
+                {{3, null}, {3, 0}, {3, null}},                  // Example 3: equal values
+                {{5, null}},                                     // single node, no random
+                {{5, 0}},                                        // single node pointing to itself
+                {},                                              // empty list
+        };
+
+        CopyListWithRandomPointer solver = new CopyListWithRandomPointer();
+        for (Integer[][] input : inputs) {
+            // build the original list: next links in order, random links by index
+            int n = input.length;
+            Node[] original = new Node[n];
+            for (int i = 0; i < n; i++) {
+                original[i] = solver.new Node(input[i][0]);
+                if (i > 0) {
+                    original[i - 1].next = original[i];
+                }
+            }
+            for (int i = 0; i < n; i++) {
+                if (input[i][1] != null) {
+                    original[i].random = original[input[i][1]];
+                }
+            }
+            Node head = n == 0 ? null : original[0];
+
+            Node copyHead = solver.copyRandomList(head);
+
+            // index every copy node by identity, so random targets can be turned back into indices
+            Map<Node, Integer> copyIndex = new IdentityHashMap<>();
+            int size = 0;
+            for (Node node = copyHead; node != null && size <= n; node = node.next) {
+                copyIndex.put(node, size++);
+            }
+
+            // serialise the copy and check it shares no nodes with the original
+            Integer[][] got = new Integer[size][];
+            boolean deepCopy = true;
+            int i = 0;
+            for (Node node = copyHead; node != null && i < size; node = node.next) {
+                got[i++] = new Integer[]{node.val, node.random == null ? null : copyIndex.get(node.random)};
+                for (Node orig : original) {
+                    deepCopy &= node != orig && node.random != orig;
+                }
+            }
+
+            // check the original list was restored
+            boolean originalIntact = true;
+            for (int j = 0; j < n; j++) {
+                originalIntact &= original[j].next == (j + 1 < n ? original[j + 1] : null);
+                originalIntact &= original[j].random == (input[j][1] == null ? null : original[input[j][1]]);
+            }
+
+            boolean ok = Arrays.deepEquals(got, input) && deepCopy && originalIntact;
+            System.out.println((ok ? "PASS" : "FAIL") + " - " + Arrays.deepToString(input)
+                    + " (got " + Arrays.deepToString(got)
+                    + (deepCopy ? "" : ", shares nodes with the original")
+                    + (originalIntact ? "" : ", original list modified") + ")");
+        }
     }
 }

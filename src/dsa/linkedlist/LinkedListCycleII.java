@@ -143,13 +143,7 @@ public class LinkedListCycleII {
         return first;
     }
 
-    /**
-     * Quick demo on 3 -> 2 -> 0 -> 4 with 4 linking back to 2; the cycle starts at the node with value 2.
-     * The check uses {@code assert}, so it only runs when the JVM is started with {@code -ea}.
-     * See {@link LinkedListCycleIITest} for the full test suite.
-     *
-     * @param args unused
-     */
+
     public static void main(String[] args){
         ListNode node1 = new ListNode(3);
         ListNode node2 = new ListNode(2);

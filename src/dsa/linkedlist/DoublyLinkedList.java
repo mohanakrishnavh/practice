@@ -12,25 +12,6 @@ package dsa.linkedlist;
  * @version 1.0
  */
 public class DoublyLinkedList {
-    /**
-     * A node holding an integer value and links to its neighbours.
-     */
-    public class DoublyLinkedListNode {
-        int val;
-        DoublyLinkedListNode next;
-        DoublyLinkedListNode prev;
-
-        /**
-         * Creates a detached node.
-         *
-         * @param val the value stored in the node
-         */
-        public DoublyLinkedListNode(int val) {
-            this.val = val;
-
-        }
-    }
-
     private DoublyLinkedListNode head;
     private int length;
 
